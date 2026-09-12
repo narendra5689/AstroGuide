@@ -1,0 +1,163 @@
+/* =========================================================
+   HOME 2 — NON-HERO COMPONENTS
+   Cleaned & improved
+   ========================================================= */
+
+
+/* =========================================================
+   EDITORIAL NUMBER
+   ========================================================= */
+
+.editorial-number {
+    font-family: var(--font-heading);
+    font-size: 5rem;
+    color: var(--secondary-color);
+    line-height: 1;
+}
+
+
+/* =========================================================
+   LARGE QUOTE
+   ========================================================= */
+
+.quote-large {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.25;
+    color: var(--text-color);
+}
+
+
+/* =========================================================
+   DARK PANEL
+   ========================================================= */
+
+.dark-panel {
+    background: var(--primary-color);
+    border-radius: var(--radius-lg);
+    padding: 40px;
+    color: #fff;
+}
+
+.dark-panel h2 {
+    color: #fff;
+}
+
+.dark-panel p {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+
+/* =========================================================
+   CONTENT PANEL  (fixed alignment for Section 04/05)
+   ========================================================= */
+
+.content-panel {
+    background: #ffffff;
+    border-radius: var(--radius-lg);
+    padding: 40px;
+    border: 1px solid rgba(26, 27, 75, 0.06);
+    box-shadow: 0 8px 30px rgba(26, 27, 75, 0.04);
+    height: 100%;
+}
+
+.content-panel h2 {
+    color: var(--text-color);
+}
+[data-theme="dark"] .content-panel h2 {
+    color:var(--primary-color);
+}
+.content-panel p {
+    color: rgba(26, 27, 75, 0.7);
+}
+
+
+/* =========================================================
+   CONTENT IMAGES
+   ========================================================= */
+
+.content-image {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    max-height: 560px;
+    border-radius: var(--radius-lg);
+}
+
+
+/* =========================================================
+   FEATURE CARD
+   ========================================================= */
+
+.feature-card {
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 45px rgba(26, 27, 75, 0.09);
+}
+
+.card-icon {
+    transition: transform 0.35s ease;
+}
+
+.feature-card:hover .card-icon {
+    transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   TESTIMONIALS  (Reviews) — new background + better hover
+   ========================================================= */
+
+.testimonial-card {
+    height: 100%;
+    background: #f8f6f1;                      /* soft warm background */
+    border-radius: var(--radius-lg);
+    padding: 32px 28px;
+    border: 1px solid rgba(201, 168, 76, 0.12);
+    transition: 
+        transform 0.35s ease, 
+        box-shadow 0.35s ease,
+        background 0.35s ease,
+        border-color 0.35s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-8px);
+    background: #ffffff;
+    border-color: rgba(201, 168, 76, 0.35);
+    box-shadow: 0 20px 50px rgba(26, 27, 75, 0.1);
+}
+
+.testimonial-card p {
+    margin-bottom: 1.25rem;
+    font-style: italic;
+    color: rgba(26, 27, 75, 0.8);
+}
+
+.testimonial-card strong {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+    letter-spacing: 0.02em;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 767.98px) {
+
+    .dark-panel,
+    .content-panel {
+        padding: 28px;
+    }
+
+    .testimonial-card {
+        padding: 26px 22px;
+    }
+
+}

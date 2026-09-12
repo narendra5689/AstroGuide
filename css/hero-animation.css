@@ -1,0 +1,1193 @@
+/* =========================================================
+   ASTROGUIDE — HERO COSMIC 3D ANIMATION
+   ========================================================= */
+
+
+/* =========================================================
+   HERO VISUAL
+   ========================================================= */
+
+.hero-visual {
+    position: relative;
+    width: 100%;
+    min-height: 560px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   COSMIC SCENE
+   ========================================================= */
+
+.cosmic-scene {
+    position: relative;
+
+    width: 520px;
+    height: 520px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    perspective: 1200px;
+    transform-style: preserve-3d;
+
+    animation: sceneFloat 7s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   BACKGROUND GLOW
+   ========================================================= */
+
+.cosmic-scene::before {
+    content: "";
+
+    position: absolute;
+
+    width: 380px;
+    height: 380px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(212, 175, 55, 0.18) 0%,
+            rgba(212, 175, 55, 0.09) 30%,
+            rgba(212, 175, 55, 0.04) 52%,
+            transparent 72%
+        );
+
+    filter: blur(18px);
+
+    animation: cosmicPulse 5s ease-in-out infinite;
+
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+
+/* =========================================================
+   LIGHT MODE — COSMIC BACKGROUND
+   ========================================================= */
+
+html[data-theme="light"] .cosmic-scene::before {
+    background:
+        radial-gradient(
+            circle,
+            rgba(212, 175, 55, 0.22) 0%,
+            rgba(212, 175, 55, 0.11) 30%,
+            rgba(212, 175, 55, 0.05) 50%,
+            transparent 72%
+        );
+
+    opacity: 0.9;
+}
+
+
+/* =========================================================
+   DARK MODE — COSMIC BACKGROUND
+   ========================================================= */
+
+html[data-theme="dark"] .cosmic-scene::before {
+    background:
+        radial-gradient(
+            circle,
+            rgba(212, 175, 55, 0.24) 0%,
+            rgba(212, 175, 55, 0.12) 30%,
+            rgba(212, 175, 55, 0.05) 55%,
+            transparent 75%
+        );
+
+    opacity: 1;
+}
+
+
+/* =========================================================
+   3D ORBIT RINGS
+   ========================================================= */
+
+.orbit {
+    position: absolute;
+
+    border-radius: 50%;
+
+    transform-style: preserve-3d;
+    transform-origin: center center;
+
+    pointer-events: none;
+
+    z-index: 1;
+}
+
+
+/* =========================================================
+   LIGHT MODE ORBITS
+   ========================================================= */
+
+html[data-theme="light"] .orbit-1 {
+    border: 1px solid rgba(140, 105, 20, 0.38);
+}
+
+html[data-theme="light"] .orbit-2 {
+    border: 1px solid rgba(140, 105, 20, 0.26);
+}
+
+html[data-theme="light"] .orbit-3 {
+    border: 1px solid rgba(140, 105, 20, 0.18);
+}
+
+
+/* =========================================================
+   DARK MODE ORBITS
+   ========================================================= */
+
+html[data-theme="dark"] .orbit-1 {
+    border: 1px solid rgba(212, 175, 55, 0.38);
+}
+
+html[data-theme="dark"] .orbit-2 {
+    border: 1px solid rgba(212, 175, 55, 0.25);
+}
+
+html[data-theme="dark"] .orbit-3 {
+    border: 1px solid rgba(212, 175, 55, 0.15);
+}
+
+
+/* =========================================================
+   ORBIT 1
+   ========================================================= */
+
+.orbit-1 {
+    width: 350px;
+    height: 350px;
+
+    transform:
+        rotateX(65deg)
+        rotateY(15deg)
+        rotateZ(0deg);
+
+    animation: orbit3DOne 18s linear infinite;
+}
+
+
+/* =========================================================
+   ORBIT 2
+   ========================================================= */
+
+.orbit-2 {
+    width: 430px;
+    height: 430px;
+
+    transform:
+        rotateX(70deg)
+        rotateY(-25deg)
+        rotateZ(20deg);
+
+    animation: orbit3DTwo 24s linear infinite;
+}
+
+
+/* =========================================================
+   ORBIT 3
+   ========================================================= */
+
+.orbit-3 {
+    width: 490px;
+    height: 490px;
+
+    transform:
+        rotateX(55deg)
+        rotateY(45deg)
+        rotateZ(-15deg);
+
+    animation: orbit3DThree 30s linear infinite;
+}
+
+
+/* =========================================================
+   ZODIAC WHEEL
+   ========================================================= */
+
+.zodiac-wheel {
+    position: absolute;
+
+    width: 390px;
+    height: 390px;
+
+    border-radius: 50%;
+
+    transform-style: preserve-3d;
+    transform-origin: center center;
+
+    transform:
+        rotateX(62deg)
+        rotateY(12deg)
+        rotateZ(0deg);
+
+    animation: zodiac3DRotation 24s linear infinite;
+
+    z-index: 2;
+}
+
+
+/* =========================================================
+   ZODIAC WHEEL — LIGHT MODE
+   ========================================================= */
+
+html[data-theme="light"] .zodiac-wheel {
+    border: 1px solid rgba(140, 105, 20, 0.40);
+
+    box-shadow:
+        0 0 20px rgba(140, 105, 20, 0.06),
+        inset 0 0 20px rgba(140, 105, 20, 0.04);
+}
+
+
+/* =========================================================
+   ZODIAC WHEEL — DARK MODE
+   ========================================================= */
+
+html[data-theme="dark"] .zodiac-wheel {
+    border: 1px solid rgba(212, 175, 55, 0.32);
+
+    box-shadow:
+        0 0 20px rgba(212, 175, 55, 0.05),
+        inset 0 0 20px rgba(212, 175, 55, 0.04);
+}
+
+
+/* =========================================================
+   ZODIAC INNER RING
+   ========================================================= */
+
+.zodiac-wheel::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 25px;
+
+    border-radius: 50%;
+
+    border: 1px dashed rgba(212, 175, 55, 0.24);
+
+    transform: translateZ(8px);
+}
+
+
+/* =========================================================
+   ZODIAC INNER RING — LIGHT MODE
+   ========================================================= */
+
+html[data-theme="light"] .zodiac-wheel::before {
+    border-color: rgba(140, 105, 20, 0.30);
+}
+
+
+/* =========================================================
+   DEEP INNER RING
+   ========================================================= */
+
+.zodiac-wheel::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 65px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(212, 175, 55, 0.17);
+
+    transform: translateZ(15px);
+}
+
+
+html[data-theme="light"] .zodiac-wheel::after {
+    border-color: rgba(140, 105, 20, 0.22);
+}
+
+
+/* =========================================================
+   ZODIAC SYMBOLS
+   ========================================================= */
+
+.zodiac-symbol {
+    position: absolute;
+
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--primary, #d4af37);
+
+    font-size: 1.35rem;
+    font-weight: 500;
+
+    text-shadow:
+        0 0 8px rgba(212, 175, 55, 0.60),
+        0 0 18px rgba(212, 175, 55, 0.30);
+
+    transform-style: preserve-3d;
+
+    transform:
+        translate(-50%, -50%)
+        translateZ(18px);
+
+    backface-visibility: visible;
+}
+
+
+/* Light mode symbols */
+
+html[data-theme="light"] .zodiac-symbol {
+    color: #1a1a1a;
+
+    text-shadow:
+        0 0 7px rgba(140, 105, 20, 0.28),
+        0 0 16px rgba(140, 105, 20, 0.12);
+}
+
+
+/* Dark mode symbols */
+
+html[data-theme="dark"] .zodiac-symbol {
+    color: #d4af37;
+
+    text-shadow:
+        0 0 8px rgba(212, 175, 55, 0.60),
+        0 0 18px rgba(212, 175, 55, 0.30);
+}
+
+
+/* =========================================================
+   ZODIAC POSITIONS
+   ========================================================= */
+
+.symbol-1 {
+    top: 0;
+    left: 50%;
+}
+
+.symbol-2 {
+    top: 7%;
+    left: 75%;
+}
+
+.symbol-3 {
+    top: 25%;
+    left: 93%;
+}
+
+.symbol-4 {
+    top: 50%;
+    left: 100%;
+}
+
+.symbol-5 {
+    top: 75%;
+    left: 93%;
+}
+
+.symbol-6 {
+    top: 93%;
+    left: 75%;
+}
+
+.symbol-7 {
+    top: 100%;
+    left: 50%;
+}
+
+.symbol-8 {
+    top: 93%;
+    left: 25%;
+}
+
+.symbol-9 {
+    top: 75%;
+    left: 7%;
+}
+
+.symbol-10 {
+    top: 50%;
+    left: 0;
+}
+
+.symbol-11 {
+    top: 25%;
+    left: 7%;
+}
+
+.symbol-12 {
+    top: 7%;
+    left: 25%;
+}
+
+
+/* =========================================================
+   CENTRAL COSMIC CORE
+   ========================================================= */
+
+.cosmic-core {
+    position: relative;
+
+    width: 190px;
+    height: 190px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 6;
+
+    transform-style: preserve-3d;
+}
+
+
+/* =========================================================
+   CORE GLOW
+   ========================================================= */
+
+.core-glow {
+    position: absolute;
+
+    width: 230px;
+    height: 230px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(212, 175, 55, 0.28) 0%,
+            rgba(212, 175, 55, 0.12) 35%,
+            rgba(212, 175, 55, 0.04) 55%,
+            transparent 72%
+        );
+
+    filter: blur(14px);
+
+    animation: coreGlow 3.5s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   MOON — STATIC
+   ========================================================= */
+
+.moon {
+    position: relative;
+
+    width: 150px;
+    height: 150px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle at 35% 30%,
+            rgba(255, 255, 255, 0.98) 0%,
+            rgba(235, 216, 165, 0.96) 28%,
+            rgba(204, 174, 105, 0.96) 50%,
+            rgba(157, 125, 55, 0.96) 73%,
+            rgba(78, 55, 18, 1) 100%
+        );
+
+    box-shadow:
+        0 0 25px rgba(212, 175, 55, 0.45),
+        0 0 60px rgba(212, 175, 55, 0.22),
+        0 0 100px rgba(212, 175, 55, 0.10),
+        inset -20px -18px 38px rgba(40, 25, 5, 0.38);
+
+    overflow: hidden;
+
+    /*
+       IMPORTANT:
+       The moon has NO animation.
+       It stays fixed in the center.
+    */
+
+    transform: translateZ(0);
+
+    z-index: 7;
+}
+
+
+/* =========================================================
+   MOON CRATERS
+   ========================================================= */
+
+.moon-crater {
+    position: absolute;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle at 35% 30%,
+            rgba(255, 245, 205, 0.18),
+            rgba(85, 60, 20, 0.24)
+        );
+
+    box-shadow:
+        inset 2px 2px 5px rgba(50, 30, 5, 0.20);
+}
+
+
+.crater-1 {
+    width: 25px;
+    height: 25px;
+
+    top: 35px;
+    left: 32px;
+}
+
+
+.crater-2 {
+    width: 16px;
+    height: 16px;
+
+    top: 80px;
+    left: 75px;
+}
+
+
+.crater-3 {
+    width: 30px;
+    height: 30px;
+
+    bottom: 25px;
+    right: 28px;
+}
+
+
+/* =========================================================
+   FLOATING INFORMATION CARDS
+   ========================================================= */
+
+.floating-card {
+    position: absolute;
+
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    padding: 11px 16px;
+
+    border-radius: 14px;
+
+    /*
+       Use a theme-aware background.
+    */
+
+    background: rgba(255, 255, 255, 0.82);
+
+    border: 1px solid rgba(140, 105, 20, 0.25);
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    box-shadow:
+        0 10px 35px rgba(0, 0, 0, 0.10),
+        0 0 25px rgba(140, 105, 20, 0.06);
+
+    /*
+       Dark text for LIGHT mode.
+    */
+
+    color: #252018;
+
+    font-size: 0.82rem;
+    font-weight: 600;
+
+    z-index: 10;
+
+    white-space: nowrap;
+
+    transform-style: preserve-3d;
+}
+
+
+/* =========================================================
+   FLOATING CARDS — LIGHT MODE
+   ========================================================= */
+
+html[data-theme="light"] .floating-card {
+    background:
+        rgba(255, 255, 255, 0.88);
+
+    border-color:
+        rgba(140, 105, 20, 0.28);
+
+    color:
+        #252018;
+
+    box-shadow:
+        0 12px 35px rgba(45, 35, 15, 0.12),
+        0 0 25px rgba(140, 105, 20, 0.07);
+}
+
+
+/* =========================================================
+   FLOATING CARDS — DARK MODE
+   ========================================================= */
+
+html[data-theme="dark"] .floating-card {
+    background:
+        rgba(25, 25, 25, 0.72);
+
+    border-color:
+        rgba(212, 175, 55, 0.25);
+
+    color:
+        #f4f0e5;
+
+    box-shadow:
+        0 12px 35px rgba(0, 0, 0, 0.25),
+        0 0 25px rgba(212, 175, 55, 0.06);
+}
+
+
+/* =========================================================
+   FLOATING CARD ICONS
+   ========================================================= */
+
+.floating-card i {
+    color: #8c6914;
+
+    font-size: 1rem;
+
+    filter:
+        drop-shadow(
+            0 0 6px rgba(140, 105, 20, 0.25)
+        );
+}
+
+
+html[data-theme="dark"] .floating-card i {
+    color: #d4af37;
+
+    filter:
+        drop-shadow(
+            0 0 6px rgba(212, 175, 55, 0.35)
+        );
+}
+
+
+/* =========================================================
+   CARD POSITIONS
+   ========================================================= */
+
+.card-top {
+    top: 45px;
+    left: 55px;
+
+    animation:
+        cardFloat1 5s ease-in-out infinite;
+}
+
+
+.card-right {
+    top: 205px;
+    right: 0;
+
+    animation:
+        cardFloat2 6s ease-in-out infinite;
+}
+
+
+.card-bottom {
+    bottom: 45px;
+    left: 75px;
+
+    animation:
+        cardFloat3 5.5s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   COSMIC STARS
+   ========================================================= */
+
+.cosmic-star {
+    position: absolute;
+
+    color: #8c6914;
+
+    font-size: 1.3rem;
+
+    text-shadow:
+        0 0 10px rgba(140, 105, 20, 0.45),
+        0 0 25px rgba(140, 105, 20, 0.18);
+
+    z-index: 8;
+
+    transform-style: preserve-3d;
+
+    animation:
+        starTwinkle 2.5s ease-in-out infinite;
+}
+
+
+html[data-theme="dark"] .cosmic-star {
+    color: #d4af37;
+
+    text-shadow:
+        0 0 10px rgba(212, 175, 55, 0.70),
+        0 0 25px rgba(212, 175, 55, 0.30);
+}
+
+
+/* =========================================================
+   STAR POSITIONS
+   ========================================================= */
+
+.star-1 {
+    top: 80px;
+    right: 100px;
+
+    animation-delay: 0s;
+}
+
+
+.star-2 {
+    top: 145px;
+    left: 40px;
+
+    animation-delay: 0.7s;
+}
+
+
+.star-3 {
+    top: 320px;
+    right: 45px;
+
+    animation-delay: 1.2s;
+}
+
+
+.star-4 {
+    bottom: 90px;
+    right: 130px;
+
+    font-size: 2rem;
+
+    animation-delay: 1.7s;
+}
+
+
+.star-5 {
+    bottom: 150px;
+    left: 35px;
+
+    animation-delay: 2s;
+}
+
+
+.star-6 {
+    top: 40px;
+    right: 190px;
+
+    font-size: 0.9rem;
+
+    animation-delay: 0.4s;
+}
+
+
+/* =========================================================
+   3D ORBIT ANIMATION — ONE
+   ========================================================= */
+
+@keyframes orbit3DOne {
+
+    0% {
+        transform:
+            rotateX(65deg)
+            rotateY(15deg)
+            rotateZ(0deg);
+    }
+
+    25% {
+        transform:
+            rotateX(72deg)
+            rotateY(55deg)
+            rotateZ(90deg);
+    }
+
+    50% {
+        transform:
+            rotateX(58deg)
+            rotateY(120deg)
+            rotateZ(180deg);
+    }
+
+    75% {
+        transform:
+            rotateX(72deg)
+            rotateY(220deg)
+            rotateZ(270deg);
+    }
+
+    100% {
+        transform:
+            rotateX(65deg)
+            rotateY(375deg)
+            rotateZ(360deg);
+    }
+}
+
+
+/* =========================================================
+   3D ORBIT ANIMATION — TWO
+   ========================================================= */
+
+@keyframes orbit3DTwo {
+
+    0% {
+        transform:
+            rotateX(70deg)
+            rotateY(-25deg)
+            rotateZ(20deg);
+    }
+
+    25% {
+        transform:
+            rotateX(45deg)
+            rotateY(65deg)
+            rotateZ(110deg);
+    }
+
+    50% {
+        transform:
+            rotateX(75deg)
+            rotateY(155deg)
+            rotateZ(200deg);
+    }
+
+    75% {
+        transform:
+            rotateX(50deg)
+            rotateY(245deg)
+            rotateZ(290deg);
+    }
+
+    100% {
+        transform:
+            rotateX(70deg)
+            rotateY(335deg)
+            rotateZ(380deg);
+    }
+}
+
+
+/* =========================================================
+   3D ORBIT ANIMATION — THREE
+   ========================================================= */
+
+@keyframes orbit3DThree {
+
+    0% {
+        transform:
+            rotateX(55deg)
+            rotateY(45deg)
+            rotateZ(-15deg);
+    }
+
+    25% {
+        transform:
+            rotateX(80deg)
+            rotateY(120deg)
+            rotateZ(75deg);
+    }
+
+    50% {
+        transform:
+            rotateX(45deg)
+            rotateY(210deg)
+            rotateZ(165deg);
+    }
+
+    75% {
+        transform:
+            rotateX(75deg)
+            rotateY(300deg)
+            rotateZ(255deg);
+    }
+
+    100% {
+        transform:
+            rotateX(55deg)
+            rotateY(405deg)
+            rotateZ(345deg);
+    }
+}
+
+
+/* =========================================================
+   3D ZODIAC ROTATION
+   ========================================================= */
+
+@keyframes zodiac3DRotation {
+
+    0% {
+        transform:
+            rotateX(62deg)
+            rotateY(12deg)
+            rotateZ(0deg);
+    }
+
+    20% {
+        transform:
+            rotateX(48deg)
+            rotateY(65deg)
+            rotateZ(72deg);
+    }
+
+    40% {
+        transform:
+            rotateX(70deg)
+            rotateY(140deg)
+            rotateZ(144deg);
+    }
+
+    60% {
+        transform:
+            rotateX(50deg)
+            rotateY(220deg)
+            rotateZ(216deg);
+    }
+
+    80% {
+        transform:
+            rotateX(72deg)
+            rotateY(300deg)
+            rotateZ(288deg);
+    }
+
+    100% {
+        transform:
+            rotateX(62deg)
+            rotateY(372deg)
+            rotateZ(360deg);
+    }
+}
+
+
+/* =========================================================
+   COSMIC BACKGROUND PULSE
+   ========================================================= */
+
+@keyframes cosmicPulse {
+
+    0%,
+    100% {
+        transform: scale(0.95);
+        opacity: 0.60;
+    }
+
+    50% {
+        transform: scale(1.08);
+        opacity: 1;
+    }
+}
+
+
+/* =========================================================
+   CORE GLOW PULSE
+   ========================================================= */
+
+@keyframes coreGlow {
+
+    0%,
+    100% {
+        transform: scale(0.90);
+        opacity: 0.65;
+    }
+
+    50% {
+        transform: scale(1.12);
+        opacity: 1;
+    }
+}
+
+
+/* =========================================================
+   FLOATING CARD — TOP
+   ========================================================= */
+
+@keyframes cardFloat1 {
+
+    0%,
+    100% {
+        transform:
+            translate3d(0, 0, 0)
+            rotateZ(-2deg);
+    }
+
+    50% {
+        transform:
+            translate3d(0, -12px, 20px)
+            rotateZ(1deg);
+    }
+}
+
+
+/* =========================================================
+   FLOATING CARD — RIGHT
+   ========================================================= */
+
+@keyframes cardFloat2 {
+
+    0%,
+    100% {
+        transform:
+            translate3d(0, 0, 0)
+            rotateZ(2deg);
+    }
+
+    50% {
+        transform:
+            translate3d(0, 10px, 25px)
+            rotateZ(-1deg);
+    }
+}
+
+
+/* =========================================================
+   FLOATING CARD — BOTTOM
+   ========================================================= */
+
+@keyframes cardFloat3 {
+
+    0%,
+    100% {
+        transform:
+            translate3d(0, 0, 0)
+            rotateZ(1deg);
+    }
+
+    50% {
+        transform:
+            translate3d(0, -9px, 18px)
+            rotateZ(-2deg);
+    }
+}
+
+
+/* =========================================================
+   STAR TWINKLE
+   ========================================================= */
+
+@keyframes starTwinkle {
+
+    0%,
+    100% {
+        opacity: 0.35;
+
+        transform:
+            translateZ(0)
+            scale(0.8)
+            rotateZ(0deg);
+    }
+
+    50% {
+        opacity: 1;
+
+        transform:
+            translateZ(25px)
+            scale(1.25)
+            rotateZ(25deg);
+    }
+}
+
+
+/* =========================================================
+   ENTIRE SCENE FLOAT
+   ========================================================= */
+
+@keyframes sceneFloat {
+
+    0%,
+    100% {
+        transform:
+            translate3d(0, 0, 0)
+            rotateX(0deg)
+            rotateY(0deg);
+    }
+
+    50% {
+        transform:
+            translate3d(0, -8px, 0)
+            rotateX(2deg)
+            rotateY(-3deg);
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE — TABLET
+   ========================================================= */
+
+@media (max-width: 991px) {
+
+    .hero-visual {
+        min-height: 480px;
+    }
+
+    .cosmic-scene {
+        transform: scale(0.85);
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE — MOBILE
+   ========================================================= */
+
+@media (max-width: 575px) {
+
+    .hero-visual {
+        min-height: 390px;
+    }
+
+    .cosmic-scene {
+        transform: scale(0.65);
+    }
+
+    .floating-card {
+        padding: 9px 12px;
+
+        font-size: 0.75rem;
+    }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .cosmic-scene,
+    .cosmic-scene *,
+    .orbit,
+    .zodiac-wheel,
+    .cosmic-core,
+    .floating-card,
+    .cosmic-star {
+        animation: none !important;
+    }
+}

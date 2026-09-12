@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="en" dir="ltr" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="AstroGuide — Sign in to continue your astrology journey."
+    >
+
+    <title>Welcome Back | AstroGuide</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="./css/global.css">
+
+    <!-- Authentication CSS -->
+    <link rel="stylesheet" href="./css/auth.css">
+
+    <!-- Lucide Icons -->
+    <script
+        src="https://unpkg.com/lucide@0.542.0/dist/umd/lucide.min.js"
+        defer>
+    </script>
+
+</head>
+
+
+<body>
+
+<main class="auth-page">
+
+
+    <!-- =====================================================
+         COSMIC BACKGROUND
+         ===================================================== -->
+
+    <div class="auth-cosmic-background" aria-hidden="true">
+
+        <!-- Soft blue glows -->
+        <div class="cosmic-glow cosmic-glow-one"></div>
+        <div class="cosmic-glow cosmic-glow-two"></div>
+
+        <!-- Moving light trails -->
+        <div class="cosmic-trail cosmic-trail-one"></div>
+        <div class="cosmic-trail cosmic-trail-two"></div>
+
+        <!-- Large subtle zodiac orbit -->
+        <div class="cosmic-zodiac-orbit">
+            <div class="orbit-symbol orbit-symbol-one">✦</div>
+            <div class="orbit-symbol orbit-symbol-two">✧</div>
+            <div class="orbit-symbol orbit-symbol-three">✦</div>
+            <div class="orbit-symbol orbit-symbol-four">·</div>
+        </div>
+
+        <!-- Stars -->
+        <span class="cosmic-star star-one"></span>
+        <span class="cosmic-star star-two"></span>
+        <span class="cosmic-star star-three"></span>
+        <span class="cosmic-star star-four"></span>
+        <span class="cosmic-star star-five"></span>
+        <span class="cosmic-star star-six"></span>
+        <span class="cosmic-star star-seven"></span>
+        <span class="cosmic-star star-eight"></span>
+        <span class="cosmic-star star-nine"></span>
+        <span class="cosmic-star star-ten"></span>
+
+        <!-- Small gold particles -->
+        <span class="gold-particle particle-one"></span>
+        <span class="gold-particle particle-two"></span>
+        <span class="gold-particle particle-three"></span>
+        <span class="gold-particle particle-four"></span>
+        <span class="gold-particle particle-five"></span>
+
+    </div>
+
+
+    <!-- =====================================================
+         TOP RIGHT CONTROLS
+         ===================================================== -->
+
+    <div class="auth-utilities">
+
+        <button
+            class="auth-utility-btn theme-toggle"
+            type="button"
+            aria-label="Toggle dark mode"
+        >
+            <i
+                data-lucide="moon"
+                class="theme-toggle-icon">
+            </i>
+        </button>
+
+
+        <button
+            class="auth-utility-btn direction-toggle"
+            id="directionToggle"
+            type="button"
+            aria-label="Toggle text direction"
+        >
+            <span class="direction-toggle-text">
+                RTL
+            </span>
+        </button>
+
+    </div>
+
+
+    <!-- =====================================================
+         LOGIN CARD
+         ===================================================== -->
+
+    <section class="auth-card">
+
+
+        <!-- =================================================
+             BRAND
+             ================================================= -->
+
+        <a
+            href="./index.html"
+            class="auth-brand"
+            aria-label="Go to AstroGuide home"
+        >
+
+            <img
+                src="./images/logo.png"
+                alt="AstroGuide logo"
+                class="auth-brand-logo"
+            >
+
+            <span class="auth-brand-name">
+                <span>Astro</span><b>Guide</b>
+            </span>
+
+        </a>
+
+
+        <!-- =================================================
+             HEADING
+             ================================================= -->
+
+        <div class="auth-heading">
+
+            <span class="auth-eyebrow">
+                ASTROGUIDE PORTAL
+            </span>
+
+            <h1>
+                Welcome Back
+            </h1>
+
+            <p class="auth-subtitle">
+                Sign in to continue your astrology journey.
+            </p>
+
+        </div>
+
+
+        <!-- =================================================
+             LOGIN FORM
+             ================================================= -->
+
+        <form
+            class="auth-form"
+            data-validate
+        >
+
+
+            <!-- EMAIL -->
+
+            <div class="auth-field">
+
+                <label for="login-email">
+                    Email Address
+                </label>
+
+                <div class="auth-input-wrap">
+
+                    <i
+                        data-lucide="mail"
+                        class="auth-input-icon">
+                    </i>
+
+                    <input
+                        id="login-email"
+                        name="email"
+                        type="email"
+                        placeholder="Enter your email address"
+                        autocomplete="email"
+                        required
+                    >
+
+                </div>
+
+            </div>
+
+
+            <!-- PASSWORD -->
+
+            <div class="auth-field">
+
+                <label for="login-password">
+                    Password
+                </label>
+
+                <div class="auth-input-wrap">
+
+                    <i
+                        data-lucide="lock-keyhole"
+                        class="auth-input-icon">
+                    </i>
+
+                    <input
+                        id="login-password"
+                        name="password"
+                        type="password"
+                        placeholder="Enter your password"
+                        autocomplete="current-password"
+                        required
+                    >
+
+                    <button
+                        type="button"
+                        class="password-toggle"
+                        data-target="login-password"
+                        aria-label="Show password"
+                        aria-pressed="false"
+                    >
+                        <i data-lucide="eye" class="password-eye-show"></i>
+                        <i data-lucide="eye-off" class="password-eye-hide" style="display:none;"></i>
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- OPTIONS -->
+
+            <div class="auth-options">
+
+                <label class="remember-option">
+
+                    <input
+                        type="checkbox"
+                        id="remember"
+                    >
+
+                    <span class="custom-checkbox"></span>
+
+                    <span>
+                        Remember Me
+                    </span>
+
+                </label>
+
+
+                <a
+                    href="#"
+                    class="forgot-link"
+                >
+                    Forgot Password?
+                </a>
+
+            </div>
+
+
+            <!-- SIGN IN -->
+
+            <button
+                class="auth-submit"
+                type="submit"
+            >
+
+                <span>
+                    Sign In
+                </span>
+
+                <i data-lucide="arrow-right"></i>
+
+            </button>
+
+        </form>
+
+
+        <!-- =================================================
+             DIVIDER
+             ================================================= -->
+
+        <div class="auth-divider">
+
+            <span></span>
+
+            <p>
+                OR CONTINUE WITH
+            </p>
+
+            <span></span>
+
+        </div>
+
+
+        <!-- =================================================
+             SOCIAL LOGIN
+             ================================================= -->
+
+        <div class="auth-social">
+
+
+            <button
+                type="button"
+                class="auth-social-btn"
+            >
+
+                <span class="social-google">
+                    G
+                </span>
+
+                <span>
+                    Google
+                </span>
+
+            </button>
+
+
+            <button
+                type="button"
+                class="auth-social-btn"
+            >
+
+                <i data-lucide="apple"></i>
+
+                <span>
+                    Apple
+                </span>
+
+            </button>
+
+
+            <button
+                type="button"
+                class="auth-social-btn"
+            >
+
+                <span class="social-linkedin">
+                    in
+                </span>
+
+                <span>
+                    LinkedIn
+                </span>
+
+            </button>
+
+        </div>
+
+
+        <!-- =================================================
+             REGISTER
+             ================================================= -->
+
+        <p class="auth-register">
+
+            Don't have an account?
+
+            <a href="./signup.html">
+                Create an account
+            </a>
+
+        </p>
+
+
+    </section>
+
+
+    <!-- =====================================================
+         BOTTOM BRAND MESSAGE
+         ===================================================== -->
+
+    <div class="auth-bottom-note">
+
+        <span class="bottom-star">✦</span>
+
+        <span>
+            Understand Your Path. Embrace Your Future.
+        </span>
+
+        <span class="bottom-star">✦</span>
+
+    </div>
+
+
+</main>
+
+
+<!-- =========================================================
+     LOGIN SCRIPT
+     ========================================================= -->
+<!-- AstroGuide Theme / RTL -->
+<script src="./js/theme.js"></script>
+
+</body>
+</html>

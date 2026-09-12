@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en" dir="ltr" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Page Not Found | AstroGuide</title>
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./css/404.css">
+</head>
+
+<body>
+
+    <!-- ========================= NAVBAR ========================= -->
+    <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+        <div class="container">
+
+            <a class="navbar-brand-custom" href="./index.html">
+                <img src="./images/logo.png" alt="">
+                <span class="brand-astro" dir="ltr">
+                    <span class="brand-astro">Astro</span><span class="brand-guide">Guide</span>
+                </span>
+            </a>
+
+            <button
+                class="navbar-toggler navbar-toggler-custom"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navMain"
+                aria-controls="navMain"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navMain">
+
+                <ul class="navbar-nav mx-auto gap-lg-1">
+
+                    <!-- Home Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a
+                            class="nav-link nav-link-custom dropdown-toggle"
+                            href="./index.html"
+                            role="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                        >
+                            Home
+                        </a>
+
+                        <ul class="dropdown-menu dropdown-menu-custom">
+                            <li>
+                                <a
+                                    class="dropdown-item dropdown-item-custom"
+                                    href="./index.html"
+                                >
+                                    Home 1 <span class="item-sub">Classic</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a
+                                    class="dropdown-item dropdown-item-custom"
+                                    href="./home2.html"
+                                >
+                                    Home 2 <span class="item-sub">Premium</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-custom" href="./about.html">
+                            About
+                        </a>
+                    </li>
+                    <!-- Services Dropdown -->
+<li class="nav-item">
+    <a
+        class="nav-link nav-link-custom"
+        href="./services.html"
+    >
+        Services
+    </a>
+</li>
+
+
+
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-custom" href="./astrologers.html">
+                            Astrologers
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-custom" href="./pricing.html">
+                            Pricing
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-custom" href="./dashboard.html">
+                            Dashboard
+                        </a>
+                    </li>
+
+                </ul>
+
+                <div class="d-flex align-items-center gap-2 flex-wrap">
+
+                    <div class="nav-utility-group">
+
+                        <button
+                            class="nav-utility-btn theme-toggle"
+                            aria-label="Toggle dark mode"
+                        >
+                            <i
+                                data-lucide="sun"
+                                class="theme-toggle-icon"
+                            ></i>
+                        </button>
+
+                        <button
+                            class="nav-utility-btn direction-toggle"
+                            id="directionToggle"
+                            aria-label="Toggle text direction"
+                        >
+                            <span class="direction-toggle-text">LTR</span>
+                        </button>
+
+                    </div>
+
+                    <div class="nav-cta-group">
+                        <a href="./login.html" class="btn btn-secondary">
+                            Login
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========================= 404 CONTENT ========================= -->
+    <main class="minimal-page celestial-bg">
+        <div class="container position-relative">
+
+            <i
+                data-lucide="sparkles"
+                class="minimal-icon"
+            ></i>
+
+            <span class="section-label d-block">
+                404 · Cosmic Detour
+            </span>
+
+            <h1>
+                The Stars Couldn't Find This Page.
+            </h1>
+
+            <p
+                class="text-muted mx-auto"
+                style="max-width:560px"
+            >
+                It looks like this cosmic path doesn't exist. Let's guide you
+                back to where you need to be.
+            </p>
+
+            <div class="d-flex justify-content-center flex-wrap gap-3 mt-4">
+
+                <a
+                    class="btn btn-primary"
+                    href="./index.html"
+                >
+                    Back to Home
+                </a>
+
+                <a
+                    class="btn btn-secondary"
+                    href="./services.html"
+                >
+                    Explore Services
+                </a>
+
+            </div>
+
+        </div>
+    </main>
+
+    <div data-site-footer></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/theme.js"></script>
+    <script src="https://unpkg.com/lucide@0.542.0/dist/umd/lucide.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            lucide.createIcons();
+        });
+    </script>
+</body>
+
+</html>

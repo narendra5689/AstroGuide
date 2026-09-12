@@ -1,0 +1,1713 @@
+/* =========================================================
+   ASTROGUIDE — SIGNUP PAGE
+   ========================================================= */
+
+
+/* =========================================================
+   PAGE
+   ========================================================= */
+
+.signup-page {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 24px;
+    box-sizing: border-box;
+
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(201, 164, 76, 0.08),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 85% 80%,
+            rgba(16, 45, 82, 0.10),
+            transparent 35%
+        ),
+        var(--bg-color);
+}
+
+
+/* =========================================================
+   BACKGROUND
+   ========================================================= */
+
+.signup-background {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+}
+
+
+/* =========================================================
+   GLOWS
+   ========================================================= */
+
+.signup-glow {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(70px);
+    pointer-events: none;
+    animation: signupGlowMove 14s ease-in-out infinite alternate;
+}
+
+.signup-glow-one {
+    width: 360px;
+    height: 360px;
+
+    top: -120px;
+    left: -100px;
+
+    background: rgba(201, 164, 76, 0.12);
+}
+
+.signup-glow-two {
+    width: 420px;
+    height: 420px;
+
+    right: -150px;
+    bottom: -170px;
+
+    background: rgba(16, 45, 82, 0.12);
+
+    animation-delay: -5s;
+}
+
+@keyframes signupGlowMove {
+
+    0% {
+        transform: translate3d(0, 0, 0) scale(1);
+    }
+
+    50% {
+        transform: translate3d(30px, -20px, 0) scale(1.08);
+    }
+
+    100% {
+        transform: translate3d(-20px, 30px, 0) scale(0.96);
+    }
+
+}
+
+
+/* =========================================================
+   CONSTELLATIONS
+   ========================================================= */
+
+.constellation {
+    position: absolute;
+    width: 220px;
+    height: 170px;
+
+    opacity: 0.42;
+
+    animation:
+        constellationFloat
+        18s
+        ease-in-out
+        infinite;
+}
+
+.constellation-one {
+    top: 10%;
+    left: 6%;
+}
+
+.constellation-two {
+    right: 6%;
+    bottom: 13%;
+
+    transform: scale(0.8);
+
+    animation-delay: -8s;
+}
+
+.constellation-dot {
+    position: absolute;
+
+    width: 5px;
+    height: 5px;
+
+    border-radius: 50%;
+
+    background: var(--secondary-color);
+
+    box-shadow:
+        0 0 7px
+        rgba(201, 164, 76, 0.55);
+}
+
+.constellation-line {
+    position: absolute;
+
+    height: 1px;
+
+    transform-origin: left center;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(201, 164, 76, 0.45),
+            transparent
+        );
+}
+
+
+/* constellation one dots */
+
+.constellation-one .dot-1 {
+    left: 20px;
+    top: 30px;
+}
+
+.constellation-one .dot-2 {
+    left: 85px;
+    top: 10px;
+}
+
+.constellation-one .dot-3 {
+    left: 135px;
+    top: 55px;
+}
+
+.constellation-one .dot-4 {
+    left: 190px;
+    top: 30px;
+}
+
+.constellation-one .dot-5 {
+    left: 155px;
+    top: 125px;
+}
+
+
+/* constellation one lines */
+
+.constellation-one .line-1 {
+    width: 70px;
+    left: 24px;
+    top: 31px;
+    transform: rotate(-17deg);
+}
+
+.constellation-one .line-2 {
+    width: 67px;
+    left: 88px;
+    top: 14px;
+    transform: rotate(43deg);
+}
+
+.constellation-one .line-3 {
+    width: 59px;
+    left: 138px;
+    top: 57px;
+    transform: rotate(-23deg);
+}
+
+.constellation-one .line-4 {
+    width: 75px;
+    left: 158px;
+    top: 60px;
+    transform: rotate(105deg);
+}
+
+
+/* constellation two dots */
+
+.constellation-two .dot-1 {
+    left: 25px;
+    top: 90px;
+}
+
+.constellation-two .dot-2 {
+    left: 80px;
+    top: 35px;
+}
+
+.constellation-two .dot-3 {
+    left: 135px;
+    top: 75px;
+}
+
+.constellation-two .dot-4 {
+    left: 185px;
+    top: 20px;
+}
+
+
+/* constellation two lines */
+
+.constellation-two .line-1 {
+    width: 77px;
+    left: 28px;
+    top: 88px;
+    transform: rotate(-45deg);
+}
+
+.constellation-two .line-2 {
+    width: 67px;
+    left: 84px;
+    top: 38px;
+    transform: rotate(36deg);
+}
+
+.constellation-two .line-3 {
+    width: 65px;
+    left: 139px;
+    top: 76px;
+    transform: rotate(-39deg);
+}
+
+
+@keyframes constellationFloat {
+
+    0%,
+    100% {
+        transform: translate3d(0, 0, 0) rotate(0deg);
+    }
+
+    50% {
+        transform: translate3d(15px, -12px, 0) rotate(2deg);
+    }
+
+}
+
+
+/* =========================================================
+   CELESTIAL ARCS
+   ========================================================= */
+
+.celestial-arc {
+    position: absolute;
+
+    border: 1px solid
+        rgba(201, 164, 76, 0.18);
+
+    border-radius: 50%;
+
+    animation:
+        celestialRotate
+        30s
+        linear
+        infinite;
+}
+
+.celestial-arc-one {
+    width: 430px;
+    height: 430px;
+
+    top: -250px;
+    right: -160px;
+
+    transform: rotate(18deg);
+}
+
+.celestial-arc-two {
+    width: 330px;
+    height: 330px;
+
+    bottom: -190px;
+    left: -100px;
+
+    border-color:
+        rgba(16, 45, 82, 0.20);
+
+    animation-duration: 38s;
+    animation-direction: reverse;
+}
+
+.celestial-arc-three {
+    width: 600px;
+    height: 600px;
+
+    left: 50%;
+    top: 50%;
+
+    transform:
+        translate(-50%, -50%)
+        rotate(25deg);
+
+    border-color:
+        rgba(201, 164, 76, 0.06);
+
+    animation-duration: 50s;
+}
+
+
+@keyframes celestialRotate {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+/* =========================================================
+   STARS
+   ========================================================= */
+
+.signup-star {
+    position: absolute;
+
+    width: 3px;
+    height: 3px;
+
+    border-radius: 50%;
+
+    background: var(--secondary-color);
+
+    opacity: 0.55;
+
+    box-shadow:
+        0 0 7px
+        rgba(201, 164, 76, 0.65);
+
+    animation:
+        starPulse
+        4s
+        ease-in-out
+        infinite;
+}
+
+.star-1 {
+    left: 13%;
+    top: 23%;
+}
+
+.star-2 {
+    left: 27%;
+    top: 12%;
+    animation-delay: -1s;
+}
+
+.star-3 {
+    left: 39%;
+    top: 18%;
+    animation-delay: -2s;
+}
+
+.star-4 {
+    left: 72%;
+    top: 15%;
+    animation-delay: -3s;
+}
+
+.star-5 {
+    left: 86%;
+    top: 28%;
+    animation-delay: -1.5s;
+}
+
+.star-6 {
+    left: 92%;
+    top: 56%;
+    animation-delay: -2.5s;
+}
+
+.star-7 {
+    left: 79%;
+    top: 76%;
+    animation-delay: -0.5s;
+}
+
+.star-8 {
+    left: 62%;
+    top: 88%;
+    animation-delay: -2s;
+}
+
+.star-9 {
+    left: 31%;
+    top: 83%;
+    animation-delay: -3.5s;
+}
+
+.star-10 {
+    left: 14%;
+    top: 72%;
+    animation-delay: -1.2s;
+}
+
+.star-11 {
+    left: 8%;
+    top: 45%;
+    animation-delay: -2.8s;
+}
+
+.star-12 {
+    left: 52%;
+    top: 8%;
+    animation-delay: -0.8s;
+}
+
+
+@keyframes starPulse {
+
+    0%,
+    100% {
+        opacity: 0.25;
+        transform: scale(0.8);
+    }
+
+    50% {
+        opacity: 0.85;
+        transform: scale(1.4);
+    }
+
+}
+
+
+/* =========================================================
+   PARTICLES
+   ========================================================= */
+
+.signup-particle {
+    position: absolute;
+
+    width: 2px;
+    height: 2px;
+
+    border-radius: 50%;
+
+    background:
+        var(--text-muted);
+
+    opacity: 0.3;
+
+    animation:
+        particleFloat
+        12s
+        ease-in-out
+        infinite;
+}
+
+.particle-1 {
+    left: 18%;
+    top: 48%;
+}
+
+.particle-2 {
+    left: 34%;
+    top: 75%;
+    animation-delay: -2s;
+}
+
+.particle-3 {
+    left: 68%;
+    top: 35%;
+    animation-delay: -5s;
+}
+
+.particle-4 {
+    left: 82%;
+    top: 52%;
+    animation-delay: -7s;
+}
+
+.particle-5 {
+    left: 47%;
+    top: 89%;
+    animation-delay: -4s;
+}
+
+.particle-6 {
+    left: 7%;
+    top: 82%;
+    animation-delay: -9s;
+}
+
+
+@keyframes particleFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-18px);
+    }
+
+}
+
+
+/* =========================================================
+   FLOATING ZODIAC SYMBOLS
+   ========================================================= */
+
+.zodiac-float {
+    position: absolute;
+
+    font-family:
+        var(--font-heading);
+
+    font-size: 26px;
+
+    color:
+        var(--secondary-color);
+
+    opacity: 0.22;
+
+    animation:
+        zodiacFloat
+        10s
+        ease-in-out
+        infinite;
+}
+
+.zodiac-1 {
+    left: 11%;
+    top: 34%;
+}
+
+.zodiac-2 {
+    right: 13%;
+    top: 42%;
+
+    animation-delay: -3s;
+}
+
+.zodiac-3 {
+    left: 21%;
+    bottom: 17%;
+
+    animation-delay: -6s;
+}
+
+.zodiac-4 {
+    right: 22%;
+    bottom: 14%;
+
+    animation-delay: -1.5s;
+}
+
+
+@keyframes zodiacFloat {
+
+    0%,
+    100% {
+        transform:
+            translateY(0)
+            rotate(0deg);
+    }
+
+    50% {
+        transform:
+            translateY(-14px)
+            rotate(8deg);
+    }
+
+}
+
+
+/* =========================================================
+   UTILITY BUTTONS
+   ========================================================= */
+
+.signup-utilities {
+    position: absolute;
+
+    top: 22px;
+    right: 24px;
+
+    z-index: 10;
+
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+}
+
+.signup-utility-btn {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+
+    background: var(--bg-card);
+
+    color: var(--text-color);
+
+    cursor: pointer;
+
+    transition:
+        background 0.25s ease,
+        border-color 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.signup-utility-btn:hover {
+    border-color:
+        var(--secondary-color);
+
+    color:
+        var(--secondary-color);
+
+    transform:
+        translateY(-2px);
+}
+
+.signup-utility-btn svg {
+    width: 17px;
+    height: 17px;
+}
+
+.direction-toggle-text {
+    font-family: var(--font-body);
+    font-size: 11px;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   SIGNUP CARD
+   ========================================================= */
+
+.signup-card {
+    position: relative;
+
+    z-index: 5;
+
+    width: min(540px, calc(100% - 32px));
+    max-width: 540px;
+
+    min-height: 620px;
+
+    padding: 30px 38px;
+
+    box-sizing: border-box;
+
+    border: 1px solid
+        var(--border-color);
+
+    border-radius: 22px;
+
+    background:
+        color-mix(
+            in srgb,
+            var(--bg-card) 94%,
+            transparent
+        );
+
+    box-shadow:
+        0 25px 70px
+        rgba(8, 25, 48, 0.12);
+
+    backdrop-filter:
+        blur(18px);
+
+    -webkit-backdrop-filter:
+        blur(18px);
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+
+/* =========================================================
+   BRAND
+   ========================================================= */
+
+.signup-brand {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: fit-content;
+
+    margin: 0 auto 10px;
+
+    gap: 0;
+
+    color: var(--text-color);
+
+    text-decoration: none;
+
+    font-family:
+        var(--font-heading);
+
+    font-size: 25.6px;
+    font-weight: 600;
+
+    line-height: 1;
+
+    direction: ltr;
+
+    transition:
+        opacity 0.25s ease;
+}
+
+.signup-brand:hover {
+    opacity: 0.88;
+}
+
+.signup-brand-logo {
+    width: 38px;
+    height: 38px;
+
+    object-fit: contain;
+
+    margin-right: 7px;
+}
+
+.signup-brand-name {
+    display: flex;
+    align-items: baseline;
+
+    gap: 0;
+}
+
+.signup-brand-name span {
+    font-weight: 500;
+}
+
+.signup-brand-name b {
+    color:
+        var(--secondary-color);
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   HEADING
+   ========================================================= */
+
+.signup-heading {
+    text-align: center;
+
+    margin-bottom: 17px;
+}
+
+.signup-eyebrow {
+    display: block;
+
+    margin-bottom: 3px;
+
+    font-family:
+        var(--font-body);
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 0.18em;
+
+    color:
+        var(--secondary-color);
+}
+
+.signup-heading h1 {
+    margin: 0;
+
+    font-family:
+        var(--font-heading);
+
+    font-size: 31px;
+    font-weight: 600;
+
+    line-height: 1.05;
+
+    color:
+        var(--text-color);
+}
+
+.signup-subtitle {
+    max-width: 430px;
+
+    margin: 6px auto 0;
+
+    font-family:
+        var(--font-body);
+
+    font-size: 13px;
+    line-height: 1.45;
+
+    color:
+        var(--text-muted);
+}
+
+
+/* =========================================================
+   FORM
+   ========================================================= */
+
+.signup-form {
+    width: 100%;
+}
+
+.signup-field {
+    width: 100%;
+}
+
+.signup-field + .signup-field {
+    margin-top: 10px;
+}
+
+.signup-field label {
+    display: block;
+
+    margin-bottom: 5px;
+
+    font-family:
+        var(--font-body);
+
+    font-size: 12px;
+    font-weight: 600;
+
+    color:
+        var(--text-color);
+}
+
+
+/* =========================================================
+   PASSWORD ROW
+   ========================================================= */
+
+.signup-password-row {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 12px;
+
+    margin-top: 10px;
+}
+
+.signup-password-row .signup-field + .signup-field {
+    margin-top: 0;
+}
+
+
+/* =========================================================
+   INPUT WRAPPER
+   ========================================================= */
+
+.signup-input-wrap {
+    position: relative;
+
+    width: 100%;
+}
+
+.signup-input-icon {
+    position: absolute;
+
+    left: 12px;
+    top: 50%;
+
+    width: 16px;
+    height: 16px;
+
+    transform:
+        translateY(-50%);
+
+    color:
+        var(--text-muted);
+
+    pointer-events: none;
+
+    z-index: 2;
+}
+
+.signup-input-wrap input {
+    width: 100%;
+    height: 42px;
+
+    box-sizing: border-box;
+
+    padding:
+        0 40px 0 38px;
+
+    border: 1px solid
+        var(--border-color);
+
+    border-radius: 9px;
+
+    outline: none;
+
+    background:
+        var(--bg-input);
+
+    color:
+        var(--text-color);
+
+    font-family:
+        var(--font-body);
+
+    font-size: 12px;
+
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+.signup-input-wrap input::placeholder {
+    color:
+        var(--text-muted);
+
+    opacity: 0.75;
+}
+
+.signup-input-wrap input:focus {
+    border-color:
+        var(--secondary-color);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(201, 164, 76, 0.10);
+}
+
+.signup-input-error {
+    border-color:
+        #c94f4f !important;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(201, 79, 79, 0.08) !important;
+}
+
+
+/* =========================================================
+   PASSWORD TOGGLE
+   ========================================================= */
+
+.signup-password-toggle {
+    position: absolute;
+
+    right: 9px;
+    top: 50%;
+
+    transform:
+        translateY(-50%);
+
+    width: 26px;
+    height: 26px;
+
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 0;
+
+    background: transparent;
+
+    color:
+        var(--text-muted);
+
+    cursor: pointer;
+
+    z-index: 3;
+}
+
+.signup-password-toggle:hover {
+    color:
+        var(--secondary-color);
+}
+
+.signup-password-toggle svg {
+    width: 15px;
+    height: 15px;
+}
+
+.signup-eye-hide {
+    display: none;
+}
+
+
+/* =========================================================
+   TERMS
+   ========================================================= */
+
+.signup-terms {
+    position: relative;
+
+    display: flex;
+    align-items: flex-start;
+
+    gap: 9px;
+
+    margin-top: 12px;
+
+    cursor: pointer;
+}
+
+.signup-terms input {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+
+    opacity: 0;
+}
+
+.signup-checkbox {
+    flex: 0 0 auto;
+
+    width: 15px;
+    height: 15px;
+
+    margin-top: 1px;
+
+    border: 1px solid
+        var(--border-color);
+
+    border-radius: 4px;
+
+    background:
+        var(--bg-input);
+
+    transition:
+        border-color 0.2s ease,
+        background 0.2s ease;
+}
+
+.signup-terms input:checked
++ .signup-checkbox {
+    background:
+        var(--secondary-color);
+
+    border-color:
+        var(--secondary-color);
+}
+
+.signup-terms input:checked
++ .signup-checkbox::after {
+    content: "";
+
+    display: block;
+
+    width: 4px;
+    height: 8px;
+
+    margin:
+        1px auto 0;
+
+    border:
+        solid var(--primary-color);
+
+    border-width:
+        0 2px 2px 0;
+
+    transform:
+        rotate(45deg);
+}
+
+.signup-terms-text {
+    font-family:
+        var(--font-body);
+
+    font-size: 10.5px;
+
+    line-height: 1.4;
+
+    color:
+        var(--text-muted);
+}
+
+.signup-terms-text a {
+    color:
+        var(--secondary-color);
+
+    text-decoration: none;
+
+    font-weight: 600;
+}
+
+.signup-terms-text a:hover {
+    text-decoration: underline;
+}
+
+.signup-terms-error .signup-checkbox {
+    border-color:
+        #c94f4f;
+}
+
+
+/* =========================================================
+   SUBMIT BUTTON
+   ========================================================= */
+
+.signup-submit {
+    width: 100%;
+    height: 43px;
+
+    margin-top: 14px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    border: 1px solid
+        var(--secondary-color);
+
+    border-radius: 9px;
+
+    background:
+        var(--primary-color);
+
+    color:
+        #ffffff;
+
+    font-family:
+        var(--font-body);
+
+    font-size: 12px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+.signup-submit svg {
+    width: 15px;
+    height: 15px;
+
+    transition:
+        transform 0.25s ease;
+}
+
+.signup-submit:hover {
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 10px 25px
+        rgba(16, 45, 82, 0.18);
+}
+
+.signup-submit:hover svg {
+    transform:
+        translateX(3px);
+}
+
+
+/* =========================================================
+   DIVIDER
+   ========================================================= */
+
+.signup-divider {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    margin: 15px 0 11px;
+}
+
+.signup-divider span {
+    flex: 1;
+
+    height: 1px;
+
+    background:
+        var(--border-color);
+}
+
+.signup-divider p {
+    margin: 0;
+
+    white-space: nowrap;
+
+    font-family:
+        var(--font-body);
+
+    font-size: 8px;
+    font-weight: 700;
+
+    letter-spacing: 0.12em;
+
+    color:
+        var(--text-muted);
+}
+
+
+/* =========================================================
+   SOCIAL BUTTONS
+   ========================================================= */
+
+.signup-social {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 9px;
+}
+
+.signup-social-btn {
+    height: 37px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 6px;
+
+    border: 1px solid
+        var(--border-color);
+
+    border-radius: 8px;
+
+    background:
+        var(--bg-input);
+
+    color:
+        var(--text-color);
+
+    font-family:
+        var(--font-body);
+
+    font-size: 10px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        border-color 0.25s ease,
+        transform 0.25s ease,
+        background 0.25s ease;
+}
+
+.signup-social-btn:hover {
+    border-color:
+        var(--secondary-color);
+
+    transform:
+        translateY(-2px);
+}
+
+.signup-social-btn svg {
+    width: 14px;
+    height: 14px;
+}
+
+.social-google {
+    font-family:
+        Arial, sans-serif;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    color:
+        var(--text-color);
+}
+
+.social-linkedin {
+    font-family:
+        Arial, sans-serif;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    color:
+        var(--text-color);
+}
+
+
+/* =========================================================
+   LOGIN LINK
+   ========================================================= */
+
+.signup-login {
+    margin: 12px 0 0;
+
+    text-align: center;
+
+    font-family:
+        var(--font-body);
+
+    font-size: 10.5px;
+
+    color:
+        var(--text-muted);
+}
+
+.signup-login a {
+    margin-left: 4px;
+
+    color:
+        var(--secondary-color);
+
+    font-weight: 700;
+
+    text-decoration: none;
+}
+
+.signup-login a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   BOTTOM NOTE
+   ========================================================= */
+
+.signup-bottom-note {
+    position: absolute;
+
+    left: 50%;
+    bottom: 13px;
+
+    transform:
+        translateX(-50%);
+
+    z-index: 5;
+
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    white-space: nowrap;
+
+    font-family:
+        var(--font-heading);
+
+    font-size: 12px;
+
+    color:
+        var(--text-muted);
+
+    opacity: 0.72;
+}
+
+.bottom-star {
+    color:
+        var(--secondary-color);
+
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   RTL
+   ========================================================= */
+
+[dir="rtl"] .signup-utilities {
+    right: auto;
+    left: 24px;
+}
+
+[dir="rtl"] .signup-brand {
+    direction: ltr;
+    flex-direction: row-reverse;
+
+    gap: 7px;
+}
+
+[dir="rtl"] .signup-brand-logo {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+[dir="rtl"] .signup-input-icon {
+    left: auto;
+    right: 12px;
+}
+
+[dir="rtl"] .signup-input-wrap input {
+    padding-left: 40px;
+    padding-right: 38px;
+}
+
+[dir="rtl"] .signup-password-toggle {
+    right: auto;
+    left: 9px;
+}
+
+[dir="rtl"] .signup-submit svg {
+    transform: rotate(180deg);
+}
+
+[dir="rtl"] .signup-submit:hover svg {
+    transform:
+        rotate(180deg)
+        translateX(3px);
+}
+
+[dir="rtl"] .signup-login a {
+    margin-left: 0;
+    margin-right: 4px;
+}
+
+
+/* =========================================================
+   DARK MODE
+   ========================================================= */
+
+[data-theme="dark"] .signup-page {
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(201, 164, 76, 0.10),
+            transparent 32%
+        ),
+        radial-gradient(
+            circle at 85% 80%,
+            rgba(16, 45, 82, 0.25),
+            transparent 38%
+        ),
+        var(--bg-color);
+}
+
+[data-theme="dark"] .signup-card {
+    background:
+        color-mix(
+            in srgb,
+            var(--bg-card) 90%,
+            transparent
+        );
+
+    box-shadow:
+        0 25px 80px
+        rgba(0, 0, 0, 0.32);
+}
+
+[data-theme="dark"] .signup-glow-one {
+    background:
+        rgba(201, 164, 76, 0.15);
+}
+
+[data-theme="dark"] .signup-glow-two {
+    background:
+        rgba(16, 45, 82, 0.24);
+}
+
+
+/* =========================================================
+   RESPONSIVE — TABLET
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .signup-page {
+        padding: 18px;
+    }
+
+    .signup-card {
+        width: min(540px, calc(100% - 20px));
+        min-height: 600px;
+
+        padding: 28px 30px;
+
+        border-radius: 20px;
+    }
+
+    .signup-heading h1 {
+        font-size: 29px;
+    }
+
+    .signup-password-row {
+        gap: 10px;
+    }
+
+    .signup-bottom-note {
+        display: none;
+    }
+
+    .constellation {
+        opacity: 0.25;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — MOBILE
+   ========================================================= */
+
+@media (max-width: 560px) {
+
+    .signup-page {
+        min-height: 100svh;
+
+        padding: 16px 12px;
+    }
+
+    .signup-utilities {
+        top: 14px;
+        right: 14px;
+    }
+
+    [dir="rtl"] .signup-utilities {
+        right: auto;
+        left: 14px;
+    }
+
+    .signup-utility-btn {
+        width: 35px;
+        height: 35px;
+    }
+
+    .signup-card {
+        width: 100%;
+        max-width: 100%;
+
+        min-height: auto;
+
+        padding: 25px 20px;
+
+        border-radius: 18px;
+    }
+
+    .signup-brand {
+        font-size: 24px;
+    }
+
+    .signup-brand-logo {
+        width: 36px;
+        height: 36px;
+
+        margin-right: 6px;
+    }
+
+    .signup-heading {
+        margin-bottom: 15px;
+    }
+
+    .signup-heading h1 {
+        font-size: 27px;
+    }
+
+    .signup-subtitle {
+        font-size: 12px;
+
+        max-width: 340px;
+    }
+
+    .signup-password-row {
+        grid-template-columns: 1fr;
+
+        gap: 10px;
+    }
+
+    .signup-password-row
+    .signup-field
+    + .signup-field {
+        margin-top: 0;
+    }
+
+    .signup-social {
+        grid-template-columns: 1fr;
+    }
+
+    .signup-social-btn {
+        height: 39px;
+    }
+
+    .signup-form {
+        width: 100%;
+    }
+
+    .celestial-arc-three {
+        width: 420px;
+        height: 420px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+    .signup-page {
+        padding: 12px 10px;
+    }
+
+    .signup-card {
+        padding:
+            22px 16px;
+    }
+
+    .signup-brand {
+        font-size: 22px;
+    }
+
+    .signup-brand-logo {
+        width: 34px;
+        height: 34px;
+    }
+
+    .signup-heading h1 {
+        font-size: 25px;
+    }
+
+    .signup-subtitle {
+        font-size: 11.5px;
+    }
+
+    .signup-field label {
+        font-size: 11px;
+    }
+
+    .signup-input-wrap input {
+        height: 40px;
+
+        font-size: 11.5px;
+    }
+
+    .signup-submit {
+        height: 41px;
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .signup-glow,
+    .constellation,
+    .celestial-arc,
+    .signup-star,
+    .signup-particle,
+    .zodiac-float {
+        animation: none !important;
+    }
+
+    .signup-submit,
+    .signup-submit svg,
+    .signup-social-btn,
+    .signup-utility-btn {
+        transition: none !important;
+    }
+
+}

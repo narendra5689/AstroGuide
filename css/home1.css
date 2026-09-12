@@ -1,0 +1,452 @@
+/* =========================
+   Home 1 — Classic
+   ========================= */
+
+/* Hero */
+.hero-section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.hero-headline {
+    font-size: clamp(2.5rem, 5vw, 3.75rem);
+    margin-bottom: 20px;
+    line-height: 1.15;
+}
+
+.hero-subtext {
+    font-size: 1.125rem;
+    color: var(--text-muted);
+    max-width: 480px;
+    margin-bottom: 0;
+}
+
+.hero-stats {
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+}
+
+.hero-stat-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-stat-item .stat-number {
+    font-family: var(--font-heading);
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+}
+
+.hero-stat-item .stat-label {
+    font-size: 0.8125rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.hero-image-wrap {
+    position: relative;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+}
+
+.hero-image {
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+    border-radius: var(--radius-lg);
+}
+
+.hero-image-badge {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: var(--shadow-md);
+}
+
+.hero-image-badge i {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+}
+
+.hero-image-badge strong {
+    display: block;
+    font-size: 0.9375rem;
+    color: var(--text-color);
+}
+
+.hero-image-badge span {
+    font-size: 0.8125rem;
+    color: var(--text-muted);
+}
+
+/* Introduction */
+.intro-text {
+    font-size: 1.0625rem;
+    color: var(--text-muted);
+    margin-bottom: 16px;
+}
+
+/* Services section uses global .feature-card */
+
+/* Astrologers Preview */
+.consultant-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    height: 100%;
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.consultant-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--secondary-color);
+    
+}
+
+.consultant-image-wrap {
+    position: relative;
+    overflow: hidden;
+}
+
+.consultant-image-wrap img {
+    width: fit-content;
+    height: fit-content;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.consultant-card:hover .consultant-image-wrap img {
+    transform: scale(1.05);
+    
+}
+
+.consultant-badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background-color: var(--primary-color);
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 500;
+    padding: 4px 12px;
+    border-radius: var(--radius-pill);
+}
+
+[data-theme="dark"] .consultant-badge {
+    color: var(--secondary-color);
+}
+
+.consultant-info {
+    padding: 24px;
+}
+
+.consultant-info h4 {
+    margin-bottom: 4px;
+}
+
+.consultant-specialty {
+    font-size: 0.875rem;
+    color: var(--secondary-color);
+    font-weight: 500;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.consultant-info p {
+    font-size: 0.9375rem;
+    color: var(--text-muted);
+    margin-bottom: 14px;
+}
+
+.consultant-meta {
+    display: flex;
+    gap: 16px;
+    font-size: 0.875rem;
+    color: var(--text-muted);
+}
+
+.consultant-meta i {
+    color: var(--secondary-color);
+    margin-right: 4px;
+}
+
+/* How It Works */
+.step-card {
+    text-align: center;
+    padding: 32px 24px;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    height: 100%;
+    position: relative;
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.step-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--secondary-color);
+}
+
+.step-number {
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--border-color);
+    line-height: 1;
+}
+
+.step-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: var(--radius-sm);
+    background-color: var(--bg-alt);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    margin: 0 auto 20px;
+}
+.step-card h4 {
+    margin-bottom: 10px;
+}
+
+.step-card p {
+    font-size: 0.9375rem;
+    color: var(--text-muted);
+    margin-bottom: 0;
+}
+
+/* Zodiac Preview */
+/* =========================
+   Horoscope Preview
+   ========================= */
+
+.horoscope-preview-section {
+    padding: 70px 0;
+}
+
+/* Zodiac cards */
+.zodiac-mini-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 130px;
+    padding: 18px 10px;
+
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+
+    text-decoration: none;
+    text-align: center;
+
+    transition: transform 0.25s ease,
+                border-color 0.25s ease,
+                box-shadow 0.25s ease;
+}
+
+/* Icon */
+.zodiac-symbol {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 48px;
+    height: 48px;
+
+    margin-bottom: 10px;
+
+    color: var(--secondary-color);
+}
+
+/* SVG icon size */
+.zodiac-symbol svg {
+    width: 30px;
+    height: 30px;
+
+    stroke: currentColor;
+    stroke-width: 2;
+}
+
+/* Name */
+.zodiac-name {
+    color: var(--text-color);
+
+    font-size: 0.9rem;
+    font-weight: 600;
+
+    line-height: 1.2;
+}
+
+/* Hover */
+.zodiac-mini-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--secondary-color);
+    box-shadow: var(--shadow-md);
+}
+
+.zodiac-mini-card:hover .zodiac-symbol,
+.zodiac-mini-card:hover .zodiac-name {
+    color: var(--secondary-color);
+}
+
+
+/* =========================
+   Tablet
+   ========================= */
+
+@media (max-width: 991.98px) {
+
+    .horoscope-preview-section {
+        padding: 60px 0;
+    }
+
+    .zodiac-mini-card {
+        min-height: 120px;
+        padding: 16px 8px;
+    }
+
+    .zodiac-symbol {
+        width: 44px;
+        height: 44px;
+    }
+
+    .zodiac-symbol svg {
+        width: 28px;
+        height: 28px;
+    }
+}
+
+
+/* =========================
+   Mobile
+   ========================= */
+
+@media (max-width: 575.98px) {
+
+    .horoscope-preview-section {
+        padding: 45px 0;
+    }
+
+    .horoscope-preview-section .row {
+        row-gap: 12px;
+    }
+
+    .zodiac-mini-card {
+        min-height: 105px;
+        padding: 14px 6px;
+    }
+
+    .zodiac-symbol {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 7px;
+    }
+
+    .zodiac-symbol svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    .zodiac-name {
+        font-size: 0.8rem;
+    }
+}
+/* Testimonials */
+.testimonial-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 28px;
+    height: 100%;
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.testimonial-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--secondary-color);
+}
+
+.testimonial-stars {
+    color: var(--secondary-color);
+    margin-bottom: 14px;
+    font-size: 0.9375rem;
+    letter-spacing: 2px;
+}
+
+.testimonial-card p {
+    font-size: 0.9375rem;
+    color: var(--text-color);
+    margin-bottom: 20px;
+    line-height: 1.7;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.author-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 0.875rem;
+}
+
+[data-theme="dark"] .author-avatar {
+    color: var(--secondary-color);
+}
+
+.testimonial-author strong {
+    display: block;
+    font-size: 0.9375rem;
+    color: var(--text-color);
+}
+
+.testimonial-author span {
+    font-size: 0.8125rem;
+    color: var(--text-muted);
+}
+
+/* Responsive */
+@media (max-width: 991.98px) {
+    .hero-section { padding-top: 48px; padding-bottom: 48px; }
+    .hero-image { height: 360px; }
+    .hero-stats { gap: 24px; }
+}
+
+@media (max-width: 575.98px) {
+    .hero-stats { gap: 20px; }
+    .hero-stat-item .stat-number { font-size: 1.5rem; }
+    .hero-image { height: 280px; }
+    .hero-image-badge { padding: 8px 12px; }
+    .step-number { font-size: 2rem; }
+}

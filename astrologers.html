@@ -1,0 +1,937 @@
+<!doctype html>
+<html lang="en" dir="ltr" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Astrologers | AstroGuide</title>
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./css/astrologers.css">
+</head>
+
+<body>
+
+    <!-- ========================= NAVBAR ========================= -->
+    <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+        <div class="container">
+
+            <a class="navbar-brand-custom" href="./index.html">
+                <img src="./images/logo.png" alt="">
+
+                <span class="brand-astro" dir="ltr">
+                    <span class="brand-astro">Astro</span><span class="brand-guide">Guide</span>
+                </span>
+            </a>
+
+            <button
+                class="navbar-toggler navbar-toggler-custom"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navMain"
+                aria-controls="navMain"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navMain">
+
+                <ul class="navbar-nav mx-auto gap-lg-1">
+
+                    <!-- Home Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a
+                            class="nav-link nav-link-custom dropdown-toggle"
+                            href="./index.html"
+                            role="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                        >
+                            Home
+                        </a>
+
+                        <ul class="dropdown-menu dropdown-menu-custom">
+                            <li>
+                                <a
+                                    class="dropdown-item dropdown-item-custom"
+                                    href="./index.html"
+                                >
+                                    Home 1 <span class="item-sub">Classic</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a
+                                    class="dropdown-item dropdown-item-custom"
+                                    href="./home2.html"
+                                >
+                                    Home 2 <span class="item-sub">Premium</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a
+                            class="nav-link nav-link-custom"
+                            href="./about.html"
+                        >
+                            About
+                        </a>
+                    </li>
+                    <!-- Services Dropdown -->
+<li class="nav-item">
+    <a
+        class="nav-link nav-link-custom"
+        href="./services.html"
+    >
+        Services
+    </a>
+</li>
+
+
+
+                    <li class="nav-item">
+                        <a
+                            class="nav-link nav-link-custom active"
+                            href="./astrologers.html"
+                        >
+                            Astrologers
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a
+                            class="nav-link nav-link-custom"
+                            href="./pricing.html"
+                        >
+                            Pricing
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a
+                            class="nav-link nav-link-custom"
+                            href="./dashboard.html"
+                        >
+                            Dashboard
+                        </a>
+                    </li>
+
+                </ul>
+
+                <div class="d-flex align-items-center gap-2 flex-wrap">
+
+                    <div class="nav-utility-group">
+
+                        <button
+                            class="nav-utility-btn theme-toggle"
+                            aria-label="Toggle dark mode"
+                        >
+                            <i
+                                data-lucide="sun"
+                                class="theme-toggle-icon"
+                            ></i>
+                        </button>
+
+                        <button
+                            class="nav-utility-btn direction-toggle"
+                            id="directionToggle"
+                            aria-label="Toggle text direction"
+                        >
+                            <span class="direction-toggle-text">LTR</span>
+                        </button>
+
+                    </div>
+
+                    <div class="nav-cta-group">
+                        <a
+                            href="./login.html"
+                            class="btn btn-secondary"
+                        >
+                            Login
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- ========================= PAGE HERO ========================= -->
+    <section class="page-hero celestial-bg">
+        <div class="container position-relative">
+
+            <span class="section-label">
+                Our Consultants
+            </span>
+
+            <h1>
+                Thoughtful Guides for Your Journey
+            </h1>
+
+            <p>
+                Meet a carefully selected circle of astrologers who bring
+                experience, empathy, and a grounded perspective to every
+                consultation.
+            </p>
+
+        </div>
+    </section>
+
+
+    <!-- ========================= PERSONAL MATCH ========================= -->
+    <section>
+        <div class="container">
+
+            <div class="row align-items-center g-5">
+
+                <div class="col-lg-7">
+
+                    <span class="section-label">
+                        01 · A Personal Match
+                    </span>
+
+                    <h2>
+                        Find the voice that feels right for you
+                    </h2>
+
+                    <p class="text-muted">
+                        Every consultant on AstroGuide is chosen for their
+                        depth of practice and their ability to make complex
+                        ideas feel clear and relevant. Browse by specialty,
+                        explore their approach, and choose the conversation
+                        you are ready to have.
+                    </p>
+
+                </div>
+
+                <div class="col-lg-5">
+
+                    <div class="page-cta">
+
+                        <i
+                            data-lucide="compass"
+                            class="minimal-icon"
+                            style="font-size:3rem"
+                        ></i>
+
+                        <h3>
+                            Not sure who to choose?
+                        </h3>
+
+                        <p class="text-muted">
+                            Start with a personal consultation and let your
+                            questions guide the match.
+                        </p>
+
+                        <a
+                            class="btn btn-primary"
+                            href="./pricing.html"
+                        >
+                            Find Your Match
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ========================= FEATURED ASTROLOGERS ========================= -->
+    <section class="bg-alt">
+        <div class="container">
+
+            <div class="text-center mb-5">
+
+                <span class="section-label">
+                    02 · Featured Astrologers
+                </span>
+
+                <h2>
+                    Meet Your Guides
+                </h2>
+
+            </div>
+
+            <div class="profile-grid">
+
+                <!-- Priya Sharma -->
+                <div class="profile-card">
+
+                    <img
+                        src="./images/astrologer-female1.png"
+                        alt="Priya Sharma"
+                    >
+
+                    <div class="profile-body">
+
+                        <span class="badge-soft">
+                            Vedic Astrology
+                        </span>
+
+                        <h3 class="mt-3">
+                            Priya Sharma
+                        </h3>
+
+                        <p>
+                            15 years experience. Specializes in birth charts,
+                            life patterns, and personal growth.
+                        </p>
+
+                        <div class="consultant-meta">
+
+                            <span>
+                                <i data-lucide="star"></i>
+                                4.9
+                            </span>
+
+                            <span>
+                                <i data-lucide="video"></i>
+                                Video
+                            </span>
+
+                        </div>
+
+                        <a
+                            class="btn btn-secondary w-100 mt-3"
+                            href="./pricing.html"
+                        >
+                            Book with Priya
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Rajesh Verma -->
+                <div class="profile-card">
+
+                    <img
+                        src="./images/astrologer-male.png"
+                        alt="Rajesh Verma"
+                    >
+
+                    <div class="profile-body">
+
+                        <span class="badge-soft">
+                            Career Guidance
+                        </span>
+
+                        <h3 class="mt-3">
+                            Rajesh Verma
+                        </h3>
+
+                        <p>
+                            12 years experience. Helps clients navigate
+                            vocation, timing, and major decisions.
+                        </p>
+
+                        <div class="consultant-meta">
+
+                            <span>
+                                <i data-lucide="star"></i>
+                                4.8
+                            </span>
+
+                            <span>
+                                <i data-lucide="video"></i>
+                                Video
+                            </span>
+
+                        </div>
+
+                        <a
+                            class="btn btn-secondary w-100 mt-3"
+                            href="./pricing.html"
+                        >
+                            Book with Rajesh
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Ananya Iyer -->
+                <div class="profile-card">
+
+                    <img
+                        src="./images/astrologer-female2.png"
+                        alt="Ananya Iyer"
+                    >
+
+                    <div class="profile-body">
+
+                        <span class="badge-soft">
+                            Matchmaking
+                        </span>
+
+                        <h3 class="mt-3">
+                            Ananya Iyer
+                        </h3>
+
+                        <p>
+                            10 years experience. Explores compatibility,
+                            communication, and relationship dynamics.
+                        </p>
+
+                        <div class="consultant-meta">
+
+                            <span>
+                                <i data-lucide="star"></i>
+                                5.0
+                            </span>
+
+                            <span>
+                                <i data-lucide="video"></i>
+                                Video
+                            </span>
+
+                        </div>
+
+                        <a
+                            class="btn btn-secondary w-100 mt-3"
+                            href="./pricing.html"
+                        >
+                            Book with Ananya
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ========================= VEDIC SPECIALISTS ========================= -->
+    <section>
+        <div class="container">
+
+            <div class="text-center mb-5">
+
+                <span class="section-label">
+                    03 · Vedic Specialists
+                </span>
+
+                <h2>
+                    Rooted in a Living Tradition
+                </h2>
+
+            </div>
+
+            <div class="row g-4">
+
+                <div class="col-md-4">
+                    <div class="content-panel">
+
+                        <h3>
+                            Dr. Arjun Mehta
+                        </h3>
+
+                        <span class="badge-soft">
+                            18 yrs · Birth Charts
+                        </span>
+
+                        <p class="mt-3">
+                            Blends classical Jyotish with a practical approach
+                            to personal reflection.
+                        </p>
+
+                    </div>
+                </div>
+
+
+                <div class="col-md-4">
+                    <div class="content-panel">
+
+                        <h3>
+                            Meera Kapoor
+                        </h3>
+
+                        <span class="badge-soft">
+                            14 yrs · Timing
+                        </span>
+
+                        <p class="mt-3">
+                            Known for clear, compassionate readings around
+                            cycles and transitions.
+                        </p>
+
+                    </div>
+                </div>
+
+
+                <div class="col-md-4">
+                    <div class="content-panel">
+
+                        <h3>
+                            Vikram Rao
+                        </h3>
+
+                        <span class="badge-soft">
+                            16 yrs · Life Path
+                        </span>
+
+                        <p class="mt-3">
+                            Helps clients connect long-term patterns with
+                            everyday choices.
+                        </p>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ========================= SPECIALISTS ========================= -->
+    <section class="bg-alt">
+        <div class="container">
+
+            <div class="row g-4">
+
+                <div class="col-lg-6">
+                    <div class="content-panel">
+
+                        <span class="section-label">
+                            04 · Relationship Specialists
+                        </span>
+
+                        <h2>
+                            For Conversations That Matter Most
+                        </h2>
+
+                        <p>
+                            Our relationship consultants create a gentle space
+                            to explore compatibility, shared values, and the
+                            places where two people can grow together.
+                        </p>
+
+                        <a
+                            class="btn btn-secondary"
+                            href="./services.html"
+                        >
+                            Explore Matchmaking
+                        </a>
+
+                    </div>
+                </div>
+
+
+                <div class="col-lg-6">
+                    <div class="content-panel">
+
+                        <span class="section-label">
+                            05 · Career Specialists
+                        </span>
+
+                        <h2>
+                            For the Next Professional Chapter
+                        </h2>
+
+                        <p>
+                            Our career-focused consultants help you reflect on
+                            your natural strengths, work style, and timing when
+                            making an important move.
+                        </p>
+
+                        <a
+                            class="btn btn-primary"
+                            href="./services.html"
+                        >
+                            Explore Career Guidance
+                        </a>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ========================= HOW TO CHOOSE ========================= -->
+    <section>
+        <div class="container">
+
+            <div class="text-center mb-5">
+
+                <span class="section-label">
+                    06 · Choose with Confidence
+                </span>
+
+                <h2>
+                    How to Choose Your Astrologer
+                </h2>
+
+            </div>
+
+            <div class="timeline">
+
+                <div class="timeline-item">
+
+                    <div class="timeline-marker">
+                        1
+                    </div>
+
+                    <div>
+
+                        <h4>
+                            Start with your question
+                        </h4>
+
+                        <p>
+                            Is it about relationships, direction, timing,
+                            or self-understanding?
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="timeline-item">
+
+                    <div class="timeline-marker">
+                        2
+                    </div>
+
+                    <div>
+
+                        <h4>
+                            Read their approach
+                        </h4>
+
+                        <p>
+                            Choose the style and specialty that feels most
+                            aligned with your needs.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="timeline-item">
+
+                    <div class="timeline-marker">
+                        3
+                    </div>
+
+                    <div>
+
+                        <h4>
+                            Book a comfortable time
+                        </h4>
+
+                        <p>
+                            Pick a session format and time that gives you
+                            space to be present.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ========================= FINAL CTA ========================= -->
+    <section class="bg-alt">
+        <div class="container">
+
+            <div class="page-cta text-center">
+
+                <span class="section-label">
+                    07 · Begin
+                </span>
+
+                <h2>
+                    Your next insight starts with a question
+                </h2>
+
+                <p class="section-description">
+                    Meet a consultant who can help you explore it with care.
+                </p>
+
+                <a
+                    class="btn btn-primary mt-3"
+                    href="./pricing.html"
+                >
+                    Book a Consultation
+                </a>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ========================= NEWSLETTER ========================= -->
+    <section class="newsletter-section section-sm">
+        <div class="container position-relative text-center">
+
+            <span class="section-label">
+                Stay Connected
+            </span>
+
+            <h2>
+                Stay Connected With the Stars
+            </h2>
+
+            <p class="section-description">
+                Receive astrology insights, horoscope updates, and helpful
+                guidance delivered to your inbox.
+            </p>
+
+            <form class="newsletter-form mt-4">
+
+                <input
+                    type="email"
+                    class="form-control"
+                    placeholder="Email Address"
+                    required
+                >
+
+                <button class="btn btn-primary">
+                    Subscribe
+                </button>
+
+            </form>
+
+            <p class="newsletter-msg mt-2"></p>
+
+        </div>
+    </section>
+
+
+    <!-- ========================= FOOTER ========================= -->
+    <footer class="footer-custom">
+        <div class="container">
+
+            <div class="row g-4">
+
+                <div class="col-lg-4 col-md-6">
+
+                    <div class="footer-brand">
+
+                        <img src="./images/logo.png" alt="">
+
+                        <span class="brand-astro" dir="ltr">
+                            <span class="brand-astro">Astro</span><span class="brand-guide">Guide</span>
+                        </span>
+
+                    </div>
+
+                    <p class="footer-tagline">
+                        Understand Your Path. Embrace Your Future.
+                    </p>
+
+                    <div class="footer-social">
+
+                        <a href="#" aria-label="Facebook">
+                            <i data-lucide="facebook"></i>
+                        </a>
+
+                        <a href="#" aria-label="Instagram">
+                            <i data-lucide="instagram"></i>
+                        </a>
+
+                        <a href="#" aria-label="Twitter">
+                            <i data-lucide="twitter"></i>
+                        </a>
+
+                        <a href="#" aria-label="YouTube">
+                            <i data-lucide="youtube"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-lg-2 col-md-6 col-6">
+
+                    <h5 class="footer-heading">
+                        Quick Links
+                    </h5>
+
+                    <a class="footer-link" href="./index.html">
+                        Home
+                    </a>
+
+                    <a class="footer-link" href="./services.html">
+                        Services
+                    </a>
+
+
+
+                    <a class="footer-link" href="./astrologers.html">
+                        Astrologers
+                    </a>
+
+                    <a class="footer-link" href="./pricing.html">
+                        Pricing
+                    </a>
+
+                    <a class="footer-link" href="./about.html">
+                        About
+                    </a>
+
+                </div>
+
+
+                <div class="col-lg-2 col-md-6 col-6">
+
+                    <h5 class="footer-heading">
+                        Services
+                    </h5>
+
+                    <a class="footer-link" href="./services.html">
+                        Birth Chart Reading
+                    </a>
+
+                    <a class="footer-link" href="./services.html">
+                        Matchmaking
+                    </a>
+
+                    <a class="footer-link" href="./services.html">
+                        Career Guidance
+                    </a>
+
+                    <a class="footer-link" href="./services.html">
+                        Personal Consultation
+                    </a>
+
+                </div>
+
+
+                <div class="col-lg-2 col-md-6 col-6">
+
+                    <h5 class="footer-heading">
+                        Additional Pages
+                    </h5>
+
+                    <a class="footer-link" href="./404.html">
+                        404 Page
+                    </a>
+
+                    <a class="footer-link" href="./maintenance.html">
+                        Maintenance
+                    </a>
+
+                </div>
+
+
+                <div class="col-lg-2 col-md-6 col-6">
+
+                    <h5 class="footer-heading">
+                        Contact Us
+                    </h5>
+
+                    <div class="contact-item">
+
+                        <i data-lucide="phone"></i>
+
+                        <span>
+                            +91 98765 43210
+                        </span>
+
+                    </div>
+
+                    <div class="contact-item">
+
+                        <i data-lucide="map-pin"></i>
+
+                        <span>
+                            Hyderabad, India
+                        </span>
+
+                    </div>
+
+                    <div class="contact-item">
+
+                        <i data-lucide="mail"></i>
+
+                        <span>
+                            contact@astroguide.com
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom d-flex flex-wrap justify-content-between align-items-center">
+
+                <p
+                    class="mb-0 text-muted"
+                    style="font-size:0.875rem;"
+                >
+                    &copy; 2026 AstroGuide. All rights reserved.
+                </p>
+
+                <div class="footer-bottom-links">
+
+                    <a href="#">
+                        Privacy Policy
+                    </a>
+
+                    <a href="#">
+                        Terms &amp; Conditions
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+    </footer>
+
+
+    <!-- ========================= SCRIPTS ========================= -->
+    <script src="https://unpkg.com/lucide@0.542.0/dist/umd/lucide.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            lucide.createIcons();
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/theme.js"></script>
+
+</body>
+
+</html>

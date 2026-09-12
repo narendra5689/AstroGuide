@@ -1,0 +1,544 @@
+<!doctype html>
+<html lang="en" dir="ltr" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="AstroGuide — Create your account and begin your astrology journey."
+    >
+
+    <title>Create Account | AstroGuide</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Global -->
+    <link rel="stylesheet" href="./css/global.css">
+
+    <!-- Signup -->
+    <link rel="stylesheet" href="./css/signup.css">
+
+    <!-- Lucide -->
+    <script
+        src="https://unpkg.com/lucide@0.542.0/dist/umd/lucide.min.js"
+        defer>
+    </script>
+</head>
+
+
+<body>
+
+<main class="signup-page">
+
+    <!-- =====================================================
+         BACKGROUND
+         ===================================================== -->
+
+    <div class="signup-background" aria-hidden="true">
+
+        <div class="signup-glow signup-glow-one"></div>
+        <div class="signup-glow signup-glow-two"></div>
+
+
+        <!-- Constellation One -->
+
+        <div class="constellation constellation-one">
+
+            <span class="constellation-dot dot-1"></span>
+            <span class="constellation-dot dot-2"></span>
+            <span class="constellation-dot dot-3"></span>
+            <span class="constellation-dot dot-4"></span>
+            <span class="constellation-dot dot-5"></span>
+
+            <span class="constellation-line line-1"></span>
+            <span class="constellation-line line-2"></span>
+            <span class="constellation-line line-3"></span>
+            <span class="constellation-line line-4"></span>
+
+        </div>
+
+
+        <!-- Constellation Two -->
+
+        <div class="constellation constellation-two">
+
+            <span class="constellation-dot dot-1"></span>
+            <span class="constellation-dot dot-2"></span>
+            <span class="constellation-dot dot-3"></span>
+            <span class="constellation-dot dot-4"></span>
+
+            <span class="constellation-line line-1"></span>
+            <span class="constellation-line line-2"></span>
+            <span class="constellation-line line-3"></span>
+
+        </div>
+
+
+        <!-- Celestial Arcs -->
+
+        <div class="celestial-arc celestial-arc-one"></div>
+        <div class="celestial-arc celestial-arc-two"></div>
+        <div class="celestial-arc celestial-arc-three"></div>
+
+
+        <!-- Stars -->
+
+        <span class="signup-star star-1"></span>
+        <span class="signup-star star-2"></span>
+        <span class="signup-star star-3"></span>
+        <span class="signup-star star-4"></span>
+        <span class="signup-star star-5"></span>
+        <span class="signup-star star-6"></span>
+        <span class="signup-star star-7"></span>
+        <span class="signup-star star-8"></span>
+        <span class="signup-star star-9"></span>
+        <span class="signup-star star-10"></span>
+        <span class="signup-star star-11"></span>
+        <span class="signup-star star-12"></span>
+
+
+        <!-- Particles -->
+
+        <span class="signup-particle particle-1"></span>
+        <span class="signup-particle particle-2"></span>
+        <span class="signup-particle particle-3"></span>
+        <span class="signup-particle particle-4"></span>
+        <span class="signup-particle particle-5"></span>
+        <span class="signup-particle particle-6"></span>
+
+
+        <!-- Zodiac -->
+
+        <span class="zodiac-float zodiac-1">✦</span>
+        <span class="zodiac-float zodiac-2">✧</span>
+        <span class="zodiac-float zodiac-3">☽</span>
+        <span class="zodiac-float zodiac-4">✦</span>
+
+    </div>
+
+
+    <!-- =====================================================
+         CONTROLS
+         ===================================================== -->
+
+    <div class="signup-utilities">
+
+        <button
+            class="signup-utility-btn theme-toggle"
+            type="button"
+            aria-label="Toggle dark mode"
+        >
+            <i
+                data-lucide="moon"
+                class="theme-toggle-icon">
+            </i>
+        </button>
+
+
+        <button
+            class="signup-utility-btn direction-toggle"
+            type="button"
+            aria-label="Toggle text direction"
+        >
+            <span class="direction-toggle-text">
+                RTL
+            </span>
+        </button>
+
+    </div>
+
+
+    <!-- =====================================================
+         SIGNUP CARD
+         ===================================================== -->
+
+    <section class="signup-card">
+
+
+        <!-- BRAND -->
+
+        <a
+            href="./index.html"
+            class="signup-brand"
+            aria-label="Go to AstroGuide home"
+        >
+
+            <img
+                src="./images/logo.png"
+                alt="AstroGuide logo"
+                class="signup-brand-logo"
+            >
+
+            <span class="signup-brand-name">
+                <span>Astro</span><b>Guide</b>
+            </span>
+
+        </a>
+
+
+        <!-- HEADING -->
+
+        <div class="signup-heading">
+
+            <span class="signup-eyebrow">
+                ASTROGUIDE PORTAL
+            </span>
+
+            <h1>
+                Create Your Account
+            </h1>
+
+            <p class="signup-subtitle">
+                Begin your astrology journey and discover insights
+                designed around your path.
+            </p>
+
+        </div>
+
+
+        <!-- =================================================
+             FORM
+             ================================================= -->
+
+        <form
+            class="signup-form"
+            data-validate
+        >
+
+
+            <!-- NAME -->
+
+            <div class="signup-field">
+
+                <label for="signup-name">
+                    Full Name
+                </label>
+
+                <div class="signup-input-wrap">
+
+                    <i
+                        data-lucide="user-round"
+                        class="signup-input-icon">
+                    </i>
+
+                    <input
+                        id="signup-name"
+                        name="name"
+                        type="text"
+                        placeholder="Enter your full name"
+                        autocomplete="name"
+                        required
+                    >
+
+                </div>
+
+            </div>
+
+
+            <!-- EMAIL -->
+
+            <div class="signup-field">
+
+                <label for="signup-email">
+                    Email Address
+                </label>
+
+                <div class="signup-input-wrap">
+
+                    <i
+                        data-lucide="mail"
+                        class="signup-input-icon">
+                    </i>
+
+                    <input
+                        id="signup-email"
+                        name="email"
+                        type="email"
+                        placeholder="Enter your email address"
+                        autocomplete="email"
+                        required
+                    >
+
+                </div>
+
+            </div>
+
+
+            <!-- PASSWORDS -->
+
+            <div class="signup-password-row">
+
+
+                <!-- PASSWORD -->
+
+                <div class="signup-field">
+
+                    <label for="signup-password">
+                        Password
+                    </label>
+
+                    <div class="signup-input-wrap">
+
+                        <i
+                            data-lucide="lock-keyhole"
+                            class="signup-input-icon">
+                        </i>
+
+                        <input
+                            id="signup-password"
+                            name="password"
+                            type="password"
+                            placeholder="Create password"
+                            autocomplete="new-password"
+                            required
+                        >
+
+                        <button
+                            type="button"
+                            class="signup-password-toggle"
+                            data-target="signup-password"
+                            aria-label="Show password"
+                            aria-pressed="false"
+                        >
+
+                            <i
+                                data-lucide="eye"
+                                class="signup-eye-show">
+                            </i>
+
+                            <i
+                                data-lucide="eye-off"
+                                class="signup-eye-hide">
+                            </i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CONFIRM PASSWORD -->
+
+                <div class="signup-field">
+
+                    <label for="signup-confirm-password">
+                        Confirm Password
+                    </label>
+
+                    <div class="signup-input-wrap">
+
+                        <i
+                            data-lucide="shield-check"
+                            class="signup-input-icon">
+                        </i>
+
+                        <input
+                            id="signup-confirm-password"
+                            name="confirm-password"
+                            type="password"
+                            placeholder="Confirm password"
+                            autocomplete="new-password"
+                            required
+                        >
+
+                        <button
+                            type="button"
+                            class="signup-password-toggle"
+                            data-target="signup-confirm-password"
+                            aria-label="Show password"
+                            aria-pressed="false"
+                        >
+
+                            <i
+                                data-lucide="eye"
+                                class="signup-eye-show">
+                            </i>
+
+                            <i
+                                data-lucide="eye-off"
+                                class="signup-eye-hide">
+                            </i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- TERMS -->
+
+            <label class="signup-terms">
+
+                <input
+                    type="checkbox"
+                    id="signup-terms"
+                    required
+                >
+
+                <span class="signup-checkbox"></span>
+
+                <span class="signup-terms-text">
+
+                    I agree to the
+
+                    <a href="#">
+                        Terms &amp; Conditions
+                    </a>
+
+                    and
+
+                    <a href="#">
+                        Privacy Policy
+                    </a>
+
+                </span>
+
+            </label>
+
+
+            <!-- CREATE ACCOUNT -->
+
+            <button
+                type="submit"
+                class="signup-submit"
+            >
+
+                <span>
+                    Create Account
+                </span>
+
+                <i data-lucide="arrow-right"></i>
+
+            </button>
+
+        </form>
+
+
+        <!-- DIVIDER -->
+
+        <div class="signup-divider">
+
+            <span></span>
+
+            <p>
+                OR SIGN UP WITH
+            </p>
+
+            <span></span>
+
+        </div>
+
+
+        <!-- SOCIAL -->
+
+        <div class="signup-social">
+
+            <button
+                type="button"
+                class="signup-social-btn"
+            >
+
+                <span class="social-google">
+                    G
+                </span>
+
+                <span>
+                    Google
+                </span>
+
+            </button>
+
+
+            <button
+                type="button"
+                class="signup-social-btn"
+            >
+
+                <i data-lucide="apple"></i>
+
+                <span>
+                    Apple
+                </span>
+
+            </button>
+
+
+            <button
+                type="button"
+                class="signup-social-btn"
+            >
+
+                <span class="social-linkedin">
+                    in
+                </span>
+
+                <span>
+                    LinkedIn
+                </span>
+
+            </button>
+
+        </div>
+
+
+        <!-- LOGIN -->
+
+        <p class="signup-login">
+
+            Already have an account?
+
+            <a href="./login.html">
+                Sign in
+            </a>
+
+        </p>
+
+    </section>
+
+
+    <!-- BOTTOM MESSAGE -->
+
+    <div class="signup-bottom-note">
+
+        <span class="bottom-star">✦</span>
+
+        <span>
+            Understand Your Path. Embrace Your Future.
+        </span>
+
+        <span class="bottom-star">✦</span>
+
+    </div>
+
+</main>
+
+
+<!-- Global Theme + RTL -->
+<script src="./js/theme.js"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@0.542.0/dist/umd/lucide.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            lucide.createIcons();
+        });
+    </script>
+<!-- Signup JavaScript -->
+<script src="./js/signup.js"></script>
+
+</body>
+</html>

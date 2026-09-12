@@ -1,0 +1,975 @@
+<!doctype html>
+<html lang="en" dir="ltr" data-theme="light">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Daily Horoscope | AstroGuide
+    </title>
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="./css/global.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="./css/horoscope.css"
+    >
+
+</head>
+
+<body>
+
+    <!-- ========================= NAVBAR ========================= -->
+    <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+
+        <div class="container">
+
+            <a
+                class="navbar-brand-custom"
+                href="./index.html"
+            >
+                <img src="./images/logo.png" alt="">
+
+                <span
+                    class="brand-astro"
+                    dir="ltr"
+                >
+                    <span class="brand-astro">Astro</span><span class="brand-guide">Guide</span>
+                </span>
+            </a>
+
+
+            <button
+                class="navbar-toggler navbar-toggler-custom"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navMain"
+                aria-controls="navMain"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+            <div
+                class="collapse navbar-collapse"
+                id="navMain"
+            >
+
+                <ul class="navbar-nav mx-auto gap-lg-1">
+
+                    <!-- Home Dropdown -->
+                    <li class="nav-item dropdown">
+
+                        <a
+                            class="nav-link nav-link-custom dropdown-toggle"
+                            href="./index.html"
+                            role="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                        >
+                            Home
+                        </a>
+
+
+                        <ul class="dropdown-menu dropdown-menu-custom">
+
+                            <li>
+                                <a
+                                    class="dropdown-item dropdown-item-custom"
+                                    href="./index.html"
+                                >
+                                    Home 1 <span class="item-sub">Classic</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a
+                                    class="dropdown-item dropdown-item-custom"
+                                    href="./home2.html"
+                                >
+                                    Home 2 <span class="item-sub">Premium</span>
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </li>
+
+                    <li class="nav-item">
+                        <a
+                            class="nav-link nav-link-custom"
+                            href="./about.html"
+                        >
+                            About
+                        </a>
+                    </li>
+                    <!-- Services Dropdown -->
+<li class="nav-item">
+    <a
+        class="nav-link nav-link-custom"
+        href="./services.html"
+    >
+        Services
+    </a>
+</li>
+
+
+
+
+
+                    <li class="nav-item">
+                        <a
+                            class="nav-link nav-link-custom"
+                            href="./astrologers.html"
+                        >
+                            Astrologers
+                        </a>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a
+                            class="nav-link nav-link-custom"
+                            href="./pricing.html"
+                        >
+                            Pricing
+                        </a>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a
+                            class="nav-link nav-link-custom"
+                            href="./dashboard.html"
+                        >
+                            Dashboard
+                        </a>
+                    </li>
+
+                </ul>
+
+
+                <div class="d-flex align-items-center gap-2 flex-wrap">
+
+                    <div class="nav-utility-group">
+
+                        <button
+                            class="nav-utility-btn theme-toggle"
+                            aria-label="Toggle dark mode"
+                        >
+                            <i
+                                data-lucide="sun"
+                                class="theme-toggle-icon"
+                            ></i>
+                        </button>
+
+
+                        <button
+                            class="nav-utility-btn direction-toggle"
+                            id="directionToggle"
+                            aria-label="Toggle text direction"
+                        >
+                            <span class="direction-toggle-text">
+                                LTR
+                            </span>
+                        </button>
+
+                    </div>
+
+
+                    <div class="nav-cta-group">
+
+                        <a
+                            href="./login.html"
+                            class="btn btn-secondary"
+                        >
+                            Login
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <!-- ========================= PAGE HERO ========================= -->
+    <section class="page-hero celestial-bg">
+
+        <div class="container position-relative">
+
+            <span class="section-label">
+                Daily Horoscope
+            </span>
+
+            <h1>
+                Let the Stars Offer a Little Perspective
+            </h1>
+
+            <p>
+                Explore today's themes for your sign — a moment for reflection,
+                intention, and a more mindful day.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ========================= ZODIAC SELECTOR ========================= -->
+    <section>
+
+        <div class="container">
+
+            <div class="text-center mb-5">
+
+                <span class="section-label">
+                    01 · Choose Your Sign
+                </span>
+
+                <h2>
+                    What is your sign?
+                </h2>
+
+                <p class="section-description">
+                    Select your zodiac sign to reveal today's personalized guidance.
+                </p>
+
+            </div>
+
+
+            <div class="zodiac-selector">
+
+                <button
+                    class="zodiac-sign-btn active"
+                    data-sign="aries"
+                >
+                    <span class="symbol">♈</span>
+                    Aries
+                </button>
+
+
+                <button
+                    class="zodiac-sign-btn"
+                    data-sign="taurus"
+                >
+                    <span class="symbol">♉</span>
+                    Taurus
+                </button>
+
+
+                <button
+                    class="zodiac-sign-btn"
+                    data-sign="gemini"
+                >
+                    <span class="symbol">♊</span>
+                    Gemini
+                </button>
+
+
+                <button
+                    class="zodiac-sign-btn"
+                    data-sign="cancer"
+                >
+                    <span class="symbol">♋</span>
+                    Cancer
+                </button>
+
+
+                <button
+                    class="zodiac-sign-btn"
+                    data-sign="leo"
+                >
+                    <span class="symbol">♌</span>
+                    Leo
+                </button>
+
+
+                <button
+                    class="zodiac-sign-btn"
+                    data-sign="virgo"
+                >
+                    <span class="symbol">♍</span>
+                    Virgo
+                </button>
+
+
+                <button
+                    class="zodiac-sign-btn"
+                    data-sign="libra"
+                >
+                    <span class="symbol">♎</span>
+                    Libra
+                </button>
+
+
+                <button
+                    class="zodiac-sign-btn"
+                    data-sign="scorpio"
+                >
+                    <span class="symbol">♏</span>
+                    Scorpio
+                </button>
+
+
+                <button
+                    class="zodiac-sign-btn"
+                    data-sign="sagittarius"
+                >
+                    <span class="symbol">♐</span>
+                    Sagittarius
+                </button>
+
+
+                <button
+                    class="zodiac-sign-btn"
+                    data-sign="capricorn"
+                >
+                    <span class="symbol">♑</span>
+                    Capricorn
+                </button>
+
+
+                <button
+                    class="zodiac-sign-btn"
+                    data-sign="aquarius"
+                >
+                    <span class="symbol">♒</span>
+                    Aquarius
+                </button>
+
+
+                <button
+                    class="zodiac-sign-btn"
+                    data-sign="pisces"
+                >
+                    <span class="symbol">♓</span>
+                    Pisces
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ========================= HOROSCOPE DISPLAY ========================= -->
+    <section class="bg-alt">
+
+        <div class="container">
+
+            <div
+                id="zodiac-horoscope-display"
+                class="horoscope-display"
+            >
+
+                <div class="d-flex flex-wrap justify-content-between align-items-end mb-4">
+
+                    <div>
+
+                        <span class="section-label">
+                            02 · Today's Horoscope
+                        </span>
+
+                        <h2 class="zodiac-title">
+                            Aries
+                        </h2>
+
+                        <p class="zodiac-date-range mb-0">
+                            Mar 21 – Apr 19
+                        </p>
+
+                    </div>
+
+
+                    <i
+                        data-lucide="sparkles"
+                        style="font-size:3rem;color:var(--secondary-light)"
+                    ></i>
+
+                </div>
+
+
+                <p class="zodiac-general mb-4">
+                    Today brings a surge of confidence. Channel your natural
+                    boldness into a project that has been waiting for your initiative.
+                </p>
+
+
+                <div class="row g-3">
+
+                    <div class="col-md-4">
+
+                        <div class="insight-card">
+
+                            <h5>
+                                <i
+                                    data-lucide="heart"
+                                    class="me-2"
+                                ></i>
+                                Love & Relationships
+                            </h5>
+
+                            <p class="zodiac-love">
+                                Passion is on your side. A heartfelt conversation
+                                could deepen a meaningful connection.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-md-4">
+
+                        <div class="insight-card">
+
+                            <h5>
+                                <i
+                                    data-lucide="briefcase"
+                                    class="me-2"
+                                ></i>
+                                Career & Finances
+                            </h5>
+
+                            <p class="zodiac-career">
+                                Your leadership instincts are sharp. Trust them
+                                when an unexpected opportunity appears.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-md-4">
+
+                        <div class="insight-card">
+
+                            <h5>
+                                <i
+                                    data-lucide="sun"
+                                    class="me-2"
+                                ></i>
+                                Wellbeing
+                            </h5>
+
+                            <p class="zodiac-wellness">
+                                High energy calls for physical activity. A brisk
+                                walk or workout will restore your balance.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ========================= DAILY INSIGHTS ========================= -->
+    <section>
+
+        <div class="container">
+
+            <div class="row g-4">
+
+                <div class="col-lg-4">
+
+                    <div class="content-panel">
+
+                        <span class="section-label">
+                            03 · Love & Relationships
+                        </span>
+
+                        <h3>
+                            Make Room for Honest Connection
+                        </h3>
+
+                        <p>
+                            Today's sky invites you to listen before solving.
+                            Notice the small gestures that create safety,
+                            warmth, and trust.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-lg-4">
+
+                    <div class="content-panel">
+
+                        <span class="section-label">
+                            04 · Career & Finances
+                        </span>
+
+                        <h3>
+                            Choose Progress Over Pressure
+                        </h3>
+
+                        <p>
+                            A thoughtful next step is more valuable than a rushed
+                            decision. Let your priorities guide the pace.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-lg-4">
+
+                    <div class="content-panel">
+
+                        <span class="section-label">
+                            05 · Personal Energy
+                        </span>
+
+                        <h3>
+                            Return to Your Center
+                        </h3>
+
+                        <p>
+                            Protect a little quiet time today. Your clearest
+                            insights may arrive when your schedule makes space
+                            for them.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ========================= LOOKING AHEAD ========================= -->
+    <section class="bg-alt">
+
+        <div class="container">
+
+            <div class="row align-items-center g-5">
+
+                <div class="col-lg-6">
+
+                    <img
+                        class="content-image"
+                        src="./images/moon-night.png"
+                        alt="Moon against the night sky"
+                    >
+
+                </div>
+
+
+                <div class="col-lg-6">
+
+                    <span class="section-label">
+                        06 · Looking Ahead
+                    </span>
+
+                    <h2>
+                        Weekly & Monthly Perspectives
+                    </h2>
+
+                    <p class="text-muted">
+                        Daily guidance is a starting point. A longer reading
+                        can help you notice recurring themes and create
+                        intentions for the weeks ahead.
+                    </p>
+
+
+                    <div class="d-flex gap-3 flex-wrap">
+
+                        <a
+                            class="btn btn-secondary"
+                            href="./pricing.html"
+                        >
+                            Weekly Horoscope
+                        </a>
+
+                        <a
+                            class="btn btn-primary"
+                            href="./pricing.html"
+                        >
+                            Monthly Reading
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ========================= FINAL CTA ========================= -->
+    <section>
+
+        <div class="container">
+
+            <div class="page-cta text-center">
+
+                <span class="section-label">
+                    07 · Go Deeper
+                </span>
+
+                <h2>
+                    Want Guidance Written for Your Chart?
+                </h2>
+
+                <p class="section-description">
+                    A personal consultation brings the sky into conversation
+                    with your specific questions and lived experience.
+                </p>
+
+                <a
+                    class="btn btn-primary mt-3"
+                    href="./pricing.html"
+                >
+                    Book a Consultation
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ========================= NEWSLETTER ========================= -->
+    <section class="newsletter-section section-sm">
+
+        <div class="container position-relative text-center">
+
+            <span class="section-label">
+                Stay Connected
+            </span>
+
+            <h2>
+                Stay Connected With the Stars
+            </h2>
+
+            <p class="section-description">
+                Receive astrology insights, horoscope updates, and helpful
+                guidance delivered to your inbox.
+            </p>
+
+            <form class="newsletter-form mt-4">
+
+                <input
+                    type="email"
+                    class="form-control"
+                    placeholder="Email Address"
+                    required
+                >
+
+                <button class="btn btn-primary">
+                    Subscribe
+                </button>
+
+            </form>
+
+            <p class="newsletter-msg mt-2"></p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ========================= FOOTER ========================= -->
+    <footer class="footer-custom">
+
+        <div class="container">
+
+            <div class="row g-4">
+
+                <div class="col-lg-4 col-md-6">
+
+                    <div class="footer-brand">
+
+                        <img src="./images/logo.png" alt="">
+
+                        <span
+                            class="brand-astro"
+                            dir="ltr"
+                        >
+                            <span class="brand-astro">Astro</span><span class="brand-guide">Guide</span>
+                        </span>
+
+                    </div>
+
+
+                    <p class="footer-tagline">
+                        Understand Your Path. Embrace Your Future.
+                    </p>
+
+
+                    <div class="footer-social">
+
+                        <a
+                            href="#"
+                            aria-label="Facebook"
+                        >
+                            <i data-lucide="facebook"></i>
+                        </a>
+
+                        <a
+                            href="#"
+                            aria-label="Instagram"
+                        >
+                            <i data-lucide="instagram"></i>
+                        </a>
+
+                        <a
+                            href="#"
+                            aria-label="Twitter"
+                        >
+                            <i data-lucide="twitter"></i>
+                        </a>
+
+                        <a
+                            href="#"
+                            aria-label="YouTube"
+                        >
+                            <i data-lucide="youtube"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-lg-2 col-md-6 col-6">
+
+                    <h5 class="footer-heading">
+                        Quick Links
+                    </h5>
+
+                    <a
+                        class="footer-link"
+                        href="./index.html"
+                    >
+                        Home
+                    </a>
+
+                    <a
+                        class="footer-link"
+                        href="./services.html"
+                    >
+                        Services
+                    </a>
+
+
+                    <a
+                        class="footer-link"
+                        href="./astrologers.html"
+                    >
+                        Astrologers
+                    </a>
+
+                    <a
+                        class="footer-link"
+                        href="./pricing.html"
+                    >
+                        Pricing
+                    </a>
+
+                    <a
+                        class="footer-link"
+                        href="./about.html"
+                    >
+                        About
+                    </a>
+
+                </div>
+
+
+                <div class="col-lg-2 col-md-6 col-6">
+
+                    <h5 class="footer-heading">
+                        Services
+                    </h5>
+
+                    <a
+                        class="footer-link"
+                        href="./services.html"
+                    >
+                        Birth Chart Reading
+                    </a>
+
+                    <a
+                        class="footer-link"
+                        href="./services.html"
+                    >
+                        Matchmaking
+                    </a>
+
+                    <a
+                        class="footer-link"
+                        href="./services.html"
+                    >
+                        Career Guidance
+                    </a>
+
+                    <a
+                        class="footer-link"
+                        href="./services.html"
+                    >
+                        Personal Consultation
+                    </a>
+
+                </div>
+
+
+                <div class="col-lg-2 col-md-6 col-6">
+
+                    <h5 class="footer-heading">
+                        Additional Pages
+                    </h5>
+
+                    <a
+                        class="footer-link"
+                        href="./404.html"
+                    >
+                        404 Page
+                    </a>
+
+                    <a
+                        class="footer-link"
+                        href="./maintenance.html"
+                    >
+                        Maintenance
+                    </a>
+
+                </div>
+
+
+                <div class="col-lg-2 col-md-6 col-6">
+
+                    <h5 class="footer-heading">
+                        Contact Us
+                    </h5>
+
+
+                    <div class="contact-item">
+
+                        <i data-lucide="phone"></i>
+
+                        <span>
+                            +91 98765 43210
+                        </span>
+
+                    </div>
+
+
+                    <div class="contact-item">
+
+                        <i data-lucide="map-pin"></i>
+
+                        <span>
+                            Hyderabad, India
+                        </span>
+
+                    </div>
+
+
+                    <div class="contact-item">
+
+                        <i data-lucide="mail"></i>
+
+                        <span>
+                            contact@astroguide.com
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom d-flex flex-wrap justify-content-between align-items-center">
+
+                <p
+                    class="mb-0 text-muted"
+                    style="font-size:0.875rem;"
+                >
+                    &copy; 2026 AstroGuide. All rights reserved.
+                </p>
+
+
+                <div class="footer-bottom-links">
+
+                    <a href="#">
+                        Privacy Policy
+                    </a>
+
+                    <a href="#">
+                        Terms &amp; Conditions
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ========================= SCRIPTS ========================= -->
+
+    <script src="https://unpkg.com/lucide@0.542.0/dist/umd/lucide.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            lucide.createIcons();
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="./js/theme.js"></script>
+
+</body>
+
+</html>

@@ -3094,3 +3094,179 @@
 .dashboard-content {
     padding-top: 30px !important;
 }
+
+
+/* =========================================================
+   FINAL HORIZONTAL OVERFLOW FIX
+   ========================================================= */
+
+/* Keep the entire dashboard inside the viewport */
+.dashboard-page {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Main scrolling area */
+.dashboard-content {
+    width: auto;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+/* Prevent grids from creating extra width */
+.overview-grid,
+.dashboard-main-grid,
+.dashboard-lower-grid,
+.planet-grid {
+    width: 100%;
+    max-width: 1320px;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+/* Prevent grid children from forcing the grid wider */
+.overview-card,
+.dashboard-card,
+.horoscope-card,
+.event-card,
+.planet-item {
+    min-width: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Header content must be allowed to shrink */
+.dashboard-header,
+.dashboard-header-content {
+    min-width: 0;
+    max-width: 100%;
+}
+
+/* Prevent long text from pushing containers */
+.dashboard-title,
+.dashboard-subtitle,
+.card-title,
+.card-description,
+.overview-card h3,
+.overview-card p,
+.horoscope-message,
+.horoscope-description,
+.event-highlight h3,
+.event-highlight p,
+.insight-item h3,
+.insight-item p,
+.reading-item h3,
+.reading-item p,
+.dashboard-premium-card h2,
+.dashboard-premium-card p {
+    max-width: 100%;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+/* Flex children must be allowed to shrink */
+.dashboard-card-header > *,
+.event-highlight > *,
+.dashboard-premium-card > *,
+.dashboard-header > * {
+    min-width: 0;
+}
+
+/* Event text section */
+.event-highlight > div {
+    min-width: 0;
+    max-width: 100%;
+}
+
+/* Premium CTA text */
+.dashboard-premium-card > div {
+    min-width: 0;
+    max-width: 100%;
+}
+
+/* Reading list text */
+.reading-item > div {
+    min-width: 0;
+    max-width: 100%;
+}
+
+/* =========================================================
+   MOBILE OVERFLOW PROTECTION
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .dashboard-content {
+        width: 100%;
+        max-width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        box-sizing: border-box;
+    }
+
+    .dashboard-header,
+    .overview-grid,
+    .dashboard-main-grid,
+    .dashboard-lower-grid,
+    .planetary-card,
+    .dashboard-premium-card {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .dashboard-main-grid,
+    .dashboard-lower-grid {
+        min-width: 0;
+    }
+
+    .dashboard-card {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .overview-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .overview-card {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .dashboard-premium-card {
+        min-width: 0;
+        overflow: hidden;
+    }
+
+    .dashboard-premium-card > div {
+        width: 100%;
+        min-width: 0;
+    }
+}
+
+/* =========================================================
+   VERY SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 350px) {
+
+    .dashboard-content {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .overview-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .overview-card,
+    .dashboard-card,
+    .dashboard-premium-card {
+        width: 100%;
+        max-width: 100%;
+    }
+}

@@ -389,7 +389,7 @@
         0 15px 45px
         rgba(20,20,60,.06);
 
-    overflow: hidden;
+    overflow: visible;
 
     opacity: 0;
 
@@ -648,34 +648,29 @@
             scale(1.15);
     }
 }
+/* =========================================================
+   MOST POPULAR BADGE — ON THE BORDER
+========================================================= */
 
 .popular-badge {
     position: absolute;
 
-    top: 18px;
+    top: 0;
     left: 50%;
 
-    transform:
-        translateX(-50%);
+    transform: translate(-50%, -50%);
 
-    z-index: 3;
+    z-index: 10;
 
-    padding:
-        6px 18px;
+    padding: 6px 18px;
 
-    border-radius:
-        var(--radius-pill);
+    border-radius: var(--radius-pill);
 
-    background:
-        var(--secondary-color);
+    background: var(--secondary-color);
+    color: var(--primary-color);
 
-    color:
-        var(--primary-color);
-
-    white-space:
-        nowrap;
+    white-space: nowrap;
 }
-
 
 /* =========================================================
    SECTION 2 — PRICING NOTE

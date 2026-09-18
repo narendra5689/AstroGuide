@@ -248,15 +248,15 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 38px;
-    height: 38px;
+    width: 45px;
+    height: 45px;
     padding: 0;
     border: 1px solid var(--border-color);
-    border-radius: var(--radius-sm);
+    border-radius: 50%;
     background-color: var(--bg-card);
     color: var(--text-color);
     font-family: var(--font-body);
-    font-size: 1.05rem;
+    font-size: 16.8px;
     font-weight: 500;
     cursor: pointer;
     transition: color var(--transition), border-color var(--transition), background-color var(--transition);
@@ -277,7 +277,7 @@ body {
 
 .auth-utility-btn .direction-toggle-text {
     font-family: var(--font-body);
-    font-size: 0.75rem;
+    font-size:16.8px;
     font-weight: 600;
     line-height: 1;
 }

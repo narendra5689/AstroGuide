@@ -33,31 +33,65 @@
         rel="stylesheet"
         href="./css/horoscope.css"
     >
+        <!-- Favicon -->
+<link rel="icon" type="image/png" href="./images/logo.png" />
+<link rel="shortcut icon" href="./images/logo.png" />
+<link rel="apple-touch-icon" href="./images/logo.png" />
 
 </head>
 
 <body>
 
-    <!-- ========================= NAVBAR ========================= -->
-    <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
 
-        <div class="container">
+<!-- =========================================================
+     NAVBAR — UNCHANGED
+========================================================= -->
 
-            <a
-                class="navbar-brand-custom"
-                href="./index.html"
+
+<nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+    <div class="container">
+
+        <!-- ========================= BRAND ========================= -->
+        <a class="navbar-brand-custom" href="./index.html">
+            <img src="./images/logo.png" alt="AstroGuide">
+
+            <span class="brand-astro" dir="ltr">
+                <span class="brand-astro">Astro</span><span class="brand-guide">Guide</span>
+            </span>
+        </a>
+
+
+        <!-- =====================================================
+             MOBILE CONTROLS
+             DARK MODE → RTL → HAMBURGER
+             ===================================================== -->
+        <div class="mobile-nav-controls">
+
+            <!-- Dark Mode -->
+            <button
+                class="nav-utility-btn theme-toggle"
+                type="button"
+                aria-label="Toggle dark mode"
             >
-                <img src="./images/logo.png" alt="">
-
-                <span
-                    class="brand-astro"
-                    dir="ltr"
-                >
-                    <span class="brand-astro">Astro</span><span class="brand-guide">Guide</span>
-                </span>
-            </a>
+                <i
+                    data-lucide="sun"
+                    class="theme-toggle-icon"
+                ></i>
+            </button>
 
 
+            <!-- RTL -->
+            <button
+                class="nav-utility-btn direction-toggle"
+                id="directionToggleMobile"
+                type="button"
+                aria-label="Toggle text direction"
+            >
+                <span class="direction-toggle-text">LTR</span>
+            </button>
+
+
+            <!-- Hamburger -->
             <button
                 class="navbar-toggler navbar-toggler-custom"
                 type="button"
@@ -70,144 +104,168 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-
-            <div
-                class="collapse navbar-collapse"
-                id="navMain"
-            >
-
-                <ul class="navbar-nav mx-auto gap-lg-1">
-
-                    <!-- Home Dropdown -->
-                    <li class="nav-item dropdown">
-
-                        <a
-                            class="nav-link nav-link-custom dropdown-toggle"
-                            href="./index.html"
-                            role="button"
-                            data-bs-toggle="dropdown"
-                            aria-expanded="false"
-                        >
-                            Home
-                        </a>
+        </div>
 
 
-                        <ul class="dropdown-menu dropdown-menu-custom">
+        <!-- =====================================================
+             NAVBAR COLLAPSE
+             ===================================================== -->
+        <div class="collapse navbar-collapse" id="navMain">
 
-                            <li>
-                                <a
-                                    class="dropdown-item dropdown-item-custom"
-                                    href="./index.html"
-                                >
-                                    Home 1 <span class="item-sub">Classic</span>
-                                </a>
-                            </li>
+            <!-- ========================= NAV LINKS ========================= -->
+            <ul class="navbar-nav mx-auto gap-lg-1">
 
-                            <li>
-                                <a
-                                    class="dropdown-item dropdown-item-custom"
-                                    href="./home2.html"
-                                >
-                                    Home 2 <span class="item-sub">Premium</span>
-                                </a>
-                            </li>
+                <!-- Home Dropdown -->
+                <li class="nav-item dropdown">
 
-                        </ul>
+                    <a
+                        class="nav-link nav-link-custom dropdown-toggle"
+                        href="./index.html"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                    >
+                        Home
+                    </a>
 
-                    </li>
+                    <ul class="dropdown-menu dropdown-menu-custom">
 
-                    <li class="nav-item">
-                        <a
-                            class="nav-link nav-link-custom"
-                            href="./about.html"
-                        >
-                            About
-                        </a>
-                    </li>
-                    <!-- Services Dropdown -->
-<li class="nav-item">
-    <a
-        class="nav-link nav-link-custom"
-        href="./services.html"
-    >
-        Services
-    </a>
-</li>
+                        <li>
+                            <a
+                                class="dropdown-item dropdown-item-custom"
+                                href="./index.html"
+                            >
+                                Home 1
+                                <span class="item-sub">Classic</span>
+                            </a>
+                        </li>
 
+                        <li>
+                            <a
+                                class="dropdown-item dropdown-item-custom"
+                                href="./home2.html"
+                            >
+                                Home 2
+                                <span class="item-sub">Premium</span>
+                            </a>
+                        </li>
 
-
-
-
-                    <li class="nav-item">
-                        <a
-                            class="nav-link nav-link-custom"
-                            href="./astrologers.html"
-                        >
-                            Astrologers
-                        </a>
-                    </li>
+                    </ul>
+                </li>
 
 
-                    <li class="nav-item">
-                        <a
-                            class="nav-link nav-link-custom"
-                            href="./pricing.html"
-                        >
-                            Pricing
-                        </a>
-                    </li>
+                <!-- About -->
+                <li class="nav-item">
+                    <a
+                        class="nav-link nav-link-custom"
+                        href="./about.html"
+                    >
+                        About
+                    </a>
+                </li>
 
 
-                    <li class="nav-item">
-                        <a
-                            class="nav-link nav-link-custom"
-                            href="./dashboard.html"
-                        >
-                            Dashboard
-                        </a>
-                    </li>
-
-                </ul>
-
-
-                <div class="d-flex align-items-center gap-2 flex-wrap">
-
-                    <div class="nav-utility-group">
-
-                        <button
-                            class="nav-utility-btn theme-toggle"
-                            aria-label="Toggle dark mode"
-                        >
-                            <i
-                                data-lucide="sun"
-                                class="theme-toggle-icon"
-                            ></i>
-                        </button>
+                <!-- Services -->
+                <li class="nav-item">
+                    <a
+                        class="nav-link nav-link-custom"
+                        href="./services.html"
+                    >
+                        Services
+                    </a>
+                </li>
 
 
-                        <button
-                            class="nav-utility-btn direction-toggle"
-                            id="directionToggle"
-                            aria-label="Toggle text direction"
-                        >
-                            <span class="direction-toggle-text">
-                                LTR
-                            </span>
-                        </button>
-
-                    </div>
+                <!-- Horoscope -->
+                <li class="nav-item">
+                    <a
+                        class="nav-link nav-link-custom active"
+                        href="./horoscope.html"
+                    >
+                        Horoscope
+                    </a>
+                </li>
 
 
-                    <div class="nav-cta-group">
+                <!-- Astrologers -->
+                <li class="nav-item">
+                    <a
+                        class="nav-link nav-link-custom"
+                        href="./astrologers.html"
+                    >
+                        Astrologers
+                    </a>
+                </li>
 
-                        <a
-                            href="./login.html"
-                            class="btn btn-secondary"
-                        >
-                            Login
-                        </a>
 
-                    </div>
+                <!-- Pricing -->
+                <li class="nav-item">
+                    <a
+                        class="nav-link nav-link-custom"
+                        href="./pricing.html"
+                    >
+                        Pricing
+                    </a>
+                </li>
+
+
+                <!-- Dashboard -->
+                <li class="nav-item">
+                    <a
+                        class="nav-link nav-link-custom"
+                        href="./dashboard.html"
+                    >
+                        Dashboard
+                    </a>
+                </li>
+
+            </ul>
+
+
+            <!-- =====================================================
+                 DESKTOP RIGHT SIDE
+                 ===================================================== -->
+            <div class="d-flex align-items-center gap-2 flex-wrap">
+
+                <!-- Desktop utility buttons -->
+                <div class="nav-utility-group">
+
+                    <!-- Dark Mode -->
+                    <button
+                        class="nav-utility-btn theme-toggle btninside"
+                        type="button"
+                        aria-label="Toggle dark mode"
+                    >
+                        <i
+                            data-lucide="sun"
+                            class="theme-toggle-icon"
+                        ></i>
+                    </button>
+
+
+                    <!-- RTL -->
+                    <button
+                        class="nav-utility-btn direction-toggle btninside"
+                        
+                        id="directionToggle"
+                        type="button"
+                        aria-label="Toggle text direction"
+                    >
+                        <span class="direction-toggle-text">LTR</span>
+                    </button>
+
+                </div>
+
+
+                <!-- Login -->
+                <div class="nav-cta-group">
+
+                    <a
+                        href="./login.html"
+                        class="btn btn-secondary"
+                    >
+                        Login
+                    </a>
 
                 </div>
 
@@ -215,312 +273,588 @@
 
         </div>
 
-    </nav>
+    </div>
+</nav>
 
 
-    <!-- ========================= PAGE HERO ========================= -->
-    <section class="page-hero celestial-bg">
 
-        <div class="container position-relative">
+<!-- =========================================================
+     01 — HERO
+========================================================= -->
 
-            <span class="section-label">
+<section class="horoscope-hero">
+
+    <div class="horoscope-hero-stars">
+
+        <span class="hero-star star-one"></span>
+        <span class="hero-star star-two"></span>
+        <span class="hero-star star-three"></span>
+        <span class="hero-star star-four"></span>
+        <span class="hero-star star-five"></span>
+
+    </div>
+
+
+    <div class="container">
+
+        <div class="horoscope-hero-content">
+
+            <div class="hero-icon-orbit">
+
+                <div class="hero-orbit-ring"></div>
+
+                <div class="hero-orbit-icon">
+
+                    <i data-lucide="sparkles"></i>
+
+                </div>
+
+            </div>
+
+
+            <span class="section-label horoscope-reveal">
                 Daily Horoscope
             </span>
 
-            <h1>
-                Let the Stars Offer a Little Perspective
+
+            <h1 class="horoscope-reveal delay-one">
+
+                Your Day,
+                <span>
+                    Written in the Stars
+                </span>
+
             </h1>
 
-            <p>
-                Explore today's themes for your sign — a moment for reflection,
-                intention, and a more mindful day.
+
+            <p class="horoscope-hero-text horoscope-reveal delay-two">
+
+                Begin your day with a thoughtful look at the energies,
+                opportunities, relationships, and personal themes surrounding
+                your zodiac sign. Use your horoscope as a moment of reflection,
+                intention, and mindful direction.
+
+            </p>
+
+
+            <div class="hero-meta horoscope-reveal delay-three">
+
+                <div class="hero-meta-item">
+
+                    <i data-lucide="calendar-days"></i>
+
+                    <span>
+                        Daily guidance
+                    </span>
+
+                </div>
+
+
+                <div class="hero-meta-divider"></div>
+
+
+                <div class="hero-meta-item">
+
+                    <i data-lucide="moon-star"></i>
+
+                    <span>
+                        Celestial perspective
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     02 — ZODIAC SELECTOR
+========================================================= -->
+
+<section class="zodiac-section">
+
+    <div class="container">
+
+        <div class="section-heading-center">
+
+            <span class="section-label">
+                Discover Your Sign
+            </span>
+
+            <h2>
+                Choose Your Zodiac Sign
+            </h2>
+
+            <p class="section-description">
+                Select the sign that represents you and explore a
+                personalized perspective for the day ahead.
             </p>
 
         </div>
 
-    </section>
+
+        <div class="zodiac-grid">
 
 
-    <!-- ========================= ZODIAC SELECTOR ========================= -->
-    <section>
+            <!-- ARIES -->
 
-        <div class="container">
+            <button
+                class="zodiac-card active"
+                data-sign="aries"
+            >
 
-            <div class="text-center mb-5">
+                <span class="zodiac-icon">
 
-                <span class="section-label">
-                    01 · Choose Your Sign
+                    <i data-lucide="flame"></i>
+
                 </span>
 
-                <h2>
-                    What is your sign?
-                </h2>
+                <span class="zodiac-name">
+                    Aries
+                </span>
 
-                <p class="section-description">
-                    Select your zodiac sign to reveal today's personalized guidance.
+                <span class="zodiac-date">
+                    Mar 21 – Apr 19
+                </span>
+
+                <span class="zodiac-arrow">
+                    <i data-lucide="arrow-up-right"></i>
+                </span>
+
+            </button>
+
+
+            <!-- TAURUS -->
+
+            <button
+                class="zodiac-card"
+                data-sign="taurus"
+            >
+
+                <span class="zodiac-icon">
+
+                    <i data-lucide="sprout"></i>
+
+                </span>
+
+                <span class="zodiac-name">
+                    Taurus
+                </span>
+
+                <span class="zodiac-date">
+                    Apr 20 – May 20
+                </span>
+
+                <span class="zodiac-arrow">
+                    <i data-lucide="arrow-up-right"></i>
+                </span>
+
+            </button>
+
+
+            <!-- GEMINI -->
+
+            <button
+                class="zodiac-card"
+                data-sign="gemini"
+            >
+
+                <span class="zodiac-icon">
+
+                    <i data-lucide="git-branch"></i>
+
+                </span>
+
+                <span class="zodiac-name">
+                    Gemini
+                </span>
+
+                <span class="zodiac-date">
+                    May 21 – Jun 20
+                </span>
+
+                <span class="zodiac-arrow">
+                    <i data-lucide="arrow-up-right"></i>
+                </span>
+
+            </button>
+
+
+            <!-- CANCER -->
+
+            <button
+                class="zodiac-card"
+                data-sign="cancer"
+            >
+
+                <span class="zodiac-icon">
+
+                    <i data-lucide="waves"></i>
+
+                </span>
+
+                <span class="zodiac-name">
+                    Cancer
+                </span>
+
+                <span class="zodiac-date">
+                    Jun 21 – Jul 22
+                </span>
+
+                <span class="zodiac-arrow">
+                    <i data-lucide="arrow-up-right"></i>
+                </span>
+
+            </button>
+
+
+            <!-- LEO -->
+
+            <button
+                class="zodiac-card"
+                data-sign="leo"
+            >
+
+                <span class="zodiac-icon">
+
+                    <i data-lucide="sun"></i>
+
+                </span>
+
+                <span class="zodiac-name">
+                    Leo
+                </span>
+
+                <span class="zodiac-date">
+                    Jul 23 – Aug 22
+                </span>
+
+                <span class="zodiac-arrow">
+                    <i data-lucide="arrow-up-right"></i>
+                </span>
+
+            </button>
+
+
+            <!-- VIRGO -->
+
+            <button
+                class="zodiac-card"
+                data-sign="virgo"
+            >
+
+                <span class="zodiac-icon">
+
+                    <i data-lucide="leaf"></i>
+
+                </span>
+
+                <span class="zodiac-name">
+                    Virgo
+                </span>
+
+                <span class="zodiac-date">
+                    Aug 23 – Sep 22
+                </span>
+
+                <span class="zodiac-arrow">
+                    <i data-lucide="arrow-up-right"></i>
+                </span>
+
+            </button>
+
+
+            <!-- LIBRA -->
+
+            <button
+                class="zodiac-card"
+                data-sign="libra"
+            >
+
+                <span class="zodiac-icon">
+
+                    <i data-lucide="scale"></i>
+
+                </span>
+
+                <span class="zodiac-name">
+                    Libra
+                </span>
+
+                <span class="zodiac-date">
+                    Sep 23 – Oct 22
+                </span>
+
+                <span class="zodiac-arrow">
+                    <i data-lucide="arrow-up-right"></i>
+                </span>
+
+            </button>
+
+
+            <!-- SCORPIO -->
+
+            <button
+                class="zodiac-card"
+                data-sign="scorpio"
+            >
+
+                <span class="zodiac-icon">
+
+                    <i data-lucide="bug"></i>
+
+                </span>
+
+                <span class="zodiac-name">
+                    Scorpio
+                </span>
+
+                <span class="zodiac-date">
+                    Oct 23 – Nov 21
+                </span>
+
+                <span class="zodiac-arrow">
+                    <i data-lucide="arrow-up-right"></i>
+                </span>
+
+            </button>
+
+
+            <!-- SAGITTARIUS -->
+
+            <button
+                class="zodiac-card"
+                data-sign="sagittarius"
+            >
+
+                <span class="zodiac-icon">
+
+                    <i data-lucide="navigation"></i>
+
+                </span>
+
+                <span class="zodiac-name">
+                    Sagittarius
+                </span>
+
+                <span class="zodiac-date">
+                    Nov 22 – Dec 21
+                </span>
+
+                <span class="zodiac-arrow">
+                    <i data-lucide="arrow-up-right"></i>
+                </span>
+
+            </button>
+
+
+            <!-- CAPRICORN -->
+
+            <button
+                class="zodiac-card"
+                data-sign="capricorn"
+            >
+
+                <span class="zodiac-icon">
+
+                    <i data-lucide="mountain"></i>
+
+                </span>
+
+                <span class="zodiac-name">
+                    Capricorn
+                </span>
+
+                <span class="zodiac-date">
+                    Dec 22 – Jan 19
+                </span>
+
+                <span class="zodiac-arrow">
+                    <i data-lucide="arrow-up-right"></i>
+                </span>
+
+            </button>
+
+
+            <!-- AQUARIUS -->
+
+            <button
+                class="zodiac-card"
+                data-sign="aquarius"
+            >
+
+                <span class="zodiac-icon">
+
+                    <i data-lucide="droplets"></i>
+
+                </span>
+
+                <span class="zodiac-name">
+                    Aquarius
+                </span>
+
+                <span class="zodiac-date">
+                    Jan 20 – Feb 18
+                </span>
+
+                <span class="zodiac-arrow">
+                    <i data-lucide="arrow-up-right"></i>
+                </span>
+
+            </button>
+
+
+            <!-- PISCES -->
+
+            <button
+                class="zodiac-card"
+                data-sign="pisces"
+            >
+
+                <span class="zodiac-icon">
+
+                    <i data-lucide="fish"></i>
+
+                </span>
+
+                <span class="zodiac-name">
+                    Pisces
+                </span>
+
+                <span class="zodiac-date">
+                    Feb 19 – Mar 20
+                </span>
+
+                <span class="zodiac-arrow">
+                    <i data-lucide="arrow-up-right"></i>
+                </span>
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     03 — FEATURED HOROSCOPE
+========================================================= -->
+
+<section class="featured-horoscope-section">
+
+    <div class="container">
+
+        <div class="featured-horoscope">
+
+            <div class="featured-glow glow-one"></div>
+            <div class="featured-glow glow-two"></div>
+
+
+            <div class="featured-top">
+
+                <div>
+
+                    <span class="section-label">
+                        Today's Reading
+                    </span>
+
+                    <div class="featured-sign">
+
+                        <div class="featured-sign-icon">
+
+                            <i data-lucide="flame"></i>
+
+                        </div>
+
+                        <div>
+
+                            <span class="featured-kicker">
+                                Your selected sign
+                            </span>
+
+                            <h2>
+                                Aries
+                            </h2>
+
+                            <span class="featured-date">
+                                March 21 – April 19
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="featured-celestial-icon">
+
+                    <i data-lucide="sparkles"></i>
+
+                </div>
+
+            </div>
+
+
+            <div class="featured-divider"></div>
+
+
+            <div class="featured-reading">
+
+                <span class="reading-label">
+                    Today's Theme
+                </span>
+
+                <h3>
+                    Lead With Confidence, But Leave Room to Listen
+                </h3>
+
+                <p>
+                    Your natural instinct to move forward is especially strong
+                    today. Instead of trying to control every outcome, direct
+                    that energy toward one meaningful priority. A calm,
+                    intentional decision can create more progress than several
+                    rushed ones.
+                </p>
+
+                <p>
+                    Relationships may benefit from a softer approach. Someone
+                    close to you could be looking for understanding rather than
+                    an immediate solution. Give conversations enough space to
+                    unfold, and allow your intuition to guide the response.
                 </p>
 
             </div>
 
 
-            <div class="zodiac-selector">
-
-                <button
-                    class="zodiac-sign-btn active"
-                    data-sign="aries"
-                >
-                    <span class="symbol">♈</span>
-                    Aries
-                </button>
+            <div class="featured-insights">
 
 
-                <button
-                    class="zodiac-sign-btn"
-                    data-sign="taurus"
-                >
-                    <span class="symbol">♉</span>
-                    Taurus
-                </button>
+                <div class="featured-insight">
 
+                    <div class="insight-icon">
 
-                <button
-                    class="zodiac-sign-btn"
-                    data-sign="gemini"
-                >
-                    <span class="symbol">♊</span>
-                    Gemini
-                </button>
+                        <i data-lucide="heart-handshake"></i>
 
-
-                <button
-                    class="zodiac-sign-btn"
-                    data-sign="cancer"
-                >
-                    <span class="symbol">♋</span>
-                    Cancer
-                </button>
-
-
-                <button
-                    class="zodiac-sign-btn"
-                    data-sign="leo"
-                >
-                    <span class="symbol">♌</span>
-                    Leo
-                </button>
-
-
-                <button
-                    class="zodiac-sign-btn"
-                    data-sign="virgo"
-                >
-                    <span class="symbol">♍</span>
-                    Virgo
-                </button>
-
-
-                <button
-                    class="zodiac-sign-btn"
-                    data-sign="libra"
-                >
-                    <span class="symbol">♎</span>
-                    Libra
-                </button>
-
-
-                <button
-                    class="zodiac-sign-btn"
-                    data-sign="scorpio"
-                >
-                    <span class="symbol">♏</span>
-                    Scorpio
-                </button>
-
-
-                <button
-                    class="zodiac-sign-btn"
-                    data-sign="sagittarius"
-                >
-                    <span class="symbol">♐</span>
-                    Sagittarius
-                </button>
-
-
-                <button
-                    class="zodiac-sign-btn"
-                    data-sign="capricorn"
-                >
-                    <span class="symbol">♑</span>
-                    Capricorn
-                </button>
-
-
-                <button
-                    class="zodiac-sign-btn"
-                    data-sign="aquarius"
-                >
-                    <span class="symbol">♒</span>
-                    Aquarius
-                </button>
-
-
-                <button
-                    class="zodiac-sign-btn"
-                    data-sign="pisces"
-                >
-                    <span class="symbol">♓</span>
-                    Pisces
-                </button>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- ========================= HOROSCOPE DISPLAY ========================= -->
-    <section class="bg-alt">
-
-        <div class="container">
-
-            <div
-                id="zodiac-horoscope-display"
-                class="horoscope-display"
-            >
-
-                <div class="d-flex flex-wrap justify-content-between align-items-end mb-4">
+                    </div>
 
                     <div>
 
-                        <span class="section-label">
-                            02 · Today's Horoscope
+                        <span>
+                            Love
                         </span>
-
-                        <h2 class="zodiac-title">
-                            Aries
-                        </h2>
-
-                        <p class="zodiac-date-range mb-0">
-                            Mar 21 – Apr 19
-                        </p>
-
-                    </div>
-
-
-                    <i
-                        data-lucide="sparkles"
-                        style="font-size:3rem;color:var(--secondary-light)"
-                    ></i>
-
-                </div>
-
-
-                <p class="zodiac-general mb-4">
-                    Today brings a surge of confidence. Channel your natural
-                    boldness into a project that has been waiting for your initiative.
-                </p>
-
-
-                <div class="row g-3">
-
-                    <div class="col-md-4">
-
-                        <div class="insight-card">
-
-                            <h5>
-                                <i
-                                    data-lucide="heart"
-                                    class="me-2"
-                                ></i>
-                                Love & Relationships
-                            </h5>
-
-                            <p class="zodiac-love">
-                                Passion is on your side. A heartfelt conversation
-                                could deepen a meaningful connection.
-                            </p>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="col-md-4">
-
-                        <div class="insight-card">
-
-                            <h5>
-                                <i
-                                    data-lucide="briefcase"
-                                    class="me-2"
-                                ></i>
-                                Career & Finances
-                            </h5>
-
-                            <p class="zodiac-career">
-                                Your leadership instincts are sharp. Trust them
-                                when an unexpected opportunity appears.
-                            </p>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="col-md-4">
-
-                        <div class="insight-card">
-
-                            <h5>
-                                <i
-                                    data-lucide="sun"
-                                    class="me-2"
-                                ></i>
-                                Wellbeing
-                            </h5>
-
-                            <p class="zodiac-wellness">
-                                High energy calls for physical activity. A brisk
-                                walk or workout will restore your balance.
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- ========================= DAILY INSIGHTS ========================= -->
-    <section>
-
-        <div class="container">
-
-            <div class="row g-4">
-
-                <div class="col-lg-4">
-
-                    <div class="content-panel">
-
-                        <span class="section-label">
-                            03 · Love & Relationships
-                        </span>
-
-                        <h3>
-                            Make Room for Honest Connection
-                        </h3>
 
                         <p>
-                            Today's sky invites you to listen before solving.
-                            Notice the small gestures that create safety,
-                            warmth, and trust.
+                            Honest communication creates warmth and deeper trust.
                         </p>
 
                     </div>
@@ -528,21 +862,23 @@
                 </div>
 
 
-                <div class="col-lg-4">
+                <div class="featured-insight">
 
-                    <div class="content-panel">
+                    <div class="insight-icon">
 
-                        <span class="section-label">
-                            04 · Career & Finances
+                        <i data-lucide="briefcase-business"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Career
                         </span>
 
-                        <h3>
-                            Choose Progress Over Pressure
-                        </h3>
-
                         <p>
-                            A thoughtful next step is more valuable than a rushed
-                            decision. Let your priorities guide the pace.
+                            Focus on one valuable opportunity instead of chasing
+                            every possibility.
                         </p>
 
                     </div>
@@ -550,22 +886,22 @@
                 </div>
 
 
-                <div class="col-lg-4">
+                <div class="featured-insight">
 
-                    <div class="content-panel">
+                    <div class="insight-icon">
 
-                        <span class="section-label">
-                            05 · Personal Energy
+                        <i data-lucide="battery-charging"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Energy
                         </span>
 
-                        <h3>
-                            Return to Your Center
-                        </h3>
-
                         <p>
-                            Protect a little quiet time today. Your clearest
-                            insights may arrive when your schedule makes space
-                            for them.
+                            Use your momentum wisely and make time for recovery.
                         </p>
 
                     </div>
@@ -576,200 +912,713 @@
 
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 
-    <!-- ========================= LOOKING AHEAD ========================= -->
-    <section class="bg-alt">
 
-        <div class="container">
+<!-- =========================================================
+     04 — LIFE AREAS
+========================================================= -->
 
-            <div class="row align-items-center g-5">
+<section class="life-areas-section">
 
-                <div class="col-lg-6">
+    <div class="container">
 
-                    <img
-                        class="content-image"
-                        src="./images/moon-night.png"
-                        alt="Moon against the night sky"
-                    >
+        <div class="section-heading-center">
+
+            <span class="section-label">
+                Your Daily Perspective
+            </span>
+
+            <h2>
+                Where Today's Energy Can Guide You
+            </h2>
+
+            <p class="section-description">
+                A horoscope can offer different perspectives across the areas
+                that shape your everyday experience.
+            </p>
+
+        </div>
+
+
+        <div class="life-area-stack">
+
+
+            <article class="life-area-card">
+
+                <div class="life-area-number">
+                    01
+                </div>
+
+                <div class="life-area-icon">
+
+                    <i data-lucide="heart"></i>
 
                 </div>
 
-
-                <div class="col-lg-6">
+                <div class="life-area-content">
 
                     <span class="section-label">
-                        06 · Looking Ahead
+                        Relationships
                     </span>
 
-                    <h2>
-                        Weekly & Monthly Perspectives
-                    </h2>
+                    <h3>
+                        Make Space for Meaningful Connection
+                    </h3>
 
-                    <p class="text-muted">
-                        Daily guidance is a starting point. A longer reading
-                        can help you notice recurring themes and create
-                        intentions for the weeks ahead.
+                    <p>
+                        Whether you are nurturing a long-term relationship,
+                        meeting someone new, or simply strengthening your
+                        connection with yourself, today's energy encourages
+                        patience and openness. Listen carefully to what is
+                        being expressed beneath the surface.
                     </p>
-
-
-                    <div class="d-flex gap-3 flex-wrap">
-
-                        <a
-                            class="btn btn-secondary"
-                            href="./pricing.html"
-                        >
-                            Weekly Horoscope
-                        </a>
-
-                        <a
-                            class="btn btn-primary"
-                            href="./pricing.html"
-                        >
-                            Monthly Reading
-                        </a>
-
-                    </div>
 
                 </div>
 
-            </div>
+                <div class="life-area-mark">
+
+                    <i data-lucide="arrow-up-right"></i>
+
+                </div>
+
+            </article>
+
+
+            <article class="life-area-card">
+
+                <div class="life-area-number">
+                    02
+                </div>
+
+                <div class="life-area-icon">
+
+                    <i data-lucide="briefcase"></i>
+
+                </div>
+
+                <div class="life-area-content">
+
+                    <span class="section-label">
+                        Career & Finances
+                    </span>
+
+                    <h3>
+                        Turn Momentum Into Meaningful Progress
+                    </h3>
+
+                    <p>
+                        Your attention is most valuable when it is directed
+                        toward work that genuinely matters. Review your
+                        priorities, identify the next practical step, and
+                        resist the temptation to measure progress only by speed.
+                    </p>
+
+                </div>
+
+                <div class="life-area-mark">
+
+                    <i data-lucide="arrow-up-right"></i>
+
+                </div>
+
+            </article>
+
+
+            <article class="life-area-card">
+
+                <div class="life-area-number">
+                    03
+                </div>
+
+                <div class="life-area-icon">
+
+                    <i data-lucide="sparkles"></i>
+
+                </div>
+
+                <div class="life-area-content">
+
+                    <span class="section-label">
+                        Personal Growth
+                    </span>
+
+                    <h3>
+                        Notice What Your Intuition Is Telling You
+                    </h3>
+
+                    <p>
+                        Not every answer needs to arrive immediately. Give
+                        yourself permission to pause, observe recurring
+                        patterns, and recognize which choices feel aligned
+                        with the person you are becoming.
+                    </p>
+
+                </div>
+
+                <div class="life-area-mark">
+
+                    <i data-lucide="arrow-up-right"></i>
+
+                </div>
+
+            </article>
+
+
+            <article class="life-area-card">
+
+                <div class="life-area-number">
+                    04
+                </div>
+
+                <div class="life-area-icon">
+
+                    <i data-lucide="moon-star"></i>
+
+                </div>
+
+                <div class="life-area-content">
+
+                    <span class="section-label">
+                        Wellbeing
+                    </span>
+
+                    <h3>
+                        Balance Ambition With Restoration
+                    </h3>
+
+                    <p>
+                        Your energy deserves the same attention as your goals.
+                        Build small pauses into your day, step away from
+                        unnecessary noise, and choose habits that help you
+                        return to a calm and centered state.
+                    </p>
+
+                </div>
+
+                <div class="life-area-mark">
+
+                    <i data-lucide="arrow-up-right"></i>
+
+                </div>
+
+            </article>
 
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 
-    <!-- ========================= FINAL CTA ========================= -->
-    <section>
 
-        <div class="container">
+<!-- =========================================================
+     05 — DAILY RHYTHM
+========================================================= -->
 
-            <div class="page-cta text-center">
+<section class="rhythm-section">
+
+    <div class="container">
+
+        <div class="rhythm-wrapper">
+
+            <div class="rhythm-heading">
 
                 <span class="section-label">
-                    07 · Go Deeper
+                    Daily Rhythm
                 </span>
 
                 <h2>
-                    Want Guidance Written for Your Chart?
+                    Move Through the Day With Intention
                 </h2>
 
-                <p class="section-description">
-                    A personal consultation brings the sky into conversation
-                    with your specific questions and lived experience.
+                <p>
+                    Think of the day as a sequence of moments rather than
+                    a single prediction. Each phase offers a different
+                    opportunity to pause, act, connect, and reset.
                 </p>
 
+            </div>
+
+
+            <div class="rhythm-line">
+
+
+                <div class="rhythm-step">
+
+                    <div class="rhythm-marker">
+
+                        <i data-lucide="sunrise"></i>
+
+                    </div>
+
+                    <div class="rhythm-content">
+
+                        <span>
+                            Morning
+                        </span>
+
+                        <h4>
+                            Set Your Direction
+                        </h4>
+
+                        <p>
+                            Begin slowly. Identify the one intention you want
+                            to carry through the rest of the day.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="rhythm-step">
+
+                    <div class="rhythm-marker">
+
+                        <i data-lucide="sun"></i>
+
+                    </div>
+
+                    <div class="rhythm-content">
+
+                        <span>
+                            Afternoon
+                        </span>
+
+                        <h4>
+                            Take Focused Action
+                        </h4>
+
+                        <p>
+                            Use your strongest momentum on work that deserves
+                            your attention and creativity.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="rhythm-step">
+
+                    <div class="rhythm-marker">
+
+                        <i data-lucide="sunset"></i>
+
+                    </div>
+
+                    <div class="rhythm-content">
+
+                        <span>
+                            Evening
+                        </span>
+
+                        <h4>
+                            Reconnect
+                        </h4>
+
+                        <p>
+                            Step away from pressure and make room for
+                            conversation, reflection, or simple enjoyment.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="rhythm-step">
+
+                    <div class="rhythm-marker">
+
+                        <i data-lucide="moon"></i>
+
+                    </div>
+
+                    <div class="rhythm-content">
+
+                        <span>
+                            Night
+                        </span>
+
+                        <h4>
+                            Release the Day
+                        </h4>
+
+                        <p>
+                            Let unfinished thoughts rest. A quieter mind can
+                            make tomorrow's direction easier to recognize.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     06 — CELESTIAL REFLECTION
+========================================================= -->
+
+<section class="reflection-section">
+
+    <div class="container">
+
+        <div class="reflection-card">
+
+            <div class="reflection-visual">
+
+                <div class="reflection-moon">
+
+                    <i data-lucide="moon-star"></i>
+
+                </div>
+
+                <span class="reflection-orbit orbit-a"></span>
+                <span class="reflection-orbit orbit-b"></span>
+                <span class="reflection-star star-a"></span>
+                <span class="reflection-star star-b"></span>
+                <span class="reflection-star star-c"></span>
+
+            </div>
+
+
+            <div class="reflection-content">
+
+                <span class="section-label">
+                    Reflection
+                </span>
+
+                <h2>
+                    One Question to Carry With You
+                </h2>
+
+                <p>
+                    Instead of asking what will happen, consider what you can
+                    consciously bring into the day. Reflection turns a horoscope
+                    from a prediction into a personal moment of awareness.
+                </p>
+
+
+                <div class="reflection-question">
+
+                    <i data-lucide="quote"></i>
+
+                    <span>
+                        What deserves more of my attention today,
+                        and what can I comfortably let go?
+                    </span>
+
+                </div>
+
+
+                <div class="reflection-tags">
+
+                    <span>
+                        <i data-lucide="circle-check"></i>
+                        Awareness
+                    </span>
+
+                    <span>
+                        <i data-lucide="compass"></i>
+                        Direction
+                    </span>
+
+                    <span>
+                        <i data-lucide="heart"></i>
+                        Balance
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     07 — WEEKLY / MONTHLY
+========================================================= -->
+
+<section class="perspective-section">
+
+    <div class="container">
+
+        <div class="section-heading-center">
+
+            <span class="section-label">
+                Go Beyond Today
+            </span>
+
+            <h2>
+                See the Bigger Picture
+            </h2>
+
+            <p class="section-description">
+                Daily guidance gives you a snapshot. Longer readings help
+                you explore recurring themes, transitions, and intentions
+                over a wider period.
+            </p>
+
+        </div>
+
+
+        <div class="perspective-stack">
+
+
+            <div class="perspective-card">
+
+                <div class="perspective-icon">
+
+                    <i data-lucide="calendar-days"></i>
+
+                </div>
+
+                <div class="perspective-content">
+
+                    <span class="section-label">
+                        Weekly
+                    </span>
+
+                    <h3>
+                        Understand the Coming Week
+                    </h3>
+
+                    <p>
+                        Explore the themes that may influence your relationships,
+                        work, personal priorities, and emotional rhythm across
+                        the next several days.
+                    </p>
+
+                </div>
+
                 <a
-                    class="btn btn-primary mt-3"
                     href="./pricing.html"
+                    class="perspective-action"
                 >
-                    Book a Consultation
+
+                    <span>
+                        Explore Weekly
+                    </span>
+
+                    <i data-lucide="arrow-right"></i>
+
+                </a>
+
+            </div>
+
+
+            <div class="perspective-card">
+
+                <div class="perspective-icon">
+
+                    <i data-lucide="orbit"></i>
+
+                </div>
+
+                <div class="perspective-content">
+
+                    <span class="section-label">
+                        Monthly
+                    </span>
+
+                    <h3>
+                        Explore the Month Ahead
+                    </h3>
+
+                    <p>
+                        Take a broader look at your month's patterns and
+                        opportunities so you can approach important decisions
+                        with greater awareness and intention.
+                    </p>
+
+                </div>
+
+                <a
+                    href="./pricing.html"
+                    class="perspective-action"
+                >
+
+                    <span>
+                        Explore Monthly
+                    </span>
+
+                    <i data-lucide="arrow-right"></i>
+
                 </a>
 
             </div>
 
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 
-    <!-- ========================= NEWSLETTER ========================= -->
-    <section class="newsletter-section section-sm">
 
-        <div class="container position-relative text-center">
+<!-- =========================================================
+     08 — FINAL CTA
+========================================================= -->
+
+<section class="horoscope-final-cta">
+
+    <div class="container">
+
+        <div class="final-cta-card">
+
+            <div class="final-cta-icon">
+
+                <i data-lucide="sparkles"></i>
+
+            </div>
+
 
             <span class="section-label">
-                Stay Connected
+                Personal Guidance
             </span>
 
+
             <h2>
-                Stay Connected With the Stars
+                Your Chart Holds More Than a Daily Horoscope
             </h2>
 
-            <p class="section-description">
-                Receive astrology insights, horoscope updates, and helpful
-                guidance delivered to your inbox.
+
+            <p>
+                A personal consultation can take you beyond general zodiac
+                guidance and explore the unique patterns, questions, and
+                experiences reflected in your birth chart.
             </p>
 
-            <form class="newsletter-form mt-4">
 
-                <input
-                    type="email"
-                    class="form-control"
-                    placeholder="Email Address"
-                    required
+            <div class="final-cta-actions">
+
+                <a
+                    href="./pricing.html"
+                    class="btn btn-primary"
                 >
+                    Book a Consultation
+                </a>
 
-                <button class="btn btn-primary">
-                    Subscribe
-                </button>
+                <a
+                    href="./services.html"
+                    class="btn btn-secondary"
+                >
+                    Explore Services
+                </a>
 
-            </form>
-
-            <p class="newsletter-msg mt-2"></p>
+            </div>
 
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 
-    <!-- ========================= FOOTER ========================= -->
+
+<!-- =========================================================
+     NEWSLETTER — UNCHANGED
+========================================================= -->
+
+<section class="newsletter-section section-sm">
+
+    <div class="container position-relative text-center">
+
+        <span class="section-label">
+            Stay Connected
+        </span>
+
+        <h2>
+            Stay Connected With the Stars
+        </h2>
+
+        <p class="section-description">
+            Receive astrology insights, horoscope updates, and helpful
+            guidance delivered to your inbox.
+        </p>
+
+        <form class="newsletter-form mt-4">
+
+            <input
+                type="email"
+                class="form-control"
+                placeholder="Email Address"
+                required
+            >
+
+            <button class="btn btn-primary">
+                Subscribe
+            </button>
+
+        </form>
+
+        <p class="newsletter-msg mt-2"></p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     FOOTER — UNCHANGED
+========================================================= -->
+
     <footer class="footer-custom">
-
         <div class="container">
 
             <div class="row g-4">
 
+                <!-- Brand -->
                 <div class="col-lg-4 col-md-6">
 
-                    <div class="footer-brand">
-
-                        <img src="./images/logo.png" alt="">
-
-                        <span
-                            class="brand-astro"
-                            dir="ltr"
-                        >
-                            <span class="brand-astro">Astro</span><span class="brand-guide">Guide</span>
-                        </span>
+<div class="footer-brand">
+                    <a class="navbar-brand-custom" href="./index.html">
+                                    <img src="./images/logo.png" alt="">
+                                    <span class="brand-astro" dir="ltr">
+                                        <span class="brand-astro">Astro</span><span class="brand-guide">Guide</span>
+                                    </span>
+                    </a>
 
                     </div>
-
 
                     <p class="footer-tagline">
                         Understand Your Path. Embrace Your Future.
                     </p>
 
-
                     <div class="footer-social">
 
-                        <a
-                            href="#"
-                            aria-label="Facebook"
-                        >
+                        <a href="#" aria-label="Facebook">
                             <i data-lucide="facebook"></i>
                         </a>
 
-                        <a
-                            href="#"
-                            aria-label="Instagram"
-                        >
+                        <a href="#" aria-label="Instagram">
                             <i data-lucide="instagram"></i>
                         </a>
 
-                        <a
-                            href="#"
-                            aria-label="Twitter"
-                        >
+                        <a href="#" aria-label="Twitter">
                             <i data-lucide="twitter"></i>
                         </a>
 
-                        <a
-                            href="#"
-                            aria-label="YouTube"
-                        >
+                        <a href="#" aria-label="YouTube">
                             <i data-lucide="youtube"></i>
                         </a>
 
@@ -778,6 +1627,7 @@
                 </div>
 
 
+                <!-- Quick Links -->
                 <div class="col-lg-2 col-md-6 col-6">
 
                     <h5 class="footer-heading">
@@ -790,14 +1640,17 @@
                     >
                         Home
                     </a>
-
                     <a
                         class="footer-link"
-                        href="./services.html"
+                        href="./about.html"
                     >
-                        Services
+                        About
                     </a>
+                    <a class="footer-link" href="./horoscope.html">
 
+                        Horoscope
+
+                    </a>
 
                     <a
                         class="footer-link"
@@ -813,16 +1666,12 @@
                         Pricing
                     </a>
 
-                    <a
-                        class="footer-link"
-                        href="./about.html"
-                    >
-                        About
-                    </a>
+                    
 
                 </div>
 
 
+                <!-- Services -->
                 <div class="col-lg-2 col-md-6 col-6">
 
                     <h5 class="footer-heading">
@@ -860,6 +1709,7 @@
                 </div>
 
 
+                <!-- Additional Pages -->
                 <div class="col-lg-2 col-md-6 col-6">
 
                     <h5 class="footer-heading">
@@ -883,12 +1733,12 @@
                 </div>
 
 
+                <!-- Contact -->
                 <div class="col-lg-2 col-md-6 col-6">
 
                     <h5 class="footer-heading">
                         Contact Us
                     </h5>
-
 
                     <div class="contact-item">
 
@@ -900,7 +1750,6 @@
 
                     </div>
 
-
                     <div class="contact-item">
 
                         <i data-lucide="map-pin"></i>
@@ -910,7 +1759,6 @@
                         </span>
 
                     </div>
-
 
                     <div class="contact-item">
 
@@ -927,15 +1775,15 @@
             </div>
 
 
+            <!-- Footer Bottom -->
             <div class="footer-bottom d-flex flex-wrap justify-content-between align-items-center">
 
                 <p
                     class="mb-0 text-muted"
-                    style="font-size:0.875rem;"
+                    style="font-size: 0.875rem;"
                 >
                     &copy; 2026 AstroGuide. All rights reserved.
                 </p>
-
 
                 <div class="footer-bottom-links">
 
@@ -952,23 +1800,22 @@
             </div>
 
         </div>
-
     </footer>
 
 
-    <!-- ========================= SCRIPTS ========================= -->
 
-    <script src="https://unpkg.com/lucide@0.542.0/dist/umd/lucide.min.js"></script>
+<!-- =========================================================
+     SCRIPTS
+========================================================= -->
 
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            lucide.createIcons();
-        });
-    </script>
+<script src="https://unpkg.com/lucide@0.542.0/dist/umd/lucide.min.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-    <script src="./js/theme.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="./js/theme.js"></script>
 
 </body>
 

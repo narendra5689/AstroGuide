@@ -2,7 +2,11 @@
    Home 1 — Classic
    ========================= */
 
-/* Hero */
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
 .hero-section {
     padding-top: 80px;
     padding-bottom: 80px;
@@ -64,13 +68,17 @@
     position: absolute;
     bottom: 20px;
     left: 20px;
+
     background-color: var(--bg-card);
     border: 1px solid var(--border-color);
     border-radius: var(--radius-md);
+
     padding: 12px 16px;
+
     display: flex;
     align-items: center;
     gap: 12px;
+
     box-shadow: var(--shadow-md);
 }
 
@@ -90,30 +98,38 @@
     color: var(--text-muted);
 }
 
-/* Introduction */
+
+/* =========================================================
+   INTRODUCTION
+   ========================================================= */
+
 .intro-text {
     font-size: 1.0625rem;
     color: var(--text-muted);
     margin-bottom: 16px;
 }
 
-/* Services section uses global .feature-card */
 
-/* Astrologers Preview */
+/* =========================================================
+   ASTROLOGERS PREVIEW
+   ========================================================= */
+
 .consultant-card {
     background-color: var(--bg-card);
     border: 1px solid var(--border-color);
     border-radius: var(--radius-md);
     overflow: hidden;
     height: 100%;
-    transition: transform var(--transition), box-shadow var(--transition);
+
+    transition:
+        transform var(--transition),
+        box-shadow var(--transition);
 }
 
 .consultant-card:hover {
     transform: translateY(-4px);
     box-shadow: var(--shadow-lg);
     border-color: var(--secondary-color);
-    
 }
 
 .consultant-image-wrap {
@@ -122,25 +138,29 @@
 }
 
 .consultant-image-wrap img {
-    width: fit-content;
-    height: fit-content;
+    width: 100%;
+    height: 660px;
     object-fit: cover;
+    display: block;
+
     transition: transform 0.4s ease;
 }
 
 .consultant-card:hover .consultant-image-wrap img {
     transform: scale(1.05);
-    
 }
 
 .consultant-badge {
     position: absolute;
     top: 12px;
     right: 12px;
+
     background-color: var(--primary-color);
     color: #ffffff;
+
     font-size: 0.75rem;
     font-weight: 500;
+
     padding: 4px 12px;
     border-radius: var(--radius-pill);
 }
@@ -161,6 +181,7 @@
     font-size: 0.875rem;
     color: var(--secondary-color);
     font-weight: 500;
+
     display: block;
     margin-bottom: 10px;
 }
@@ -174,6 +195,7 @@
 .consultant-meta {
     display: flex;
     gap: 16px;
+
     font-size: 0.875rem;
     color: var(--text-muted);
 }
@@ -183,16 +205,26 @@
     margin-right: 4px;
 }
 
-/* How It Works */
+
+/* =========================================================
+   HOW IT WORKS
+   ========================================================= */
+
 .step-card {
     text-align: center;
+
     padding: 32px 24px;
+
     background-color: var(--bg-card);
     border: 1px solid var(--border-color);
     border-radius: var(--radius-md);
+
     height: 100%;
     position: relative;
-    transition: transform var(--transition), box-shadow var(--transition);
+
+    transition:
+        transform var(--transition),
+        box-shadow var(--transition);
 }
 
 .step-card:hover {
@@ -205,9 +237,11 @@
     position: absolute;
     top: 16px;
     right: 20px;
+
     font-family: var(--font-heading);
     font-size: 2.5rem;
     font-weight: 700;
+
     color: var(--border-color);
     line-height: 1;
 }
@@ -215,15 +249,20 @@
 .step-icon {
     width: 56px;
     height: 56px;
+
     border-radius: var(--radius-sm);
     background-color: var(--bg-alt);
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     font-size: 1.5rem;
     color: var(--secondary-color);
+
     margin: 0 auto 20px;
 }
+
 .step-card h4 {
     margin-bottom: 10px;
 }
@@ -234,16 +273,20 @@
     margin-bottom: 0;
 }
 
-/* Zodiac Preview */
-/* =========================
-   Horoscope Preview
-   ========================= */
+
+/* =========================================================
+   HOROSCOPE PREVIEW
+   ========================================================= */
 
 .horoscope-preview-section {
     padding: 70px 0;
 }
 
-/* Zodiac cards */
+
+/* =========================================================
+   ZODIAC CARDS
+   ========================================================= */
+
 .zodiac-mini-card {
     display: flex;
     flex-direction: column;
@@ -260,15 +303,15 @@
     text-decoration: none;
     text-align: center;
 
-    transition: transform 0.25s ease,
-                border-color 0.25s ease,
-                box-shadow 0.25s ease;
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
 }
 
-/* Icon */
 .zodiac-symbol {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
 
     width: 48px;
@@ -279,7 +322,6 @@
     color: var(--secondary-color);
 }
 
-/* SVG icon size */
 .zodiac-symbol svg {
     width: 30px;
     height: 30px;
@@ -288,7 +330,6 @@
     stroke-width: 2;
 }
 
-/* Name */
 .zodiac-name {
     color: var(--text-color);
 
@@ -298,7 +339,6 @@
     line-height: 1.2;
 }
 
-/* Hover */
 .zodiac-mini-card:hover {
     transform: translateY(-4px);
     border-color: var(--secondary-color);
@@ -311,11 +351,188 @@
 }
 
 
-/* =========================
-   Tablet
-   ========================= */
+/* =========================================================
+   TESTIMONIALS
+   ========================================================= */
 
-@media (max-width: 991.98px) {
+.testimonial-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+
+    padding: 28px;
+
+    height: 100%;
+
+    transition:
+        transform var(--transition),
+        box-shadow var(--transition);
+}
+
+.testimonial-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--secondary-color);
+}
+
+.testimonial-stars {
+    color: var(--secondary-color);
+
+    margin-bottom: 14px;
+
+    font-size: 0.9375rem;
+    letter-spacing: 2px;
+}
+
+.testimonial-card p {
+    font-size: 0.9375rem;
+    color: var(--text-color);
+
+    margin-bottom: 20px;
+    line-height: 1.7;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.author-avatar {
+    width: 44px;
+    height: 44px;
+
+    border-radius: 50%;
+
+    background-color: var(--primary-color);
+    color: #ffffff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: 600;
+    font-size: 0.875rem;
+
+    flex-shrink: 0;
+}
+
+[data-theme="dark"] .author-avatar {
+    color: var(--secondary-color);
+}
+
+.testimonial-author strong {
+    display: block;
+
+    font-size: 0.9375rem;
+    color: var(--text-color);
+}
+
+.testimonial-author span {
+    font-size: 0.8125rem;
+    color: var(--text-muted);
+}
+
+
+/* =========================================================
+   BASE RESPONSIVE SAFETY
+   ========================================================= */
+
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.hero-section,
+.horoscope-preview-section {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.hero-section .row,
+.horoscope-preview-section .row {
+    width: 100%;
+}
+
+.hero-section img,
+.horoscope-preview-section img {
+    max-width: 100%;
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+   1600px AND ABOVE
+   ========================================================= */
+
+@media (min-width: 1600px) {
+
+    .hero-section {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    .consultant-card,
+    .step-card,
+    .testimonial-card,
+    .zodiac-mini-card {
+        max-width: 100%;
+    }
+
+    .consultant-card,
+    .step-card,
+    .testimonial-card {
+        margin-bottom: 24px;
+    }
+
+    .zodiac-mini-card {
+        margin-bottom: 16px;
+    }
+}
+
+
+/* =========================================================
+   DESKTOP / NEST HUB
+   992px — 1199px
+   ========================================================= */
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+
+    .hero-section {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    .hero-image {
+        height: 420px;
+    }
+
+    .hero-stats {
+        gap: 24px;
+    }
+
+    .consultant-card,
+    .step-card,
+    .testimonial-card {
+        margin-bottom: 20px;
+    }
+
+    .zodiac-mini-card {
+        margin-bottom: 14px;
+    }
+
+    .consultant-info {
+        padding: 20px;
+    }
+
+    .step-card {
+        padding: 28px 20px;
+    }
+
+    .testimonial-card {
+        padding: 24px;
+    }
 
     .horoscope-preview-section {
         padding: 60px 0;
@@ -338,18 +555,216 @@
 }
 
 
-/* =========================
-   Mobile
-   ========================= */
+/* =========================================================
+   IPAD MINI — 768px
+   CHANGE LAYOUT ONLY
+   ========================================================= */
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+    /* -----------------------------------------------------
+       HERO
+       Keep the two-column layout instead of stacking
+       ----------------------------------------------------- */
+
+    .hero-section .row {
+        align-items: center;
+    }
+
+    .hero-section .hero-image-wrap {
+        width: 100%;
+        margin: 0;
+    }
+
+    .hero-section .hero-image {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+
+    /* -----------------------------------------------------
+       CONSULTANT CARDS
+       2 cards per row
+       ----------------------------------------------------- */
+
+    .consultant-row > [class*="col-"] {
+        flex: 0 0 50%;
+        width: 50%;
+    }
+
+    .consultant-card {
+        width: 100%;
+        height: 100%;
+        margin-bottom: 0;
+    }
+
+    .consultant-image-wrap {
+        width: 100%;
+    }
+
+    .consultant-image-wrap img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .consultant-info {
+        padding: 24px;
+    }
+
+
+    /* -----------------------------------------------------
+       HOW IT WORKS
+       2 cards per row
+       ----------------------------------------------------- */
+
+    .steps-row > [class*="col-"] {
+        flex: 0 0 50%;
+        width: 50%;
+    }
+
+    .step-card {
+        width: 100%;
+        height: 100%;
+        margin-bottom: 0;
+        padding: 28px 22px;
+    }
+
+
+    /* -----------------------------------------------------
+       TESTIMONIALS
+       2 cards per row
+       ----------------------------------------------------- */
+
+    .testimonial-row > [class*="col-"] {
+        flex: 0 0 50%;
+        width: 50%;
+    }
+
+    .testimonial-card {
+        width: 100%;
+        height: 100%;
+        margin-bottom: 0;
+        padding: 24px;
+    }
+
+
+    /* -----------------------------------------------------
+       ZODIAC
+       4 cards per row
+       ----------------------------------------------------- */
+
+    .zodiac-row > [class*="col-"] {
+        flex: 0 0 25%;
+        width: 25%;
+    }
+
+    .zodiac-mini-card {
+        width: 100%;
+        min-height: 115px;
+        margin-bottom: 0;
+    }
+
+
+    /* -----------------------------------------------------
+       SPACING BETWEEN CARDS
+       ----------------------------------------------------- */
+
+    .consultant-row,
+    .steps-row,
+    .testimonial-row {
+        row-gap: 20px;
+    }
+
+    .zodiac-row {
+        row-gap: 16px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   BELOW 576px
+   ========================================================= */
 
 @media (max-width: 575.98px) {
 
+    .hero-section,
     .horoscope-preview-section {
-        padding: 45px 0;
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
     }
 
-    .horoscope-preview-section .row {
-        row-gap: 12px;
+    .hero-section {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .hero-headline {
+        margin-bottom: 16px;
+    }
+
+    .hero-subtext {
+        max-width: 100%;
+    }
+
+    .hero-stats {
+        gap: 18px;
+    }
+
+    .hero-stat-item .stat-number {
+        font-size: 1.5rem;
+    }
+
+    .hero-image {
+        height: 280px;
+    }
+
+    .hero-image-badge {
+        padding: 8px 12px;
+
+        left: 12px;
+        right: 12px;
+
+        max-width: calc(100% - 24px);
+    }
+
+    /* Small consistent card spacing */
+    .consultant-card,
+    .step-card,
+    .testimonial-card {
+        margin-bottom: 16px;
+    }
+
+    .zodiac-mini-card {
+        margin-bottom: 10px;
+    }
+
+    .consultant-info {
+        padding: 20px;
+    }
+
+    .consultant-meta {
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .step-card {
+        padding: 26px 20px;
+    }
+
+    .step-number {
+        font-size: 2rem;
+    }
+
+    .testimonial-card {
+        padding: 22px;
+    }
+
+    .horoscope-preview-section {
+        padding: 45px 0;
     }
 
     .zodiac-mini-card {
@@ -371,82 +786,522 @@
     .zodiac-name {
         font-size: 0.8rem;
     }
-}
-/* Testimonials */
-.testimonial-card {
-    background-color: var(--bg-card);
-    border: 1px solid var(--border-color);
-    border-radius: var(--radius-md);
-    padding: 28px;
-    height: 100%;
-    transition: transform var(--transition), box-shadow var(--transition);
+
+    /* Row gaps */
+    .consultant-row,
+    .steps-row,
+    .testimonial-row {
+        row-gap: 16px;
+    }
+
+    .zodiac-row {
+        row-gap: 10px;
+    }
 }
 
-.testimonial-card:hover {
-    transform: translateY(-3px);
-    box-shadow: var(--shadow-md);
-    border-color: var(--secondary-color);
+
+/* =========================================================
+   SAMSUNG S8+
+   321px — 380px
+   ========================================================= */
+
+@media (min-width: 321px) and (max-width: 380px) {
+
+    .hero-section,
+    .horoscope-preview-section {
+        overflow-x: hidden;
+    }
+
+    .hero-section {
+        padding-top: 36px;
+        padding-bottom: 36px;
+    }
+
+    .hero-headline {
+        margin-bottom: 14px;
+    }
+
+    .hero-stats {
+        gap: 14px;
+    }
+
+    .hero-image {
+        height: 260px;
+    }
+
+    .hero-image-badge {
+        left: 10px;
+        right: 10px;
+        bottom: 10px;
+
+        padding: 8px 10px;
+        gap: 8px;
+
+        max-width: calc(100% - 20px);
+    }
+
+    .consultant-card,
+    .step-card,
+    .testimonial-card {
+        margin-bottom: 14px;
+    }
+
+    .consultant-info {
+        padding: 18px;
+    }
+
+    .step-card {
+        padding: 24px 16px;
+    }
+
+    .testimonial-card {
+        padding: 20px;
+    }
+
+    .horoscope-preview-section {
+        padding: 40px 0;
+    }
+
+    .zodiac-mini-card {
+        min-height: 100px;
+        padding: 12px 5px;
+        margin-bottom: 0;
+    }
+
+    .zodiac-symbol {
+        width: 36px;
+        height: 36px;
+        margin-bottom: 6px;
+    }
+
+    .zodiac-symbol svg {
+        width: 22px;
+        height: 22px;
+    }
+
+    .zodiac-name {
+        font-size: 0.78rem;
+    }
+
+    .consultant-row,
+    .steps-row,
+    .testimonial-row {
+        row-gap: 14px;
+    }
+
+    .zodiac-row {
+        row-gap: 8px;
+    }
 }
 
-.testimonial-stars {
-    color: var(--secondary-color);
-    margin-bottom: 14px;
-    font-size: 0.9375rem;
-    letter-spacing: 2px;
+
+/* =========================================================
+   VERY SMALL DEVICES
+   270px — 320px
+   ========================================================= */
+
+@media (max-width: 320px) {
+
+    .hero-section,
+    .horoscope-preview-section {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    .hero-section {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .hero-image {
+        height: 220px;
+    }
+
+    .hero-image-badge {
+        left: 8px;
+        right: 8px;
+        bottom: 8px;
+
+        max-width: calc(100% - 16px);
+
+        padding: 7px 8px;
+        gap: 6px;
+    }
+
+    .hero-image-badge i {
+        font-size: 1.1rem;
+    }
+
+    .hero-image-badge strong {
+        font-size: 0.8rem;
+    }
+
+    .hero-image-badge span {
+        font-size: 0.7rem;
+    }
+
+    .hero-stats {
+        gap: 10px;
+    }
+
+    .consultant-card,
+    .step-card,
+    .testimonial-card {
+        margin-bottom: 12px;
+    }
+
+    .consultant-info {
+        padding: 16px;
+    }
+
+    .step-card {
+        padding: 22px 14px;
+    }
+
+    .testimonial-card {
+        padding: 18px;
+    }
+
+    .consultant-meta {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .horoscope-preview-section {
+        padding: 35px 0;
+    }
+
+    .zodiac-mini-card {
+        min-height: 92px;
+        padding: 10px 4px;
+        margin-bottom: 0;
+    }
+
+    .zodiac-symbol {
+        width: 32px;
+        height: 32px;
+        margin-bottom: 5px;
+    }
+
+    .zodiac-symbol svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .zodiac-name {
+        font-size: 0.72rem;
+    }
+
+    .consultant-row,
+    .steps-row,
+    .testimonial-row {
+        row-gap: 12px;
+    }
+
+    .zodiac-row {
+        row-gap: 8px;
+    }
 }
 
-.testimonial-card p {
-    font-size: 0.9375rem;
-    color: var(--text-color);
-    margin-bottom: 20px;
-    line-height: 1.7;
+
+/* =========================================================
+   MOBILE LANDSCAPE
+   ========================================================= */
+
+@media (max-width: 991.98px) and (orientation: landscape) {
+
+    .hero-section {
+        padding-top: 36px;
+        padding-bottom: 36px;
+    }
+
+    .hero-image {
+        height: 300px;
+    }
+
+    .consultant-card,
+    .step-card,
+    .testimonial-card {
+        margin-bottom: 16px;
+    }
+
+    .zodiac-mini-card {
+        margin-bottom: 10px;
+    }
+
+    .horoscope-preview-section {
+        padding-top: 45px;
+        padding-bottom: 45px;
+    }
 }
 
-.testimonial-author {
-    display: flex;
-    align-items: center;
-    gap: 12px;
+
+/* =========================================================
+   SMALL MOBILE LANDSCAPE
+   ========================================================= */
+
+@media (max-width: 575.98px) and (orientation: landscape) {
+
+    .hero-section {
+        padding-top: 28px;
+        padding-bottom: 28px;
+    }
+
+    .hero-image {
+        height: 230px;
+    }
+
+    .hero-image-badge {
+        bottom: 8px;
+    }
+
+    .consultant-card,
+    .step-card,
+    .testimonial-card {
+        margin-bottom: 14px;
+    }
+
+    .zodiac-mini-card {
+        margin-bottom: 8px;
+    }
 }
 
-.author-avatar {
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    background-color: var(--primary-color);
-    color: #ffffff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 600;
-    font-size: 0.875rem;
+
+/* =========================================================
+   TABLET LANDSCAPE
+   IPAD MINI / 768px
+   ========================================================= */
+
+@media (min-width: 576px) and (max-width: 991.98px)
+       and (orientation: landscape) {
+
+    .hero-section {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .hero-image {
+        height: 330px;
+    }
+
+    .consultant-card,
+    .step-card,
+    .testimonial-card {
+        margin-bottom: 18px;
+    }
+
+    .zodiac-mini-card {
+        margin-bottom: 12px;
+    }
+
+    .consultant-row,
+    .steps-row,
+    .testimonial-row {
+        row-gap: 18px;
+    }
+
+    .zodiac-row {
+        row-gap: 12px;
+    }
 }
 
-[data-theme="dark"] .author-avatar {
-    color: var(--secondary-color);
+
+/* =========================================================
+   NEST HUB LANDSCAPE
+   1024px
+   ========================================================= */
+
+@media (min-width: 992px) and (max-width: 1199.98px)
+       and (orientation: landscape) {
+
+    .hero-section {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .hero-image {
+        height: 390px;
+    }
+
+    .consultant-card,
+    .step-card,
+    .testimonial-card {
+        margin-bottom: 20px;
+    }
+
+    .zodiac-mini-card {
+        margin-bottom: 12px;
+    }
 }
 
-.testimonial-author strong {
-    display: block;
-    font-size: 0.9375rem;
-    color: var(--text-color);
+
+/* =========================================================
+   GENERAL CARD ROW SPACING
+   ========================================================= */
+
+/*
+   If your HTML uses these row classes, these provide
+   consistent spacing without changing Bootstrap columns.
+*/
+
+.consultant-row,
+.steps-row,
+.testimonial-row,
+.zodiac-row {
+    --bs-gutter-y: 0;
 }
 
-.testimonial-author span {
-    font-size: 0.8125rem;
-    color: var(--text-muted);
-}
 
-/* Responsive */
+/* =========================================================
+   BOOTSTRAP COLUMN SAFETY
+   ========================================================= */
+
 @media (max-width: 991.98px) {
-    .hero-section { padding-top: 48px; padding-bottom: 48px; }
-    .hero-image { height: 360px; }
-    .hero-stats { gap: 24px; }
+
+    .consultant-row > [class*="col-"],
+    .steps-row > [class*="col-"],
+    .testimonial-row > [class*="col-"],
+    .zodiac-row > [class*="col-"] {
+        min-width: 0;
+    }
+
+    .consultant-card,
+    .step-card,
+    .testimonial-card,
+    .zodiac-mini-card {
+        width: 100%;
+        max-width: 100%;
+    }
 }
+
+
+/* =========================================================
+   IMAGE RESPONSIVENESS
+   ========================================================= */
+
+.hero-image,
+.consultant-image-wrap img {
+    max-width: 100%;
+}
+
+.hero-image-wrap,
+.consultant-image-wrap {
+    max-width: 100%;
+}
+
+
+/* =========================================================
+   TEXT OVERFLOW PROTECTION
+   ========================================================= */
+
+.hero-headline,
+.hero-subtext,
+.consultant-info,
+.step-card,
+.testimonial-card,
+.zodiac-mini-card {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .consultant-card,
+    .step-card,
+    .testimonial-card,
+    .zodiac-mini-card,
+    .consultant-image-wrap img {
+        transition: none;
+    }
+}
+
+
+/* =========================================================
+   HOME 1 — SAMSUNG S8+ IMAGE FIX
+   Keep complete images visible
+   ========================================================= */
 
 @media (max-width: 575.98px) {
-    .hero-stats { gap: 20px; }
-    .hero-stat-item .stat-number { font-size: 1.5rem; }
-    .hero-image { height: 280px; }
-    .hero-image-badge { padding: 8px 12px; }
-    .step-number { font-size: 2rem; }
+
+    .hero-image {
+        width: 100%;
+        height: 320px;
+        object-fit: contain;
+        object-position: center;
+        display: block;
+    }
+
+    .consultant-image-wrap {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .consultant-image-wrap img {
+        width: 100%;
+        height: auto;
+        min-height: 0;
+        object-fit: contain;
+        object-position: center;
+        display: block;
+    }
+}
+
+
+/* =========================================================
+   SAMSUNG S8+ — 321px to 380px
+   ========================================================= */
+
+@media (min-width: 321px) and (max-width: 380px) {
+
+    .hero-image {
+        width: 100%;
+        height: 260px;
+        object-fit: contain;
+        object-position: center;
+    }
+
+    .consultant-image-wrap {
+        width: 100%;
+        height: auto;
+    }
+
+    .consultant-image-wrap img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        object-position: center;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL DEVICES — 320px AND BELOW
+   ========================================================= */
+
+@media (max-width: 320px) {
+
+    .hero-image {
+        width: 100%;
+        height: 220px;
+        object-fit: contain;
+        object-position: center;
+    }
+
+    .consultant-image-wrap {
+        width: 100%;
+        height: auto;
+    }
+
+    .consultant-image-wrap img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        object-position: center;
+    }
 }

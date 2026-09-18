@@ -46,21 +46,61 @@
         name="twitter:image"
         content="https://bolt.new/static/og_default.png"
     />
+    <!-- Favicon -->
+<link rel="icon" type="image/png" href="./images/logo.png" />
+<link rel="shortcut icon" href="./images/logo.png" />
+<link rel="apple-touch-icon" href="./images/logo.png" />
 </head>
 
 <body>
 
-    <!-- ========================= NAVBAR ========================= -->
-    <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
-        <div class="container">
+<!-- ========================= NAVBAR ========================= -->
 
-            <a class="navbar-brand-custom" href="./index.html">
-                <img src="./images/logo.png" alt="">
-                <span class="brand-astro" dir="ltr">
-                    <span class="brand-astro">Astro</span><span class="brand-guide">Guide</span>
-                </span>
-            </a>
 
+<nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+    <div class="container">
+
+        <!-- ========================= BRAND ========================= -->
+        <a class="navbar-brand-custom" href="./index.html">
+            <img src="./images/logo.png" alt="AstroGuide">
+
+            <span class="brand-astro" dir="ltr">
+                <span class="brand-astro">Astro</span><span class="brand-guide">Guide</span>
+            </span>
+        </a>
+
+
+        <!-- =====================================================
+             MOBILE CONTROLS
+             DARK MODE → RTL → HAMBURGER
+             ===================================================== -->
+        <div class="mobile-nav-controls">
+
+            <!-- Dark Mode -->
+            <button
+                class="nav-utility-btn theme-toggle"
+                type="button"
+                aria-label="Toggle dark mode"
+            >
+                <i
+                    data-lucide="sun"
+                    class="theme-toggle-icon"
+                ></i>
+            </button>
+
+
+            <!-- RTL -->
+            <button
+                class="nav-utility-btn direction-toggle"
+                id="directionToggleMobile"
+                type="button"
+                aria-label="Toggle text direction"
+            >
+                <span class="direction-toggle-text">LTR</span>
+            </button>
+
+
+            <!-- Hamburger -->
             <button
                 class="navbar-toggler navbar-toggler-custom"
                 type="button"
@@ -73,129 +113,177 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse" id="navMain">
-
-                <ul class="navbar-nav mx-auto gap-lg-1">
-
-                    <!-- Home Dropdown -->
-                    <li class="nav-item dropdown">
-                        <a
-                            class="nav-link nav-link-custom dropdown-toggle active"
-                            href="./index.html"
-                            role="button"
-                            data-bs-toggle="dropdown"
-                            aria-expanded="false"
-                        >
-                            Home
-                        </a>
-
-                        <ul class="dropdown-menu dropdown-menu-custom">
-                            <li>
-                                <a
-                                    class="dropdown-item dropdown-item-custom"
-                                    href="./index.html"
-                                >
-                                    Home 1 <span class="item-sub">Classic</span>
-                                </a>
-                            </li>
-
-                            <li>
-                                <a
-                                    class="dropdown-item dropdown-item-custom"
-                                    href="./home2.html"
-                                >
-                                    Home 2 <span class="item-sub">Premium</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a
-                            class="nav-link nav-link-custom"
-                            href="./about.html"
-                        >
-                            About
-                        </a>
-                    </li>
-                    <!-- Services Dropdown -->
-<li class="nav-item">
-    <a
-        class="nav-link nav-link-custom"
-        href="./services.html"
-    >
-        Services
-    </a>
-</li>
+        </div>
 
 
+        <!-- =====================================================
+             NAVBAR COLLAPSE
+             ===================================================== -->
+        <div class="collapse navbar-collapse" id="navMain">
 
-                    <li class="nav-item">
-                        <a
-                            class="nav-link nav-link-custom"
-                            href="./astrologers.html"
-                        >
-                            Astrologers
-                        </a>
-                    </li>
+            <!-- ========================= NAV LINKS ========================= -->
+            <ul class="navbar-nav mx-auto gap-lg-1">
 
-                    <li class="nav-item">
-                        <a
-                            class="nav-link nav-link-custom"
-                            href="./pricing.html"
-                        >
-                            Pricing
-                        </a>
-                    </li>
+                <!-- Home Dropdown -->
+                <li class="nav-item dropdown">
 
-                    <li class="nav-item">
-                        <a
-                            class="nav-link nav-link-custom"
-                            href="./dashboard.html"
-                        >
-                            Dashboard
-                        </a>
-                    </li>
+                    <a
+                        class="nav-link nav-link-custom dropdown-toggle active"
+                        href="./index.html"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                    >
+                        Home
+                    </a>
 
-                </ul>
+                    <ul class="dropdown-menu dropdown-menu-custom">
 
-                <div class="d-flex align-items-center gap-2 flex-wrap">
+                        <li>
+                            <a
+                                class="dropdown-item dropdown-item-custom"
+                                href="./index.html"
+                            >
+                                Home 1
+                                <span class="item-sub">Classic</span>
+                            </a>
+                        </li>
 
-                    <div class="nav-utility-group">
+                        <li>
+                            <a
+                                class="dropdown-item dropdown-item-custom"
+                                href="./home2.html"
+                            >
+                                Home 2
+                                <span class="item-sub">Premium</span>
+                            </a>
+                        </li>
 
-                        <button
-                            class="nav-utility-btn theme-toggle"
-                            aria-label="Toggle dark mode"
-                        >
-                            <i
-                                data-lucide="sun"
-                                class="theme-toggle-icon"
-                            ></i>
-                        </button>
+                    </ul>
+                </li>
 
-                        <button
-                            class="nav-utility-btn direction-toggle"
-                            id="directionToggle"
-                            aria-label="Toggle text direction"
-                        >
-                            <span class="direction-toggle-text">LTR</span>
-                        </button>
 
-                    </div>
+                <!-- About -->
+                <li class="nav-item">
+                    <a
+                        class="nav-link nav-link-custom"
+                        href="./about.html"
+                    >
+                        About
+                    </a>
+                </li>
 
-                    <div class="nav-cta-group">
-                        <a
-                            href="./login.html"
-                            class="btn btn-secondary"
-                        >
-                            Login
-                        </a>
-                    </div>
+
+                <!-- Services -->
+                <li class="nav-item">
+                    <a
+                        class="nav-link nav-link-custom"
+                        href="./services.html"
+                    >
+                        Services
+                    </a>
+                </li>
+
+
+                <!-- Horoscope -->
+                <li class="nav-item">
+                    <a
+                        class="nav-link nav-link-custom"
+                        href="./horoscope.html"
+                    >
+                        Horoscope
+                    </a>
+                </li>
+
+
+                <!-- Astrologers -->
+                <li class="nav-item">
+                    <a
+                        class="nav-link nav-link-custom"
+                        href="./astrologers.html"
+                    >
+                        Astrologers
+                    </a>
+                </li>
+
+
+                <!-- Pricing -->
+                <li class="nav-item">
+                    <a
+                        class="nav-link nav-link-custom"
+                        href="./pricing.html"
+                    >
+                        Pricing
+                    </a>
+                </li>
+
+
+                <!-- Dashboard -->
+                <li class="nav-item">
+                    <a
+                        class="nav-link nav-link-custom"
+                        href="./dashboard.html"
+                    >
+                        Dashboard
+                    </a>
+                </li>
+
+            </ul>
+
+
+            <!-- =====================================================
+                 DESKTOP RIGHT SIDE
+                 ===================================================== -->
+            <div class="d-flex align-items-center gap-2 flex-wrap">
+
+                <!-- Desktop utility buttons -->
+                <div class="nav-utility-group">
+
+                    <!-- Dark Mode -->
+                    <button
+                        class="nav-utility-btn theme-toggle btninside"
+                        type="button"
+                        aria-label="Toggle dark mode"
+                    >
+                        <i
+                            data-lucide="sun"
+                            class="theme-toggle-icon"
+                        ></i>
+                    </button>
+
+
+                    <!-- RTL -->
+                    <button
+                        class="nav-utility-btn direction-toggle btninside"
+                        
+                        id="directionToggle"
+                        type="button"
+                        aria-label="Toggle text direction"
+                    >
+                        <span class="direction-toggle-text">LTR</span>
+                    </button>
+
+                </div>
+
+
+                <!-- Login -->
+                <div class="nav-cta-group">
+
+                    <a
+                        href="./login.html"
+                        class="btn btn-secondary"
+                    >
+                        Login
+                    </a>
 
                 </div>
 
             </div>
+
         </div>
-    </nav>
+
+    </div>
+</nav>
 
 
 
@@ -259,7 +347,7 @@
                             </div>
 
                             <div class="hero-stat-item">
-                                <span class="stat-number">4.9</span>
+                                <span class="stat-number">4.9<i data-lucide="star"></i></span>
                                 <span class="stat-label">
                                     Client Rating
                                 </span>
@@ -808,7 +896,7 @@
 
                         <div class="consultant-info">
 
-                            <h4>Priya Sharma</h4>
+                            <h4>vivek Sharma</h4>
 
                             <span class="consultant-specialty">
                                 Vedic Astrology Specialist
@@ -1644,17 +1732,13 @@
                 <!-- Brand -->
                 <div class="col-lg-4 col-md-6">
 
-                    <div class="footer-brand">
-
-                        <img
-                            src="./images/logo.png"
-                            alt=""
-                        />
-
-                        <span class="brand-astro" dir="ltr">
-                            <span class="brand-astro">Astro</span>
-                            <span class="brand-guide">Guide</span>
-                        </span>
+<div class="footer-brand">
+                    <a class="navbar-brand-custom" href="./index.html">
+                                    <img src="./images/logo.png" alt="">
+                                    <span class="brand-astro" dir="ltr">
+                                        <span class="brand-astro">Astro</span><span class="brand-guide">Guide</span>
+                                    </span>
+                    </a>
 
                     </div>
 
@@ -1698,12 +1782,16 @@
                     >
                         Home
                     </a>
-
                     <a
                         class="footer-link"
-                        href="./services.html"
+                        href="./about.html"
                     >
-                        Services
+                        About
+                    </a>
+                    <a class="footer-link" href="./horoscope.html">
+
+                        Horoscope
+
                     </a>
 
                     <a
@@ -1720,12 +1808,7 @@
                         Pricing
                     </a>
 
-                    <a
-                        class="footer-link"
-                        href="./about.html"
-                    >
-                        About
-                    </a>
+                    
 
                 </div>
 

@@ -2,43 +2,98 @@
 <html lang="en" dir="ltr" data-theme="light">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
     <title>Pricing | AstroGuide</title>
+    <!-- Google Fonts -->
+<link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+>
 
-    <!-- Bootstrap CSS -->
+    <!-- Bootstrap -->
     <link
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
         rel="stylesheet"
-    />
-
-    <!-- Google Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap"
-        rel="stylesheet"
-    />
+    >
 
     <!-- Global CSS -->
-    <link rel="stylesheet" href="./css/global.css" />
+    <link
+        rel="stylesheet"
+        href="./css/global.css"
+    >
 
-    <!-- Page CSS -->
-    <link rel="stylesheet" href="./css/pricing.css" />
+    <!-- Pricing CSS -->
+    <link
+        rel="stylesheet"
+        href="./css/pricing.css"
+    >
+        <!-- Favicon -->
+<link rel="icon" type="image/png" href="./images/logo.png" />
+<link rel="shortcut icon" href="./images/logo.png" />
+<link rel="apple-touch-icon" href="./images/logo.png" />
 </head>
+
 
 <body>
 
-    <!-- ========================= NAVBAR ========================= -->
-    <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
-        <div class="container">
 
-            <a class="navbar-brand-custom" href="./index.html">
-                <img src="./images/logo.png" alt="">
-                <span class="brand-astro" dir="ltr">
-                    <span class="brand-astro">Astro</span><span class="brand-guide">Guide</span>
-                </span>
-            </a>
+<!-- =========================================================
+     NAVBAR — KEEPING YOUR EXISTING NAVBAR STRUCTURE
+========================================================= -->
 
+<!-- ========================= NAVBAR ========================= -->
+
+<nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+    <div class="container">
+
+        <!-- ========================= BRAND ========================= -->
+        <a class="navbar-brand-custom" href="./index.html">
+            <img src="./images/logo.png" alt="AstroGuide">
+
+            <span class="brand-astro" dir="ltr">
+                <span class="brand-astro">Astro</span><span class="brand-guide">Guide</span>
+            </span>
+        </a>
+
+
+        <!-- =====================================================
+             MOBILE CONTROLS
+             DARK MODE → RTL → HAMBURGER
+             ===================================================== -->
+        <div class="mobile-nav-controls">
+
+            <!-- Dark Mode -->
+            <button
+                class="nav-utility-btn theme-toggle"
+                type="button"
+                aria-label="Toggle dark mode"
+            >
+                <i
+                    data-lucide="sun"
+                    class="theme-toggle-icon"
+                ></i>
+            </button>
+
+
+            <!-- RTL -->
+            <button
+                class="nav-utility-btn direction-toggle"
+                id="directionToggleMobile"
+                type="button"
+                aria-label="Toggle text direction"
+            >
+                <span class="direction-toggle-text">LTR</span>
+            </button>
+
+
+            <!-- Hamburger -->
             <button
                 class="navbar-toggler navbar-toggler-custom"
                 type="button"
@@ -51,385 +106,806 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse" id="navMain">
+        </div>
 
-                <ul class="navbar-nav mx-auto gap-lg-1">
 
-                    <!-- Home Dropdown -->
-                    <li class="nav-item dropdown">
-                        <a
-                            class="nav-link nav-link-custom dropdown-toggle"
-                            href="./index.html"
-                            role="button"
-                            data-bs-toggle="dropdown"
-                            aria-expanded="false"
-                        >
-                            Home
-                        </a>
+        <!-- =====================================================
+             NAVBAR COLLAPSE
+             ===================================================== -->
+        <div class="collapse navbar-collapse" id="navMain">
 
-                        <ul class="dropdown-menu dropdown-menu-custom">
-                            <li>
-                                <a
-                                    class="dropdown-item dropdown-item-custom"
-                                    href="./index.html"
-                                >
-                                    Home 1 <span class="item-sub">Classic</span>
-                                </a>
-                            </li>
+            <!-- ========================= NAV LINKS ========================= -->
+            <ul class="navbar-nav mx-auto gap-lg-1">
 
-                            <li>
-                                <a
-                                    class="dropdown-item dropdown-item-custom"
-                                    href="./home2.html"
-                                >
-                                    Home 2 <span class="item-sub">Premium</span>
-                                </a>
-                            </li>
-                        </ul>
+                <!-- Home Dropdown -->
+                <li class="nav-item dropdown">
+
+                    <a
+                        class="nav-link nav-link-custom dropdown-toggle"
+                        href="./index.html"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                    >
+                        Home
+                    </a>
+
+                    <ul class="dropdown-menu dropdown-menu-custom">
+
+                        <li>
+                            <a
+                                class="dropdown-item dropdown-item-custom"
+                                href="./index.html"
+                            >
+                                Home 1
+                                <span class="item-sub">Classic</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a
+                                class="dropdown-item dropdown-item-custom"
+                                href="./home2.html"
+                            >
+                                Home 2
+                                <span class="item-sub">Premium</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </li>
+
+
+                <!-- About -->
+                <li class="nav-item">
+                    <a
+                        class="nav-link nav-link-custom"
+                        href="./about.html"
+                    >
+                        About
+                    </a>
+                </li>
+
+
+                <!-- Services -->
+                <li class="nav-item">
+                    <a
+                        class="nav-link nav-link-custom"
+                        href="./services.html"
+                    >
+                        Services
+                    </a>
+                </li>
+
+
+                <!-- Horoscope -->
+                <li class="nav-item">
+                    <a
+                        class="nav-link nav-link-custom"
+                        href="./horoscope.html"
+                    >
+                        Horoscope
+                    </a>
+                </li>
+
+
+                <!-- Astrologers -->
+                <li class="nav-item">
+                    <a
+                        class="nav-link nav-link-custom"
+                        href="./astrologers.html"
+                    >
+                        Astrologers
+                    </a>
+                </li>
+
+
+                <!-- Pricing -->
+                <li class="nav-item">
+                    <a
+                        class="nav-link nav-link-custom active"
+                        href="./pricing.html"
+                    >
+                        Pricing
+                    </a>
+                </li>
+
+
+                <!-- Dashboard -->
+                <li class="nav-item">
+                    <a
+                        class="nav-link nav-link-custom"
+                        href="./dashboard.html"
+                    >
+                        Dashboard
+                    </a>
+                </li>
+
+            </ul>
+
+
+            <!-- =====================================================
+                 DESKTOP RIGHT SIDE
+                 ===================================================== -->
+            <div class="d-flex align-items-center gap-2 flex-wrap">
+
+                <!-- Desktop utility buttons -->
+                <div class="nav-utility-group">
+
+                    <!-- Dark Mode -->
+                    <button
+                        class="nav-utility-btn theme-toggle btninside"
+                        type="button"
+                        aria-label="Toggle dark mode"
+                    >
+                        <i
+                            data-lucide="sun"
+                            class="theme-toggle-icon"
+                        ></i>
+                    </button>
+
+
+                    <!-- RTL -->
+                    <button
+                        class="nav-utility-btn direction-toggle btninside"
+                        
+                        id="directionToggle"
+                        type="button"
+                        aria-label="Toggle text direction"
+                    >
+                        <span class="direction-toggle-text">LTR</span>
+                    </button>
+
+                </div>
+
+
+                <!-- Login -->
+                <div class="nav-cta-group">
+
+                    <a
+                        href="./login.html"
+                        class="btn btn-secondary"
+                    >
+                        Login
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</nav>
+
+
+
+
+<!-- =========================================================
+     SECTION 1 — HERO
+========================================================= -->
+
+<section class="pricing-hero">
+
+    <div class="pricing-hero-overlay"></div>
+
+    <div class="pricing-hero-stars"></div>
+
+    <div class="container">
+
+        <div class="pricing-hero-content">
+
+
+            <span class="section-label pricing-reveal">
+                Astrology Consultations
+            </span>
+
+
+            <h1 class="pricing-reveal delay-1">
+                Choose the Space
+                <span class="hero-gold-text">
+                    You Need
+                </span>
+            </h1>
+
+
+            <p class="pricing-hero-description pricing-reveal delay-2">
+                Thoughtful astrology consultations designed around
+                your questions, your time, and the level of perspective
+                you are looking for.
+            </p>
+
+
+            <div class="hero-trust-row pricing-reveal delay-3">
+
+                <div class="hero-trust-item">
+
+                    <span class="hero-trust-icon">
+                        <i data-lucide="shield-check"></i>
+                    </span>
+
+                    <span>
+                        Private sessions
+                    </span>
+
+                </div>
+
+
+                <div class="hero-trust-item">
+
+                    <span class="hero-trust-icon">
+                        <i data-lucide="clock-3"></i>
+                    </span>
+
+                    <span>
+                        Flexible duration
+                    </span>
+
+                </div>
+
+
+                <div class="hero-trust-item">
+
+                    <span class="hero-trust-icon">
+                        <i data-lucide="sparkles"></i>
+                    </span>
+
+                    <span>
+                        Personal guidance
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <a
+                href="#plans"
+                class="btn btn-secondary hero-button pricing-reveal delay-4"
+            >
+                Explore Plans
+                <i data-lucide="arrow-down"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     SECTION 2 — PRICING PLANS
+========================================================= -->
+
+<section
+    class="pricing-plans-section"
+    id="plans"
+>
+
+    <div class="container">
+
+
+        <div class="section-heading-block">
+
+            <span class="section-label">
+            Consultation Plans
+            </span>
+
+            <h2>
+                Choose the Depth of Your Reading
+            </h2>
+
+            <p class="section-description">
+                Every plan is designed to give you dedicated time
+                with an experienced consultant. Choose the format
+                that matches the question you are ready to explore.
+            </p>
+
+        </div>
+
+
+
+        <!-- IMPORTANT:
+             THESE THREE PLANS REMAIN SIDE-BY-SIDE
+        -->
+
+        <div class="pricing-plan-grid">
+
+
+            <!-- =================================================
+                 ESSENTIAL
+            ================================================= -->
+
+            <article class="premium-plan-card">
+
+                <div class="plan-number">
+                    01
+                </div>
+
+
+                <div class="plan-icon">
+
+                    <i data-lucide="compass"></i>
+
+                </div>
+
+
+                <span class="section-label">
+                    Essential
+                </span>
+
+
+                <h3>
+                    A Focused Question
+                </h3>
+
+
+                <p class="plan-description">
+                    A clear starting point when you want perspective
+                    on one important question or theme.
+                </p>
+
+
+                <div class="plan-price">
+                    $49
+                    <small>
+                        / session
+                    </small>
+                </div>
+
+
+                <div class="plan-divider"></div>
+
+
+                <ul class="premium-plan-features">
+
+                    <li>
+                        <i data-lucide="check-circle-2"></i>
+                        30-minute video consultation
                     </li>
 
-                    <li class="nav-item">
-                        <a
-                            class="nav-link nav-link-custom"
-                            href="./about.html"
-                        >
-                            About
-                        </a>
+                    <li>
+                        <i data-lucide="check-circle-2"></i>
+                        One focused topic
                     </li>
 
-                    <!-- Services -->
-                    <li class="nav-item">
-                        <a
-                            class="nav-link nav-link-custom"
-                            href="./services.html"
-                        >
-                            Services
-                        </a>
+                    <li>
+                        <i data-lucide="check-circle-2"></i>
+                        Key takeaways by email
                     </li>
 
-                    <li class="nav-item">
-                        <a
-                            class="nav-link nav-link-custom"
-                            href="./astrologers.html"
-                        >
-                            Astrologers
-                        </a>
+
+                </ul>
+
+
+                <a
+                    class="btn btn-secondary plan-button"
+                    href="./login.html"
+                >
+                    Choose Essential
+                    <i data-lucide="arrow-right"></i>
+                </a>
+
+            </article>
+
+
+
+            <!-- =================================================
+                 COMPLETE
+            ================================================= -->
+
+            <article class="premium-plan-card featured-plan">
+
+                <div class="featured-glow"></div>
+
+
+                <div class="popular-badge">
+                    Most Popular
+                </div>
+
+
+                <div class="plan-number">
+                    02
+                </div>
+
+
+                <div class="plan-icon">
+
+                    <i data-lucide="stars"></i>
+
+                </div>
+
+
+                <span class="section-label">
+                    Complete
+                </span>
+
+
+                <h3>
+                    A Full Perspective
+                </h3>
+
+
+                <p class="plan-description">
+                    A deeper conversation for understanding several
+                    connected areas of your chart and current concerns.
+                </p>
+
+
+                <div class="plan-price">
+                    $89
+                    <small>
+                        / session
+                    </small>
+                </div>
+
+
+                <div class="plan-divider"></div>
+
+
+                <ul class="premium-plan-features">
+
+                    <li>
+                        <i data-lucide="check-circle-2"></i>
+                        60-minute video consultation
                     </li>
 
-                    <li class="nav-item">
-                        <a
-                            class="nav-link nav-link-custom active"
-                            href="./pricing.html"
-                        >
-                            Pricing
-                        </a>
+                    <li>
+                        <i data-lucide="check-circle-2"></i>
+                        Birth chart overview
                     </li>
 
-                    <li class="nav-item">
-                        <a
-                            class="nav-link nav-link-custom"
-                            href="./dashboard.html"
-                        >
-                            Dashboard
-                        </a>
+                    <li>
+                        <i data-lucide="check-circle-2"></i>
+                        Three focus areas
+                    </li>
+
+                    <li>
+                        <i data-lucide="check-circle-2"></i>
+                        Written reading summary
                     </li>
 
                 </ul>
 
-                <div class="d-flex align-items-center gap-2 flex-wrap">
+<br><br>
+                <a
+                    class="btn btn-primary plan-button"
+                    href="./login.html"
+                >
+                    Choose Complete
+                    <i data-lucide="arrow-right"></i>
+                </a>
 
-                    <div class="nav-utility-group">
+            </article>
 
-                        <button
-                            class="nav-utility-btn theme-toggle"
-                            aria-label="Toggle dark mode"
-                        >
-                            <i
-                                data-lucide="sun"
-                                class="theme-toggle-icon"
-                            ></i>
-                        </button>
 
-                        <button
-                            class="nav-utility-btn direction-toggle"
-                            id="directionToggle"
-                            aria-label="Toggle text direction"
-                        >
-                            <span class="direction-toggle-text">LTR</span>
-                        </button>
 
-                    </div>
+            <!-- =================================================
+                 PREMIUM
+            ================================================= -->
 
-                    <div class="nav-cta-group">
-                        <a
-                            href="./login.html"
-                            class="btn btn-secondary"
-                        >
-                            Login
-                        </a>
-                    </div>
+            <article class="premium-plan-card">
+
+                <div class="plan-number">
+                    03
+                </div>
+
+
+                <div class="plan-icon">
+
+                    <i data-lucide="moon-star"></i>
 
                 </div>
 
-            </div>
+
+                <span class="section-label">
+                    Premium
+                </span>
+
+
+                <h3>
+                    Deep Exploration
+                </h3>
+
+
+                <p class="plan-description">
+                    An expansive consultation for major transitions,
+                    deeper chart exploration, and multiple life themes.
+                </p>
+
+
+                <div class="plan-price">
+                    $149
+                    <small>
+                        / session
+                    </small>
+                </div>
+
+
+                <div class="plan-divider"></div>
+
+
+                <ul class="premium-plan-features">
+
+                    <li>
+                        <i data-lucide="check-circle-2"></i>
+                        90-minute consultation
+                    </li>
+
+                    <li>
+                        <i data-lucide="check-circle-2"></i>
+                        Full birth chart reading
+                    </li>
+
+                    <li>
+                        <i data-lucide="check-circle-2"></i>
+                        Detailed written report
+                    </li>
+
+                    <li>
+                        <i data-lucide="check-circle-2"></i>
+                        Follow-up guidance
+                    </li>
+
+                </ul>
+
+                        <br><br>
+                <a
+                    class="btn btn-secondary plan-button"
+                    href="./login.html"
+                >
+                    Choose Premium
+                    <i data-lucide="arrow-right"></i>
+                </a>
+
+            </article>
+
         </div>
-    </nav>
 
 
-    <!-- ========================= SECTION 1 — PAGE HERO ========================= -->
-    <section class="page-hero celestial-bg">
-        <div class="container position-relative">
 
-            <span class="section-label">
-                Simple, Clear Pricing
+        <div class="pricing-note">
+
+            <i data-lucide="info"></i>
+
+            <span>
+                All sessions are private consultations. Choose the
+                plan according to the amount of time and depth you
+                would like to explore.
             </span>
 
-            <h1>
-                Choose the Space You Need
-            </h1>
+        </div>
 
-            <p>
-                Thoughtful consultations with no hidden surprises.
-                Choose a plan based on the depth and time that feels
-                right for your question.
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     SECTION 3 — WHY THE PLANS ARE DIFFERENT
+========================================================= -->
+
+<section class="pricing-story-section">
+
+    <div class="container">
+
+        <div class="section-heading-block">
+
+            <span class="section-label">
+                More Than a Session
+            </span>
+
+            <h2>
+                Your Time Is Designed Around Your Question
+            </h2>
+
+            <p class="section-description">
+                The difference between the plans is not simply the
+                number of minutes. It is the amount of space available
+                to explore your question, connect different themes,
+                and leave with something meaningful to revisit.
             </p>
 
         </div>
-    </section>
 
 
-    <!-- ========================= SECTION 2 — CONSULTATION PLANS ========================= -->
-    <section>
-        <div class="container">
+        <div class="pricing-story-layout">
 
-            <div class="text-center mb-5">
+            <div class="pricing-story-image-wrap">
 
-                <span class="section-label">
-                    01 · Consultation Plans
-                </span>
+                <img
+                    src="./images/session.png"
+                    alt="Astrology birth chart consultation"
+                    class="pricing-story-image"
+                >
 
-                <h2>
-                    Invest in Your Perspective
-                </h2>
 
-            </div>
+                <div class="floating-story-card">
 
-            <div class="row g-4 align-items-stretch">
+                    <div class="floating-story-icon">
+                        <i data-lucide="sparkles"></i>
+                    </div>
 
-                <!-- Essential -->
-                <div class="col-lg-4">
-                    <div class="plan-card">
+                    <div>
 
-                        <span class="section-label">
-                            Essential
+                        <strong>
+                            Personalised perspective
+                        </strong>
+
+                        <span>
+                            Your consultation follows your questions.
                         </span>
-
-                        <h3>
-                            A Focused Question
-                        </h3>
-
-                        <div class="plan-price">
-                            $49
-                            <small>/ session</small>
-                        </div>
-
-                        <p class="text-muted">
-                            A clear starting point for one question or theme.
-                        </p>
-
-                        <ul class="mini-list">
-
-                            <li>
-                                <i data-lucide="check"></i>
-                                30-minute video consultation
-                            </li>
-
-                            <li>
-                                <i data-lucide="check"></i>
-                                One focused topic
-                            </li>
-
-                            <li>
-                                <i data-lucide="check"></i>
-                                Key takeaways by email
-                            </li>
-
-                        </ul>
-
-                        <a
-                            class="btn btn-secondary w-100 mt-3"
-                            href="./login.html"
-                        >
-                            Choose Essential
-                        </a>
 
                     </div>
-                </div>
 
-
-                <!-- Complete -->
-                <div class="col-lg-4">
-                    <div class="plan-card popular">
-
-                        <span class="popular-badge">
-                            Most Popular
-                        </span>
-
-                        <span class="section-label">
-                            Complete
-                        </span>
-
-                        <h3>
-                            A Full Perspective
-                        </h3>
-
-                        <div class="plan-price">
-                            $89
-                            <small>/ session</small>
-                        </div>
-
-                        <p class="text-muted">
-                            A deeper conversation for meaningful clarity.
-                        </p>
-
-                        <ul class="mini-list">
-
-                            <li>
-                                <i data-lucide="check"></i>
-                                60-minute video consultation
-                            </li>
-
-                            <li>
-                                <i data-lucide="check"></i>
-                                Birth chart overview
-                            </li>
-
-                            <li>
-                                <i data-lucide="check"></i>
-                                Three focus areas
-                            </li>
-
-                            <li>
-                                <i data-lucide="check"></i>
-                                Written reading summary
-                            </li>
-
-                        </ul>
-
-                        <a
-                            class="btn btn-primary w-100 mt-3"
-                            href="./login.html"
-                        >
-                            Choose Complete
-                        </a>
-
-                    </div>
-                </div>
-
-
-                <!-- Premium -->
-                <div class="col-lg-4">
-                    <div class="plan-card">
-
-                        <span class="section-label">
-                            Premium
-                        </span>
-
-                        <h3>
-                            Deep Exploration
-                        </h3>
-
-                        <div class="plan-price">
-                            $149
-                            <small>/ session</small>
-                        </div>
-
-                        <p class="text-muted">
-                            An expansive session for life's bigger transitions.
-                        </p>
-
-                        <ul class="mini-list">
-
-                            <li>
-                                <i data-lucide="check"></i>
-                                90-minute consultation
-                            </li>
-
-                            <li>
-                                <i data-lucide="check"></i>
-                                Full birth chart reading
-                            </li>
-
-                            <li>
-                                <i data-lucide="check"></i>
-                                Unlimited focus areas
-                            </li>
-
-                            <li>
-                                <i data-lucide="check"></i>
-                                Detailed written report
-                            </li>
-
-                        </ul>
-
-                        <a
-                            class="btn btn-secondary w-100 mt-3"
-                            href="./login.html"
-                        >
-                            Choose Premium
-                        </a>
-
-                    </div>
                 </div>
 
             </div>
+
+
+            <div class="story-feature-list">
+
+
+                <div class="story-feature">
+
+                    <div class="story-feature-icon">
+                        <i data-lucide="message-circle"></i>
+                    </div>
+
+                    <div>
+
+                        <p>
+                            Begin with the area of life where you want
+                            more context, perspective, or understanding.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="story-feature">
+
+                    <div class="story-feature-icon">
+                        <i data-lucide="layers-3"></i>
+                    </div>
+
+                    <div>
+                        <p>
+                            Longer sessions allow more room to connect
+                            different themes instead of treating every
+                            question in isolation.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="story-feature">
+
+                    <div class="story-feature-icon">
+                        <i data-lucide="notebook-pen"></i>
+                    </div>
+
+                    <div>
+                        <p>
+                            Selected plans include written notes so your
+                            insights remain easy to revisit after the session.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
         </div>
-    </section>
+
+    </div>
+
+</section>
 
 
-    <!-- ========================= SECTION 3 — COMPARE PLANS ========================= -->
-    <section class="bg-alt">
-        <div class="container">
 
-            <div class="text-center mb-5">
 
-                <span class="section-label">
-                    02 · Compare Plans
-                </span>
+<!-- =========================================================
+     SECTION 5 — PLAN COMPARISON
+========================================================= -->
 
-                <h2>
-                    What's Included
-                </h2>
+<section class="comparison-section">
 
-            </div>
+    <div class="container">
 
-            <div class="comparison-table table-responsive">
 
-                <table class="table mb-0" id="all-text">
+        <div class="section-heading-block">
+
+            <span class="section-label">
+                At a Glance
+            </span>
+
+            <h2>
+                See the Difference Clearly
+            </h2>
+
+            <p class="section-description">
+                Compare the core features before choosing the
+                consultation format that fits your needs.
+            </p>
+
+        </div>
+
+
+        <div class="comparison-wrapper">
+
+            <div class="comparison-table pricing-comparison">
+
+                <table
+                    class="table mb-0"
+                    id="all-text"
+                >
 
                     <thead>
+
                         <tr>
-                            <th>Feature</th>
-                            <th>Essential</th>
-                            <th>Complete</th>
-                            <th>Premium</th>
+
+                            <th>
+                                Feature
+                            </th>
+
+                            <th>
+                                Essential
+                            </th>
+
+                            <th>
+                                Complete
+                            </th>
+
+                            <th>
+                                Premium
+                            </th>
+
                         </tr>
+
                     </thead>
+
 
                     <tbody>
 
-                        <tr>
-                            <td>Video consultation</td>
-                            <td>30 min</td>
-                            <td>60 min</td>
-                            <td>90 min</td>
-                        </tr>
 
                         <tr>
-                            <td>Birth chart overview</td>
 
                             <td>
-                                <i data-lucide="minus"></i>
+                                Video consultation
+                            </td>
+
+                            <td>
+                                30 min
+                            </td>
+
+                            <td>
+                                60 min
+                            </td>
+
+                            <td>
+                                90 min
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Birth chart overview
+                            </td>
+
+                            <td>
+                                —
                             </td>
 
                             <td>
@@ -439,577 +915,925 @@
                             <td>
                                 <i data-lucide="check"></i>
                             </td>
+
                         </tr>
 
+
                         <tr>
-                            <td>Written summary</td>
+
+                            <td>
+                                Focus areas
+                            </td>
+
+                            <td>
+                                One
+                            </td>
+
+                            <td>
+                                Three
+                            </td>
+
+                            <td>
+                                Unlimited
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Written summary
+                            </td>
 
                             <td>
                                 Key takeaways
                             </td>
 
                             <td>
-                                <i data-lucide="check"></i>
+                                Written summary
                             </td>
 
                             <td>
                                 Detailed report
                             </td>
+
                         </tr>
 
+
                         <tr>
-                            <td>Focus areas</td>
-                            <td>One</td>
-                            <td>Three</td>
-                            <td>Unlimited</td>
+
+                            <td>
+                                Follow-up question
+                            </td>
+
+                            <td>
+                                —
+                            </td>
+
+                            <td>
+                                <i data-lucide="check"></i>
+                            </td>
+
+                            <td>
+                                <i data-lucide="check"></i>
+                            </td>
+
                         </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Private consultation
+                            </td>
+
+                            <td>
+                                <i data-lucide="check"></i>
+                            </td>
+
+                            <td>
+                                <i data-lucide="check"></i>
+                            </td>
+
+                            <td>
+                                <i data-lucide="check"></i>
+                            </td>
+
+                        </tr>
+
 
                     </tbody>
 
                 </table>
 
             </div>
+
         </div>
-    </section>
 
+    </div>
 
-    <!-- ========================= SECTION 4 — BENEFITS ========================= -->
-    <section>
-        <div class="container">
+</section>
 
-            <div class="row g-4">
 
-                <div class="col-md-4">
-                    <div class="content-panel">
 
-                        <span class="section-label">
-                            03 · Benefit
-                        </span>
+<!-- =========================================================
+     SECTION 6 — BOOKING JOURNEY
+========================================================= -->
 
-                        <h3>
-                            Private & Personal
-                        </h3>
+<section class="journey-section">
 
-                        <p>
-                            Your session is a confidential conversation
-                            shaped around your experience.
-                        </p>
+    <div class="container">
 
-                    </div>
-                </div>
 
-
-                <div class="col-md-4">
-                    <div class="content-panel">
-
-                        <span class="section-label">
-                            04 · Benefit
-                        </span>
-
-                        <h3>
-                            Clear & Grounded
-                        </h3>
-
-                        <p>
-                            We translate astrological language into useful
-                            reflection rather than fixed predictions.
-                        </p>
-
-                    </div>
-                </div>
-
-
-                <div class="col-md-4">
-                    <div class="content-panel">
-
-                        <span class="section-label">
-                            05 · Benefit
-                        </span>
-
-                        <h3>
-                            Easy to Revisit
-                        </h3>
-
-                        <p>
-                            Receive notes that help you return to your
-                            insights whenever you need perspective.
-                        </p>
-
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-
-    <!-- ========================= SECTION 5 — BOOKING & PAYMENT ========================= -->
-    <section class="bg-alt">
-        <div class="container">
-
-            <div class="row align-items-center g-5">
-
-                <div class="col-lg-6">
-
-                    <span class="section-label">
-                        06 · Booking & Payment
-                    </span>
-
-                    <h2>
-                        A simple path from question to clarity
-                    </h2>
-
-                    <p class="text-muted">
-                        Choose a plan, select your consultant and preferred
-                        time, then complete secure checkout. You will receive
-                        a confirmation with everything you need for your session.
-                    </p>
-
-                </div>
-
-
-                <div class="col-lg-6">
-
-                    <div class="timeline">
-
-                        <div class="timeline-item">
-
-                            <div class="timeline-marker">
-                                1
-                            </div>
-
-                            <div>
-                                <h4>
-                                    Choose your plan
-                                </h4>
-
-                                <p>
-                                    Match the session depth to your needs.
-                                </p>
-                            </div>
-
-                        </div>
-
-
-                        <div class="timeline-item">
-
-                            <div class="timeline-marker">
-                                2
-                            </div>
-
-                            <div>
-                                <h4>
-                                    Select your time
-                                </h4>
-
-                                <p>
-                                    Find a slot that feels comfortable.
-                                </p>
-                            </div>
-
-                        </div>
-
-
-                        <div class="timeline-item">
-
-                            <div class="timeline-marker">
-                                3
-                            </div>
-
-                            <div>
-                                <h4>
-                                    Meet and reflect
-                                </h4>
-
-                                <p>
-                                    Join your private video session.
-                                </p>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-
-    <!-- ========================= SECTION 6 — FAQ ========================= -->
-    <section>
-        <div class="container">
-
-            <div class="text-center mb-4">
-
-                <span class="section-label">
-                    07 · FAQ
-                </span>
-
-                <h2>
-                    Common Questions
-                </h2>
-
-            </div>
-
-
-            <div class="row justify-content-center">
-
-                <div class="col-lg-8">
-
-                    <div class="faq-item">
-
-                        <h5>
-                            Do I need to know my exact birth time?
-                        </h5>
-
-                        <p>
-                            An exact time is helpful for a detailed chart,
-                            but your consultant can still offer meaningful
-                            guidance without it.
-                        </p>
-
-                    </div>
-
-
-                    <div class="faq-item">
-
-                        <h5>
-                            Is astrology a prediction of my future?
-                        </h5>
-
-                        <p>
-                            We treat astrology as a tool for reflection
-                            and perspective, not a guarantee of what will happen.
-                        </p>
-
-                    </div>
-
-
-                    <div class="faq-item">
-
-                        <h5>
-                            Can I reschedule my consultation?
-                        </h5>
-
-                        <p>
-                            Yes. Your confirmation email includes simple
-                            options for managing your appointment.
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-
-    <!-- ========================= SECTION 7 — NEWSLETTER ========================= -->
-    <section class="newsletter-section section-sm">
-        <div class="container position-relative text-center">
+        <div class="section-heading-block">
 
             <span class="section-label">
-                Stay Connected
+                Your Journey
             </span>
 
             <h2>
-                Stay Connected With the Stars
+                From Question to Consultation
             </h2>
 
             <p class="section-description">
-                Receive astrology insights, horoscope updates, and helpful
-                guidance delivered to your inbox.
+                Booking your session is simple. Follow six clear
+                steps and arrive prepared for the conversation.
             </p>
 
-            <form class="newsletter-form mt-4">
-
-                <input
-                    type="email"
-                    class="form-control"
-                    placeholder="Email Address"
-                    required
-                />
-
-                <button
-                    class="btn btn-primary"
-                    type="submit"
-                >
-                    Subscribe
-                </button>
-
-            </form>
-
-            <p class="newsletter-msg mt-2"></p>
-
-            <div class="newsletter-final-cta">
-                Ready to begin?
-
-                <a href="./login.html">
-                    Start your booking
-                </a>
-            </div>
-
         </div>
-    </section>
 
 
-    <!-- ========================= FOOTER ========================= -->
-    <footer class="footer-custom">
 
-        <div class="container">
+        <div class="journey-wire">
 
-            <div class="row g-4">
 
-                <!-- Brand -->
-                <div class="col-lg-4 col-md-6">
+            <div class="journey-line"></div>
 
-                    <div class="footer-brand">
 
-                        <img
-                            src="./images/logo.png"
-                            alt=""
-                        />
+            <!-- STEP 1 -->
 
-                        <span class="brand-astro" dir="ltr">
-                            <span class="brand-astro">Astro</span>
-                            <span class="brand-guide">Guide</span>
-                        </span>
+            <div class="journey-step">
 
-                    </div>
+                <div class="journey-marker">
 
-                    <p class="footer-tagline">
-                        Understand Your Path. Embrace Your Future.
+                    <i data-lucide="message-square-question"></i>
+
+                    <span>
+                        01
+                    </span>
+
+                </div>
+
+
+                <div class="journey-content">
+
+                    <span>
+                        Begin
+                    </span>
+
+                    <h3>
+                        Identify your question
+                    </h3>
+
+                    <p>
+                        Think about the area of life where you
+                        would like greater perspective.
                     </p>
 
-                    <div class="footer-social">
+                </div>
 
-                        <a
-                            href="#"
-                            aria-label="Facebook"
-                        >
-                            <i data-lucide="facebook"></i>
-                        </a>
+            </div>
 
-                        <a
-                            href="#"
-                            aria-label="Instagram"
-                        >
-                            <i data-lucide="instagram"></i>
-                        </a>
 
-                        <a
-                            href="#"
-                            aria-label="Twitter"
-                        >
-                            <i data-lucide="twitter"></i>
-                        </a>
 
-                        <a
-                            href="#"
-                            aria-label="YouTube"
-                        >
-                            <i data-lucide="youtube"></i>
-                        </a>
+            <!-- STEP 2 -->
 
-                    </div>
+            <div class="journey-step">
+
+                <div class="journey-marker">
+
+                    <i data-lucide="list-checks"></i>
+
+                    <span>
+                        02
+                    </span>
 
                 </div>
 
 
-                <!-- Quick Links -->
-                <div class="col-lg-2 col-md-6 col-6">
+                <div class="journey-content">
 
-                    <h5 class="footer-heading">
-                        Quick Links
-                    </h5>
+                    <span>
+                        Select
+                    </span>
 
-                    <a
-                        class="footer-link"
-                        href="./index.html"
-                    >
-                        Home
-                    </a>
+                    <h3>
+                        Choose your plan
+                    </h3>
 
-                    <a
-                        class="footer-link"
-                        href="./services.html"
-                    >
-                        Services
-                    </a>
-
-                    <a
-                        class="footer-link"
-                        href="./astrologers.html"
-                    >
-                        Astrologers
-                    </a>
-
-                    <a
-                        class="footer-link"
-                        href="./pricing.html"
-                    >
-                        Pricing
-                    </a>
-
-                    <a
-                        class="footer-link"
-                        href="./about.html"
-                    >
-                        About
-                    </a>
-
-                </div>
-
-
-                <!-- Services -->
-                <div class="col-lg-2 col-md-6 col-6">
-
-                    <h5 class="footer-heading">
-                        Services
-                    </h5>
-
-                    <a
-                        class="footer-link"
-                        href="./services.html"
-                    >
-                        Birth Chart Reading
-                    </a>
-
-                    <a
-                        class="footer-link"
-                        href="./services.html"
-                    >
-                        Matchmaking
-                    </a>
-
-                    <a
-                        class="footer-link"
-                        href="./services.html"
-                    >
-                        Career Guidance
-                    </a>
-
-                    <a
-                        class="footer-link"
-                        href="./services.html"
-                    >
-                        Personal Consultation
-                    </a>
-
-                </div>
-
-
-                <!-- Additional Pages -->
-                <div class="col-lg-2 col-md-6 col-6">
-
-                    <h5 class="footer-heading">
-                        Additional Pages
-                    </h5>
-
-                    <a
-                        class="footer-link"
-                        href="./404.html"
-                    >
-                        404 Page
-                    </a>
-
-                    <a
-                        class="footer-link"
-                        href="./maintenance.html"
-                    >
-                        Maintenance
-                    </a>
-
-                </div>
-
-
-                <!-- Contact -->
-                <div class="col-lg-2 col-md-6 col-6">
-
-                    <h5 class="footer-heading">
-                        Contact Us
-                    </h5>
-
-                    <div class="contact-item">
-
-                        <i data-lucide="phone"></i>
-
-                        <span>
-                            +91 98765 43210
-                        </span>
-
-                    </div>
-
-                    <div class="contact-item">
-
-                        <i data-lucide="map-pin"></i>
-
-                        <span>
-                            Hyderabad, India
-                        </span>
-
-                    </div>
-
-                    <div class="contact-item">
-
-                        <i data-lucide="mail"></i>
-
-                        <span>
-                            contact@astroguide.com
-                        </span>
-
-                    </div>
+                    <p>
+                        Select the consultation depth and duration
+                        that matches your needs.
+                    </p>
 
                 </div>
 
             </div>
 
 
-            <!-- Footer Bottom -->
-            <div class="footer-bottom d-flex flex-wrap justify-content-between align-items-center">
 
-                <p
-                    class="mb-0 text-muted"
-                    style="font-size: 0.875rem;"
+            <!-- STEP 3 -->
+
+            <div class="journey-step">
+
+                <div class="journey-marker">
+
+                    <i data-lucide="user-round-search"></i>
+
+                    <span>
+                        03
+                    </span>
+
+                </div>
+
+
+                <div class="journey-content">
+
+                    <span>
+                        Match
+                    </span>
+
+                    <h3>
+                        Select your consultant
+                    </h3>
+
+                    <p>
+                        Explore consultant specialties and choose
+                        the approach that feels suitable.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- STEP 4 -->
+
+            <div class="journey-step">
+
+                <div class="journey-marker">
+
+                    <i data-lucide="calendar-days"></i>
+
+                    <span>
+                        04
+                    </span>
+
+                </div>
+
+
+                <div class="journey-content">
+
+                    <span>
+                        Schedule
+                    </span>
+
+                    <h3>
+                        Pick your time
+                    </h3>
+
+                    <p>
+                        Choose a convenient consultation slot and
+                        complete your booking details.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- STEP 5 -->
+
+            <div class="journey-step">
+
+                <div class="journey-marker">
+
+                    <i data-lucide="credit-card"></i>
+
+                    <span>
+                        05
+                    </span>
+
+                </div>
+
+
+                <div class="journey-content">
+
+                    <span>
+                        Confirm
+                    </span>
+
+                    <h3>
+                        Complete checkout
+                    </h3>
+
+                    <p>
+                        Confirm your selected plan and securely
+                        complete the booking process.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- STEP 6 -->
+
+            <div class="journey-step">
+
+                <div class="journey-marker">
+
+                    <i data-lucide="video"></i>
+
+                    <span>
+                        06
+                    </span>
+
+                </div>
+
+
+                <div class="journey-content">
+
+                    <span>
+                        Connect
+                    </span>
+
+                    <h3>
+                        Meet and reflect
+                    </h3>
+
+                    <p>
+                        Join your private consultation and explore
+                        the questions that brought you here.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     SECTION 7 — FAQ
+========================================================= -->
+
+<section class="faq-section">
+
+    <div class="container">
+
+
+        <div class="section-heading-block">
+
+            <span class="section-label">
+                Frequently Asked Questions
+            </span>
+
+            <h2>
+                Before You Book
+            </h2>
+
+            <p class="section-description">
+                A few common questions to help you feel comfortable
+                choosing your consultation.
+            </p>
+
+        </div>
+
+
+
+        <div class="faq-list">
+
+
+            <!-- FAQ 1 -->
+
+            <div class="pricing-faq">
+
+                <button
+                    class="pricing-faq-question"
+                    type="button"
+                    aria-expanded="false"
                 >
-                    &copy; 2026 AstroGuide. All rights reserved.
+
+                    <span>
+                        Do I need to know my exact birth time?
+                    </span>
+
+                    <span class="faq-plus">
+                        <i data-lucide="plus"></i>
+                    </span>
+
+                </button>
+
+
+                <div class="pricing-faq-answer">
+
+                    <p>
+                        An exact time is helpful for a detailed chart,
+                        but your consultant can still offer meaningful
+                        guidance without it.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- FAQ 2 -->
+
+            <div class="pricing-faq">
+
+                <button
+                    class="pricing-faq-question"
+                    type="button"
+                    aria-expanded="false"
+                >
+
+                    <span>
+                        Is astrology a prediction of my future?
+                    </span>
+
+                    <span class="faq-plus">
+                        <i data-lucide="plus"></i>
+                    </span>
+
+                </button>
+
+
+                <div class="pricing-faq-answer">
+
+                    <p>
+                        Astrology can be used as a reflective framework
+                        for exploring patterns, themes, and possibilities.
+                        It should not be treated as a guarantee of what
+                        will happen.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- FAQ 3 -->
+
+            <div class="pricing-faq">
+
+                <button
+                    class="pricing-faq-question"
+                    type="button"
+                    aria-expanded="false"
+                >
+
+                    <span>
+                        Can I reschedule my consultation?
+                    </span>
+
+                    <span class="faq-plus">
+                        <i data-lucide="plus"></i>
+                    </span>
+
+                </button>
+
+
+                <div class="pricing-faq-answer">
+
+                    <p>
+                        Yes. Your confirmation details can include options
+                        for managing your appointment. Check your booking
+                        information for the available rescheduling options.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- FAQ 4 -->
+
+            <div class="pricing-faq">
+
+                <button
+                    class="pricing-faq-question"
+                    type="button"
+                    aria-expanded="false"
+                >
+
+                    <span>
+                        Which plan should I choose for a birth chart reading?
+                    </span>
+
+                    <span class="faq-plus">
+                        <i data-lucide="plus"></i>
+                    </span>
+
+                </button>
+
+
+                <div class="pricing-faq-answer">
+
+                    <p>
+                        The Complete plan provides more time for a birth
+                        chart overview and several focus areas. Premium
+                        provides the longest session and the most expansive
+                        written follow-up.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- FAQ 5 -->
+
+            <div class="pricing-faq">
+
+                <button
+                    class="pricing-faq-question"
+                    type="button"
+                    aria-expanded="false"
+                >
+
+                    <span>
+                        Can I discuss more than one topic?
+                    </span>
+
+                    <span class="faq-plus">
+                        <i data-lucide="plus"></i>
+                    </span>
+
+                </button>
+
+
+                <div class="pricing-faq-answer">
+
+                    <p>
+                        Yes, although the amount of time available affects
+                        how deeply each topic can be explored. Longer plans
+                        provide more room for multiple connected questions.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================================
+     NEWSLETTER — UNCHANGED
+========================================================= -->
+
+<section class="newsletter-section section-sm">
+
+    <div class="container position-relative text-center">
+
+        <span class="section-label">
+            Stay Connected
+        </span>
+
+        <h2>
+            Stay Connected With the Stars
+        </h2>
+
+        <p class="section-description">
+            Receive astrology insights, horoscope updates, and helpful
+            guidance delivered to your inbox.
+        </p>
+
+
+        <form class="newsletter-form mt-4">
+
+            <input
+                type="email"
+                class="form-control"
+                placeholder="Email Address"
+                required
+            >
+
+
+            <button
+                class="btn btn-primary"
+                type="submit"
+            >
+                Subscribe
+            </button>
+
+        </form>
+
+
+        <p class="newsletter-msg mt-2"></p>
+
+
+        <div class="newsletter-final-cta">
+
+            Ready to begin?
+
+            <a href="./login.html">
+                Start your booking
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     FOOTER — UNCHANGED
+========================================================= -->
+
+<footer class="footer-custom">
+
+    <div class="container">
+
+
+        <div class="row g-4">
+
+
+            <!-- BRAND -->
+
+            <div class="col-lg-4 col-md-6">
+
+<div class="footer-brand">
+                    <a class="navbar-brand-custom" href="./index.html">
+                                    <img src="./images/logo.png" alt="">
+                                    <span class="brand-astro" dir="ltr">
+                                        <span class="brand-astro">Astro</span><span class="brand-guide">Guide</span>
+                                    </span>
+                    </a>
+
+                    </div>
+
+
+                <p class="footer-tagline">
+                    Understand Your Path. Embrace Your Future.
                 </p>
 
-                <div class="footer-bottom-links">
 
-                    <a href="#">
-                        Privacy Policy
+                <div class="footer-social">
+
+                    <a
+                        href="#"
+                        aria-label="Facebook"
+                    >
+                        <i data-lucide="facebook"></i>
                     </a>
 
-                    <a href="#">
-                        Terms &amp; Conditions
+
+                    <a
+                        href="#"
+                        aria-label="Instagram"
+                    >
+                        <i data-lucide="instagram"></i>
                     </a>
+
+
+                    <a
+                        href="#"
+                        aria-label="Twitter"
+                    >
+                        <i data-lucide="twitter"></i>
+                    </a>
+
+
+                    <a
+                        href="#"
+                        aria-label="YouTube"
+                    >
+                        <i data-lucide="youtube"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- QUICK LINKS -->
+
+            <div class="col-lg-2 col-md-6 col-6">
+
+                <h5 class="footer-heading">
+                    Quick Links
+                </h5>
+
+
+                <a
+                    class="footer-link"
+                    href="./index.html"
+                >
+                    Home
+                </a>
+                <a
+                    class="footer-link"
+                    href="./about.html"
+                >
+                    About
+                </a>
+
+                <a
+                    class="footer-link"
+                    href="./horoscope.html"
+                >
+                    Horoscope
+                </a>
+
+
+                <a
+                    class="footer-link"
+                    href="./astrologers.html"
+                >
+                    Astrologers
+                </a>
+
+
+                <a
+                    class="footer-link"
+                    href="./pricing.html"
+                >
+                    Pricing
+                </a>
+
+            </div>
+
+
+
+            <!-- SERVICES -->
+
+            <div class="col-lg-2 col-md-6 col-6">
+
+                <h5 class="footer-heading">
+                    Services
+                </h5>
+
+
+                <a
+                    class="footer-link"
+                    href="./services.html"
+                >
+                    Birth Chart Reading
+                </a>
+
+
+                <a
+                    class="footer-link"
+                    href="./services.html"
+                >
+                    Matchmaking
+                </a>
+
+
+                <a
+                    class="footer-link"
+                    href="./services.html"
+                >
+                    Career Guidance
+                </a>
+
+
+                <a
+                    class="footer-link"
+                    href="./services.html"
+                >
+                    Personal Consultation
+                </a>
+
+            </div>
+
+
+
+            <!-- ADDITIONAL -->
+
+            <div class="col-lg-2 col-md-6 col-6">
+
+                <h5 class="footer-heading">
+                    Additional Pages
+                </h5>
+
+
+                <a
+                    class="footer-link"
+                    href="./404.html"
+                >
+                    404 Page
+                </a>
+
+
+                <a
+                    class="footer-link"
+                    href="./maintenance.html"
+                >
+                    Maintenance
+                </a>
+
+            </div>
+
+
+
+            <!-- CONTACT -->
+
+            <div class="col-lg-2 col-md-6 col-6">
+
+                <h5 class="footer-heading">
+                    Contact Us
+                </h5>
+
+
+                <div class="contact-item">
+
+                    <i data-lucide="phone"></i>
+
+                    <span>
+                        +91 98765 43210
+                    </span>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <i data-lucide="map-pin"></i>
+
+                    <span>
+                        Hyderabad, India
+                    </span>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <i data-lucide="mail"></i>
+
+                    <span>
+                        contact@astroguide.com
+                    </span>
 
                 </div>
 
             </div>
 
         </div>
-    </footer>
 
 
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@0.542.0/dist/umd/lucide.min.js"></script>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            lucide.createIcons();
-        });
-    </script>
+        <div class="footer-bottom d-flex flex-wrap justify-content-between align-items-center">
 
-    <!-- Bootstrap JS Bundle -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+            <p
+                class="mb-0 text-muted"
+            >
+                &copy; 2026 AstroGuide. All rights reserved.
+            </p>
 
-    <!-- Theme JS -->
-    <script src="./js/theme.js"></script>
+
+            <div class="footer-bottom-links">
+
+                <a href="#">
+                    Privacy Policy
+                </a>
+
+
+                <a href="#">
+                    Terms &amp; Conditions
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =========================================================
+     SCRIPTS
+========================================================= -->
+
+<script src="https://unpkg.com/lucide@0.542.0/dist/umd/lucide.min.js"></script>
+
+
+<script src="./js/pricing.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="./js/theme.js"></script>
+
 
 </body>
 

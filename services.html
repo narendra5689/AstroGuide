@@ -4,7 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <!-- Favicon -->
+<link rel="icon" type="image/png" href="./images/logo.png" />
+<link rel="shortcut icon" href="./images/logo.png" />
+<link rel="apple-touch-icon" href="./images/logo.png" />
     <title>Astrology Services | AstroGuide</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -21,16 +24,52 @@
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
-        <div class="container">
+<!-- ========================= NAVBAR ========================= -->
 
-            <a class="navbar-brand-custom" href="./index.html">
-                <img src="./images/logo.png" alt="">
-                <span class="brand-astro" dir="ltr">
-                    <span class="brand-astro">Astro</span><span class="brand-guide">Guide</span>
-                </span>
-            </a>
+<nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+    <div class="container">
 
+        <!-- ========================= BRAND ========================= -->
+        <a class="navbar-brand-custom" href="./index.html">
+            <img src="./images/logo.png" alt="AstroGuide">
+
+            <span class="brand-astro" dir="ltr">
+                <span class="brand-astro">Astro</span><span class="brand-guide">Guide</span>
+            </span>
+        </a>
+
+
+        <!-- =====================================================
+             MOBILE CONTROLS
+             DARK MODE → RTL → HAMBURGER
+             ===================================================== -->
+        <div class="mobile-nav-controls">
+
+            <!-- Dark Mode -->
+            <button
+                class="nav-utility-btn theme-toggle"
+                type="button"
+                aria-label="Toggle dark mode"
+            >
+                <i
+                    data-lucide="sun"
+                    class="theme-toggle-icon"
+                ></i>
+            </button>
+
+
+            <!-- RTL -->
+            <button
+                class="nav-utility-btn direction-toggle"
+                id="directionToggleMobile"
+                type="button"
+                aria-label="Toggle text direction"
+            >
+                <span class="direction-toggle-text">LTR</span>
+            </button>
+
+
+            <!-- Hamburger -->
             <button
                 class="navbar-toggler navbar-toggler-custom"
                 type="button"
@@ -43,462 +82,1271 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse" id="navMain">
+        </div>
 
-                <ul class="navbar-nav mx-auto gap-lg-1">
 
-                    <!-- Home Dropdown -->
-                    <li class="nav-item dropdown">
-                        <a
-                            class="nav-link nav-link-custom dropdown-toggle"
-                            href="./index.html"
-                            role="button"
-                            data-bs-toggle="dropdown"
-                            aria-expanded="false"
-                        >
-                            Home
-                        </a>
+        <!-- =====================================================
+             NAVBAR COLLAPSE
+             ===================================================== -->
+        <div class="collapse navbar-collapse" id="navMain">
 
-                        <ul class="dropdown-menu dropdown-menu-custom">
-                            <li>
-                                <a class="dropdown-item dropdown-item-custom" href="./index.html">
-                                    Home 1 <span class="item-sub">Classic</span>
-                                </a>
-                            </li>
+            <!-- ========================= NAV LINKS ========================= -->
+            <ul class="navbar-nav mx-auto gap-lg-1">
 
-                            <li>
-                                <a class="dropdown-item dropdown-item-custom" href="./home2.html">
-                                    Home 2 <span class="item-sub">Premium</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
- <li class="nav-item">
-                        <a class="nav-link nav-link-custom" href="./about.html">
-                            About
-                        </a>
-                    </li>
-                    <!-- Services Dropdown -->
-<li class="nav-item">
-    <a
-        class="nav-link nav-link-custom active"
-        href="./services.html"
-    >
-        Services
-    </a>
-</li>
+                <!-- Home Dropdown -->
+                <li class="nav-item dropdown">
 
-                   
+                    <a
+                        class="nav-link nav-link-custom dropdown-toggle"
+                        href="./index.html"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                    >
+                        Home
+                    </a>
 
-                    <li class="nav-item">
-                        <a class="nav-link nav-link-custom" href="./astrologers.html">
-                            Astrologers
-                        </a>
-                    </li>
+                    <ul class="dropdown-menu dropdown-menu-custom">
 
-                    <li class="nav-item">
-                        <a class="nav-link nav-link-custom" href="./pricing.html">
-                            Pricing
-                        </a>
-                    </li>
+                        <li>
+                            <a
+                                class="dropdown-item dropdown-item-custom"
+                                href="./index.html"
+                            >
+                                Home 1
+                                <span class="item-sub">Classic</span>
+                            </a>
+                        </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link nav-link-custom" href="./dashboard.html">
-                            Dashboard
-                        </a>
-                    </li>
-                </ul>
+                        <li>
+                            <a
+                                class="dropdown-item dropdown-item-custom"
+                                href="./home2.html"
+                            >
+                                Home 2
+                                <span class="item-sub">Premium</span>
+                            </a>
+                        </li>
 
-                <div class="d-flex align-items-center gap-2 flex-wrap">
+                    </ul>
+                </li>
 
-                    <div class="nav-utility-group">
-                        <button
-                            class="nav-utility-btn theme-toggle"
-                            aria-label="Toggle dark mode"
-                        >
-                            <i data-lucide="sun" class="theme-toggle-icon"></i>
-                        </button>
 
-                        <button
-                            class="nav-utility-btn direction-toggle"
-                            id="directionToggle"
-                            aria-label="Toggle text direction"
-                        >
-                            <span class="direction-toggle-text">LTR</span>
-                        </button>
-                    </div>
+                <!-- About -->
+                <li class="nav-item">
+                    <a
+                        class="nav-link nav-link-custom"
+                        href="./about.html"
+                    >
+                        About
+                    </a>
+                </li>
 
-                    <div class="nav-cta-group">
-                        <a href="./login.html" class="btn btn-secondary">
-                            Login
-                        </a>
-                    </div>
+
+                <!-- Services -->
+                <li class="nav-item">
+                    <a
+                        class="nav-link nav-link-custom active"
+                        href="./services.html"
+                    >
+                        Services
+                    </a>
+                </li>
+
+
+                <!-- Horoscope -->
+                <li class="nav-item">
+                    <a
+                        class="nav-link nav-link-custom"
+                        href="./horoscope.html"
+                    >
+                        Horoscope
+                    </a>
+                </li>
+
+
+                <!-- Astrologers -->
+                <li class="nav-item">
+                    <a
+                        class="nav-link nav-link-custom"
+                        href="./astrologers.html"
+                    >
+                        Astrologers
+                    </a>
+                </li>
+
+
+                <!-- Pricing -->
+                <li class="nav-item">
+                    <a
+                        class="nav-link nav-link-custom"
+                        href="./pricing.html"
+                    >
+                        Pricing
+                    </a>
+                </li>
+
+
+                <!-- Dashboard -->
+                <li class="nav-item">
+                    <a
+                        class="nav-link nav-link-custom"
+                        href="./dashboard.html"
+                    >
+                        Dashboard
+                    </a>
+                </li>
+
+            </ul>
+
+
+            <!-- =====================================================
+                 DESKTOP RIGHT SIDE
+                 ===================================================== -->
+            <div class="d-flex align-items-center gap-2 flex-wrap">
+
+                <!-- Desktop utility buttons -->
+                <div class="nav-utility-group">
+
+                    <!-- Dark Mode -->
+                    <button
+                        class="nav-utility-btn theme-toggle btninside"
+                        type="button"
+                        aria-label="Toggle dark mode"
+                    >
+                        <i
+                            data-lucide="sun"
+                            class="theme-toggle-icon"
+                        ></i>
+                    </button>
+
+
+                    <!-- RTL -->
+                    <button
+                        class="nav-utility-btn direction-toggle btninside"
+                        
+                        id="directionToggle"
+                        type="button"
+                        aria-label="Toggle text direction"
+                    >
+                        <span class="direction-toggle-text">LTR</span>
+                    </button>
 
                 </div>
-            </div>
-        </div>
-    </nav>
 
-    <!-- Page Hero -->
-    <section class="page-hero celestial-bg">
+
+                <!-- Login -->
+                <div class="nav-cta-group">
+
+                    <a
+                        href="./login.html"
+                        class="btn btn-secondary"
+                    >
+                        Login
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</nav>
+
+
+<main>
+
+    <!-- =====================================================
+         SERVICES HERO
+         ===================================================== -->
+
+    <section class="services-hero">
+
+        <div class="services-hero-overlay"></div>
+
         <div class="container position-relative">
-            <span class="section-label">Our Services</span>
 
-            <h1>Clarity for Every Chapter</h1>
+            <div class="services-hero-content">
 
-            <p>
-                Thoughtful, personalized astrology consultations that turn cosmic
-                patterns into practical self-reflection and meaningful direction.
-            </p>
-        </div>
-    </section>
+                <span class="section-label">
+                    Explore AstroGuide
+                </span>
 
-    <!-- Birth Chart Reading -->
-    <section id="birthchart">
-        <div class="container">
-            <div class="row align-items-center g-5">
+                <h1>
+                    Guidance for the Questions
+                    That Matter to You
+                </h1>
 
-                <div class="col-lg-6">
-                    <img
-                        class="content-image"
-                        src="./images/charts.png"
-                        alt="Astrology chart and tarot cards"
-                    >
-                </div>
-
-                <div class="col-lg-6">
-                    <span class="section-label">01 · Birth Chart Reading</span>
-
-                    <h2>Your Cosmic Blueprint</h2>
-
-                    <p class="text-muted">
-                        A birth chart reading maps the sky at your exact moment of birth.
-                        Together, we explore your natural strengths, emotional patterns,
-                        motivations, and the themes shaping this season of your life.
-                    </p>
-
-                    <ul class="mini-list">
-                        <li>
-                            <i data-lucide="check"></i>
-                            Full natal chart interpretation
-                        </li>
-                        <li>
-                            <i data-lucide="check"></i>
-                            Personal strengths and growth patterns
-                        </li>
-                        <li>
-                            <i data-lucide="check"></i>
-                            Written summary after your session
-                        </li>
-                    </ul>
-
-                    <a class="btn btn-primary" href="./pricing.html">
-                        Book a Birth Chart Reading
-                    </a>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Matchmaking -->
-    <section class="bg-alt" id="matchmaker">
-        <div class="container">
-            <div class="row align-items-center g-5">
-
-                <div class="col-lg-6 order-lg-2">
-                    <img
-                        class="content-image"
-                        src="./images/couple.png"
-                        alt="Couple holding hands at sunset"
-                    >
-                </div>
-
-                <div class="col-lg-6 order-lg-1">
-                    <span class="section-label">02 · Matchmaking</span>
-
-                    <h2>Understand the Space Between Two Hearts</h2>
-
-                    <p class="text-muted">
-                        Relationship astrology offers a thoughtful way to explore how
-                        two charts interact — from communication styles and emotional
-                        needs to shared values and areas for conscious growth.
-                    </p>
-
-                    <ul class="mini-list">
-                        <li>
-                            <i data-lucide="check"></i>
-                            Synastry and compatibility overview
-                        </li>
-                        <li>
-                            <i data-lucide="check"></i>
-                            Strengths and recurring relationship themes
-                        </li>
-                        <li>
-                            <i data-lucide="check"></i>
-                            Practical conversation prompts
-                        </li>
-                    </ul>
-
-                    <a class="btn btn-primary" href="./pricing.html">
-                        Explore Matchmaking
-                    </a>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Career Guidance -->
-    <section id="careerguide">
-        <div class="container">
-            <div class="row align-items-center g-5">
-
-                <div class="col-lg-6">
-                    <img
-                        class="content-image"
-                        src="./images/alpha-astro2.png"
-                        alt="Professional in thoughtful consultation"
-                    >
-                </div>
-
-                <div class="col-lg-6">
-                    <span class="section-label">03 · Career Guidance</span>
-
-                    <h2>Make Decisions With More Self-Knowledge</h2>
-
-                    <p class="text-muted">
-                        Use your chart as a reflective tool for understanding work styles,
-                        motivation, natural talents, and the timing of important
-                        professional transitions.
-                    </p>
-
-                    <ul class="mini-list">
-                        <li>
-                            <i data-lucide="check"></i>
-                            Strengths and vocation themes
-                        </li>
-                        <li>
-                            <i data-lucide="check"></i>
-                            Decision-making patterns
-                        </li>
-                        <li>
-                            <i data-lucide="check"></i>
-                            Timing for focused reflection
-                        </li>
-                    </ul>
-
-                    <a class="btn btn-primary" href="./pricing.html">
-                        Explore Career Guidance
-                    </a>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Personal Consultation -->
-    <section class="bg-alt" id="personalcons">
-        <div class="container">
-            <div class="row align-items-center g-5">
-
-                <div class="col-lg-6 order-lg-2">
-                    <img
-                        class="content-image"
-                        src="./images/crystal.png"
-                        alt="Crystal ball and tarot cards"
-                    >
-                </div>
-
-                <div class="col-lg-6 order-lg-1">
-                    <span class="section-label">04 · Personal Consultation</span>
-
-                    <h2>A Conversation Centered on You</h2>
-
-                    <p class="text-muted">
-                        Bring the question that has been on your mind. Your astrologer
-                        will create a calm, open space to explore the themes most
-                        relevant to your life right now.
-                    </p>
-
-                    <ul class="mini-list">
-                        <li>
-                            <i data-lucide="check"></i>
-                            One-on-one video consultation
-                        </li>
-                        <li>
-                            <i data-lucide="check"></i>
-                            Flexible, question-led format
-                        </li>
-                        <li>
-                            <i data-lucide="check"></i>
-                            Personal follow-up notes
-                        </li>
-                    </ul>
-
-                    <a class="btn btn-primary" href="./pricing.html">
-                        Book Personal Consultation
-                    </a>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Consultation Experience -->
-    <section>
-        <div class="container">
-
-            <div class="text-center mb-5">
-                <span class="section-label">05 · The Experience</span>
-
-                <h2>How Consultations Work</h2>
-
-                <p class="section-description">
-                    A thoughtful process designed around your questions and your pace.
+                <p>
+                    From understanding your birth chart to exploring relationships,
+                    career direction, and personal questions, our consultations are
+                    designed to turn astrology into a thoughtful space for reflection.
                 </p>
-            </div>
 
-            <div class="row g-4">
+                <div class="services-hero-actions">
 
-                <div class="col-md-3">
-                    <div class="content-panel text-center">
-                        <div class="service-detail-icon mx-auto mb-3">1</div>
+                    <a
+                        href="./pricing.html"
+                        class="btn btn-secondary"
+                    >
+                        Explore Consultations
+                    </a>
 
-                        <h3>Share</h3>
+                    <a
+                        href="#birthchart"
+                        class="services-text-link"
+                    >
+                        Explore our services
+                        <i data-lucide="arrow-down"></i>
+                    </a>
 
-                        <p>Tell us what you would like to explore.</p>
-                    </div>
-                </div>
-
-                <div class="col-md-3">
-                    <div class="content-panel text-center">
-                        <div class="service-detail-icon mx-auto mb-3">2</div>
-
-                        <h3>Match</h3>
-
-                        <p>Choose the consultant and service for you.</p>
-                    </div>
-                </div>
-
-                <div class="col-md-3">
-                    <div class="content-panel text-center">
-                        <div class="service-detail-icon mx-auto mb-3">3</div>
-
-                        <h3>Meet</h3>
-
-                        <p>Join a private, welcoming consultation.</p>
-                    </div>
-                </div>
-
-                <div class="col-md-3">
-                    <div class="content-panel text-center">
-                        <div class="service-detail-icon mx-auto mb-3">4</div>
-
-                        <h3>Reflect</h3>
-
-                        <p>Receive notes to revisit in your own time.</p>
-                    </div>
                 </div>
 
             </div>
+
         </div>
+
     </section>
 
-    <!-- Why AstroGuide / Promise -->
-    <section class="bg-alt">
+
+    <!-- =====================================================
+         SERVICE 01 — BIRTH CHART
+         ===================================================== -->
+
+    <section
+        id="birthchart"
+        class="service-feature service-feature-light"
+    >
+
         <div class="container">
-            <div class="row g-4">
+
+            <div class="row align-items-center">
 
                 <div class="col-lg-6">
-                    <div class="content-panel">
 
-                        <span class="section-label">06 · Why AstroGuide</span>
+                    <div class="service-image-wrap">
 
-                        <h2>A More Grounded Kind of Guidance</h2>
+                        <span class="service-number">
+                            01
+                        </span>
 
-                        <ul class="mini-list">
-                            <li>
-                                <i data-lucide="sparkles"></i>
-                                Experienced, compassionate consultants
-                            </li>
-                            <li>
-                                <i data-lucide="shield-check"></i>
-                                Private and respectful conversations
-                            </li>
-                            <li>
-                                <i data-lucide="book-open-text"></i>
-                                Practical summaries you can revisit
-                            </li>
-                            <li>
-                                <i data-lucide="heart"></i>
-                                Guidance, never guarantees
-                            </li>
-                        </ul>
+                        <img
+                            class="service-feature-image"
+                            src="./images/charts.png"
+                            alt="Astrology birth chart and tarot cards"
+                        >
+
+                        <div class="service-image-caption">
+                            <i data-lucide="orbit"></i>
+                            Your cosmic blueprint
+                        </div>
 
                     </div>
+
                 </div>
 
+
                 <div class="col-lg-6">
-                    <div class="content-panel">
 
-                        <span class="section-label">07 · Our Promise</span>
+                    <div class="service-feature-content">
 
-                        <h2>Space to See Yourself Clearly</h2>
+                        <span class="section-label">
+                            Birth Chart Reading
+                        </span>
 
-                        <p>
-                            Astrology readings are intended for guidance and personal
-                            reflection and should not replace professional advice.
-                            We meet every question with care, context, and curiosity.
+                        <h2>
+                            Understand the map
+                            you were born with
+                        </h2>
+
+                        <p class="text-muted">
+                            A birth chart reading gives you a wider view of the
+                            patterns, motivations, strengths, and emotional
+                            tendencies reflected in your chart. Instead of focusing
+                            on a single placement, we explore how the different
+                            pieces work together.
                         </p>
 
-                        <a class="btn btn-secondary" href="./about.html">
-                            Learn about our approach
+                        <p class="text-muted">
+                            Your session becomes a calm conversation about the areas
+                            of life you want to understand more clearly, with space
+                            to ask questions and reflect on what resonates with you.
+                        </p>
+
+
+                        <div class="service-points">
+
+                            <div class="service-point">
+
+                                <div class="service-point-icon">
+                                    <i data-lucide="map"></i>
+                                </div>
+
+                                <div>
+                                    <h4>
+                                        Complete chart perspective
+                                    </h4>
+
+                                    <p>
+                                        Explore the major themes and placements
+                                        within your natal chart.
+                                    </p>
+                                </div>
+
+                            </div>
+
+
+                            <div class="service-point">
+
+                                <div class="service-point-icon">
+                                    <i data-lucide="lightbulb"></i>
+                                </div>
+
+                                <div>
+                                    <h4>
+                                        Personal insights
+                                    </h4>
+
+                                    <p>
+                                        Connect astrological themes with your
+                                        questions and lived experience.
+                                    </p>
+                                </div>
+
+                            </div>
+
+
+                            <div class="service-point">
+
+                                <div class="service-point-icon">
+                                    <i data-lucide="notebook-pen"></i>
+                                </div>
+
+                                <div>
+                                    <h4>
+                                        Written reflection
+                                    </h4>
+
+                                    <p>
+                                        Revisit important observations after
+                                        your consultation.
+                                    </p>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <a
+                            href="./pricing.html"
+                            class="btn btn-primary"
+                        >
+                            Book a Birth Chart Reading
+                            <i data-lucide="arrow-up-right"></i>
                         </a>
 
                     </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         SERVICE 02 — MATCHMAKING
+         ===================================================== -->
+
+    <section
+        id="matchmaker"
+        class="service-feature service-feature-dark"
+    >
+
+        <div class="container">
+
+            <div class="row align-items-center">
+
+                <div class="col-lg-6 order-lg-2">
+
+                    <div class="service-image-wrap">
+
+                        <span class="service-number">
+                            02
+                        </span>
+
+                        <img
+                            class="service-feature-image"
+                            src="./images/couple.png"
+                            alt="Couple representing relationship compatibility"
+                        >
+
+                        <div class="service-image-caption">
+                            <i data-lucide="heart-handshake"></i>
+                            Two charts, one conversation
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-lg-6 order-lg-1">
+
+                    <div class="service-feature-content">
+
+                        <span class="section-label">
+                            Matchmaking
+                        </span>
+
+                        <h2>
+                            Understand the space
+                            between two hearts
+                        </h2>
+
+                        <p class="text-muted">
+                            Relationship astrology offers another perspective on
+                            connection. By looking at two charts together, we can
+                            explore communication patterns, emotional needs,
+                            shared strengths, and areas where understanding may
+                            take more intention.
+                        </p>
+
+                        <p class="text-muted">
+                            The goal is not to define a relationship for you, but
+                            to create useful questions and a deeper understanding
+                            of how two people may experience connection differently.
+                        </p>
+
+
+                        <div class="service-points">
+
+                            <div class="service-point">
+
+                                <div class="service-point-icon">
+                                    <i data-lucide="heart"></i>
+                                </div>
+
+                                <div>
+                                    <h4>
+                                        Compatibility perspective
+                                    </h4>
+
+                                    <p>
+                                        Explore the dynamics created when two
+                                        individual charts meet.
+                                    </p>
+                                </div>
+
+                            </div>
+
+
+                            <div class="service-point">
+
+                                <div class="service-point-icon">
+                                    <i data-lucide="messages-square"></i>
+                                </div>
+
+                                <div>
+                                    <h4>
+                                        Communication patterns
+                                    </h4>
+
+                                    <p>
+                                        Consider different emotional and
+                                        conversational tendencies.
+                                    </p>
+                                </div>
+
+                            </div>
+
+
+                            <div class="service-point">
+
+                                <div class="service-point-icon">
+                                    <i data-lucide="sprout"></i>
+                                </div>
+
+                                <div>
+                                    <h4>
+                                        Areas for growth
+                                    </h4>
+
+                                    <p>
+                                        Identify themes that may benefit from
+                                        patience and conscious communication.
+                                    </p>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <a
+                            href="./pricing.html"
+                            class="btn btn-secondary"
+                        >
+                            Explore Matchmaking
+                            <i data-lucide="arrow-up-right"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         SERVICE 03 — CAREER
+         ===================================================== -->
+
+    <section
+        id="careerguide"
+        class="service-feature service-feature-light"
+    >
+
+        <div class="container">
+
+            <div class="row align-items-center">
+
+                <div class="col-lg-6">
+
+                    <div class="service-image-wrap">
+
+                        <span class="service-number">
+                            03
+                        </span>
+
+                        <img
+                            class="service-feature-image"
+                            src="./images/alpha-astro2.png"
+                            alt="Professional career reflection"
+                        >
+
+                        <div class="service-image-caption">
+                            <i data-lucide="compass"></i>
+                            Direction through reflection
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-lg-6">
+
+                    <div class="service-feature-content">
+
+                        <span class="section-label">
+                            Career Guidance
+                        </span>
+
+                        <h2>
+                            Bring more self-awareness
+                            to your next decision
+                        </h2>
+
+                        <p class="text-muted">
+                            Career guidance uses astrology as a reflective framework
+                            for exploring work preferences, motivation, natural
+                            strengths, and the kinds of environments in which you
+                            may feel most engaged.
+                        </p>
+
+                        <p class="text-muted">
+                            Whether you are considering a new direction, navigating
+                            a transition, or simply trying to understand your working
+                            style, the conversation stays centered around your
+                            questions and circumstances.
+                        </p>
+
+
+                        <div class="service-points">
+
+                            <div class="service-point">
+
+                                <div class="service-point-icon">
+                                    <i data-lucide="briefcase-business"></i>
+                                </div>
+
+                                <div>
+                                    <h4>
+                                        Work-style themes
+                                    </h4>
+
+                                    <p>
+                                        Reflect on motivation, working preferences,
+                                        and personal strengths.
+                                    </p>
+                                </div>
+
+                            </div>
+
+
+                            <div class="service-point">
+
+                                <div class="service-point-icon">
+                                    <i data-lucide="route"></i>
+                                </div>
+
+                                <div>
+                                    <h4>
+                                        Direction and choices
+                                    </h4>
+
+                                    <p>
+                                        Use your chart to frame career questions
+                                        from another perspective.
+                                    </p>
+                                </div>
+
+                            </div>
+
+
+                            <div class="service-point">
+
+                                <div class="service-point-icon">
+                                    <i data-lucide="target"></i>
+                                </div>
+
+                                <div>
+                                    <h4>
+                                        Focused reflection
+                                    </h4>
+
+                                    <p>
+                                        Leave with clearer questions to consider
+                                        as you move forward.
+                                    </p>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <a
+                            href="./pricing.html"
+                            class="btn btn-primary"
+                        >
+                            Explore Career Guidance
+                            <i data-lucide="arrow-up-right"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         SERVICE 04 — PERSONAL CONSULTATION
+         ===================================================== -->
+
+    <section
+        id="personalcons"
+        class="service-feature service-feature-dark"
+    >
+
+        <div class="container">
+
+            <div class="row align-items-center">
+
+                <div class="col-lg-6 order-lg-2">
+
+                    <div class="service-image-wrap">
+
+                        <span class="service-number">
+                            04
+                        </span>
+
+                        <img
+                            class="service-feature-image"
+                            src="./images/crystals.png"
+                            alt="Astrology consultation setting"
+                        >
+
+                        <div class="service-image-caption">
+                            <i data-lucide="messages-circle"></i>
+                            Your question comes first
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-lg-6 order-lg-1">
+
+                    <div class="service-feature-content">
+
+                        <span class="section-label">
+                            Personal Consultation
+                        </span>
+
+                        <h2>
+                            A private conversation
+                            centered around you
+                        </h2>
+
+                        <p class="text-muted">
+                            Sometimes you do not need a specific category. You simply
+                            have a question you want to explore. Personal consultation
+                            gives you room to bring that question into a private,
+                            focused conversation.
+                        </p>
+
+                        <p class="text-muted">
+                            Your astrologer can follow the themes that matter most
+                            to you, allowing the session to feel personal rather
+                            than predetermined.
+                        </p>
+
+
+                        <div class="service-points">
+
+                            <div class="service-point">
+
+                                <div class="service-point-icon">
+                                    <i data-lucide="user-round"></i>
+                                </div>
+
+                                <div>
+                                    <h4>
+                                        One-to-one attention
+                                    </h4>
+
+                                    <p>
+                                        A consultation shaped around your individual
+                                        questions and priorities.
+                                    </p>
+                                </div>
+
+                            </div>
+
+
+                            <div class="service-point">
+
+                                <div class="service-point-icon">
+                                    <i data-lucide="messages-square"></i>
+                                </div>
+
+                                <div>
+                                    <h4>
+                                        Open conversation
+                                    </h4>
+
+                                    <p>
+                                        Explore multiple themes without forcing
+                                        your questions into one category.
+                                    </p>
+                                </div>
+
+                            </div>
+
+
+                            <div class="service-point">
+
+                                <div class="service-point-icon">
+                                    <i data-lucide="file-pen-line"></i>
+                                </div>
+
+                                <div>
+                                    <h4>
+                                        Personal notes
+                                    </h4>
+
+                                    <p>
+                                        Keep useful observations available for
+                                        later reflection.
+                                    </p>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <a
+                            href="./pricing.html"
+                            class="btn btn-secondary"
+                        >
+                            Book Personal Consultation
+                            <i data-lucide="arrow-up-right"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         05 — THE EXPERIENCE
+         ===================================================== -->
+
+    <section class="experience-section">
+
+        <div class="container">
+
+            <div class="experience-heading text-center">
+
+                <span class="section-label">
+                    The Experience
+                </span>
+
+                <h2>
+                    A simple process,
+                    thoughtfully designed
+                </h2>
+
+                <p class="section-description">
+                    From the first question to the final reflection, every step
+                    is designed to feel clear, personal, and unhurried.
+                </p>
+
+            </div>
+
+
+            <div class="experience-flow">
+
+                <div class="experience-step">
+
+                    <div class="experience-icon">
+                        <i data-lucide="message-circle"></i>
+                    </div>
+
+                    <span class="experience-step-number">
+                        01
+                    </span>
+
+                    <h3>
+                        Share
+                    </h3>
+
+                    <p>
+                        Tell us what you would like to understand or explore.
+                    </p>
+
+                </div>
+
+
+                <div class="experience-connector">
+                    <i data-lucide="arrow-right"></i>
+                </div>
+
+
+                <div class="experience-step">
+
+                    <div class="experience-icon">
+                        <i data-lucide="user-round-search"></i>
+                    </div>
+
+                    <span class="experience-step-number">
+                        02
+                    </span>
+
+                    <h3>
+                        Match
+                    </h3>
+
+                    <p>
+                        Choose the astrologer that suit your needs.
+                    </p>
+
+                </div>
+
+
+                <div class="experience-connector">
+                    <i data-lucide="arrow-right"></i>
+                </div>
+
+
+                <div class="experience-step">
+
+                    <div class="experience-icon">
+                        <i data-lucide="video"></i>
+                    </div>
+
+                    <span class="experience-step-number">
+                        03
+                    </span>
+
+                    <h3>
+                        Meet
+                    </h3>
+
+                    <p>
+                        Join a private conversation where questions lead the way.
+                    </p>
+
+                </div>
+
+
+                <div class="experience-connector">
+                    <i data-lucide="arrow-right"></i>
+                </div>
+
+
+                <div class="experience-step">
+
+                    <div class="experience-icon">
+                        <i data-lucide="book-open-check"></i>
+                    </div>
+
+                    <span class="experience-step-number">
+                        04
+                    </span>
+
+                    <h3>
+                        Reflect
+                    </h3>
+
+                    <p>
+                        Revisit the key observations and continue your reflection.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         06 — WHY ASTROGUIDE
+         COMPLETELY SEPARATE SECTION
+         ===================================================== -->
+
+    <section class="why-section">
+
+        <div class="container">
+
+            <div class="why-intro">
+
+                <span class="section-label">
+                    Why AstroGuide
+                </span>
+
+                <h2>
+                    A more grounded
+                    kind of guidance
+                </h2>
+
+                <p>
+                    We believe an astrology consultation should give you room to
+                    think, ask questions, and form your own perspective. That is
+                    why our approach combines traditional astrological frameworks
+                    with a calm, human conversation.
+                </p>
+
+            </div>
+
+
+            <div class="why-grid">
+
+                <article class="why-card">
+
+                    <div class="why-card-top">
+
+                        <span class="why-card-number">
+                            01
+                        </span>
+
+                        <div class="why-card-icon">
+                            <i data-lucide="sparkles"></i>
+                        </div>
+
+                    </div>
+
+                    <h3>
+                        Thoughtful consultants
+                    </h3>
+
+                    <p>
+                        Our consultations are centered on listening, context,
+                        and explaining ideas in a way that gives your questions
+                        the attention they deserve.
+                    </p>
+
+                </article>
+
+
+                <article class="why-card">
+
+                    <div class="why-card-top">
+
+                        <span class="why-card-number">
+                            02
+                        </span>
+
+                        <div class="why-card-icon">
+                            <i data-lucide="shield-check"></i>
+                        </div>
+
+                    </div>
+
+                    <h3>
+                        A private space
+                    </h3>
+
+                    <p>
+                        Personal questions deserve a respectful environment.
+                        We keep the experience focused, comfortable, and free
+                        from unnecessary pressure.
+                    </p>
+
+                </article>
+
+
+                <article class="why-card">
+
+                    <div class="why-card-top">
+
+                        <span class="why-card-number">
+                            03
+                        </span>
+
+                        <div class="why-card-icon">
+                            <i data-lucide="book-open-text"></i>
+                        </div>
+
+                    </div>
+
+                    <h3>
+                        Clarity you can revisit
+                    </h3>
+
+                    <p>
+                        Important observations should not disappear when a session
+                        ends. Written notes give you something useful to return to
+                        as your perspective develops.
+                    </p>
+
+                </article>
+
+
+                <article class="why-card">
+
+                    <div class="why-card-top">
+
+                        <span class="why-card-number">
+                            04
+                        </span>
+
+                        <div class="why-card-icon">
+                            <i data-lucide="heart"></i>
+                        </div>
+
+                    </div>
+
+                    <h3>
+                        Guidance, never guarantees
+                    </h3>
+
+                    <p>
+                        Astrology can offer a framework for reflection, but your
+                        choices remain your own. We avoid fear-based claims and
+                        promises about outcomes.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         07 — OUR PROMISE
+         COMPLETELY SEPARATE FROM SECTION 06
+         ===================================================== -->
+
+    <section class="promise-section">
+
+        <div class="container">
+
+            <div class="promise-layout">
+
+                <div class="promise-visual">
+
+                    <img
+                        src="./images/our-promise.png"
+                        alt="Calm astrology consultation environment"
+                    >
+
+                    <div class="promise-visual-badge">
+
+                        <i data-lucide="compass"></i>
+
+                        <span>
+                            Stay curious.
+                            Stay grounded.
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="promise-content">
+
+                    <span class="section-label">
+                        Our Promise
+                    </span>
+
+                    <h2>
+                        Space to see
+                        yourself clearly
+                    </h2>
+
+                    <p>
+                        We want every consultation to leave you with something
+                        more useful than a prediction. Our intention is to create
+                        space for questions, context, and personal reflection.
+                    </p>
+
+                    <p>
+                        Astrology readings are intended for guidance and personal
+                        reflection and should not replace professional advice.
+                        We encourage you to consider what you hear thoughtfully
+                        and make decisions based on your own circumstances.
+                    </p>
+
+
+                    <div class="promise-points">
+
+                        <div class="promise-point">
+
+                            <i data-lucide="check-circle-2"></i>
+
+                            <span>
+                                Clear, understandable conversations
+                            </span>
+
+                        </div>
+
+
+                        <div class="promise-point">
+
+                            <i data-lucide="check-circle-2"></i>
+
+                            <span>
+                                Respect for your individual perspective
+                            </span>
+
+                        </div>
+
+
+                        <div class="promise-point">
+
+                            <i data-lucide="check-circle-2"></i>
+
+                            <span>
+                                No pressure to accept a particular interpretation
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <a
+                        href="./about.html"
+                        class="btn btn-primary"
+                    >
+                        Learn About Our Approach
+                        <i data-lucide="arrow-up-right"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         NEWSLETTER
+         ===================================================== -->
+
+    <section class="newsletter-section section-sm">
+        <div class="container position-relative">
+
+            <div class="text-center animate-on-scroll">
+
+                <span class="section-label">
+                    Stay Connected
+                </span>
+
+                <h2 class="section-heading">
+                    Stay Connected With the Stars
+                </h2>
+
+                <p class="section-description">
+                    Receive astrology insights, horoscope updates, and helpful
+                    guidance delivered to your inbox.
+                </p>
+
+                <form class="newsletter-form mt-4">
+
+                    <input
+                        type="email"
+                        class="form-control"
+                        placeholder="Email Address"
+                        aria-label="Email Address"
+                        required
+                    />
+
+                    <button
+                        type="submit"
+                        class="btn btn-primary"
+                    >
+                        Subscribe
+                    </button>
+
+                </form>
+
+                <p class="newsletter-msg mt-2"></p>
+
+                <div class="newsletter-final-cta">
+                    Ready for a personalized reading?
+                    <a href="./pricing.html">
+                        Book your consultation today
+                    </a>
                 </div>
 
             </div>
         </div>
     </section>
 
-    <!-- Newsletter -->
-    <section class="newsletter-section section-sm">
-        <div class="container position-relative text-center">
-
-            <span class="section-label">Stay Connected</span>
-
-            <h2>Stay Connected With the Stars</h2>
-
-            <p class="section-description">
-                Receive astrology insights, horoscope updates, and helpful guidance
-                delivered to your inbox.
-            </p>
-
-            <form class="newsletter-form mt-4">
-                <input
-                    type="email"
-                    class="form-control"
-                    placeholder="Email Address"
-                    aria-label="Email Address"
-                    required
-                >
-
-                <button class="btn btn-primary">
-                    Subscribe
-                </button>
-            </form>
-
-            <p class="newsletter-msg mt-2"></p>
-
-            <div class="newsletter-final-cta">
-                Ready for a personal reading?
-                <a href="./pricing.html">Book a consultation</a>
-            </div>
-
-        </div>
-    </section>
+</main>
 
     <!-- ========================= FOOTER ========================= -->
     <footer class="footer-custom">
@@ -507,12 +1355,14 @@
             <div class="row g-4">
 
                 <div class="col-lg-4 col-md-6">
-                    <div class="footer-brand">
-                        <img src="./images/logo.png" alt="">
+<div class="footer-brand">
+                    <a class="navbar-brand-custom" href="./index.html">
+                                    <img src="./images/logo.png" alt="">
+                                    <span class="brand-astro" dir="ltr">
+                                        <span class="brand-astro">Astro</span><span class="brand-guide">Guide</span>
+                                    </span>
+                    </a>
 
-                        <span class="brand-astro" dir="ltr">
-                            <span class="brand-astro">Astro</span><span class="brand-guide">Guide</span>
-                        </span>
                     </div>
 
                     <p class="footer-tagline">

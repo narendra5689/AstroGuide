@@ -64,17 +64,14 @@
     /* =====================================================
        DIRECTION — RTL / LTR
        ===================================================== */
+        function initializeDirection() {
+            const saved =
+                localStorage.getItem("direction") || "rtl";
 
-    function initializeDirection() {
+            document.documentElement.setAttribute("dir", saved);
 
-        const saved =
-            localStorage.getItem("direction") || "ltr";
-
-        document.documentElement.setAttribute("dir", saved);
-
-        updateDirectionText(saved);
-    }
-
+            updateDirectionText(saved);
+        }
 
     function toggleDirection() {
 
@@ -92,17 +89,13 @@
     }
 
 
-    function updateDirectionText(dir) {
-
-        document
-            .querySelectorAll(".direction-toggle-text")
-            .forEach(function (text) {
-
-                text.textContent =
-                    dir === "rtl" ? "RTL" : "LTR";
-
-            });
-    }
+        function updateDirectionText(dir) {
+            document
+                .querySelectorAll(".direction-toggle-text")
+                .forEach(function (text) {
+                    text.textContent = dir === "rtl" ? "LTR" : "RTL";
+                });
+        }
 
 
     /* =====================================================
@@ -249,96 +242,106 @@
        ZODIAC SIGN SELECTOR
        ===================================================== */
 
-    function initializeZodiacSelector() {
+function initializeZodiacSelector() {
 
-        const buttons =
-            document.querySelectorAll(".zodiac-sign-btn");
+    const buttons =
+        document.querySelectorAll(".zodiac-card");
 
-        const display =
-            document.getElementById(
-                "zodiac-horoscope-display"
-            );
+    const display =
+        document.querySelector(".featured-horoscope");
 
-        if (!buttons.length || !display) return;
+    if (!buttons.length || !display) return;
 
-        buttons.forEach(function (btn) {
+    buttons.forEach(function (btn) {
 
-            btn.addEventListener("click", function () {
+        btn.addEventListener("click", function () {
 
-                buttons.forEach(function (button) {
-                    button.classList.remove("active");
-                });
-
-                btn.classList.add("active");
-
-                const sign =
-                    btn.getAttribute("data-sign");
-
-                const data =
-                    getZodiacData(sign);
-
-                const title =
-                    display.querySelector(".zodiac-title");
-
-                const dateRange =
-                    display.querySelector(
-                        ".zodiac-date-range"
-                    );
-
-                const general =
-                    display.querySelector(
-                        ".zodiac-general"
-                    );
-
-                const love =
-                    display.querySelector(
-                        ".zodiac-love"
-                    );
-
-                const career =
-                    display.querySelector(
-                        ".zodiac-career"
-                    );
-
-                const wellness =
-                    display.querySelector(
-                        ".zodiac-wellness"
-                    );
-
-                if (title) {
-                    title.textContent = data.title;
-                }
-
-                if (dateRange) {
-                    dateRange.textContent = data.dateRange;
-                }
-
-                if (general) {
-                    general.textContent = data.general;
-                }
-
-                if (love) {
-                    love.textContent = data.love;
-                }
-
-                if (career) {
-                    career.textContent = data.career;
-                }
-
-                if (wellness) {
-                    wellness.textContent = data.wellness;
-                }
-
-                display.classList.add("fade-in");
-
-                setTimeout(function () {
-                    display.classList.remove("fade-in");
-                }, 500);
-
+            buttons.forEach(function (button) {
+                button.classList.remove("active");
             });
 
+            btn.classList.add("active");
+
+            const sign =
+                btn.getAttribute("data-sign");
+
+            const data =
+                getZodiacData(sign);
+
+            /* ================================
+               SELECT FEATURED CONTENT
+            ================================= */
+
+            const title =
+                display.querySelector(".featured-sign h2");
+
+            const dateRange =
+                display.querySelector(".featured-date");
+
+            const general =
+                display.querySelector(".featured-reading p");
+
+            const love =
+                display.querySelector(
+                    ".featured-insight:nth-child(1) p"
+                );
+
+            const career =
+                display.querySelector(
+                    ".featured-insight:nth-child(2) p"
+                );
+
+            const wellness =
+                display.querySelector(
+                    ".featured-insight:nth-child(3) p"
+                );
+
+            /* ================================
+               UPDATE CONTENT
+            ================================= */
+
+            if (title) {
+                title.textContent = data.title;
+            }
+
+            if (dateRange) {
+                dateRange.textContent = data.dateRange;
+            }
+
+            if (general) {
+                general.textContent = data.general;
+            }
+
+            if (love) {
+                love.textContent = data.love;
+            }
+
+            if (career) {
+                career.textContent = data.career;
+            }
+
+            if (wellness) {
+                wellness.textContent = data.wellness;
+            }
+
+            /* ================================
+               ANIMATION
+            ================================= */
+
+            display.classList.remove("fade-in");
+
+            void display.offsetWidth;
+
+            display.classList.add("fade-in");
+
+            setTimeout(function () {
+                display.classList.remove("fade-in");
+            }, 500);
+
         });
-    }
+
+    });
+}
 
 
     function getZodiacData(sign) {

@@ -290,29 +290,22 @@
 
 .dashboard-profile-dropdown {
     position: absolute;
-
     top: calc(100% + 10px);
     right: 0;
-
     z-index: 1110;
 
     width: 300px;
-
     padding: 17px;
 
     border: 1px solid var(--border-color);
-
     border-radius: 15px;
 
     background: var(--bg-card);
-
     box-shadow: var(--shadow-lg);
 
     opacity: 0;
     visibility: hidden;
-
     transform: translateY(-8px);
-
     pointer-events: none;
 
     transition:
@@ -323,27 +316,48 @@
 
 
 /* =========================================================
-   PROFILE OPEN
+   PROFILE DROPDOWN ACTIVE
    ========================================================= */
 
-.dashboard-profile-toggle:checked
-~ .dashboard-profile-button
-+ .dashboard-profile-dropdown {
+.dashboard-profile-dropdown.profile-open {
     opacity: 1;
-
     visibility: visible;
-
     transform: translateY(0);
-
     pointer-events: auto;
 }
 
-.dashboard-profile-toggle:checked
-~ .dashboard-profile-button
-.dashboard-profile-button > i {
-    transform: rotate(180deg);
+
+/* =========================================================
+   PROFILE CLOSE OVERLAY
+   ========================================================= */
+
+.dashboard-profile-close-overlay {
+    position: fixed;
+    inset: 0;
+
+    z-index: 1090;
+
+    display: block;
+
+    background: transparent;
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    cursor: default;
+
+    transition:
+        opacity 0.2s ease,
+        visibility 0.2s ease;
 }
 
+
+.dashboard-profile-close-overlay.profile-overlay-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
 
 /* =========================================================
    PROFILE OUTSIDE CLICK
@@ -492,7 +506,7 @@
 .profile-dropdown-item:hover {
     background: var(--bg-soft);
 
-    color: var(--text-color);
+    color: var(--secondary-color);
 }
 
 .profile-dropdown-item i {
@@ -3062,4 +3076,21 @@
 
         height: 19px;
     }
+}
+
+/* =========================================================
+   DASHBOARD CONTENT SECTIONS
+   ========================================================= */
+
+.dashboard-section {
+    display: none;
+    width: 100%;
+}
+
+.dashboard-section.active {
+    display: block;
+}
+
+.dashboard-content {
+    padding-top: 30px !important;
 }

@@ -8,7 +8,10 @@
         name="viewport"
         content="width=device-width, initial-scale=1.0"
     >
-
+        <!-- Favicon -->
+<link rel="icon" type="image/png" href="./images/logo.png" />
+<link rel="shortcut icon" href="./images/logo.png" />
+<link rel="apple-touch-icon" href="./images/logo.png" />
     <meta
         name="description"
         content="AstroGuide — Your personal astrology dashboard."
@@ -30,6 +33,7 @@
         src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"
         defer>
     </script>
+    <script src="./js/dashboard.js"></script>
     <script src="./js/theme.js"></script>
 </head>
 
@@ -119,13 +123,13 @@
             >
 
                 <span class="dashboard-profile-avatar">
-                    J
+                    N
                 </span>
 
                 <span class="dashboard-profile-button-info">
 
                     <strong>
-                        Jordan Davis
+                        Narendra Nelluri
                     </strong>
 
                     <small>
@@ -153,11 +157,11 @@
                     <div class="profile-dropdown-user">
 
                         <strong>
-                            Jordan Davis
+                            Narendra Nelluri
                         </strong>
 
                         <span>
-                            jordan.davis@email.com
+                            Narendra.Nelluri@email.com
                         </span>
 
                     </div>
@@ -236,9 +240,9 @@
 
 
         <!-- BRAND -->
-
+<a href="./index.html">
         <div class="dashboard-sidebar-brand">
-
+            
             <div class="dashboard-brand-symbol">
                  <img src="./images/logo.png" alt="">
             </div>
@@ -247,7 +251,9 @@
                 Astro<span>Guide</span>
             </div>
 
+
         </div>
+                    </a>
 
 
         <!-- SIDEBAR CONTENT -->
@@ -266,137 +272,57 @@
 
                 <nav class="dashboard-nav">
 
-                    <a
-                        href="#"
-                        class="dashboard-nav-item active"
-                    >
-                        <i data-lucide="layout-dashboard"></i>
-                        <span>Overview</span>
-                    </a>
+    <a href="#" class="dashboard-nav-item active" data-section="overview">
+        <i data-lucide="layout-dashboard"></i>
+        <span>Overview</span>
+    </a>
 
+    <a href="#" class="dashboard-nav-item" data-section="consultations">
+        <i data-lucide="sparkles"></i>
+        <span>Consultations</span>
+    </a>
 
-                    <a
-                        href="#"
-                        class="dashboard-nav-item"
-                    >
-                        <i data-lucide="sparkles"></i>
-                        <span>Daily Horoscope</span>
-                    </a>
+    <a href="#" class="dashboard-nav-item" data-section="readings">
+        <i data-lucide="orbit"></i>
+        <span>Reading Summaries</span>
+    </a>
 
+    <a href="#" class="dashboard-nav-item" data-section="appointments">
+        <i data-lucide="moon"></i>
+        <span>Appointments</span>
+    </a>
 
-                    <a
-                        href="#"
-                        class="dashboard-nav-item"
-                    >
-                        <i data-lucide="orbit"></i>
-                        <span>Birth Chart</span>
-                    </a>
+    <a href="#" class="dashboard-nav-item" data-section="horoscope">
+        <i data-lucide="heart"></i>
+        <span>Horoscope Reports</span>
+    </a>
 
-
-                    <a
-                        href="#"
-                        class="dashboard-nav-item"
-                    >
-                        <i data-lucide="moon"></i>
-                        <span>Moon &amp; Planets</span>
-                    </a>
-
-
-                    <a
-                        href="#"
-                        class="dashboard-nav-item"
-                    >
-                        <i data-lucide="heart"></i>
-                        <span>Love &amp; Compatibility</span>
-                    </a>
-
-
-                    <a
-                        href="#"
-                        class="dashboard-nav-item"
-                    >
-                        <i data-lucide="briefcase-business"></i>
-                        <span>Career &amp; Finance</span>
-                    </a>
-
-                </nav>
+</nav>
 
             </div>
-
-
-            <!-- DISCOVER -->
-
-            <div class="dashboard-sidebar-section">
-
-                <span class="dashboard-sidebar-label">
-                    DISCOVER
-                </span>
-
-
-                <nav class="dashboard-nav">
-
-                    <a
-                        href="#"
-                        class="dashboard-nav-item"
-                    >
-                        <i data-lucide="calendar-days"></i>
-                        <span>Celestial Events</span>
-                    </a>
-
-
-                    <a
-                        href="#"
-                        class="dashboard-nav-item"
-                    >
-                        <i data-lucide="book-open"></i>
-                        <span>Astrology Library</span>
-                    </a>
-
-
-                    <a
-                        href="#"
-                        class="dashboard-nav-item"
-                    >
-                        <i data-lucide="history"></i>
-                        <span>Reading History</span>
-                    </a>
-
-                </nav>
-
-            </div>
-
-
             <!-- TOOLS -->
-
-            <div class="dashboard-sidebar-section">
-
-                <span class="dashboard-sidebar-label">
-                    TOOLS
+             <span class="dashboard-sidebar-label">
+                    Account
                 </span>
 
+            <nav class="dashboard-nav">
 
-                <nav class="dashboard-nav">
+    <a href="#" class="dashboard-nav-item" data-section="payments">
+        <i data-lucide="briefcase-business"></i>
+        <span>Payment History</span>
+    </a>
 
-                    <a
-                        href="#"
-                        class="dashboard-nav-item"
-                    >
-                        <i data-lucide="wand-sparkles"></i>
-                        <span>Ask AstroGuide</span>
-                    </a>
+    <a href="#" class="dashboard-nav-item" data-section="notifications">
+        <i data-lucide="bell"></i>
+        <span>Notifications</span>
+    </a>
 
+    <a href="#" class="dashboard-nav-item" data-section="profile">
+        <i data-lucide="users"></i>
+        <span>Profile</span>
+    </a>
 
-                    <a
-                        href="#"
-                        class="dashboard-nav-item"
-                    >
-                        <i data-lucide="users"></i>
-                        <span>Saved Profiles</span>
-                    </a>
-
-                </nav>
-
-            </div>
+</nav>
 
         </div>
 
@@ -405,33 +331,13 @@
 
         <div class="dashboard-sidebar-bottom">
 
-            <a
-                href="#"
-                class="dashboard-premium-mini"
-            >
-
-                <div class="dashboard-premium-mini-icon">
-                    <i data-lucide="crown"></i>
-                </div>
-
-                <div>
-
-                    <strong>
-                        AstroGuide Premium
-                    </strong>
-
-                    <span>
-                        Unlock deeper insights
-                    </span>
-
-                </div>
-
-                <i
-                    data-lucide="chevron-right"
-                    class="dashboard-premium-arrow">
-                </i>
-
-            </a>
+                            <a
+                    href="#"
+                    class="profile-dropdown-item profile-logout"
+                >
+                    <i data-lucide="log-out"></i>
+                    <span>Logout</span>
+                </a>
 
         </div>
 
@@ -442,9 +348,18 @@
          SCROLLABLE DASHBOARD CONTENT
          ===================================================== -->
 
-    <section class="dashboard-content">
 
+<section class="dashboard-content">
 
+    <!-- =====================================================
+         OVERVIEW
+         KEEP YOUR EXISTING OVERVIEW CONTENT HERE
+         ===================================================== -->
+
+    <section
+        class="dashboard-section active"
+        id="section-overview"
+    >
         <!-- HEADER -->
 
         <div class="dashboard-header">
@@ -461,7 +376,7 @@
 
 
                 <h1 class="dashboard-title">
-                    Welcome back, Jordan.
+                    Welcome back, Narendra.
                 </h1>
 
 
@@ -1167,10 +1082,1818 @@
                 <i data-lucide="arrow-up-right"></i>
             </a>
 
-        </section>
+    </section>
+    </section>
 
+
+    <!-- =====================================================
+         CONSULTATIONS
+         ===================================================== -->
+
+    <section
+        class="dashboard-section"
+        id="section-consultations"
+    >
+
+        <div class="dashboard-header">
+
+            <div class="dashboard-header-content">
+
+                <span class="dashboard-eyebrow">
+                    <i data-lucide="sparkles"></i>
+                    ASTROLOGY CONSULTATIONS
+                </span>
+
+                <h1 class="dashboard-title">
+                    Your Consultations
+                </h1>
+
+                <p class="dashboard-subtitle">
+                    Connect with experienced astrologers and manage
+                    your personalized consultation sessions.
+                </p>
+
+            </div>
+
+            <a
+                href="#"
+                class="dashboard-primary-button"
+            >
+                Find an Astrologer
+                <i data-lucide="arrow-up-right"></i>
+            </a>
+
+        </div>
+
+
+        <!-- CONSULTATION STATS -->
+
+        <div class="overview-grid">
+
+            <article class="overview-card">
+
+                <div class="overview-icon">
+                    <i data-lucide="calendar-check"></i>
+                </div>
+
+                <div class="overview-card-content">
+
+                    <span class="overview-label">
+                        UPCOMING
+                    </span>
+
+                    <h3>
+                        2
+                    </h3>
+
+                </div>
+
+                <span class="overview-status">
+                    Scheduled
+                </span>
+
+            </article>
+
+
+            <article class="overview-card">
+
+                <div class="overview-icon">
+                    <i data-lucide="messages-square"></i>
+                </div>
+
+                <div class="overview-card-content">
+
+                    <span class="overview-label">
+                        COMPLETED
+                    </span>
+
+                    <h3>
+                        8
+                    </h3>
+
+                </div>
+
+                <span class="overview-status">
+                    Sessions
+                </span>
+
+            </article>
+
+
+            <article class="overview-card">
+
+                <div class="overview-icon">
+                    <i data-lucide="clock-3"></i>
+                </div>
+
+                <div class="overview-card-content">
+
+                    <span class="overview-label">
+                        HOURS
+                    </span>
+
+                    <h3>
+                        12.5
+                    </h3>
+
+                </div>
+
+                <span class="overview-status">
+                    Consulted
+                </span>
+
+            </article>
+
+
+            <article class="overview-card">
+
+                <div class="overview-icon">
+                    <i data-lucide="star"></i>
+                </div>
+
+                <div class="overview-card-content">
+
+                    <span class="overview-label">
+                        FAVORITE
+                    </span>
+
+                    <h3>
+                        3
+                    </h3>
+
+                </div>
+
+                <span class="overview-status">
+                    Astrologers
+                </span>
+
+            </article>
+
+        </div>
+
+
+        <!-- UPCOMING CONSULTATION -->
+
+        <article class="dashboard-card">
+
+            <div class="dashboard-card-header">
+
+                <div>
+
+                    <span class="card-eyebrow">
+                        NEXT SESSION
+                    </span>
+
+                    <h2 class="card-title">
+                        Upcoming Consultation
+                    </h2>
+
+                    <p class="card-description">
+                        Your next scheduled astrology consultation.
+                    </p>
+
+                </div>
+
+                <a
+                    href="#"
+                    class="card-action"
+                >
+                    View Appointment
+                    <i data-lucide="arrow-right"></i>
+                </a>
+
+            </div>
+
+
+            <div class="event-content">
+
+                <div class="event-highlight">
+
+                    <div class="event-date">
+
+                        <strong>
+                            20
+                        </strong>
+
+                        <span>
+                            SEP
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <h3>
+                            Birth Chart Consultation
+                        </h3>
+
+                        <p>
+                            Personalized discussion about your natal
+                            chart, planetary positions and current
+                            cosmic influences.
+                        </p>
+
+                        <span class="event-badge">
+                            Confirmed
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="event-meta">
+
+                    <span>
+                        <i data-lucide="clock"></i>
+                        06:30 PM
+                    </span>
+
+                    <span>
+                        <i data-lucide="video"></i>
+                        Video Consultation
+                    </span>
+
+                    <span>
+                        <i data-lucide="user-round"></i>
+                        Ananya Sharma
+                    </span>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- ASTROLOGERS -->
+
+        <div class="dashboard-lower-grid">
+
+            <article class="dashboard-card">
+
+                <div class="dashboard-card-header">
+
+                    <div>
+
+                        <span class="card-eyebrow">
+                            YOUR ASTROLOGERS
+                        </span>
+
+                        <h2 class="card-title">
+                            Favorite Astrologers
+                        </h2>
+
+                    </div>
+
+                    <a
+                        href="#"
+                        class="card-action"
+                    >
+                        View All
+                        <i data-lucide="arrow-right"></i>
+                    </a>
+
+                </div>
+
+
+                <div class="insight-list">
+
+                    <div class="insight-item">
+
+                        <div class="insight-icon">
+                            <i data-lucide="user-round"></i>
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Ananya Sharma
+                            </h3>
+
+                            <p>
+                                Vedic Astrology · Birth Charts
+                            </p>
+
+                            <span>
+                                <i data-lucide="star"></i>
+                                4.9 · Available
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="insight-item">
+
+                        <div class="insight-icon">
+                            <i data-lucide="user-round"></i>
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Rahul Mehta
+                            </h3>
+
+                            <p>
+                                Relationship · Career Astrology
+                            </p>
+
+                            <span>
+                                <i data-lucide="star"></i>
+                                4.8 · Available
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <article class="dashboard-card">
+
+                <div class="dashboard-card-header">
+
+                    <div>
+
+                        <span class="card-eyebrow">
+                            RECENT SESSION
+                        </span>
+
+                        <h2 class="card-title">
+                            Last Consultation
+                        </h2>
+
+                    </div>
+
+                    <i data-lucide="history"></i>
+
+                </div>
+
+
+                <div class="reading-list">
+
+                    <div class="reading-item">
+
+                        <div class="reading-icon">
+                            <i data-lucide="sparkles"></i>
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Career Consultation
+                            </h3>
+
+                            <p>
+                                Discussion about career direction
+                                and planetary influences.
+                            </p>
+
+                        </div>
+
+                        <span>
+                            Sep 12
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+        </div>
 
     </section>
+
+
+    <!-- =====================================================
+         READING SUMMARIES
+         ===================================================== -->
+
+    <section
+        class="dashboard-section"
+        id="section-readings"
+    >
+
+        <div class="dashboard-header">
+
+            <div class="dashboard-header-content">
+
+                <span class="dashboard-eyebrow">
+                    <i data-lucide="orbit"></i>
+                    YOUR READINGS
+                </span>
+
+                <h1 class="dashboard-title">
+                    Reading Summaries
+                </h1>
+
+                <p class="dashboard-subtitle">
+                    Revisit your previous astrology readings,
+                    insights and personalized interpretations.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="overview-grid">
+
+            <article class="overview-card">
+
+                <div class="overview-icon">
+                    <i data-lucide="file-text"></i>
+                </div>
+
+                <div class="overview-card-content">
+
+                    <span class="overview-label">
+                        TOTAL READINGS
+                    </span>
+
+                    <h3>
+                        14
+                    </h3>
+
+                </div>
+
+                <span class="overview-status">
+                    Saved
+                </span>
+
+            </article>
+
+
+            <article class="overview-card">
+
+                <div class="overview-icon">
+                    <i data-lucide="orbit"></i>
+                </div>
+
+                <div class="overview-card-content">
+
+                    <span class="overview-label">
+                        BIRTH CHART
+                    </span>
+
+                    <h3>
+                        3
+                    </h3>
+
+                </div>
+
+                <span class="overview-status">
+                    Reports
+                </span>
+
+            </article>
+
+
+            <article class="overview-card">
+
+                <div class="overview-icon">
+                    <i data-lucide="heart"></i>
+                </div>
+
+                <div class="overview-card-content">
+
+                    <span class="overview-label">
+                        COMPATIBILITY
+                    </span>
+
+                    <h3>
+                        4
+                    </h3>
+
+                </div>
+
+                <span class="overview-status">
+                    Reports
+                </span>
+
+            </article>
+
+
+            <article class="overview-card">
+
+                <div class="overview-icon">
+                    <i data-lucide="briefcase-business"></i>
+                </div>
+
+                <div class="overview-card-content">
+
+                    <span class="overview-label">
+                        CAREER
+                    </span>
+
+                    <h3>
+                        7
+                    </h3>
+
+                </div>
+
+                <span class="overview-status">
+                    Reports
+                </span>
+
+            </article>
+
+        </div>
+
+
+        <article class="dashboard-card">
+
+            <div class="dashboard-card-header">
+
+                <div>
+
+                    <span class="card-eyebrow">
+                        SAVED READINGS
+                    </span>
+
+                    <h2 class="card-title">
+                        Your Reading History
+                    </h2>
+
+                    <p class="card-description">
+                        Your latest personalized astrology readings.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="reading-list">
+
+                <div class="reading-item">
+
+                    <div class="reading-icon">
+                        <i data-lucide="orbit"></i>
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Birth Chart Analysis
+                        </h3>
+
+                        <p>
+                            Complete natal chart interpretation
+                            and planetary analysis.
+                        </p>
+
+                    </div>
+
+                    <span>
+                        Sep 17
+                    </span>
+
+                </div>
+
+
+                <div class="reading-item">
+
+                    <div class="reading-icon">
+                        <i data-lucide="heart"></i>
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Compatibility Reading
+                        </h3>
+
+                        <p>
+                            Relationship compatibility and
+                            emotional connection insights.
+                        </p>
+
+                    </div>
+
+                    <span>
+                        Sep 15
+                    </span>
+
+                </div>
+
+
+                <div class="reading-item">
+
+                    <div class="reading-icon">
+                        <i data-lucide="briefcase-business"></i>
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Career Forecast
+                        </h3>
+
+                        <p>
+                            Career opportunities and planetary
+                            influences for the coming weeks.
+                        </p>
+
+                    </div>
+
+                    <span>
+                        Sep 10
+                    </span>
+
+                </div>
+
+
+                <div class="reading-item">
+
+                    <div class="reading-icon">
+                        <i data-lucide="sparkles"></i>
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Personal Growth Reading
+                        </h3>
+
+                        <p>
+                            Guidance for personal development,
+                            confidence and decision making.
+                        </p>
+
+                    </div>
+
+                    <span>
+                        Sep 06
+                    </span>
+
+                </div>
+
+            </div>
+
+        </article>
+
+    </section>
+
+
+    <!-- =====================================================
+         APPOINTMENTS
+         ===================================================== -->
+
+    <section
+        class="dashboard-section"
+        id="section-appointments"
+    >
+
+        <div class="dashboard-header">
+
+            <div class="dashboard-header-content">
+
+                <span class="dashboard-eyebrow">
+                    <i data-lucide="calendar-days"></i>
+                    YOUR SCHEDULE
+                </span>
+
+                <h1 class="dashboard-title">
+                    Appointments
+                </h1>
+
+                <p class="dashboard-subtitle">
+                    Manage your upcoming and previous astrology
+                    consultation appointments.
+                </p>
+
+            </div>
+
+            <a
+                href="#"
+                class="dashboard-primary-button"
+            >
+                Book Consultation
+                <i data-lucide="arrow-up-right"></i>
+            </a>
+
+        </div>
+
+
+        <div class="overview-grid">
+
+            <article class="overview-card">
+
+                <div class="overview-icon">
+                    <i data-lucide="calendar-check"></i>
+                </div>
+
+                <div class="overview-card-content">
+
+                    <span class="overview-label">
+                        UPCOMING
+                    </span>
+
+                    <h3>
+                        2
+                    </h3>
+
+                </div>
+
+                <span class="overview-status">
+                    Appointments
+                </span>
+
+            </article>
+
+
+            <article class="overview-card">
+
+                <div class="overview-icon">
+                    <i data-lucide="check-circle"></i>
+                </div>
+
+                <div class="overview-card-content">
+
+                    <span class="overview-label">
+                        COMPLETED
+                    </span>
+
+                    <h3>
+                        8
+                    </h3>
+
+                </div>
+
+                <span class="overview-status">
+                    Sessions
+                </span>
+
+            </article>
+
+
+            <article class="overview-card">
+
+                <div class="overview-icon">
+                    <i data-lucide="clock"></i>
+                </div>
+
+                <div class="overview-card-content">
+
+                    <span class="overview-label">
+                        NEXT SESSION
+                    </span>
+
+                    <h3>
+                        20 Sep
+                    </h3>
+
+                </div>
+
+                <span class="overview-status">
+                    06:30 PM
+                </span>
+
+            </article>
+
+        </div>
+
+
+        <article class="dashboard-card">
+
+            <div class="dashboard-card-header">
+
+                <div>
+
+                    <span class="card-eyebrow">
+                        UPCOMING APPOINTMENTS
+                    </span>
+
+                    <h2 class="card-title">
+                        Your Schedule
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="reading-list">
+
+                <div class="reading-item">
+
+                    <div class="reading-icon">
+                        <i data-lucide="video"></i>
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Birth Chart Consultation
+                        </h3>
+
+                        <p>
+                            With Ananya Sharma · Video Consultation
+                        </p>
+
+                    </div>
+
+                    <span>
+                        Sep 20
+                    </span>
+
+                </div>
+
+
+                <div class="reading-item">
+
+                    <div class="reading-icon">
+                        <i data-lucide="phone"></i>
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Career Astrology
+                        </h3>
+
+                        <p>
+                            With Rahul Mehta · Phone Consultation
+                        </p>
+
+                    </div>
+
+                    <span>
+                        Sep 25
+                    </span>
+
+                </div>
+
+            </div>
+
+        </article>
+
+    </section>
+
+
+    <!-- =====================================================
+         HOROSCOPE REPORTS
+         ===================================================== -->
+
+    <section
+        class="dashboard-section"
+        id="section-horoscope"
+    >
+
+        <div class="dashboard-header">
+
+            <div class="dashboard-header-content">
+
+                <span class="dashboard-eyebrow">
+                    <i data-lucide="heart"></i>
+                    PERSONALIZED HOROSCOPE
+                </span>
+
+                <h1 class="dashboard-title">
+                    Horoscope Reports
+                </h1>
+
+                <p class="dashboard-subtitle">
+                    Explore personalized horoscope guidance based
+                    on your zodiac sign and celestial influences.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="dashboard-main-grid">
+
+            <article class="dashboard-card horoscope-card">
+
+                <div class="dashboard-card-header">
+
+                    <div>
+
+                        <span class="card-eyebrow">
+                            DAILY HOROSCOPE
+                        </span>
+
+                        <h2 class="card-title">
+                            Today's Guidance
+                        </h2>
+
+                        <p class="card-description">
+                            Your personalized horoscope for today.
+                        </p>
+
+                    </div>
+
+                    <i data-lucide="sun"></i>
+
+                </div>
+
+
+                <div class="horoscope-content">
+
+                    <div class="zodiac-profile">
+
+                        <div class="zodiac-icon">
+                            <i data-lucide="sun"></i>
+                        </div>
+
+                        <h3>
+                            Leo
+                        </h3>
+
+                        <p>
+                            July 23 — August 22
+                        </p>
+
+                        <span>
+                            Rising · Libra
+                        </span>
+
+                    </div>
+
+
+                    <div class="horoscope-details">
+
+                        <div class="cosmic-score">
+
+                            <div>
+                                Cosmic Alignment
+                            </div>
+
+                            <strong>
+                                82%
+                            </strong>
+
+                        </div>
+
+
+                        <div class="cosmic-progress">
+                            <span></span>
+                        </div>
+
+
+                        <h3 class="horoscope-message">
+                            Trust your instincts today.
+                        </h3>
+
+
+                        <p class="horoscope-description">
+                            The current planetary alignment encourages
+                            confidence, thoughtful action and meaningful
+                            connections.
+                        </p>
+
+
+                        <div class="horoscope-tags">
+
+                            <span>
+                                Confidence
+                            </span>
+
+                            <span>
+                                Relationships
+                            </span>
+
+                            <span>
+                                Career
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <article class="dashboard-card">
+
+                <div class="dashboard-card-header">
+
+                    <div>
+
+                        <span class="card-eyebrow">
+                            REPORT LIBRARY
+                        </span>
+
+                        <h2 class="card-title">
+                            Available Reports
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="insight-list">
+
+                    <div class="insight-item">
+
+                        <div class="insight-icon">
+                            <i data-lucide="sun"></i>
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Daily Horoscope
+                            </h3>
+
+                            <p>
+                                Personalized guidance for today.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="insight-item">
+
+                        <div class="insight-icon">
+                            <i data-lucide="calendar"></i>
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Weekly Horoscope
+                            </h3>
+
+                            <p>
+                                Seven-day planetary forecast.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="insight-item">
+
+                        <div class="insight-icon">
+                            <i data-lucide="calendar-range"></i>
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Monthly Horoscope
+                            </h3>
+
+                            <p>
+                                A broader view of the month ahead.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         PAYMENT HISTORY
+         ===================================================== -->
+
+    <section
+        class="dashboard-section"
+        id="section-payments"
+    >
+
+        <div class="dashboard-header">
+
+            <div class="dashboard-header-content">
+
+                <span class="dashboard-eyebrow">
+                    <i data-lucide="credit-card"></i>
+                    TRANSACTIONS
+                </span>
+
+                <h1 class="dashboard-title">
+                    Payment History
+                </h1>
+
+                <p class="dashboard-subtitle">
+                    View your consultation payments and transaction
+                    history in one place.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="overview-grid">
+
+            <article class="overview-card">
+
+                <div class="overview-icon">
+                    <i data-lucide="wallet"></i>
+                </div>
+
+                <div class="overview-card-content">
+
+                    <span class="overview-label">
+                        TOTAL SPENT
+                    </span>
+
+                    <h3>
+                        ₹8,400
+                    </h3>
+
+                </div>
+
+                <span class="overview-status">
+                    Lifetime
+                </span>
+
+            </article>
+
+
+            <article class="overview-card">
+
+                <div class="overview-icon">
+                    <i data-lucide="receipt"></i>
+                </div>
+
+                <div class="overview-card-content">
+
+                    <span class="overview-label">
+                        TRANSACTIONS
+                    </span>
+
+                    <h3>
+                        11
+                    </h3>
+
+                </div>
+
+                <span class="overview-status">
+                    Completed
+                </span>
+
+            </article>
+
+
+            <article class="overview-card">
+
+                <div class="overview-icon">
+                    <i data-lucide="badge-check"></i>
+                </div>
+
+                <div class="overview-card-content">
+
+                    <span class="overview-label">
+                        SUCCESS RATE
+                    </span>
+
+                    <h3>
+                        100%
+                    </h3>
+
+                </div>
+
+                <span class="overview-status">
+                    Payments
+                </span>
+
+            </article>
+
+        </div>
+
+
+        <article class="dashboard-card">
+
+            <div class="dashboard-card-header">
+
+                <div>
+
+                    <span class="card-eyebrow">
+                        TRANSACTION HISTORY
+                    </span>
+
+                    <h2 class="card-title">
+                        Recent Payments
+                    </h2>
+
+                </div>
+
+                <a
+                    href="#"
+                    class="card-action"
+                >
+                    Download History
+                    <i data-lucide="download"></i>
+                </a>
+
+            </div>
+
+
+            <div class="reading-list">
+
+                <div class="reading-item">
+
+                    <div class="reading-icon">
+                        <i data-lucide="receipt"></i>
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Birth Chart Consultation
+                        </h3>
+
+                        <p>
+                            Transaction ID · AG-24091701
+                        </p>
+
+                    </div>
+
+                    <strong>
+                        ₹1,200
+                    </strong>
+
+                    <span>
+                        Paid
+                    </span>
+
+                </div>
+
+
+                <div class="reading-item">
+
+                    <div class="reading-icon">
+                        <i data-lucide="receipt"></i>
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Compatibility Reading
+                        </h3>
+
+                        <p>
+                            Transaction ID · AG-24091502
+                        </p>
+
+                    </div>
+
+                    <strong>
+                        ₹800
+                    </strong>
+
+                    <span>
+                        Paid
+                    </span>
+
+                </div>
+
+
+                <div class="reading-item">
+
+                    <div class="reading-icon">
+                        <i data-lucide="receipt"></i>
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Career Forecast
+                        </h3>
+
+                        <p>
+                            Transaction ID · AG-24091003
+                        </p>
+
+                    </div>
+
+                    <strong>
+                        ₹600
+                    </strong>
+
+                    <span>
+                        Paid
+                    </span>
+
+                </div>
+
+            </div>
+
+        </article>
+
+    </section>
+
+
+    <!-- =====================================================
+         NOTIFICATIONS
+         ===================================================== -->
+
+    <section
+        class="dashboard-section"
+        id="section-notifications"
+    >
+
+        <div class="dashboard-header">
+
+            <div class="dashboard-header-content">
+
+                <span class="dashboard-eyebrow">
+                    <i data-lucide="bell"></i>
+                    UPDATES
+                </span>
+
+                <h1 class="dashboard-title">
+                    Notifications
+                </h1>
+
+                <p class="dashboard-subtitle">
+                    Stay updated with your consultations, appointments,
+                    readings and AstroGuide activity.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <article class="dashboard-card">
+
+            <div class="dashboard-card-header">
+
+                <div>
+
+                    <span class="card-eyebrow">
+                        RECENT ACTIVITY
+                    </span>
+
+                    <h2 class="card-title">
+                        Your Notifications
+                    </h2>
+
+                </div>
+
+                <a
+                    href="#"
+                    class="card-action"
+                >
+                    Mark All Read
+                    <i data-lucide="check-check"></i>
+                </a>
+
+            </div>
+
+
+            <div class="insight-list">
+
+                <div class="insight-item">
+
+                    <div class="insight-icon">
+                        <i data-lucide="calendar-check"></i>
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Consultation Confirmed
+                        </h3>
+
+                        <p>
+                            Your consultation with Ananya Sharma
+                            has been confirmed for September 20.
+                        </p>
+
+                        <span>
+                            Just now
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="insight-item">
+
+                    <div class="insight-icon">
+                        <i data-lucide="sparkles"></i>
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            New Horoscope Available
+                        </h3>
+
+                        <p>
+                            Your personalized horoscope report
+                            for today is ready.
+                        </p>
+
+                        <span>
+                            2 hours ago
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="insight-item">
+
+                    <div class="insight-icon">
+                        <i data-lucide="file-text"></i>
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Reading Summary Added
+                        </h3>
+
+                        <p>
+                            Your latest consultation summary has
+                            been added to your reading history.
+                        </p>
+
+                        <span>
+                            Yesterday
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="insight-item">
+
+                    <div class="insight-icon">
+                        <i data-lucide="credit-card"></i>
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Payment Successful
+                        </h3>
+
+                        <p>
+                            Your payment for the recent consultation
+                            was successfully processed.
+                        </p>
+
+                        <span>
+                            Sep 15
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </article>
+
+    </section>
+
+
+    <!-- =====================================================
+         PROFILE
+         ===================================================== -->
+
+    <section
+        class="dashboard-section"
+        id="section-profile"
+    >
+
+        <div class="dashboard-header">
+
+            <div class="dashboard-header-content">
+
+                <span class="dashboard-eyebrow">
+                    <i data-lucide="user-round"></i>
+                    ACCOUNT
+                </span>
+
+                <h1 class="dashboard-title">
+                    My Profile
+                </h1>
+
+                <p class="dashboard-subtitle">
+                    Manage your personal information, astrology
+                    preferences and account details.
+                </p>
+
+            </div>
+
+            <a
+                href="#"
+                class="dashboard-primary-button"
+            >
+                Edit Profile
+                <i data-lucide="pencil"></i>
+            </a>
+
+        </div>
+
+
+        <div class="dashboard-main-grid">
+
+            <article class="dashboard-card">
+
+                <div class="dashboard-card-header">
+
+                    <div>
+
+                        <span class="card-eyebrow">
+                            PERSONAL INFORMATION
+                        </span>
+
+                        <h2 class="card-title">
+                            Profile Details
+                        </h2>
+
+                    </div>
+
+                    <i data-lucide="user-round"></i>
+
+                </div>
+
+
+                <div class="insight-list">
+
+                    <div class="insight-item">
+
+                        <div class="insight-icon">
+                            <i data-lucide="user"></i>
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Full Name
+                            </h3>
+
+                            <p>
+                                Narendra
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="insight-item">
+
+                        <div class="insight-icon">
+                            <i data-lucide="mail"></i>
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Email Address
+                            </h3>
+
+                            <p>
+                                Your registered email address
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="insight-item">
+
+                        <div class="insight-icon">
+                            <i data-lucide="phone"></i>
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Phone Number
+                            </h3>
+
+                            <p>
+                                Your registered phone number
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <article class="dashboard-card">
+
+                <div class="dashboard-card-header">
+
+                    <div>
+
+                        <span class="card-eyebrow">
+                            ASTROLOGY PROFILE
+                        </span>
+
+                        <h2 class="card-title">
+                            Birth Information
+                        </h2>
+
+                    </div>
+
+                    <i data-lucide="orbit"></i>
+
+                </div>
+
+
+                <div class="insight-list">
+
+                    <div class="insight-item">
+
+                        <div class="insight-icon">
+                            <i data-lucide="sun"></i>
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Sun Sign
+                            </h3>
+
+                            <p>
+                                Leo
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="insight-item">
+
+                        <div class="insight-icon">
+                            <i data-lucide="moon"></i>
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Moon Sign
+                            </h3>
+
+                            <p>
+                                Taurus
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="insight-item">
+
+                        <div class="insight-icon">
+                            <i data-lucide="sparkles"></i>
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Rising Sign
+                            </h3>
+
+                            <p>
+                                Libra
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+        </div>
+
+
+        <article class="dashboard-card planetary-card">
+
+            <div class="dashboard-card-header">
+
+                <div>
+
+                    <span class="card-eyebrow">
+                        ACCOUNT SETTINGS
+                    </span>
+
+                    <h2 class="card-title">
+                        Preferences
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="planet-grid">
+
+                <div class="planet-item">
+
+                    <div>
+                        <i data-lucide="bell"></i>
+                    </div>
+
+                    <strong>
+                        Notifications
+                    </strong>
+
+                    <span>
+                        Enabled
+                    </span>
+
+                </div>
+
+
+                <div class="planet-item">
+
+                    <div>
+                        <i data-lucide="moon"></i>
+                    </div>
+
+                    <strong>
+                        Appearance
+                    </strong>
+
+                    <span>
+                        System
+                    </span>
+
+                </div>
+
+
+                <div class="planet-item">
+
+                    <div>
+                        <i data-lucide="languages"></i>
+                    </div>
+
+                    <strong>
+                        Language
+                    </strong>
+
+                    <span>
+                        English
+                    </span>
+
+                </div>
+
+
+                <div class="planet-item">
+
+                    <div>
+                        <i data-lucide="shield-check"></i>
+                    </div>
+
+                    <strong>
+                        Privacy
+                    </strong>
+
+                    <span>
+                        Protected
+                    </span>
+
+                </div>
+
+            </div>
+
+        </article>
+
+    </section>
+
+</section>
+
+
 
 </main>
 

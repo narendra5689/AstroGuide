@@ -1,39 +1,103 @@
-<!doctype html>
-<html lang="en" dir="ltr" data-theme="light">
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Favicon -->
+<link rel="icon" type="image/png" href="./images/logo.png" />
+<link rel="shortcut icon" href="./images/logo.png" />
+<link rel="apple-touch-icon" href="./images/logo.png" />
+    <title>AstroGuide — Understand Your Path. Embrace Your Future.</title>
 
-    <title>About AstroGuide</title>
+    <meta
+        name="description"
+        content="Personalized astrology consultations, birth chart readings, matchmaking, and career guidance to help you find greater clarity."
+    />
 
+    <!-- Bootstrap CSS -->
     <link
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
         rel="stylesheet"
-    >
+    />
 
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    />
     <link
         href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap"
         rel="stylesheet"
-    >
+    />
 
-    <link rel="stylesheet" href="./css/global.css">
-    <link rel="stylesheet" href="./css/about.css">
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="./css/global.css" />
+
+    <!-- Page CSS -->
+    <link rel="stylesheet" href="./css/about.css" />
+
+    <meta
+        property="og:image"
+        content="https://bolt.new/static/og_default.png"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+        name="twitter:image"
+        content="https://bolt.new/static/og_default.png"
+    />
 </head>
 
 <body>
 
-    <!-- ========================= NAVBAR ========================= -->
-    <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
-        <div class="container">
+<!-- ========================= NAVBAR ========================= -->
 
-            <a class="navbar-brand-custom" href="./index.html">
-                <img src="./images/logo.png" alt="">
-                <span class="brand-astro" dir="ltr">
-                    <span class="brand-astro">Astro</span><span class="brand-guide">Guide</span>
-                </span>
-            </a>
+<nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+    <div class="container">
 
+        <!-- ========================= BRAND ========================= -->
+        <a class="navbar-brand-custom" href="./index.html">
+            <img src="./images/logo.png" alt="AstroGuide">
+
+            <span class="brand-astro" dir="ltr">
+                <span class="brand-astro">Astro</span><span class="brand-guide">Guide</span>
+            </span>
+        </a>
+
+
+        <!-- =====================================================
+             MOBILE CONTROLS
+             DARK MODE → RTL → HAMBURGER
+             ===================================================== -->
+        <div class="mobile-nav-controls">
+
+            <!-- Dark Mode -->
+            <button
+                class="nav-utility-btn theme-toggle"
+                type="button"
+                aria-label="Toggle dark mode"
+            >
+                <i
+                    data-lucide="sun"
+                    class="theme-toggle-icon"
+                ></i>
+            </button>
+
+
+            <!-- RTL -->
+            <button
+                class="nav-utility-btn direction-toggle"
+                id="directionToggleMobile"
+                type="button"
+                aria-label="Toggle text direction"
+            >
+                <span class="direction-toggle-text">LTR</span>
+            </button>
+
+
+            <!-- Hamburger -->
             <button
                 class="navbar-toggler navbar-toggler-custom"
                 type="button"
@@ -46,189 +110,257 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse" id="navMain">
-
-                <ul class="navbar-nav mx-auto gap-lg-1">
-
-                    <!-- Home Dropdown -->
-                    <li class="nav-item dropdown">
-                        <a
-                            class="nav-link nav-link-custom dropdown-toggle"
-                            href="./index.html"
-                            role="button"
-                            data-bs-toggle="dropdown"
-                            aria-expanded="false"
-                        >
-                            Home
-                        </a>
-
-                        <ul class="dropdown-menu dropdown-menu-custom">
-                            <li>
-                                <a
-                                    class="dropdown-item dropdown-item-custom"
-                                    href="./index.html"
-                                >
-                                    Home 1 <span class="item-sub">Classic</span>
-                                </a>
-                            </li>
-
-                            <li>
-                                <a
-                                    class="dropdown-item dropdown-item-custom"
-                                    href="./home2.html"
-                                >
-                                    Home 2 <span class="item-sub">Premium</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a
-                            class="nav-link nav-link-custom active"
-                            href="./about.html"
-                        >
-                            About
-                        </a>
-                    </li>
-                    <!-- Services Dropdown -->
-<li class="nav-item">
-    <a
-        class="nav-link nav-link-custom"
-        href="./services.html"
-    >
-        Services
-    </a>
-</li>
+        </div>
 
 
+        <!-- =====================================================
+             NAVBAR COLLAPSE
+             ===================================================== -->
+        <div class="collapse navbar-collapse" id="navMain">
 
-                    <li class="nav-item">
-                        <a
-                            class="nav-link nav-link-custom"
-                            href="./astrologers.html"
-                        >
-                            Astrologers
-                        </a>
-                    </li>
+            <!-- ========================= NAV LINKS ========================= -->
+            <ul class="navbar-nav mx-auto gap-lg-1">
 
-                    <li class="nav-item">
-                        <a
-                            class="nav-link nav-link-custom"
-                            href="./pricing.html"
-                        >
-                            Pricing
-                        </a>
-                    </li>
+                <!-- Home Dropdown -->
+                <li class="nav-item dropdown">
 
-                    <li class="nav-item">
-                        <a
-                            class="nav-link nav-link-custom"
-                            href="./dashboard.html"
-                        >
-                            Dashboard
-                        </a>
-                    </li>
+                    <a
+                        class="nav-link nav-link-custom dropdown-toggle"
+                        href="./index.html"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                    >
+                        Home
+                    </a>
 
-                </ul>
+                    <ul class="dropdown-menu dropdown-menu-custom">
 
-                <div class="d-flex align-items-center gap-2 flex-wrap">
+                        <li>
+                            <a
+                                class="dropdown-item dropdown-item-custom"
+                                href="./index.html"
+                            >
+                                Home 1
+                                <span class="item-sub">Classic</span>
+                            </a>
+                        </li>
 
-                    <div class="nav-utility-group">
+                        <li>
+                            <a
+                                class="dropdown-item dropdown-item-custom"
+                                href="./home2.html"
+                            >
+                                Home 2
+                                <span class="item-sub">Premium</span>
+                            </a>
+                        </li>
 
-                        <button
-                            class="nav-utility-btn theme-toggle"
-                            aria-label="Toggle dark mode"
-                        >
-                            <i
-                                data-lucide="sun"
-                                class="theme-toggle-icon"
-                            ></i>
-                        </button>
+                    </ul>
+                </li>
 
-                        <button
-                            class="nav-utility-btn direction-toggle"
-                            id="directionToggle"
-                            aria-label="Toggle text direction"
-                        >
-                            <span class="direction-toggle-text">LTR</span>
-                        </button>
 
-                    </div>
+                <!-- About -->
+                <li class="nav-item">
+                    <a
+                        class="nav-link nav-link-custom active"
+                        href="./about.html"
+                    >
+                        About
+                    </a>
+                </li>
 
-                    <div class="nav-cta-group">
-                        <a
-                            href="./login.html"
-                            class="btn btn-secondary"
-                        >
-                            Login
-                        </a>
-                    </div>
+
+                <!-- Services -->
+                <li class="nav-item">
+                    <a
+                        class="nav-link nav-link-custom"
+                        href="./services.html"
+                    >
+                        Services
+                    </a>
+                </li>
+
+
+                <!-- Horoscope -->
+                <li class="nav-item">
+                    <a
+                        class="nav-link nav-link-custom"
+                        href="./horoscope.html"
+                    >
+                        Horoscope
+                    </a>
+                </li>
+
+
+                <!-- Astrologers -->
+                <li class="nav-item">
+                    <a
+                        class="nav-link nav-link-custom"
+                        href="./astrologers.html"
+                    >
+                        Astrologers
+                    </a>
+                </li>
+
+
+                <!-- Pricing -->
+                <li class="nav-item">
+                    <a
+                        class="nav-link nav-link-custom"
+                        href="./pricing.html"
+                    >
+                        Pricing
+                    </a>
+                </li>
+
+
+                <!-- Dashboard -->
+                <li class="nav-item">
+                    <a
+                        class="nav-link nav-link-custom"
+                        href="./dashboard.html"
+                    >
+                        Dashboard
+                    </a>
+                </li>
+
+            </ul>
+
+
+            <!-- =====================================================
+                 DESKTOP RIGHT SIDE
+                 ===================================================== -->
+            <div class="d-flex align-items-center gap-2 flex-wrap">
+
+                <!-- Desktop utility buttons -->
+                <div class="nav-utility-group">
+
+                    <!-- Dark Mode -->
+                    <button
+                        class="nav-utility-btn theme-toggle btninside"
+                        type="button"
+                        aria-label="Toggle dark mode"
+                    >
+                        <i
+                            data-lucide="sun"
+                            class="theme-toggle-icon"
+                        ></i>
+                    </button>
+
+
+                    <!-- RTL -->
+                    <button
+                        class="nav-utility-btn direction-toggle btninside"
+                        
+                        id="directionToggle"
+                        type="button"
+                        aria-label="Toggle text direction"
+                    >
+                        <span class="direction-toggle-text">LTR</span>
+                    </button>
+
+                </div>
+
+
+                <!-- Login -->
+                <div class="nav-cta-group">
+
+                    <a
+                        href="./login.html"
+                        class="btn btn-secondary"
+                    >
+                        Login
+                    </a>
 
                 </div>
 
             </div>
-        </div>
-    </nav>
-
-
-    <!-- ========================= PAGE HERO ========================= -->
-    <section class="page-hero celestial-bg">
-        <div class="container position-relative">
-
-            <span class="section-label">
-                About AstroGuide
-            </span>
-
-            <h1>
-                A More Human Way to Read the Stars
-            </h1>
-
-            <p>
-                We create calm, thoughtful spaces where astrology becomes a
-                language for self-knowledge, meaningful questions, and
-                intentional choices.
-            </p>
 
         </div>
+
+    </div>
+</nav>
+
+
+
+    <!-- =========================================================
+         HERO
+    ========================================================== -->
+    <section class="about-hero">
+
+        <div class="about-hero-overlay"></div>
+
+
+        <div class="container">
+
+            <div class="about-hero-content">
+
+                <span class="section-label hero-reveal hero-label">
+                    <h1 id="title1">
+                    About AstroGuide
+                    </h1>
+                </span>
+                <p class="hero-reveal hero-description">
+                    We create calm, thoughtful spaces where astrology becomes
+                    a language for self-knowledge, meaningful questions, and
+                    intentional choices.
+                </p>
+
+                <div class="hero-scroll-indicator">
+
+                    <span class="hero-scroll-line"></span>
+
+                    <span>
+                        Discover our story
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
     </section>
 
 
-    <!-- ========================= OUR STORY ========================= -->
-    <section>
+    <!-- =========================================================
+         INTRODUCTION
+    ========================================================== -->
+    <section class="about-intro-section">
+
         <div class="container">
 
-            <div class="row align-items-center g-5">
+            <div class="about-intro">
 
-                <div class="col-lg-6">
-                    <img
-                        class="content-image"
-                        src="./images/biege.png"
-                        alt="Woman in a serene spiritual setting"
-                    >
+                <div class="intro-number">
+                
                 </div>
 
-                <div class="col-lg-6">
+                <div class="intro-content">
 
                     <span class="section-label">
-                        01 · Our Story
+                        Why AstroGuide
                     </span>
 
                     <h2>
-                        Born from a love of meaningful questions
+                        Astrology should create
+                        <em>space</em> for reflection.
                     </h2>
 
                     <p class="text-muted">
-                        AstroGuide began with a simple belief: people deserve
-                        guidance that respects both ancient wisdom and modern
-                        complexity. Our platform connects curious, thoughtful
-                        clients with consultants who listen deeply and speak
-                        clearly.
+                        AstroGuide brings together traditional astrological
+                        practice and a more thoughtful modern experience.
+                        Instead of treating a chart as a fixed script, we
+                        use it as a starting point for meaningful conversation.
                     </p>
 
                     <p class="text-muted">
-                        Today, we support thousands of people across life
-                        transitions, relationships, careers, and moments of
-                        quiet self-discovery.
+                        Whether you are navigating a transition, thinking about
+                        relationships, considering your next career step, or
+                        simply becoming more curious about yourself, our goal
+                        is to give you perspective without taking away your
+                        freedom to choose.
                     </p>
 
                 </div>
@@ -236,234 +368,595 @@
             </div>
 
         </div>
+
     </section>
 
 
-    <!-- ========================= OUR APPROACH ========================= -->
-    <section class="bg-alt">
+    <!-- =========================================================
+         OUR STORY
+    ========================================================== -->
+    <section class="about-story-section">
+
         <div class="container">
 
-            <div class="text-center mb-5">
+            <div class="editorial-section">
 
-                <span class="section-label">
-                    02 · Our Approach
-                </span>
+                <div class="editorial-image story-image">
 
-                <h2>
-                    Astrology as a tool for reflection
-                </h2>
+                    <img
+                        src="./images/biege.png"
+                        alt="Quiet moment of personal reflection"
+                    >
 
-                <p class="section-description">
-                    We do not believe your future is fixed. We believe
-                    self-awareness gives you more choices.
+                    <div class="image-index">
+                        02
+                    </div>
+
+                </div>
+
+
+                <div class="editorial-content">
+
+                    <span class="section-label">
+                     Our Story
+                    </span>
+
+                    <h2>
+                        Born from a love of
+                        meaningful questions
+                    </h2>
+
+                    <div class="gold-line"></div>
+
+                    <p class="text-muted lead-copy">
+                        AstroGuide began with a simple belief: guidance can be
+                        both insightful and deeply human.
+                    </p>
+
+                    <p class="text-muted">
+                        We wanted to create an environment where people could
+                        approach astrology without feeling rushed, judged, or
+                        overwhelmed by complicated language. Every consultation
+                        starts with listening and gives your questions room to
+                        shape the conversation.
+                    </p>
+
+                    <div class="editorial-quote">
+
+                        <i data-lucide="quote"></i>
+
+                        <p>
+                            A chart can offer a perspective.
+                            Your life gives it meaning.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         OUR APPROACH
+    ========================================================== -->
+    <section class="about-approach-section">
+
+        <div class="container">
+
+            <div class="editorial-section editorial-reverse">
+
+                <div class="editorial-content approach-copy">
+
+                    <span class="section-label">
+                         Our Approach
+                    </span>
+
+                    <h2>
+                        Read the pattern.
+                        Understand the context.
+                    </h2>
+
+                    <div class="gold-line"></div>
+
+                    <p class="text-muted lead-copy">
+                        We believe astrology becomes more useful when it is
+                        treated as a conversation rather than a collection of
+                        predictions.
+                    </p>
+
+                    <div class="approach-points">
+
+                        <div class="approach-point">
+
+                            <span class="point-icon">
+                                <i data-lucide="compass"></i>
+                            </span>
+
+                            <div>
+
+                                <h3>
+                                    Context over shortcuts
+                                </h3>
+
+                                <p>
+                                    We consider the broader chart and the
+                                    circumstances behind your questions.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="approach-point">
+
+                            <span class="point-icon">
+                                <i data-lucide="message-circle"></i>
+                            </span>
+
+                            <div>
+
+                                <h3>
+                                    Conversation over certainty
+                                </h3>
+
+                                <p>
+                                    Your experiences matter. Readings leave
+                                    room for discussion and interpretation.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="approach-point">
+
+                            <span class="point-icon">
+                                <i data-lucide="route"></i>
+                            </span>
+
+                            <div>
+
+                                <h3>
+                                    Perspective over prescription
+                                </h3>
+
+                                <p>
+                                    Insights are there to help you reflect,
+                                    not to make decisions on your behalf.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="editorial-image approach-image">
+
+                    <img
+                        src="./images/our-approach.png"
+                        alt="Astrology chart and thoughtful consultation"
+                    >
+
+                    <div class="image-index">
+                        03
+                    </div>
+
+                    <div class="image-floating-symbol">
+                        <i data-lucide="sparkles"></i>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         DIFFERENCE
+    ========================================================== -->
+    <section class="about-difference-section">
+
+        <div class="container">
+
+            <div class="section-introduction">
+
+                <div>
+
+                    <span class="section-label">
+                         What Makes Us Different
+                    </span>
+
+                    <h2>
+                        Warmth, depth,
+                        <br>
+                        and clarity.
+                    </h2>
+
+                </div>
+
+                <p class="text-muted">
+                    A good consultation should feel personal, understandable,
+                    and unhurried. These principles shape the experience we
+                    create at every step.
                 </p>
 
             </div>
 
-            <div class="row g-4">
 
-                <div class="col-md-4">
-                    <div class="content-panel">
+            <div class="difference-list">
 
-                        <div class="value-icon mb-3">
-                            <i data-lucide="compass"></i>
-                        </div>
+                <div class="difference-row">
 
-                        <h3>
-                            Context
-                        </h3>
-
-                        <p>
-                            We look at the whole chart, not one isolated
-                            placement or a one-size-fits-all answer.
-                        </p>
-
+                    <div class="difference-icon">
+                        <i data-lucide="heart-handshake"></i>
                     </div>
+
+                    <div class="difference-title">
+                        <span>01</span>
+                        <h3>
+                            Skill with empathy
+                        </h3>
+                    </div>
+
+                    <p>
+                        Consultants are selected for both their knowledge and
+                        their ability to approach personal questions with
+                        patience and understanding.
+                    </p>
+
                 </div>
 
 
-                <div class="col-md-4">
-                    <div class="content-panel">
+                <div class="difference-row">
 
-                        <div class="value-icon mb-3">
-                            <i data-lucide="message-circle-heart"></i>
-                        </div>
-
-                        <h3>
-                            Conversation
-                        </h3>
-
-                        <p>
-                            Your lived experience matters. Every reading is a
-                            two-way conversation shaped by your questions.
-                        </p>
-
+                    <div class="difference-icon">
+                        <i data-lucide="lock-keyhole"></i>
                     </div>
+
+                    <div class="difference-title">
+                        <span>02</span>
+                        <h3>
+                            A private space
+                        </h3>
+                    </div>
+
+                    <p>
+                        Sessions are designed around your questions, giving
+                        you room to explore personal thoughts without
+                        unnecessary pressure.
+                    </p>
+
                 </div>
 
 
-                <div class="col-md-4">
-                    <div class="content-panel">
+                <div class="difference-row">
 
-                        <div class="value-icon mb-3">
-                            <i data-lucide="signpost"></i>
-                        </div>
-
-                        <h3>
-                            Choice
-                        </h3>
-
-                        <p>
-                            Insights are invitations to reflect, never
-                            guarantees or instructions for how to live.
-                        </p>
-
+                    <div class="difference-icon">
+                        <i data-lucide="lightbulb"></i>
                     </div>
+
+                    <div class="difference-title">
+                        <span>03</span>
+                        <h3>
+                            Clear explanations
+                        </h3>
+                    </div>
+
+                    <p>
+                        We use plain language while preserving the nuance that
+                        makes every chart and every person different.
+                    </p>
+
+                </div>
+
+
+                <div class="difference-row">
+
+                    <div class="difference-icon">
+                        <i data-lucide="notebook-pen"></i>
+                    </div>
+
+                    <div class="difference-title">
+                        <span>04</span>
+                        <h3>
+                            Something to reflect on
+                        </h3>
+                    </div>
+
+                    <p>
+                        Written summaries can help you revisit useful insights
+                        after your conversation has ended.
+                    </p>
+
                 </div>
 
             </div>
 
         </div>
+
     </section>
 
 
-    <!-- ========================= DIFFERENCE & VALUES ========================= -->
-    <section>
+    <!-- =========================================================
+         VALUES
+    ========================================================== -->
+    <section class="about-values-section">
+
         <div class="container">
 
-            <div class="row g-4">
+            <div class="editorial-section values-editorial">
 
-                <div class="col-lg-6">
-                    <div class="content-panel">
-
-                        <span class="section-label">
-                            03 · What Makes Us Different
-                        </span>
-
-                        <h2>
-                            Warmth, depth, and clarity
-                        </h2>
-
-                        <ul class="mini-list">
-
-                            <li>
-                                <i data-lucide="check"></i>
-                                Consultants selected for both skill and empathy
-                            </li>
-
-                            <li>
-                                <i data-lucide="check"></i>
-                                Private sessions designed around your questions
-                            </li>
-
-                            <li>
-                                <i data-lucide="check"></i>
-                                Plain-language explanations with room for nuance
-                            </li>
-
-                            <li>
-                                <i data-lucide="check"></i>
-                                Written summaries to support your reflection
-                            </li>
-
-                        </ul>
-
-                    </div>
-                </div>
-
-
-                <div class="col-lg-6">
-                    <div class="content-panel">
-
-                        <span class="section-label">
-                            04 · Our Values
-                        </span>
-
-                        <h2>
-                            The standards we hold
-                        </h2>
-
-                        <p class="text-muted">
-                            Respect. Privacy. Curiosity. Honesty. Compassion.
-                            We hold space for uncertainty and avoid fear-based
-                            claims, pressure, or promises about outcomes.
-                        </p>
-
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-    </section>
-
-
-    <!-- ========================= CONSULTANTS ========================= -->
-    <section class="bg-alt">
-        <div class="container">
-
-            <div class="text-center mb-5">
-
-                <span class="section-label">
-                    05 · The People Behind the Guidance
-                </span>
-
-                <h2>
-                    Meet Our Consultants
-                </h2>
-
-            </div>
-
-            <div class="profile-grid">
-
-                <div class="profile-card">
+                <div class="editorial-image values-image">
 
                     <img
-                        src="./images/astrologer-female1.png"
-                        alt="Priya Sharma"
+                        src="./images/ourvals.png"
+                        alt="Peaceful astrology reflection"
                     >
 
-                    <div class="profile-body">
+                    <div class="values-image-detail">
+                        <i data-lucide="stars"></i>
+                        <span>
+                            Reflection · Respect · Choice
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <div class="editorial-content">
+
+                    <span class="section-label">
+                         Our Values
+                    </span>
+
+                    <h2>
+                        The standards
+                        we hold.
+                    </h2>
+
+                    <div class="gold-line"></div>
+
+                    <p class="text-muted lead-copy">
+                        The way guidance is offered matters just as much as the
+                        guidance itself.
+                    </p>
+
+                    <div class="values-stack">
+
+                        <div class="value-item">
+
+                            <span class="value-icon">
+                                <i data-lucide="shield-check"></i>
+                            </span>
+
+                            <div>
+
+                                <h3>
+                                    Privacy
+                                </h3>
+
+                                <p>
+                                    Personal questions deserve a private,
+                                    respectful space.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="value-item">
+
+                            <span class="value-icon">
+                                <i data-lucide="scale"></i>
+                            </span>
+
+                            <div>
+
+                                <h3>
+                                    Honesty
+                                </h3>
+
+                                <p>
+                                    Possibilities should never be presented
+                                    as guarantees.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="value-item">
+
+                            <span class="value-icon">
+                                <i data-lucide="heart"></i>
+                            </span>
+
+                            <div>
+
+                                <h3>
+                                    Compassion
+                                </h3>
+
+                                <p>
+                                    Every person deserves patience,
+                                    understanding, and respect.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="value-item">
+
+                            <span class="value-icon">
+                                <i data-lucide="sparkles"></i>
+                            </span>
+
+                            <div>
+
+                                <h3>
+                                    Curiosity
+                                </h3>
+
+                                <p>
+                                    Better questions can lead to deeper
+                                    self-reflection.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         CONSULTANTS
+    ========================================================== -->
+    <section class="about-consultants-section">
+
+        <div class="container">
+
+            <div class="section-introduction consultants-heading">
+
+                <div>
+
+                    <span class="section-label">
+                         The People Behind the Guidance
+                    </span>
+
+                    <h2>
+                        Meet our
+                        consultants.
+                    </h2>
+
+                </div>
+
+                <p class="text-muted">
+                    Different perspectives and areas of practice, connected
+                    by a shared intention to make astrology thoughtful,
+                    personal, and accessible.
+                </p>
+
+            </div>
+
+
+            <div class="consultant-editorial-grid">
+
+                <article class="consultant-profile">
+
+                    <div class="consultant-photo">
+
+                        <img
+                            src="./images/astrologer-female1.png"
+                            alt="Astrology consultant"
+                        >
+
+                        <span class="consultant-number">
+                            01
+                        </span>
+
+                    </div>
+
+                    <div class="consultant-info">
+
+                        <span>
+                            Vedic Astrology
+                        </span>
+
                         <h3>
                             Priya Sharma
                         </h3>
 
                         <p>
-                            Vedic astrology and personal growth
+                            Personal growth and self-discovery
                         </p>
+
                     </div>
 
-                </div>
+                </article>
 
 
-                <div class="profile-card">
+                <article class="consultant-profile">
 
-                    <img
-                        src="./images/astrologer-male.png"
-                        alt="Rajesh Verma"
-                    >
+                    <div class="consultant-photo">
 
-                    <div class="profile-body">
+                        <img
+                            src="./images/astrologer-male.png"
+                            alt="Astrology consultant"
+                        >
+
+                        <span class="consultant-number">
+                            02
+                        </span>
+
+                    </div>
+
+                    <div class="consultant-info">
+
+                        <span>
+                            Life Guidance
+                        </span>
+
                         <h3>
                             Rajesh Verma
                         </h3>
 
                         <p>
-                            Career and life guidance
+                            Career direction and life transitions
                         </p>
+
                     </div>
 
-                </div>
+                </article>
 
 
-                <div class="profile-card">
+                <article class="consultant-profile">
 
-                    <img
-                        src="./images/astrologer-female2.png"
-                        alt="Ananya Iyer"
-                    >
+                    <div class="consultant-photo">
 
-                    <div class="profile-body">
+                        <img
+                            src="./images/astrologer-female2.png"
+                            alt="Astrology consultant"
+                        >
+
+                        <span class="consultant-number">
+                            03
+                        </span>
+
+                    </div>
+
+                    <div class="consultant-info">
+
+                        <span>
+                            Relationships
+                        </span>
+
                         <h3>
                             Ananya Iyer
                         </h3>
@@ -471,71 +964,123 @@
                         <p>
                             Relationships and matchmaking
                         </p>
+
                     </div>
 
-                </div>
+                </article>
 
             </div>
 
         </div>
+
     </section>
 
 
-    <!-- ========================= CLIENT EXPERIENCE ========================= -->
-    <section>
+    <!-- =========================================================
+         EXPERIENCE
+    ========================================================== -->
+    <section class="about-experience-section">
+
         <div class="container">
 
-            <div class="row align-items-center g-5">
+            <div class="experience-layout">
 
-                <div class="col-lg-6">
+                <div class="experience-heading">
 
                     <span class="section-label">
-                        06 · Client Experience
+                        Your Experience
                     </span>
 
                     <h2>
-                        Trust is built in the details
+                        Trust is built
+                        in the details.
                     </h2>
 
                     <p class="text-muted">
-                        From the first booking screen to the final written
-                        summary, we make every step feel clear, respectful,
-                        and unhurried.
+                        From choosing a session to revisiting your notes,
+                        every part of the experience is designed to feel
+                        clear and considered.
                     </p>
-
-                    <a
-                        class="btn btn-secondary"
-                        href="./astrologers.html"
-                    >
-                        Meet the full team
-                    </a>
 
                 </div>
 
 
-                <div class="col-lg-6">
+                <div class="experience-steps">
 
-                    <div class="dark-panel">
+                    <div class="experience-step">
 
-                        <span class="section-label">
-                            07 · A Gentle Reminder
+                        <span class="experience-step-number">
+                            01
                         </span>
 
-                        <h2>
-                            Come curious, not certain.
-                        </h2>
+                        <div class="experience-step-icon">
+                            <i data-lucide="calendar-check"></i>
+                        </div>
 
-                        <p>
-                            Astrology readings are intended for guidance and
-                            personal reflection and should not replace
-                            professional advice.
-                        </p>
-                        <a
-                        class="btn btn-secondary"
-                        href="./astrologers.html"
-                    >
-                        consult our astrologer
-                    </a>
+                        <div>
+
+                            <h3>
+                                Choose your session
+                            </h3>
+
+                            <p>
+                                Select the type of consultation that matches
+                                the questions you want to explore.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="experience-step">
+
+                        <span class="experience-step-number">
+                            02
+                        </span>
+
+                        <div class="experience-step-icon">
+                            <i data-lucide="messages-square"></i>
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Have the conversation
+                            </h3>
+
+                            <p>
+                                Bring your questions and experiences into a
+                                session shaped around you.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="experience-step">
+
+                        <span class="experience-step-number">
+                            03
+                        </span>
+
+                        <div class="experience-step-icon">
+                            <i data-lucide="notebook-pen"></i>
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Leave with perspective
+                            </h3>
+
+                            <p>
+                                Take time to reflect and return to your notes
+                                whenever you need another moment of clarity.
+                            </p>
+
+                        </div>
 
                     </div>
 
@@ -544,11 +1089,58 @@
             </div>
 
         </div>
+
     </section>
 
 
-    <!-- ========================= NEWSLETTER ========================= -->
+    <!-- =========================================================
+         FINAL CTA
+    ========================================================== -->
+    <section class="about-final-section">
+
+        <div class="container">
+
+            <div class="about-final-panel">
+
+                <div class="final-symbol">
+                    <i data-lucide="moon-star"></i>
+                </div>
+
+                <span class="section-label">
+                    A Gentle Reminder
+                </span>
+
+                <h2>
+                    Come curious,
+                    <br>
+                    not certain.
+                </h2>
+
+                <p>
+                    Astrology can offer a perspective for reflection, but your
+                    choices remain your own. Bring your questions, your
+                    curiosity, and your openness to explore.
+                </p>
+
+                <a
+                    href="./astrologers.html"
+                    class="btn btn-secondary"
+                >
+                    Meet Our Astrologers
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         NEWSLETTER
+    ========================================================== -->
     <section class="newsletter-section section-sm">
+
         <div class="container position-relative text-center">
 
             <span class="section-label">
@@ -573,7 +1165,10 @@
                     required
                 >
 
-                <button class="btn btn-primary">
+                <button
+                    type="submit"
+                    class="btn btn-primary"
+                >
                     Subscribe
                 </button>
 
@@ -582,31 +1177,38 @@
             <p class="newsletter-msg mt-2"></p>
 
             <div class="newsletter-final-cta">
+
                 Have a question?
+
                 <a href="./services.html">
                     Explore our services
                 </a>
+
             </div>
 
         </div>
+
     </section>
 
 
-    <!-- ========================= FOOTER ========================= -->
+    <!-- =========================================================
+         FOOTER
+    ========================================================== -->
     <footer class="footer-custom">
+
         <div class="container">
 
             <div class="row g-4">
 
                 <div class="col-lg-4 col-md-6">
 
-                    <div class="footer-brand">
-
-                        <img src="./images/logo.png" alt="">
-
-                        <span class="brand-astro" dir="ltr">
-                            <span class="brand-astro">Astro</span><span class="brand-guide">Guide</span>
-                        </span>
+<div class="footer-brand">
+                    <a class="navbar-brand-custom" href="./index.html">
+                                    <img src="./images/logo.png" alt="">
+                                    <span class="brand-astro" dir="ltr">
+                                        <span class="brand-astro">Astro</span><span class="brand-guide">Guide</span>
+                                    </span>
+                    </a>
 
                     </div>
 
@@ -646,12 +1248,12 @@
                     <a class="footer-link" href="./index.html">
                         Home
                     </a>
-
-                    <a class="footer-link" href="./services.html">
-                        Services
+                    <a class="footer-link" href="./about.html">
+                        About
                     </a>
-
-
+                    <a class="footer-link" href="./horoscope.html">
+                        Horoscope
+                    </a>
 
                     <a class="footer-link" href="./astrologers.html">
                         Astrologers
@@ -661,9 +1263,7 @@
                         Pricing
                     </a>
 
-                    <a class="footer-link" href="./about.html">
-                        About
-                    </a>
+                    
 
                 </div>
 
@@ -775,19 +1375,28 @@
             </div>
 
         </div>
+
     </footer>
 
 
-    <!-- ========================= SCRIPTS ========================= -->
+    <!-- =========================================================
+         SCRIPTS
+    ========================================================== -->
+
     <script src="https://unpkg.com/lucide@0.542.0/dist/umd/lucide.min.js"></script>
 
     <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            lucide.createIcons();
+        document.addEventListener("DOMContentLoaded", function () {
+
+            if (window.lucide) {
+                lucide.createIcons();
+            }
+
         });
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
     <script src="./js/theme.js"></script>
 
 </body>

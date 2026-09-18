@@ -60,7 +60,6 @@
    ========================================================= */
 
 [data-theme="dark"] {
-    /* Brand Colors */
     --primary-color: #1a1b4b;
     --primary-light: #2a2d6e;
     --primary-lighter: #3d4090;
@@ -69,22 +68,18 @@
     --secondary-light: #e0c97e;
     --secondary-dark: #c9a84c;
 
-    /* Backgrounds */
     --bg-color: #0d0e1a;
     --bg-alt: #141528;
     --bg-card: #1a1b30;
     --bg-input: #1e1f36;
 
-    /* Text */
     --text-color: #e8e9f0;
     --text-muted: #a0a2b8;
     --text-light: #6b6d85;
 
-    /* Borders */
     --border-color: #2a2b45;
     --border-hover: #d4b865;
 
-    /* Shadows */
     --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
     --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.35);
     --shadow-lg: 0 10px 40px rgba(0, 0, 0, 0.45);
@@ -103,11 +98,16 @@
 
 html {
     scroll-behavior: smooth;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 body {
     margin: 0;
     overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
 
     font-family: var(--font-body);
     font-size: 16px;
@@ -136,6 +136,10 @@ img {
     height: auto;
 }
 
+svg {
+    max-width: 100%;
+}
+
 ul {
     list-style: none;
     padding: 0;
@@ -160,6 +164,8 @@ h6 {
     line-height: 1.2;
 
     color: var(--text-color);
+
+    overflow-wrap: break-word;
 }
 
 h1 {
@@ -180,6 +186,7 @@ h4 {
 
 p {
     font-size: 1.0625rem;
+    overflow-wrap: break-word;
 }
 
 .text-muted {
@@ -226,6 +233,10 @@ p {
 section {
     padding-top: var(--section-spacing);
     padding-bottom: var(--section-spacing);
+
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
 }
 
 .section-sm {
@@ -304,6 +315,8 @@ section {
         color var(--transition),
         transform var(--transition),
         box-shadow var(--transition);
+
+    max-width: 100%;
 }
 
 .btn-lg {
@@ -412,6 +425,8 @@ section {
     transition:
         gap var(--transition),
         color var(--transition);
+
+    max-width: 100%;
 }
 
 .btn-link-icon:hover {
@@ -436,6 +451,9 @@ section {
         transform var(--transition),
         box-shadow var(--transition),
         border-color var(--transition);
+
+    min-width: 0;
+    overflow-wrap: break-word;
 }
 
 .feature-card:hover {
@@ -488,7 +506,7 @@ section {
 /* =========================================================
    8. NAVBAR
    ========================================================= */
-/* Logo image — navbar */
+
 .navbar-brand-custom img {
     width: 38px;
     height: 38px;
@@ -497,7 +515,6 @@ section {
     flex-shrink: 0;
 }
 
-/* Logo image — footer */
 .footer-brand img {
     width: 38px;
     height: 38px;
@@ -506,16 +523,23 @@ section {
     flex-shrink: 0;
 }
 
-/* Keep logo and text perfectly aligned */
 .navbar-brand-custom,
 .footer-brand {
     display: inline-flex;
     align-items: center;
     gap: 7px;
-}
-.navbar-custom {
-    z-index: 1030;
 
+    min-width: 0;
+}
+
+.navbar-custom {
+position: sticky !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 100%;
+
+    z-index: 1030;
     padding: 12px 0;
 
     background-color: var(--bg-color);
@@ -524,6 +548,9 @@ section {
     transition:
         background-color var(--transition),
         box-shadow var(--transition);
+
+    width: 100%;
+    max-width: 100%;
 }
 
 .navbar-custom.scrolled {
@@ -545,6 +572,9 @@ section {
     letter-spacing: 0.5px;
 
     text-decoration: none;
+
+    white-space: nowrap;
+    flex-shrink: 1;
 }
 
 
@@ -625,10 +655,12 @@ section {
     color: var(--text-color) !important;
 
     transition: color var(--transition);
+
+    white-space: nowrap;
 }
 
 .nav-link-custom:hover,
-.nav-link-custom.active{
+.nav-link-custom.active {
     color: var(--secondary-color) !important;
 }
 
@@ -643,6 +675,8 @@ section {
     border: 1px solid var(--border-color);
     border-radius: var(--radius-sm);
     box-shadow: var(--shadow-md);
+
+    max-width: calc(100vw - 20px);
 }
 
 
@@ -695,6 +729,8 @@ section {
     transition:
         background-color var(--transition),
         color var(--transition);
+
+    overflow-wrap: break-word;
 }
 
 .dropdown-item-custom:hover,
@@ -716,7 +752,9 @@ section {
 .nav-utility-group {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 18px;
+
+    flex-shrink: 0;
 }
 
 .nav-utility-btn {
@@ -724,8 +762,8 @@ section {
     align-items: center;
     justify-content: center;
 
-    width: 38px;
-    height: 38px;
+    width: 45px;
+    height: 45px;
 
     font-size: 1.05rem;
     color: var(--text-color);
@@ -734,15 +772,17 @@ section {
 
     background-color: var(--bg-card);
     border: 1px solid var(--border-color);
-    border-radius: var(--radius-sm);
+    border-radius: 50%;
 
     transition:
         color var(--transition),
         border-color var(--transition),
         background-color var(--transition);
+
+    flex-shrink: 0;
 }
 
-.nav-utility-btn:hover{
+.nav-utility-btn:hover {
     color: var(--secondary-color);
     border-color: var(--secondary-color);
     background-color: var(--bg-card);
@@ -758,6 +798,8 @@ section {
     display: flex;
     align-items: center;
     gap: 10px;
+
+    flex-shrink: 0;
 }
 
 
@@ -768,6 +810,8 @@ section {
 
     border: 1px solid var(--border-color);
     border-radius: var(--radius-sm);
+
+    flex-shrink: 0;
 }
 
 .navbar-toggler-custom:focus {
@@ -793,6 +837,10 @@ section {
 
     background-color: var(--bg-alt);
     border-top: 1px solid var(--border-color);
+
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
 }
 
 .footer-brand {
@@ -872,6 +920,8 @@ section {
         color var(--transition),
         padding-left var(--transition),
         padding-right var(--transition);
+
+    overflow-wrap: break-word;
 }
 
 .footer-link:hover {
@@ -882,6 +932,12 @@ section {
 .footer-social {
     display: flex;
     gap: 10px;
+    flex-wrap: wrap;
+}
+
+[data-lucide="star"] {
+    fill: var(--secondary-color);
+    color: var(--secondary-color);
 }
 
 .footer-social a {
@@ -895,7 +951,7 @@ section {
     font-size: 1rem;
     color: var(--text-muted);
 
-    background-color: var(--bg-card);
+    background-color: transparent;
     border: 1px solid var(--border-color);
     border-radius: var(--radius-sm);
 
@@ -903,6 +959,8 @@ section {
         color var(--transition),
         border-color var(--transition),
         transform var(--transition);
+
+    flex-shrink: 0;
 }
 
 .footer-social a:hover {
@@ -944,6 +1002,9 @@ section {
 
     color: #ffffff;
     background-color: var(--primary-color);
+
+    width: 100%;
+    max-width: 100%;
 }
 
 [data-theme="dark"] .newsletter-section {
@@ -1022,6 +1083,7 @@ section {
     justify-content: center;
     gap: 10px;
 
+    width: 100%;
     max-width: 520px;
     margin: 0 auto;
 }
@@ -1039,6 +1101,8 @@ section {
     background-color: rgba(255, 255, 255, 0.08);
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: var(--radius-sm);
+
+    min-width: 0;
 }
 
 .newsletter-form .form-control::placeholder {
@@ -1110,6 +1174,8 @@ section {
         box-shadow var(--transition),
         background-color var(--transition),
         color var(--transition);
+
+    max-width: 100%;
 }
 
 .form-control:focus,
@@ -1191,10 +1257,11 @@ section {
     gap: 10px;
 }
 
-/* Keep AstroGuide brand name in normal left-to-right order */
-.brand-astro{
+.brand-astro {
     direction: ltr !important;
 }
+
+
 /* =========================================================
    14. RESPONSIVE — TABLET / MOBILE
    ========================================================= */
@@ -1206,19 +1273,90 @@ section {
         padding-bottom: 48px;
     }
 
+    /* Prevent Bootstrap rows from creating overflow */
+    .row {
+        --bs-gutter-x: 1.5rem;
+        --bs-gutter-y: 0;
+        width: 100%;
+        max-width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    /* Keep Bootstrap columns inside viewport */
+    .row > * {
+        min-width: 0;
+    }
+
+    .container,
+    .container-fluid {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* Mobile navbar */
+    .navbar-custom .container {
+        display: flex;
+        align-items: center;
+        min-width: 0;
+    }
+
+    .navbar-brand-custom {
+        min-width: 0;
+        flex-shrink: 1;
+    }
+
+    .navbar-brand-custom span {
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
     .navbar-collapse {
-        margin-top: 12px;
         padding: 16px;
+
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+
+        width: 100%;
+        max-width: 100%;
 
         background-color: var(--bg-card);
         border: 1px solid var(--border-color);
         border-radius: var(--radius-md);
+
+        overflow-x: hidden;
+        overflow-y: auto;
+        max-height: calc(100vh - 75px);
+    }
+
+    .navbar-nav {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .navbar-nav .nav-item {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .nav-link-custom {
+        width: 100%;
+        max-width: 100%;
+        white-space: normal;
     }
 
     /*
        On mobile, Bootstrap controls dropdowns through
        its normal click behavior.
     */
+
+    .dropdown-menu-custom {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+    }
 
     .nav-utility-group {
         justify-content: flex-start;
@@ -1237,34 +1375,136 @@ section {
         width: 100%;
         justify-content: center;
     }
-    
+
+    /* General images */
+    img {
+        max-width: 100%;
+    }
+
+    /* Prevent long text from breaking layout */
+    .container,
+    .container-fluid,
+    .card,
+    .feature-card,
+    .row,
+    [class*="col-"] {
+        min-width: 0;
+    }
+
+    /* Forms */
+    .form-control,
+    .form-select {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* Newsletter */
+    .newsletter-form {
+        width: 100%;
+        max-width: 520px;
+    }
+
 }
 
 
 /* =========================================================
-   15. RESPONSIVE — SMALL MOBILE
+   15. MOBILE NAV CONTROLS
    ========================================================= */
 
-@media (max-width: 575.98px) {
+@media (max-width: 991.98px) {
 
-    body {
-        font-size: 15px;
+    .mobile-nav-controls {
+        display: flex !important;
+        align-items: center;
+        gap: 5px;
+        margin-left: auto;
+        flex-shrink: 0;
     }
+
+    .mobile-nav-controls .nav-utility-btn,
+    .mobile-nav-controls .navbar-toggler-custom {
+        width: 34px;
+        height: 34px;
+        min-width: 34px;
+        min-height: 34px;
+
+        padding: 0;
+        margin: 0;
+
+        flex-shrink: 0;
+    }
+
+    .mobile-nav-controls .theme-toggle-icon {
+        width: 16px;
+        height: 16px;
+    }
+
+    .mobile-nav-controls .direction-toggle-text {
+        font-size: 9px;
+    }
+
+    .mobile-nav-controls .navbar-toggler-icon {
+        width: 16px;
+        height: 16px;
+    }
+
+    .btninside {
+        display: none;
+    }
+}
+
+.mobile-nav-controls {
+    display: none;
+}
+
+.direction-toggle-text {
+    border-radius: 50%;
+}
+
+
+/* =========================================================
+   16. MOBILE — 767px AND BELOW
+   ========================================================= */
+
+@media (max-width: 767.98px) {
 
     section {
-        padding-top: 40px;
-        padding-bottom: 40px;
+        padding-top: 42px;
+        padding-bottom: 42px;
     }
 
+    .container {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* Reduce Bootstrap horizontal gutters without changing
+       the actual component design */
+    .container,
+    .container-fluid {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .row {
+        --bs-gutter-x: 1.25rem;
+    }
+
+    /* Cards */
     .feature-card {
-        padding: 24px;
+        height: auto;
+        padding: 26px;
     }
 
+    /* Newsletter */
     .newsletter-form {
         flex-direction: column;
+        width: 100%;
     }
 
     .newsletter-form .form-control {
+        width: 100%;
+        min-width: 0;
         height: 52px;
         min-height: 52px;
         padding: 12px 16px;
@@ -1273,17 +1513,610 @@ section {
 
     .newsletter-form .btn {
         width: 100%;
+        min-height: 48px;
     }
+
+    /* Footer */
+    .footer-bottom {
+        margin-top: 30px;
+    }
+
+    .footer-bottom-links {
+        gap: 10px 18px;
+    }
+
     /* Keep header and footer brand exactly the same size */
     .navbar-brand-custom,
     .footer-brand {
         font-size: 1.6rem;
     }
+
+    /* Tables never create page overflow */
+    .table-responsive {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
 }
 
 
 /* =========================================================
-   16. ACCESSIBILITY / REDUCED MOTION
+   17. IPAD MINI — 768px PORTRAIT
+   ========================================================= */
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+    section {
+        padding-top: 52px;
+        padding-bottom: 52px;
+    }
+
+    .container {
+        max-width: 720px;
+    }
+
+    .row {
+        --bs-gutter-x: 1.5rem;
+    }
+
+    .navbar-collapse {
+        padding: 18px;
+    }
+
+    .feature-card {
+        padding: 28px;
+    }
+
+    .newsletter-form {
+        max-width: 520px;
+    }
+}
+
+
+/* =========================================================
+   18. NEST HUB / TABLET LANDSCAPE — 1024px
+   ========================================================= */
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+
+    .container {
+        max-width: 960px;
+    }
+
+    /*
+       Keep desktop navbar at 1024px but give it enough
+       room for all navigation items.
+    */
+    .navbar-custom .container {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    .nav-link-custom {
+        padding-left: 9px !important;
+        padding-right: 9px !important;
+    }
+
+    .nav-utility-group {
+        gap: 10px;
+    }
+
+    .nav-cta-group {
+        gap: 8px;
+    }
+
+    .feature-card {
+        padding: 28px;
+    }
+}
+
+
+/* =========================================================
+   19. LARGE DESKTOP — 1200px TO 1919px
+   ========================================================= */
+
+@media (min-width: 1200px) and (max-width: 1919.98px) {
+
+    .container {
+        max-width: 1140px;
+    }
+}
+
+
+/* =========================================================
+   20. FULL HD / LARGE SCREEN — 1920px+
+   ========================================================= */
+
+@media (min-width: 1920px) {
+
+    .container {
+        max-width: 1320px;
+    }
+
+    /*
+       Do not allow content to stretch excessively across
+       very wide monitors.
+    */
+    section > .container,
+    section > .container-fluid {
+        max-width: 1320px;
+    }
+
+    .navbar-custom > .container,
+    .footer-custom > .container {
+        max-width: 1320px;
+    }
+}
+
+
+/* =========================================================
+   21. SAMSUNG S8+ / SMALL MOBILE — 360px
+   ========================================================= */
+
+@media (min-width: 321px) and (max-width: 380px) {
+
+    section {
+        padding-top: 38px;
+        padding-bottom: 38px;
+    }
+
+    .container,
+    .container-fluid {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+    .row {
+        --bs-gutter-x: 1rem;
+    }
+
+    .feature-card {
+        padding: 22px;
+    }
+
+    .navbar-custom {
+        padding-top: 9px;
+        padding-bottom: 9px;
+    }
+
+    .navbar-brand-custom img {
+        width: 36px;
+        height: 36px;
+    }
+
+    .mobile-nav-controls {
+        gap: 4px;
+    }
+
+    .mobile-nav-controls .nav-utility-btn,
+    .mobile-nav-controls .navbar-toggler-custom {
+        width: 32px;
+        height: 32px;
+        min-width: 32px;
+        min-height: 32px;
+    }
+
+    .mobile-nav-controls .theme-toggle-icon {
+        width: 15px;
+        height: 15px;
+    }
+
+    .mobile-nav-controls .navbar-toggler-icon {
+        width: 15px;
+        height: 15px;
+    }
+
+    .mobile-nav-controls .direction-toggle-text {
+        font-size: 8px;
+    }
+
+    .navbar-collapse {
+        padding: 14px;
+        max-height: calc(100vh - 65px);
+    }
+}
+
+
+/* =========================================================
+   22. VERY SMALL MOBILE — 270px TO 320px
+   ========================================================= */
+
+@media (max-width: 320px) {
+
+    section {
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
+
+    .container,
+    .container-fluid {
+        width: 100%;
+        max-width: 100%;
+
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .row {
+        --bs-gutter-x: 0.75rem;
+    }
+
+    /* Very small screens need tighter cards */
+    .feature-card {
+        padding: 18px;
+        border-radius: var(--radius-sm);
+    }
+
+    .feature-card .card-icon {
+        width: 48px;
+        height: 48px;
+        margin-bottom: 16px;
+    }
+
+    /* Navbar */
+    .navbar-custom {
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+
+    .navbar-custom .container {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    .navbar-brand-custom {
+        gap: 5px;
+        min-width: 0;
+        max-width: calc(100% - 115px);
+    }
+
+    .navbar-brand-custom img {
+        width: 32px;
+        height: 32px;
+    }
+
+    .navbar-brand-custom .brand-icon {
+        font-size: 1.15rem;
+    }
+
+    .mobile-nav-controls {
+        gap: 3px;
+    }
+
+    .mobile-nav-controls .nav-utility-btn,
+    .mobile-nav-controls .navbar-toggler-custom {
+        width: 30px;
+        height: 30px;
+        min-width: 30px;
+        min-height: 30px;
+    }
+
+    .mobile-nav-controls .theme-toggle-icon {
+        width: 14px;
+        height: 14px;
+    }
+
+    .mobile-nav-controls .navbar-toggler-icon {
+        width: 14px;
+        height: 14px;
+    }
+
+    .mobile-nav-controls .direction-toggle-text {
+        font-size: 7px;
+    }
+
+    .navbar-toggler-custom {
+        padding: 5px 7px;
+    }
+
+    .navbar-collapse {
+        padding: 12px;
+        max-height: calc(100vh - 60px);
+    }
+
+    .nav-link-custom {
+        padding: 8px 10px !important;
+    }
+
+    .dropdown-item-custom {
+        padding: 9px 10px;
+    }
+
+    /* Newsletter */
+    .newsletter-form .form-control {
+        min-width: 0;
+        width: 100%;
+    }
+
+    /* Footer */
+    .footer-custom {
+        padding-top: 40px;
+        padding-bottom: 20px;
+    }
+
+    .footer-bottom-links {
+        gap: 8px 12px;
+    }
+
+    /* Buttons */
+    .btn {
+        max-width: 100%;
+        white-space: normal;
+        text-align: center;
+    }
+
+    .btn-lg {
+        padding: 12px 20px;
+    }
+
+    /* Prevent long words / URLs from creating overflow */
+    p,
+    a,
+    span,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        overflow-wrap: anywhere;
+        word-break: normal;
+    }
+}
+
+
+/* =========================================================
+   23. MOBILE LANDSCAPE
+   ========================================================= */
+
+/*
+   Samsung S8+ landscape and similar phones.
+   The hamburger remains enabled because these are still
+   mobile-width devices.
+*/
+
+@media (max-width: 991.98px) and (orientation: landscape) {
+
+    section {
+        padding-top: 34px;
+        padding-bottom: 34px;
+    }
+
+    .navbar-custom {
+        padding-top: 7px;
+        padding-bottom: 7px;
+    }
+
+    .navbar-collapse {
+        max-height: calc(100vh - 58px);
+        overflow-y: auto;
+    }
+
+    .navbar-nav .nav-link-custom {
+        padding-top: 6px !important;
+        padding-bottom: 6px !important;
+    }
+
+    .nav-utility-group {
+        margin-top: 8px;
+    }
+
+    .nav-cta-group {
+        margin-top: 8px;
+    }
+
+    .feature-card {
+        padding: 22px;
+    }
+}
+
+
+/* =========================================================
+   24. TABLET LANDSCAPE
+   ========================================================= */
+
+@media (min-width: 768px) and (max-width: 1199.98px)
+       and (orientation: landscape) {
+
+    section {
+        padding-top: 46px;
+        padding-bottom: 46px;
+    }
+
+    .container {
+        max-width: 960px;
+    }
+
+    .feature-card {
+        padding: 26px;
+    }
+}
+
+
+/* =========================================================
+   25. IPAD MINI PORTRAIT
+   ========================================================= */
+
+@media (min-width: 700px) and (max-width: 850px)
+       and (orientation: portrait) {
+
+    .container {
+        max-width: 720px;
+    }
+
+    section {
+        padding-top: 48px;
+        padding-bottom: 48px;
+    }
+
+    .feature-card {
+        padding: 26px;
+    }
+}
+
+
+/* =========================================================
+   26. NEST HUB LANDSCAPE
+   ========================================================= */
+
+@media (min-width: 900px) and (max-width: 1100px)
+       and (orientation: landscape) {
+
+    .container {
+        max-width: 960px;
+    }
+
+    .navbar-custom .container {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .nav-link-custom {
+        padding-left: 8px !important;
+        padding-right: 8px !important;
+    }
+}
+
+
+/* =========================================================
+   27. GENERAL RESPONSIVE FLEX FIXES
+   ========================================================= */
+
+@media (max-width: 991.98px) {
+
+    /*
+       Prevent flex children from forcing horizontal
+       overflow on small screens.
+    */
+    .d-flex,
+    .flex-row,
+    .align-items-center,
+    .justify-content-between {
+        min-width: 0;
+    }
+
+    .d-flex > * {
+        min-width: 0;
+    }
+
+    /*
+       Long content such as email addresses and URLs
+       should never expand the page.
+    */
+    .contact-item,
+    .footer-tagline,
+    .footer-link,
+    .newsletter-final-cta {
+        overflow-wrap: anywhere;
+    }
+
+    /*
+       Bootstrap cards and custom cards stay within
+       their columns.
+    */
+    .card,
+    .feature-card {
+        max-width: 100%;
+    }
+
+    /*
+       Prevent decorative/positioned elements from
+       generating horizontal scrolling.
+    */
+    .position-relative {
+        max-width: 100%;
+    }
+}
+
+
+/* =========================================================
+   28. RESPONSIVE CONTACT ITEMS
+   ========================================================= */
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+
+    font-size: 0.9375rem;
+    color: var(--text-muted);
+
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+#brand-title {
+    color: var(--secondary-color) !important;
+}
+
+.contact-item svg {
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+
+    color: var(--secondary-color);
+    stroke-width: 1.8;
+
+    transition:
+        color var(--transition),
+        transform var(--transition);
+}
+
+.contact-item:hover {
+    color: var(--secondary-color);
+}
+
+.contact-item:hover svg {
+    color: var(--secondary-light);
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   29. RESPONSIVE CONTACT — VERY SMALL
+   ========================================================= */
+
+@media (max-width: 320px) {
+
+    .contact-item {
+        gap: 7px;
+        font-size: 0.875rem;
+    }
+
+    .contact-item svg {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+
+/* =========================================================
+   30. RTL RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 991.98px) {
+
+    [dir="rtl"] .mobile-nav-controls {
+        margin-left: 0;
+        margin-right: auto;
+    }
+
+    [dir="rtl"] .navbar-collapse {
+        left: 0;
+        right: 0;
+    }
+
+    [dir="rtl"] .navbar-brand-custom {
+        margin-right: 0;
+    }
+}
+
+
+/* =========================================================
+   31. ACCESSIBILITY / REDUCED MOTION
    ========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
@@ -1302,7 +2135,7 @@ section {
 
 
 /* =========================================================
-   17. UTILITY
+   32. UTILITY
    ========================================================= */
 
 .divider-text {
@@ -1315,6 +2148,8 @@ section {
     color: var(--text-muted);
 
     text-align: center;
+
+    min-width: 0;
 }
 
 .divider-text::before,
@@ -1324,10 +2159,14 @@ section {
     flex: 1;
 
     border-bottom: 1px solid var(--border-color);
+
+    min-width: 0;
 }
 
 .divider-text span {
     padding: 0 16px;
+
+    flex-shrink: 0;
 }
 
 .disclaimer-text {
@@ -1341,11 +2180,13 @@ section {
     color: var(--text-muted);
 
     border-top: 1px solid var(--border-color);
+
+    overflow-wrap: anywhere;
 }
 
 
 /* =========================================================
-   18. PRIMARY TAGS / BADGES
+   33. PRIMARY TAGS / BADGES
    ========================================================= */
 
 .badge.bg-primary,
@@ -1373,36 +2214,1747 @@ section {
 .tag-primary * {
     color: #d4b865 !important;
 }
-.contact-item {
+
+
+/* =========================================================
+   34. FINAL GLOBAL OVERFLOW PROTECTION
+   ========================================================= */
+
+@media (max-width: 991.98px) {
+
+    /*
+       These rules only prevent responsive overflow.
+       They do not alter desktop design.
+    */
+
+    .container,
+    .container-fluid,
+    .row,
+    [class*="col-"],
+    section,
+    main,
+    header,
+    footer,
+    nav {
+        max-width: 100%;
+    }
+
+    iframe,
+    video,
+    canvas,
+    embed,
+    object {
+        max-width: 100%;
+    }
+
+    pre,
+    code {
+        max-width: 100%;
+        overflow-x: auto;
+    }
+}
+
+
+/* =========================================================
+   35. EXTRA SAFETY FOR 270px
+   ========================================================= */
+
+@media (max-width: 280px) {
+
+    .container,
+    .container-fluid {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    .navbar-custom .container {
+        padding-left: 6px;
+        padding-right: 6px;
+    }
+
+    .navbar-brand-custom {
+        max-width: calc(100% - 105px);
+    }
+
+    .navbar-brand-custom img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .mobile-nav-controls {
+        gap: 2px;
+    }
+
+    .mobile-nav-controls .nav-utility-btn,
+    .mobile-nav-controls .navbar-toggler-custom {
+        width: 28px;
+        height: 28px;
+        min-width: 28px;
+        min-height: 28px;
+    }
+
+    .mobile-nav-controls .theme-toggle-icon,
+    .mobile-nav-controls .navbar-toggler-icon {
+        width: 13px;
+        height: 13px;
+    }
+
+    .mobile-nav-controls .direction-toggle-text {
+        font-size: 7px;
+    }
+
+    .feature-card {
+        padding: 16px;
+    }
+
+    .footer-bottom {
+        margin-top: 24px;
+    }
+
+    .footer-bottom-links {
+        gap: 6px 10px;
+    }
+}
+
+/* =========================================================
+   MOBILE — FOOTER QUICK LINKS / SOCIAL SPACING
+   ========================================================= */
+
+@media (max-width: 767.98px) {
+
+    /* Add space before the social media icons */
+    .footer-social {
+        margin-top: 34px;
+        margin-bottom: 20px;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+    }
+
+}
+/* =========================================================
+   FINAL NAVBAR FIX — NEVER SCROLLS
+   ========================================================= */
+
+/*
+   The navbar is intentionally FIXED instead of STICKY.
+   This prevents the navbar from moving away when the page
+   is scrolled and also avoids sticky-position problems caused
+   by parent containers with overflow rules.
+*/
+
+.navbar-custom {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+
+    width: 100% !important;
+    max-width: 100% !important;
+
+    z-index: 1050 !important;
+
+    margin: 0 !important;
+
+    transform: none !important;
+}
+
+
+/* =========================================================
+   RESERVE SPACE FOR FIXED NAVBAR
+   ========================================================= */
+
+/*
+   Prevent the fixed navbar from covering the first section.
+*/
+
+body {
+    padding-top: 63px;
+}
+
+
+/* =========================================================
+   MOBILE NAVBAR HEIGHT
+   ========================================================= */
+
+@media (max-width: 991.98px) {
+
+    body {
+        padding-top: 64px;
+    }
+
+    .navbar-custom {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+
+        width: 100% !important;
+        max-width: 100% !important;
+
+        z-index: 1050 !important;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+    body {
+        padding-top: 58px;
+    }
+
+    .navbar-custom {
+        padding-top: 9px;
+        padding-bottom: 9px;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 320px) {
+
+    body {
+        padding-top: 56px;
+    }
+
+    .navbar-custom {
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+}
+
+
+/* =========================================================
+   REMOVE NAVBAR INTERNAL SCROLLING
+   ========================================================= */
+
+/*
+   The navbar itself must never become a scrolling container.
+*/
+
+.navbar-custom,
+.navbar-custom > .container,
+.navbar-custom .container-fluid {
+    overflow: visible !important;
+}
+
+
+/* =========================================================
+   MOBILE MENU
+   ========================================================= */
+
+/*
+   Keep the dropdown menu inside the viewport horizontally.
+   Do NOT make the navbar itself scroll.
+*/
+
+@media (max-width: 991.98px) {
+
+    .navbar-collapse {
+        position: absolute !important;
+
+        top: 100% !important;
+        left: 0 !important;
+        right: 0 !important;
+
+        width: 100% !important;
+        max-width: 100% !important;
+
+        overflow-x: hidden !important;
+
+        /*
+           Remove independent vertical scrolling from the
+           navbar dropdown.
+        */
+        overflow-y: visible !important;
+
+        /*
+           Keep the menu visually above page content.
+        */
+        z-index: 1051 !important;
+    }
+}
+
+
+/* =========================================================
+   RTL FIX
+   ========================================================= */
+
+@media (max-width: 991.98px) {
+
+    [dir="rtl"] .navbar-collapse {
+        left: 0 !important;
+        right: 0 !important;
+    }
+}
+
+
+/* =========================================================
+   PREVENT BOOTSTRAP FROM REINTRODUCING STICKY BEHAVIOR
+   ========================================================= */
+
+.navbar-custom.sticky-top {
+    position: fixed !important;
+    top: 0 !important;
+}
+
+
+/* =========================================================
+   FINAL SAFETY
+   ========================================================= */
+
+/*
+   No ancestor should be able to clip the fixed navbar.
+*/
+
+header,
+nav.navbar-custom {
+    overflow: visible !important;
+}
+
+/* =========================================================
+   ASTROGUIDE — FINAL NAVBAR RESPONSIVE FIX
+   iPAD MINI / TABLET / MOBILE
+   ========================================================= */
+
+
+/* =========================================================
+   1. BASE FIXED NAVBAR
+   ========================================================= */
+
+.navbar-custom {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+
+    width: 100% !important;
+    max-width: 100% !important;
+
+    min-height: 63px;
+
+    margin: 0 !important;
+    padding: 10px 0;
+
+    z-index: 1050 !important;
+
+    overflow: visible !important;
+
+    background-color: var(--bg-color) !important;
+    border-bottom: 1px solid var(--border-color);
+
+    box-shadow: none;
+}
+
+
+/* =========================================================
+   2. BODY SPACE FOR FIXED NAVBAR
+   ========================================================= */
+
+body {
+    padding-top: 63px;
+}
+
+
+/* =========================================================
+   3. NAVBAR CONTAINER
+   ========================================================= */
+
+.navbar-custom > .container,
+.navbar-custom > .container-fluid {
+    width: 100%;
+    max-width: 100%;
+
     display: flex;
     align-items: center;
-    gap: 10px;
-    margin-bottom: 12px;
 
-    font-size: 0.9375rem;
-    color: var(--text-muted);
-}
-#brand-title{
-    color:var(--secondary-color) !important;
-}
-.contact-item svg {
-    flex-shrink: 0;
-    width: 18px;
-    height: 18px;
+    min-width: 0;
 
-    color: var(--secondary-color);
-    stroke-width: 1.8;
-
-    transition:
-        color var(--transition),
-        transform var(--transition);
+    overflow: visible !important;
 }
 
-.contact-item:hover {
-    color: var(--text-color);
+
+/* =========================================================
+   4. BRAND
+   ========================================================= */
+
+.navbar-brand-custom {
+    display: flex !important;
+    align-items: center;
+
+    gap: 7px;
+
+    min-width: 0;
+    flex: 0 1 auto;
+
+    white-space: nowrap;
+
+    margin-right: auto;
 }
 
-.contact-item:hover svg {
-    color: var(--secondary-light);
-    transform: translateY(-1px);
+.navbar-brand-custom img {
+    width: 38px;
+    height: 38px;
+
+    object-fit: contain;
+
+    flex: 0 0 38px;
+}
+
+.navbar-brand-custom span {
+    min-width: 0;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+/* =========================================================
+   5. MOBILE / TABLET CONTROLS
+   ORDER:
+   DARK MODE → RTL → HAMBURGER
+   ========================================================= */
+
+.mobile-nav-controls {
+    display: none;
+}
+
+
+/* =========================================================
+   6. TABLET + MOBILE
+   0–991px
+   ========================================================= */
+
+@media (max-width: 991.98px) {
+
+    body {
+        padding-top: 64px;
+    }
+
+    .navbar-custom {
+        min-height: 64px;
+        padding: 10px 0;
+
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+
+        z-index: 1050 !important;
+
+        overflow: visible !important;
+    }
+
+
+    /* -----------------------------------------
+       Navbar container
+       ----------------------------------------- */
+
+    .navbar-custom > .container,
+    .navbar-custom > .container-fluid {
+        display: flex !important;
+        align-items: center !important;
+
+        width: 100% !important;
+        max-width: 100% !important;
+
+        min-width: 0 !important;
+
+        padding-left: 16px;
+        padding-right: 16px;
+
+        overflow: visible !important;
+    }
+
+
+    /* -----------------------------------------
+       Brand
+       ----------------------------------------- */
+
+    .navbar-brand-custom {
+        flex: 1 1 auto !important;
+
+        min-width: 0 !important;
+        max-width: calc(100% - 125px);
+
+        margin-right: 8px !important;
+
+        overflow: hidden;
+    }
+
+    .navbar-brand-custom img {
+        width: 38px;
+        height: 38px;
+
+        flex: 0 0 38px;
+    }
+
+
+    /* -----------------------------------------
+       Controls
+       ----------------------------------------- */
+
+    .mobile-nav-controls {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: flex-end !important;
+
+        flex: 0 0 auto !important;
+
+        width: auto !important;
+        min-width: 0 !important;
+
+        margin-left: auto !important;
+
+        gap: 6px !important;
+
+        position: relative;
+        z-index: 1060;
+    }
+
+
+    /* -----------------------------------------
+       Dark / RTL / Hamburger buttons
+       ----------------------------------------- */
+
+    .mobile-nav-controls .nav-utility-btn,
+    .mobile-nav-controls .navbar-toggler-custom {
+
+        display: flex !important;
+
+        align-items: center !important;
+        justify-content: center !important;
+
+        width: 34px !important;
+        height: 34px !important;
+
+        min-width: 34px !important;
+        min-height: 34px !important;
+
+        max-width: 34px !important;
+        max-height: 34px !important;
+
+        padding: 0 !important;
+        margin: 0 !important;
+
+        flex: 0 0 34px !important;
+
+        border-radius: 50%;
+
+        box-sizing: border-box;
+
+        position: relative;
+        z-index: 1061;
+    }
+
+
+    /* -----------------------------------------
+       Icons
+       ----------------------------------------- */
+
+    .mobile-nav-controls .theme-toggle-icon,
+    .mobile-nav-controls .navbar-toggler-icon {
+
+        width: 16px !important;
+        height: 16px !important;
+
+        max-width: 16px !important;
+        max-height: 16px !important;
+    }
+
+
+    .mobile-nav-controls .direction-toggle-text {
+        display: flex !important;
+
+        align-items: center;
+        justify-content: center;
+
+        width: 100%;
+        height: 100%;
+
+        font-size: 9px !important;
+        line-height: 1 !important;
+    }
+
+
+    /* -----------------------------------------
+       Remove Bootstrap default spacing
+       ----------------------------------------- */
+
+    .navbar-toggler-custom {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+
+    /* -----------------------------------------
+       Navbar collapse
+       ----------------------------------------- */
+
+    .navbar-collapse {
+        position: absolute !important;
+
+        top: calc(100% + 1px) !important;
+
+        left: 12px !important;
+        right: 12px !important;
+
+        width: auto !important;
+        max-width: none !important;
+
+        padding: 14px !important;
+
+        margin: 0 !important;
+
+        background-color: var(--bg-card) !important;
+
+        border: 1px solid var(--border-color) !important;
+        border-radius: var(--radius-md) !important;
+
+        box-shadow: var(--shadow-lg) !important;
+
+        overflow: visible !important;
+
+        z-index: 1055 !important;
+    }
+
+
+    /* -----------------------------------------
+       Navbar navigation
+       ----------------------------------------- */
+
+    .navbar-nav {
+        width: 100% !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+
+        align-items: stretch !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        min-width: 0 !important;
+    }
+
+
+    .navbar-nav .nav-item {
+        width: 100% !important;
+
+        min-width: 0 !important;
+
+        margin: 0 !important;
+    }
+
+
+    .nav-link-custom {
+        display: flex !important;
+        align-items: center !important;
+
+        width: 100% !important;
+        max-width: 100% !important;
+
+        min-height: 42px;
+
+        padding: 10px 12px !important;
+
+        white-space: normal !important;
+
+        box-sizing: border-box;
+    }
+
+
+    /* -----------------------------------------
+       Dropdowns
+       ----------------------------------------- */
+
+    .dropdown-menu-custom,
+    .navbar .dropdown-menu {
+
+        position: static !important;
+
+        width: 100% !important;
+        min-width: 0 !important;
+        max-width: 100% !important;
+
+        margin: 4px 0 6px !important;
+
+        padding: 6px !important;
+
+        box-sizing: border-box;
+
+        background-color: var(--bg-card) !important;
+
+        border: 1px solid var(--border-color);
+
+        border-radius: var(--radius-sm);
+
+        box-shadow: none;
+    }
+
+
+    .dropdown-item-custom {
+        display: block;
+
+        width: 100%;
+
+        padding: 10px 12px;
+
+        box-sizing: border-box;
+    }
+
+
+    /* -----------------------------------------
+       Login inside mobile menu
+       ----------------------------------------- */
+
+    .nav-cta-group {
+        display: flex !important;
+
+        flex-direction: column !important;
+        align-items: stretch !important;
+
+        width: 100% !important;
+
+        margin: 12px 0 0 !important;
+        padding-top: 12px;
+
+        gap: 8px !important;
+
+        border-top: 1px solid var(--border-color);
+    }
+
+    .nav-cta-group .btn {
+        width: 100% !important;
+
+        min-height: 44px;
+
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    /* -----------------------------------------
+       Utility group inside menu, if present
+       ----------------------------------------- */
+
+    .navbar-collapse .nav-utility-group {
+        display: none !important;
+    }
+
+
+    /* -----------------------------------------
+       Do not let the menu create page overflow
+       ----------------------------------------- */
+
+    .navbar-custom,
+    .navbar-custom > .container,
+    .navbar-custom > .container-fluid,
+    .navbar-collapse,
+    .navbar-nav {
+        overflow-x: visible !important;
+    }
+}
+
+
+/* =========================================================
+   7. iPAD MINI PORTRAIT
+   768px–850px
+   ========================================================= */
+
+@media (min-width: 768px) and (max-width: 850px)
+       and (orientation: portrait) {
+
+    /* -----------------------------------------
+       Navbar
+       ----------------------------------------- */
+
+    .navbar-custom {
+        min-height: 68px;
+
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+
+
+    body {
+        padding-top: 68px;
+    }
+
+
+    /* -----------------------------------------
+       Container
+       ----------------------------------------- */
+
+    .navbar-custom > .container,
+    .navbar-custom > .container-fluid {
+
+        width: 100% !important;
+        max-width: 100% !important;
+
+        padding-left: 24px !important;
+        padding-right: 24px !important;
+    }
+
+
+    /* -----------------------------------------
+       Brand
+       ----------------------------------------- */
+
+    .navbar-brand-custom {
+        max-width: calc(100% - 132px);
+
+        gap: 8px;
+
+        flex: 1 1 auto !important;
+    }
+
+    .navbar-brand-custom img {
+        width: 40px;
+        height: 40px;
+
+        flex-basis: 40px;
+    }
+
+
+    .navbar-brand-custom {
+        font-size: 1.6rem;
+    }
+
+
+    /* -----------------------------------------
+       Controls
+       ----------------------------------------- */
+
+    .mobile-nav-controls {
+
+        display: flex !important;
+
+        align-items: center !important;
+        justify-content: flex-end !important;
+
+        gap: 8px !important;
+
+        width: auto !important;
+
+        flex: 0 0 auto !important;
+
+        margin-left: auto !important;
+    }
+
+
+    .mobile-nav-controls .nav-utility-btn,
+    .mobile-nav-controls .navbar-toggler-custom {
+
+        width: 38px !important;
+        height: 38px !important;
+
+        min-width: 38px !important;
+        min-height: 38px !important;
+
+        max-width: 38px !important;
+        max-height: 38px !important;
+
+        flex: 0 0 38px !important;
+
+        padding: 0 !important;
+
+        margin: 0 !important;
+    }
+
+
+    .mobile-nav-controls .theme-toggle-icon,
+    .mobile-nav-controls .navbar-toggler-icon {
+
+        width: 17px !important;
+        height: 17px !important;
+    }
+
+
+    .mobile-nav-controls .direction-toggle-text {
+        font-size: 10px !important;
+    }
+
+
+    /* -----------------------------------------
+       iPad dropdown
+       ----------------------------------------- */
+
+    .navbar-collapse {
+
+        top: calc(100% + 1px) !important;
+
+        left: 24px !important;
+        right: 24px !important;
+
+        width: auto !important;
+
+        padding: 18px !important;
+
+        max-height: none !important;
+
+        overflow: visible !important;
+    }
+
+
+    .navbar-nav .nav-link-custom {
+        min-height: 46px;
+
+        padding: 11px 14px !important;
+
+        font-size: 1rem;
+    }
+
+
+    .dropdown-item-custom {
+        padding: 11px 14px;
+        font-size: 0.95rem;
+    }
+
+
+    /* -----------------------------------------
+       Login
+       ----------------------------------------- */
+
+    .nav-cta-group {
+        margin-top: 14px !important;
+        padding-top: 14px !important;
+    }
+
+    .nav-cta-group .btn {
+        min-height: 46px;
+    }
+}
+
+
+/* =========================================================
+   8. iPAD MINI PORTRAIT — 768px EXACT
+   Additional protection against overlap
+   ========================================================= */
+
+@media (min-width: 768px) and (max-width: 800px)
+       and (orientation: portrait) {
+
+    .navbar-custom > .container,
+    .navbar-custom > .container-fluid {
+
+        padding-left: 18px !important;
+        padding-right: 18px !important;
+    }
+
+
+    .navbar-brand-custom {
+        max-width: calc(100% - 128px);
+    }
+
+
+    .mobile-nav-controls {
+        gap: 6px !important;
+    }
+
+
+    .mobile-nav-controls .nav-utility-btn,
+    .mobile-nav-controls .navbar-toggler-custom {
+
+        width: 36px !important;
+        height: 36px !important;
+
+        min-width: 36px !important;
+        min-height: 36px !important;
+
+        flex-basis: 36px !important;
+    }
+
+
+    .mobile-nav-controls .theme-toggle-icon,
+    .mobile-nav-controls .navbar-toggler-icon {
+
+        width: 16px !important;
+        height: 16px !important;
+    }
+
+
+    .navbar-collapse {
+        left: 18px !important;
+        right: 18px !important;
+    }
+}
+
+
+/* =========================================================
+   9. TABLET LANDSCAPE
+   851px–1199px
+   ========================================================= */
+
+@media (min-width: 851px) and (max-width: 1199.98px)
+       and (orientation: landscape) {
+
+    body {
+        padding-top: 63px;
+    }
+
+
+    .navbar-custom {
+        min-height: 63px;
+
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+
+    .navbar-custom > .container,
+    .navbar-custom > .container-fluid {
+
+        padding-left: 18px !important;
+        padding-right: 18px !important;
+    }
+
+
+    /* Desktop navigation is allowed here */
+    .mobile-nav-controls {
+        display: none !important;
+    }
+
+
+    .navbar-collapse {
+        position: static !important;
+
+        display: flex !important;
+
+        width: auto !important;
+
+        padding: 0 !important;
+
+        margin: 0 !important;
+
+        background: transparent !important;
+
+        border: 0 !important;
+
+        box-shadow: none !important;
+
+        overflow: visible !important;
+    }
+
+
+    .navbar-nav {
+        flex-direction: row !important;
+
+        align-items: center !important;
+    }
+
+
+    .nav-link-custom {
+        white-space: nowrap !important;
+
+        padding-left: 8px !important;
+        padding-right: 8px !important;
+    }
+
+
+    .nav-utility-group {
+        display: flex !important;
+
+        margin-top: 0 !important;
+
+        gap: 10px;
+    }
+
+
+    .nav-cta-group {
+        display: flex !important;
+
+        flex-direction: row !important;
+
+        margin-top: 0 !important;
+    }
+}
+
+
+/* =========================================================
+   10. MOBILE PORTRAIT
+   BELOW 767px
+   ========================================================= */
+
+@media (max-width: 767.98px) {
+
+    .navbar-custom {
+        min-height: 64px;
+
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+
+    body {
+        padding-top: 64px;
+    }
+
+
+    .navbar-custom > .container,
+    .navbar-custom > .container-fluid {
+
+        padding-left: 14px !important;
+        padding-right: 14px !important;
+    }
+
+
+    .navbar-brand-custom {
+        max-width: calc(100% - 120px);
+
+        font-size: 1.5rem;
+    }
+
+
+    .navbar-brand-custom img {
+        width: 36px;
+        height: 36px;
+
+        flex-basis: 36px;
+    }
+
+
+    .mobile-nav-controls {
+        gap: 5px !important;
+    }
+
+
+    .mobile-nav-controls .nav-utility-btn,
+    .mobile-nav-controls .navbar-toggler-custom {
+
+        width: 33px !important;
+        height: 33px !important;
+
+        min-width: 33px !important;
+        min-height: 33px !important;
+
+        flex-basis: 33px !important;
+    }
+
+
+    .mobile-nav-controls .theme-toggle-icon,
+    .mobile-nav-controls .navbar-toggler-icon {
+
+        width: 15px !important;
+        height: 15px !important;
+    }
+
+
+    .mobile-nav-controls .direction-toggle-text {
+        font-size: 8px !important;
+    }
+
+
+    .navbar-collapse {
+
+        left: 14px !important;
+        right: 14px !important;
+
+        padding: 14px !important;
+    }
+}
+
+
+/* =========================================================
+   11. SAMSUNG S8+ — 360px
+   ========================================================= */
+
+@media (min-width: 321px) and (max-width: 380px) {
+
+    .navbar-custom {
+        min-height: 58px;
+
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+
+
+    body {
+        padding-top: 58px;
+    }
+
+
+    .navbar-custom > .container,
+    .navbar-custom > .container-fluid {
+
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+
+
+    .navbar-brand-custom {
+        max-width: calc(100% - 112px);
+
+        font-size: 1.4rem;
+
+        gap: 5px;
+    }
+
+
+    .navbar-brand-custom img {
+        width: 34px;
+        height: 34px;
+
+        flex-basis: 34px;
+    }
+
+
+    .mobile-nav-controls {
+        gap: 4px !important;
+    }
+
+
+    .mobile-nav-controls .nav-utility-btn,
+    .mobile-nav-controls .navbar-toggler-custom {
+
+        width: 31px !important;
+        height: 31px !important;
+
+        min-width: 31px !important;
+        min-height: 31px !important;
+
+        flex-basis: 31px !important;
+    }
+
+
+    .mobile-nav-controls .theme-toggle-icon,
+    .mobile-nav-controls .navbar-toggler-icon {
+
+        width: 14px !important;
+        height: 14px !important;
+    }
+
+
+    .mobile-nav-controls .direction-toggle-text {
+        font-size: 8px !important;
+    }
+
+
+    .navbar-collapse {
+        left: 10px !important;
+        right: 10px !important;
+
+        padding: 12px !important;
+    }
+}
+
+
+/* =========================================================
+   12. VERY SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 320px) {
+
+    .navbar-custom {
+        min-height: 56px;
+
+        padding-top: 7px;
+        padding-bottom: 7px;
+    }
+
+
+    body {
+        padding-top: 56px;
+    }
+
+
+    .navbar-custom > .container,
+    .navbar-custom > .container-fluid {
+
+        padding-left: 7px !important;
+        padding-right: 7px !important;
+    }
+
+
+    .navbar-brand-custom {
+        max-width: calc(100% - 105px);
+
+        font-size: 1.3rem;
+
+        gap: 4px;
+    }
+
+
+    .navbar-brand-custom img {
+        width: 30px;
+        height: 30px;
+
+        flex-basis: 30px;
+    }
+
+
+    .mobile-nav-controls {
+        gap: 3px !important;
+    }
+
+
+    .mobile-nav-controls .nav-utility-btn,
+    .mobile-nav-controls .navbar-toggler-custom {
+
+        width: 29px !important;
+        height: 29px !important;
+
+        min-width: 29px !important;
+        min-height: 29px !important;
+
+        flex-basis: 29px !important;
+    }
+
+
+    .mobile-nav-controls .theme-toggle-icon,
+    .mobile-nav-controls .navbar-toggler-icon {
+
+        width: 13px !important;
+        height: 13px !important;
+    }
+
+
+    .mobile-nav-controls .direction-toggle-text {
+        font-size: 7px !important;
+    }
+
+
+    .navbar-collapse {
+        left: 7px !important;
+        right: 7px !important;
+
+        padding: 10px !important;
+    }
+}
+
+
+/* =========================================================
+   13. RTL — TABLET / MOBILE
+   ========================================================= */
+
+@media (max-width: 991.98px) {
+
+    [dir="rtl"] .navbar-brand-custom {
+        margin-left: 8px !important;
+        margin-right: 0 !important;
+    }
+
+
+    [dir="rtl"] .mobile-nav-controls {
+        margin-right: auto !important;
+        margin-left: 0 !important;
+    }
+
+
+    [dir="rtl"] .navbar-collapse {
+        left: 0 !important;
+        right: 0 !important;
+    }
+}
+
+
+/* =========================================================
+   14. IMPORTANT — NEVER LET NAV ITEMS OVERLAP CONTROLS
+   ========================================================= */
+
+@media (max-width: 991.98px) {
+
+    .navbar-custom .navbar-collapse {
+        flex-basis: auto !important;
+    }
+
+
+    .navbar-custom .navbar-nav {
+        flex-basis: 100% !important;
+    }
+
+
+    .navbar-custom .mobile-nav-controls {
+        position: relative !important;
+
+        flex-shrink: 0 !important;
+
+        z-index: 1060 !important;
+    }
+
+
+    .navbar-custom .mobile-nav-controls > * {
+        flex-shrink: 0 !important;
+    }
+
+
+    .navbar-custom .navbar-toggler {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+}
+
+
+/* =========================================================
+   15. REMOVE CONFLICTING DESKTOP HOVER DROPDOWN
+   ON TABLET / MOBILE
+   ========================================================= */
+
+@media (max-width: 991.98px) {
+
+    .navbar .dropdown-menu {
+        opacity: 1 !important;
+
+        visibility: visible;
+
+        pointer-events: auto;
+
+        transform: none !important;
+    }
+
+
+    .navbar .dropdown:not(.show) > .dropdown-menu {
+        display: none !important;
+    }
+
+
+    .navbar .dropdown.show > .dropdown-menu {
+        display: block !important;
+    }
+}
+
+
+/* =========================================================
+   16. DESKTOP HOVER DROPDOWN ONLY
+   ========================================================= */
+
+@media (min-width: 992px) {
+
+    .navbar .dropdown-menu {
+        display: block;
+
+        opacity: 0;
+        visibility: hidden;
+
+        pointer-events: none;
+
+        transform: translateY(10px);
+
+        transition:
+            opacity 0.25s ease,
+            transform 0.25s ease,
+            visibility 0.25s ease;
+    }
+
+
+    .navbar .dropdown:hover > .dropdown-menu {
+
+        opacity: 1;
+
+        visibility: visible;
+
+        pointer-events: auto;
+
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================================================
+   17. FINAL OVERFLOW PROTECTION
+   ========================================================= */
+
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+
+    overflow-x: hidden !important;
+}
+
+
+.navbar-custom {
+    overflow: visible !important;
+}
+
+
+.navbar-custom > .container,
+.navbar-custom > .container-fluid {
+    overflow: visible !important;
+}
+
+
+.navbar-custom .mobile-nav-controls {
+    overflow: visible !important;
+}
+
+
+/* =========================================================
+   18. FIX BOOTSTRAP COLLAPSE WIDTH
+   ========================================================= */
+
+@media (max-width: 991.98px) {
+
+    .navbar-collapse.collapse {
+        width: auto !important;
+        flex-basis: auto !important;
+    }
+
+
+    .navbar-collapse.collapsing {
+        position: absolute !important;
+
+        top: calc(100% + 1px) !important;
+
+        left: 14px !important;
+        right: 14px !important;
+
+        width: auto !important;
+
+        height: auto !important;
+
+        overflow: hidden !important;
+
+        transition: height 0.25s ease;
+    }
+}
+
+
+/* =========================================================
+   19. IPAD MINI COLLAPSE WIDTH
+   ========================================================= */
+
+@media (min-width: 768px) and (max-width: 850px)
+       and (orientation: portrait) {
+
+    .navbar-collapse.collapse,
+    .navbar-collapse.collapsing {
+
+        left: 24px !important;
+        right: 24px !important;
+
+        width: auto !important;
+    }
+}
+
+
+/* =========================================================
+   20. FINAL BUTTON ALIGNMENT
+   ========================================================= */
+
+@media (max-width: 991.98px) {
+
+    .mobile-nav-controls {
+        align-self: center !important;
+    }
+
+
+    .mobile-nav-controls .nav-utility-btn,
+    .mobile-nav-controls .navbar-toggler-custom {
+
+        align-self: center !important;
+
+        vertical-align: middle !important;
+    }
+}
+
+
+/* =========================================================
+   FOOTER — IPAD MINI / TABLET PORTRAIT
+   ========================================================= */
+
+@media (min-width: 700px) and (max-width: 850px)
+       and (orientation: portrait) {
+
+    /* -----------------------------------------
+       Footer overall spacing
+       ----------------------------------------- */
+
+    .footer-custom {
+        padding-top: 48px;
+        padding-bottom: 24px;
+    }
+
+    .footer-custom .container {
+        width: 100%;
+        max-width: 720px;
+        margin: 0 auto;
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    /* -----------------------------------------
+       Force the 5 columns into the desired layout
+       ----------------------------------------- */
+
+    .footer-custom .row {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    /* 1. Brand column → full width */
+    .footer-custom .row > .col-lg-4 {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+        width: 100% !important;
+        text-align: center;
+        margin-bottom: 8px;
+    }
+
+    /* ---------- Logo + title perfectly centered ---------- */
+    .footer-brand {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        width: 100% !important;
+        margin-bottom: 10px !important;
+    }
+
+    .footer-brand .navbar-brand-custom {
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 8px !important;
+        margin: 0 auto !important;
+        white-space: nowrap;
+    }
+
+    .footer-brand .navbar-brand-custom img {
+        width: 38px !important;
+        height: 38px !important;
+        flex-shrink: 0;
+    }
+
+    /* ---------- Tagline perfectly centered under logo ---------- */
+    .footer-tagline {
+        display: block;
+        width: 100%;
+        max-width: 480px;
+        margin: 0 auto 0 auto !important;
+        text-align: center !important;
+        line-height: 1.5;
+    }
+
+    /* ---------- Social icons centered ---------- */
+    .footer-social {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        width: 100% !important;
+        margin-top: 22px !important;
+        margin-bottom: 36px !important;
+        gap: 12px;
+    }
+
+    .footer-social a {
+        width: 40px;
+        height: 40px;
+        flex: 0 0 40px;
+    }
+
+    /* 2. Quick Links + Services → one row (50% each) */
+    .footer-custom .row > .col-lg-2:nth-child(2),
+    .footer-custom .row > .col-lg-2:nth-child(3) {
+        flex: 0 0 50% !important;
+        max-width: 50% !important;
+        width: 50% !important;
+    }
+
+    /* 3. Additional Pages + Contact → next row (50% each) */
+    .footer-custom .row > .col-lg-2:nth-child(4),
+    .footer-custom .row > .col-lg-2:nth-child(5) {
+        flex: 0 0 50% !important;
+        max-width: 50% !important;
+        width: 50% !important;
+    }
+
+    /* Headings & links */
+    .footer-heading {
+        margin-bottom: 14px;
+        text-align: left;
+    }
+
+    .footer-link {
+        padding: 5px 0;
+        line-height: 1.5;
+    }
+
+    .contact-item {
+        width: 100%;
+        min-width: 0;
+    }
+
+    /* Footer bottom */
+    .footer-bottom {
+        margin-top: 38px;
+        padding-top: 20px;
+    }
+
+    .footer-bottom-links {
+        justify-content: center;
+        text-align: center;
+    }
+}
+/* =========================================================
+   FOOTER — MOBILE / SAMSUNG S8+ (≤ 767px)
+   Logo + title + subtitle perfectly centered
+   ========================================================= */
+
+@media (max-width: 767.98px) {
+
+    /* Brand column full width */
+    .footer-custom .row > .col-lg-4 {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+        width: 100% !important;
+        text-align: center;
+    }
+
+    /* Logo + “AstroGuide” perfectly centered */
+    .footer-brand {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        width: 100% !important;
+        margin-bottom: 10px !important;
+    }
+
+    .footer-brand .navbar-brand-custom {
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 7px !important;
+        margin: 0 auto !important;
+        white-space: nowrap;
+    }
+
+    .footer-brand .navbar-brand-custom img {
+        width: 36px !important;
+        height: 36px !important;
+        flex-shrink: 0;
+    }
+
+    /* Tagline perfectly centered under the logo */
+    .footer-tagline {
+        display: block !important;
+        width: 100% !important;
+        max-width: 320px;
+        margin: 0 auto 0 auto !important;
+        text-align: center !important;
+        line-height: 1.5;
+    }
+
+    /* Social icons already centered – keep them consistent */
+    .footer-social {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        width: 100% !important;
+        margin-top: 28px !important;
+        margin-bottom: 24px !important;
+        gap: 10px;
+    }
 }

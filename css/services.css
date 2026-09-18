@@ -1,382 +1,2187 @@
-.page-hero {
-    background: var(--primary-color);
-    color: #fff;
-    padding: 72px 0 64px;
+/* =========================================================
+   ASTROGUIDE — SERVICES PAGE
+   PROFESSIONAL REDESIGN
+   ========================================================= */
+
+
+/* =========================================================
+   01. SERVICES HERO
+   ========================================================= */
+
+.services-hero {
+
     position: relative;
-    overflow: hidden
-}
 
-.page-hero h1 {
-    color: #fff
-}
-
-.page-hero p {
-    color: rgba(255, 255, 255, .75);
-    max-width: 650px
-}
-
-.page-hero .section-label {
-    color: var(--secondary-light)
-}
-
-[data-theme="dark"] .page-hero {
-    background: var(--bg-alt)
-}
-
-[data-theme="dark"] .page-hero h1 {
-    color: var(--text-color)
-}
-
-.content-image {
     width: 100%;
-    height: 360px;
-    object-fit: cover;
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-md)
-}
 
-.content-panel {
-    background: var(--bg-card);
-    border: 1px solid var(--border-color);
-    border-radius: var(--radius-md);
-    padding: 32px;
-    height: 100%
-}
+    min-height: 88vh;
 
-.content-panel h3 {
-    margin-bottom: 12px
-}
-
-.content-panel p {
-    color: var(--text-muted);
-    font-size: .97rem
-}
-
-.service-detail {
     display: flex;
+
     align-items: center;
-    gap: 24px
-}
 
-.service-detail-icon {
-    width: 56px;
-    height: 56px;
-    flex: 0 0 56px;
-    border-radius: var(--radius-sm);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: var(--bg-alt);
-    color: var(--secondary-color);
-    font-size: 1.5rem
-}
+    overflow: hidden;
 
-.mini-list {
-    display: grid;
-    gap: 10px;
-    margin: 18px 0
-}
+    isolation: isolate;
 
-.mini-list li {
-    color: var(--text-muted);
-    font-size: .94rem;
-    display: flex;
-    gap: 10px
-}
-
-.mini-list i {
-    color: var(--secondary-color)
-}
-
-.page-cta {
-    background: var(--bg-alt);
-    padding: 40px;
-    border-radius: var(--radius-lg)
-}
-
-.zodiac-selector {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 12px
-}
-
-.zodiac-sign-btn {
-    border: 1px solid var(--border-color);
-    background: var(--bg-card);
-    border-radius: var(--radius-md);
-    padding: 16px 8px;
-    color: var(--text-color);
-    cursor: pointer;
-    transition: all var(--transition)
-}
-
-.zodiac-sign-btn:hover,
-.zodiac-sign-btn.active {
-    border-color: var(--secondary-color);
-    background: var(--primary-color);
-    color: #fff
-}
-
-.zodiac-sign-btn .symbol {
-    display: block;
-    font-size: 1.8rem;
-    color: var(--secondary-color);
-    margin-bottom: 6px
-}
-
-.zodiac-sign-btn.active .symbol {
-    color: var(--secondary-light)
-}
-
-.horoscope-display {
-    background: var(--primary-color);
     color: #fff;
-    border-radius: var(--radius-lg);
-    padding: 36px
+
+    background-image:
+        url("../images/services-hero.png");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
 }
 
-.horoscope-display h2 {
-    color: #fff
-}
 
-.horoscope-display p {
-    color: rgba(255, 255, 255, .78)
-}
+.services-hero-overlay {
 
-.horoscope-display .insight-card {
-    background: rgba(255, 255, 255, .08);
-    border: 1px solid rgba(255, 255, 255, .14);
-    border-radius: var(--radius-sm);
-    padding: 18px;
-    height: 100%
-}
-
-.horoscope-display .insight-card h5 {
-    font-family: var(--font-body);
-    font-size: .85rem;
-    color: var(--secondary-light);
-    text-transform: uppercase;
-    letter-spacing: 1px
-}
-
-.horoscope-display .insight-card p {
-    font-size: .92rem;
-    margin: 0
-}
-
-.plan-card {
-    background: var(--bg-card);
-    border: 1px solid var(--border-color);
-    border-radius: var(--radius-md);
-    padding: 32px;
-    height: 100%;
-    transition: all var(--transition);
-    position: relative
-}
-
-.plan-card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-md)
-}
-
-.plan-card.popular {
-    border: 2px solid var(--secondary-color);
-    box-shadow: var(--shadow-md)
-}
-
-.popular-badge {
     position: absolute;
-    top: -13px;
-    left: 50%;
-    transform: translateX(-50%);
+
+    inset: 0;
+
+    z-index: -1;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(8, 11, 31, .95) 0%,
+            rgba(8, 11, 31, .82) 36%,
+            rgba(8, 11, 31, .52) 65%,
+            rgba(8, 11, 31, .18) 100%
+        );
+
+}
+
+
+.services-hero-content {
+
+    width: min(700px, 65%);
+
+    padding: 80px 0;
+
+}
+
+
+.services-hero .section-label {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color: var(--secondary-light);
+
+    opacity: 0;
+
+    transform: translateY(25px);
+
+    animation:
+        servicesLabelReveal
+        .8s
+        ease-out
+        .15s
+        forwards;
+
+}
+
+
+.services-hero .section-label::before {
+
+    content: "";
+
+    width: 34px;
+
+    height: 1px;
+
     background: var(--secondary-color);
-    color: var(--primary-color);
-    padding: 4px 18px;
-    border-radius: var(--radius-pill);
-    font-size: .75rem;
-    font-weight: 700;
-    white-space: nowrap
+
 }
 
-.plan-price {
-    font-family: var(--font-heading);
-    font-size: 3rem;
-    font-weight: 700;
-    color: var(--primary-color)
-}
 
-[data-theme="dark"] .plan-price {
-    color: var(--primary-light)
-}
+.services-hero h1 {
 
-.plan-price small {
-    font-family: var(--font-body);
-    font-size: .9rem;
-    font-weight: 400;
-    color: var(--text-muted)
-}
-
-.comparison-table {
-    background: var(--bg-card);
-    border: 1px solid var(--border-color);
-    border-radius: var(--radius-md);
-    overflow: hidden
-}
-
-.comparison-table th,
-.comparison-table td {
-    padding: 14px 18px;
-    border-color: var(--border-color);
-    color: var(--text-color);
-    font-size: .9rem
-}
-
-.comparison-table th {
-    background: var(--bg-alt);
-    font-weight: 600
-}
-
-.comparison-table i {
-    color: var(--secondary-color)
-}
-
-.value-card {
-    display: flex;
-    gap: 18px;
-    align-items: flex-start
-}
-
-.value-icon {
-    width: 44px;
-    height: 44px;
-    flex: 0 0 44px;
-    border-radius: 50%;
-    background: var(--bg-alt);
-    color: var(--secondary-color);
-    display: flex;
-    align-items: center;
-    justify-content: center
-}
-
-.faq-item {
-    border-bottom: 1px solid var(--border-color);
-    padding: 18px 0
-}
-
-.faq-item h5 {
-    font-family: var(--font-body);
-    font-size: 1rem;
-    font-weight: 600;
-    margin: 0 0 8px
-}
-
-.faq-item p {
-    font-size: .92rem;
-    color: var(--text-muted);
-    margin: 0
-}
-
-.profile-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px
-}
-
-.profile-card {
-    background: var(--bg-card);
-    border: 1px solid var(--border-color);
-    border-radius: var(--radius-md);
-    overflow: hidden
-}
-
-.profile-card img {
-    width: 100%;
-    height: 270px;
-    object-fit: cover
-}
-
-.profile-card .profile-body {
-    padding: 22px
-}
-
-.profile-card p {
-    font-size: .9rem;
-    color: var(--text-muted)
-}
-
-.badge-soft {
-    display: inline-block;
-    background: var(--bg-alt);
-    color: var(--secondary-dark);
-    font-size: .75rem;
-    padding: 4px 10px;
-    border-radius: var(--radius-pill);
-    font-weight: 600
-}
-
-.timeline {
-    display: grid;
-    gap: 24px
-}
-
-.timeline-item {
-    display: flex;
-    gap: 20px
-}
-
-.timeline-marker {
-    width: 38px;
-    height: 38px;
-    flex: 0 0 38px;
-    border-radius: 50%;
-    background: var(--primary-color);
     color: #fff;
+
+    max-width: 720px;
+
+    margin-top: 18px;
+
+    margin-bottom: 22px;
+
+    opacity: 0;
+
+    transform: translateY(35px);
+
+    animation:
+        servicesHeadingReveal
+        1s
+        cubic-bezier(.22, .61, .36, 1)
+        .3s
+        forwards;
+
+}
+
+
+.services-hero p {
+
+    max-width: 620px;
+
+    color: rgba(255,255,255,.76);
+
+    margin-bottom: 30px;
+
+    opacity: 0;
+
+    transform: translateY(25px);
+
+    animation:
+        servicesParagraphReveal
+        .9s
+        ease-out
+        .55s
+        forwards;
+
+}
+
+
+.services-hero-actions {
+
     display: flex;
+
     align-items: center;
+
+    gap: 24px;
+
+    opacity: 0;
+
+    transform: translateY(20px);
+
+    animation:
+        servicesActionsReveal
+        .8s
+        ease-out
+        .75s
+        forwards;
+
+}
+
+
+.services-text-link {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: rgba(255,255,255,.82);
+
+    text-decoration: none;
+
+    transition:
+        color .3s ease,
+        gap .3s ease;
+
+}
+
+
+.services-text-link svg {
+
+    width: 17px;
+
+    height: 17px;
+
+}
+
+
+.services-text-link:hover {
+
+    color: var(--secondary-light);
+
+    gap: 13px;
+
+}
+
+
+/* =========================================================
+   HERO ANIMATIONS
+   ========================================================= */
+
+@keyframes servicesLabelReveal {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(25px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+
+@keyframes servicesHeadingReveal {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(35px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+
+@keyframes servicesParagraphReveal {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(25px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+
+@keyframes servicesActionsReveal {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(20px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+
+/* =========================================================
+   02. SERVICE FEATURE SECTIONS
+   ========================================================= */
+
+.service-feature {
+
+    position: relative;
+
+    padding: 82px 0;
+
+    overflow: hidden;
+
+}
+
+
+.service-feature-light {
+
+    background: var(--bg-color);
+
+}
+
+
+.service-feature-dark {
+
+    background: var(--bg-alt);
+
+}
+
+
+.service-feature .row {
+
+    --bs-gutter-x: 5rem;
+
+    --bs-gutter-y: 3rem;
+
+}
+
+
+/* =========================================================
+   SERVICE IMAGE
+   ========================================================= */
+
+.service-image-wrap {
+
+    position: relative;
+
+    padding: 0 14px 14px 0;
+
+}
+
+
+.service-feature-dark .service-image-wrap {
+
+    padding:
+        0
+        0
+        14px
+        14px;
+
+}
+
+
+.service-feature-image {
+
+    display: block;
+
+    width: 100%;
+
+    height: 440px;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    border-radius: var(--radius-lg);
+
+    position: relative;
+
+    z-index: 2;
+
+    transition:
+        transform .7s cubic-bezier(.22,.61,.36,1),
+        filter .5s ease;
+
+}
+
+
+.service-image-wrap::after {
+
+    content: "";
+
+    position: absolute;
+
+    right: 0;
+
+    bottom: 0;
+
+    width: 82%;
+
+    height: 82%;
+
+    border: 1px solid var(--secondary-color);
+
+    border-radius: var(--radius-lg);
+
+    opacity: .42;
+
+    z-index: 1;
+
+}
+
+
+.service-feature-dark .service-image-wrap::after {
+
+    right: auto;
+
+    left: 0;
+
+}
+
+
+.service-image-wrap:hover
+.service-feature-image {
+
+    transform: scale(1.025);
+
+    filter: brightness(1.04);
+
+}
+
+
+/* =========================================================
+   SERVICE NUMBER
+   ========================================================= */
+
+.service-number {
+
+    position: absolute;
+
+    top: -32px;
+
+    left: -12px;
+
+    z-index: 4;
+
+    color: var(--secondary-color);
+
+    opacity: .17;
+
+    line-height: 1;
+
+    pointer-events: none;
+
+}
+
+
+.service-feature-dark .service-number {
+
+    left: auto;
+
+    right: -12px;
+
+}
+
+
+/* =========================================================
+   IMAGE CAPTION
+   ========================================================= */
+
+.service-image-caption {
+
+    position: absolute;
+
+    left: 30px;
+
+    bottom: 32px;
+
+    z-index: 5;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    padding: 11px 16px;
+
+    background: rgba(8,11,31,.82);
+
+    color: #fff;
+
+    border-left: 2px solid var(--secondary-color);
+
+    backdrop-filter: blur(8px);
+
+}
+
+
+.service-feature-dark .service-image-caption {
+
+    left: auto;
+
+    right: 30px;
+
+    border-left: 0;
+
+    border-right: 2px solid var(--secondary-color);
+
+}
+
+
+.service-image-caption svg {
+
+    width: 17px;
+
+    height: 17px;
+
+    color: var(--secondary-light);
+
+}
+
+
+/* =========================================================
+   SERVICE CONTENT
+   ========================================================= */
+
+.service-feature-content {
+
+    max-width: 590px;
+
+    opacity: 0;
+
+    transform: translateY(30px);
+
+    animation:
+        serviceContentReveal
+        .85s
+        ease-out
+        .2s
+        forwards;
+
+}
+
+
+@keyframes serviceContentReveal {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(30px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+
+.service-feature .section-label {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    color: var(--secondary-dark);
+
+    margin-bottom: 13px;
+
+}
+
+
+.service-feature-dark .section-label {
+
+    color: var(--secondary-dark);
+
+}
+
+
+.service-feature .section-label::before {
+
+    content: "";
+
+    width: 26px;
+
+    height: 1px;
+
+    background: var(--secondary-color);
+
+}
+
+
+.service-feature h2 {
+
+    margin-bottom: 18px;
+
+}
+
+
+.service-feature-content .text-muted {
+
+    max-width: 570px;
+
+    line-height: 1.8;
+
+    margin-bottom: 17px;
+
+}
+
+
+/* =========================================================
+   SERVICE POINTS
+   ========================================================= */
+
+.service-points {
+
+    display: grid;
+
+    gap: 12px;
+
+    margin: 25px 0 28px;
+
+}
+
+
+.service-point {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 13px;
+
+    padding: 13px 0;
+
+    border-bottom: 1px solid var(--border-color);
+
+    transition:
+        transform .3s ease;
+
+}
+
+
+.service-point:last-child {
+
+    border-bottom: 0;
+
+}
+
+
+.service-point:hover {
+
+    transform: translateX(5px);
+
+}
+
+
+.service-point-icon {
+
+    width: 40px;
+
+    height: 40px;
+
+    flex: 0 0 40px;
+
+    display: flex;
+
+    align-items: center;
+
     justify-content: center;
-    font-weight: 600
+
+    border-radius: 50%;
+
+    background: var(--bg-alt);
+
+    color: var(--secondary-color);
+
+    border: 1px solid var(--border-color);
+
+    transition:
+        transform .35s ease,
+        background .35s ease;
+
 }
 
-.timeline-item h4 {
-    margin-bottom: 6px
+
+.service-feature-dark .service-point-icon {
+
+    background: var(--bg-card);
+
 }
 
-.timeline-item p {
+
+.service-point:hover .service-point-icon {
+
+    transform:
+        rotate(-8deg)
+        scale(1.08);
+
+    background: var(--primary-color);
+
+}
+
+
+.service-point-icon svg {
+
+    width: 18px;
+
+    height: 18px;
+
+}
+
+
+.service-point h4 {
+
+    margin: 0 0 3px;
+
+}
+
+
+.service-point p {
+
+    margin: 0;
+
     color: var(--text-muted);
-    font-size: .94rem;
-    margin: 0
+
+    line-height: 1.55;
+
 }
 
-@media(max-width:767.98px) {
-    .page-hero {
-        padding: 52px 0 44px
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+.service-feature .btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+
+}
+
+
+.service-feature .btn:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 25px rgba(26,27,75,.15);
+
+}
+
+
+.service-feature .btn svg {
+
+    width: 17px;
+
+    height: 17px;
+
+}
+
+
+/* =========================================================
+   03. EXPERIENCE SECTION
+   ========================================================= */
+
+.experience-section {
+
+    position: relative;
+
+    padding: 78px 0;
+
+    background: var(--bg-color);
+
+    overflow: hidden;
+
+}
+
+
+.experience-heading {
+
+    max-width: 690px;
+
+    margin:
+        0
+        auto
+        48px;
+
+}
+
+
+.experience-heading .section-label {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+}
+
+
+.experience-heading .section-description {
+
+    max-width: 590px;
+
+    margin-left: auto;
+
+    margin-right: auto;
+
+    color: var(--text-muted);
+
+}
+
+
+/* =========================================================
+   EXPERIENCE FLOW
+   ========================================================= */
+
+.experience-flow {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        auto
+        1fr
+        auto
+        1fr
+        auto
+        1fr;
+
+    align-items: center;
+
+    gap: 15px;
+
+}
+
+
+.experience-step {
+
+    position: relative;
+
+    min-height: 245px;
+
+    padding: 30px 24px;
+
+    background: var(--bg-card);
+
+    border: 1px solid var(--border-color);
+
+    border-radius: var(--radius-md);
+
+    text-align: center;
+
+    transition:
+        transform .4s ease,
+        border-color .4s ease,
+        box-shadow .4s ease;
+
+}
+
+
+.experience-step:hover {
+
+    transform: translateY(-7px);
+
+    border-color: rgba(201,168,76,.5);
+
+    box-shadow:
+        0 18px 38px rgba(26,27,75,.09);
+
+}
+
+
+.experience-icon {
+
+    width: 58px;
+
+    height: 58px;
+
+    margin:
+        0
+        auto
+        20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: var(--primary-color);
+
+    color: var(--secondary-light);
+
+    position: relative;
+
+}
+
+
+.experience-icon::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: -6px;
+
+    border:
+        1px
+        solid
+        var(--secondary-color);
+
+    border-radius: 50%;
+
+    opacity: .35;
+
+    animation:
+        experiencePulse
+        3s
+        ease-in-out
+        infinite;
+
+}
+
+
+@keyframes experiencePulse {
+
+    0%,
+    100% {
+
+        transform: scale(1);
+
+        opacity: .25;
+
     }
 
-    .content-image {
-        height: 260px
+    50% {
+
+        transform: scale(1.1);
+
+        opacity: .55;
+
     }
 
-    .zodiac-selector {
-        grid-template-columns: repeat(3, 1fr)
+}
+
+
+.experience-step-number {
+
+    display: block;
+
+    color: var(--secondary-color);
+
+    margin-bottom: 7px;
+
+}
+
+
+.experience-step h3 {
+
+    margin-bottom: 8px;
+
+}
+
+
+.experience-step p {
+
+    color: var(--text-muted);
+
+    margin: 0;
+
+    line-height: 1.65;
+
+}
+
+
+.experience-connector {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: var(--secondary-color);
+
+}
+
+
+.experience-connector svg {
+
+    width: 20px;
+
+    height: 20px;
+
+}
+
+
+/* =========================================================
+   04. WHY ASTROGUIDE
+   SEPARATE SECTION 06
+   ========================================================= */
+
+.why-section {
+
+    position: relative;
+
+    padding: 84px 0;
+
+    background: var(--primary-color);
+
+    color: #fff;
+
+    overflow: hidden;
+
+}
+
+
+.why-section::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 420px;
+
+    height: 420px;
+
+    border:
+        1px
+        solid
+        rgba(201,168,76,.18);
+
+    border-radius: 50%;
+
+    right: -180px;
+
+    top: -180px;
+
+}
+
+
+.why-section::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 230px;
+
+    height: 230px;
+
+    border:
+        1px
+        solid
+        rgba(201,168,76,.12);
+
+    border-radius: 50%;
+
+    left: -120px;
+
+    bottom: -120px;
+
+}
+
+
+.why-intro {
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 760px;
+
+    margin-bottom: 44px;
+
+}
+
+
+.why-intro .section-label {
+
+    color: var(--secondary-light);
+
+}
+
+
+.why-intro h2 {
+
+    color: #fff;
+
+    max-width: 650px;
+
+    margin:
+        12px
+        0
+        16px;
+
+}
+
+
+.why-intro p {
+
+    max-width: 670px;
+
+    color: rgba(255,255,255,.72);
+
+    line-height: 1.8;
+
+}
+
+
+/* =========================================================
+   WHY GRID
+   ========================================================= */
+
+.why-grid {
+
+    position: relative;
+
+    z-index: 2;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 14px;
+
+}
+
+
+.why-card {
+
+    min-height: 300px;
+
+    padding: 28px 24px;
+
+    background:
+        rgba(255,255,255,.055);
+
+    border:
+        1px
+        solid
+        rgba(255,255,255,.12);
+
+    transition:
+        transform .4s ease,
+        background .4s ease,
+        border-color .4s ease;
+
+}
+
+
+.why-card:hover {
+
+    transform: translateY(-7px);
+
+    background:
+        rgba(255,255,255,.085);
+
+    border-color:
+        rgba(201,168,76,.45);
+
+}
+
+
+.why-card-top {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 42px;
+
+}
+
+
+.why-card-number {
+
+    color:
+        rgba(255,255,255,.34);
+
+}
+
+
+.why-card-icon {
+
+    width: 48px;
+
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        rgba(201,168,76,.12);
+
+    color: var(--secondary-light);
+
+    transition:
+        transform .4s ease;
+
+}
+
+
+.why-card:hover .why-card-icon {
+
+    transform:
+        rotate(8deg)
+        scale(1.08);
+
+}
+
+
+.why-card h3 {
+
+    color: #fff;
+
+    margin-bottom: 12px;
+
+}
+
+
+.why-card p {
+
+    color:
+        rgba(255,255,255,.66);
+
+    line-height: 1.7;
+
+    margin: 0;
+
+}
+
+
+/* =========================================================
+   05. OUR PROMISE
+   SEPARATE SECTION 07
+   ========================================================= */
+
+.promise-section {
+
+    position: relative;
+
+    padding: 82px 0;
+
+    background: var(--bg-alt);
+
+    overflow: hidden;
+
+}
+
+
+.promise-layout {
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, .95fr)
+        minmax(0, 1.05fr);
+
+    align-items: center;
+
+    gap: 70px;
+
+}
+
+
+/* =========================================================
+   PROMISE IMAGE
+   ========================================================= */
+
+.promise-visual {
+
+    position: relative;
+
+}
+
+
+.promise-visual img {
+
+    display: block;
+
+    width: 100%;
+
+    height: 500px;
+
+    object-fit: cover;
+
+    border-radius: var(--radius-lg);
+
+    box-shadow: var(--shadow-md);
+
+}
+
+
+.promise-visual::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 110px;
+
+    height: 110px;
+
+    border:
+        1px
+        solid
+        var(--secondary-color);
+
+    left: -18px;
+
+    bottom: -18px;
+
+    z-index: 0;
+
+    opacity: .45;
+
+}
+
+
+.promise-visual img {
+
+    position: relative;
+
+    z-index: 1;
+
+}
+
+
+.promise-visual-badge {
+
+    position: absolute;
+
+    right: -24px;
+
+    bottom: 32px;
+
+    z-index: 3;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    max-width: 220px;
+
+    padding: 15px 18px;
+
+    background: var(--primary-color);
+
+    color: #fff;
+
+    border:
+        1px
+        solid
+        rgba(201,168,76,.4);
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,.16);
+
+}
+
+
+.promise-visual-badge svg {
+
+    width: 22px;
+
+    height: 22px;
+
+    color: var(--secondary-light);
+
+    flex: 0 0 22px;
+
+}
+
+
+/* =========================================================
+   PROMISE CONTENT
+   ========================================================= */
+
+.promise-content {
+
+    max-width: 610px;
+
+}
+
+
+.promise-content .section-label {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    color: var(--secondary-dark);
+
+}
+
+
+.promise-content .section-label::before {
+
+    content: "";
+
+    width: 25px;
+
+    height: 1px;
+
+    background: var(--secondary-color);
+
+}
+
+
+.promise-content h2 {
+
+    margin:
+        13px
+        0
+        19px;
+
+}
+
+
+.promise-content p {
+
+    color: var(--text-muted);
+
+    line-height: 1.8;
+
+    max-width: 590px;
+
+}
+
+
+.promise-points {
+
+    display: grid;
+
+    gap: 10px;
+
+    margin:
+        25px
+        0
+        28px;
+
+}
+
+
+.promise-point {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 11px;
+
+    color: var(--text-muted);
+
+}
+
+
+.promise-point svg {
+
+    width: 19px;
+
+    height: 19px;
+
+    color: var(--secondary-color);
+
+    flex: 0 0 19px;
+
+    transition:
+        transform .3s ease;
+
+}
+
+
+.promise-point:hover svg {
+
+    transform:
+        scale(1.12)
+        rotate(-6deg);
+
+}
+/* =========================================================
+   DARK MODE
+   ========================================================= */
+
+[data-theme="dark"] .services-hero {
+
+    background-image:
+        url("../images/services-hero.png");
+
+}
+
+
+[data-theme="dark"] .service-feature-light {
+
+    background: var(--bg-color);
+
+}
+
+
+[data-theme="dark"] .service-feature-dark {
+
+    background: var(--bg-alt);
+
+}
+
+
+[data-theme="dark"] .promise-section {
+
+    background: var(--bg-alt);
+
+}
+
+
+[data-theme="dark"] .why-section {
+
+    background: #10122f;
+
+}
+
+
+[data-theme="dark"] .service-point-icon {
+
+    background: var(--bg-alt);
+
+}
+
+
+[data-theme="dark"] .experience-step {
+
+    background: var(--bg-card);
+
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1199.98px) {
+
+    .services-hero-content {
+
+        width: 65%;
+
     }
 
-    .profile-grid {
-        grid-template-columns: 1fr
+
+    .service-feature .row {
+
+        --bs-gutter-x: 3rem;
+
     }
 
-    .horoscope-display {
-        padding: 24px
+
+    .service-feature-image {
+
+        height: 400px;
+
     }
 
-    .plan-card {
-        padding: 26px
+
+    .promise-layout {
+
+        gap: 45px;
+
     }
 
-    .comparison-table {
-        overflow-x: auto
+
+    .why-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
     }
 
-    .comparison-table table {
-        min-width: 620px
+}
+
+
+/* =========================================================
+   TABLET / IPAD
+   ========================================================= */
+
+@media (max-width: 991.98px) {
+
+    .services-hero {
+
+        min-height: 75vh;
+
     }
+
+
+    .services-hero-content {
+
+        width: 75%;
+
+    }
+
+
+    .service-feature {
+
+        padding: 68px 0;
+
+    }
+
+
+    .service-feature .row {
+
+        --bs-gutter-y: 3rem;
+
+    }
+
+
+    .service-feature-content {
+
+        max-width: 100%;
+
+    }
+
+
+    .service-feature-image {
+
+        height: 380px;
+
+    }
+
+
+    .experience-flow {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 18px;
+
+    }
+
+
+    .experience-connector {
+
+        display: none;
+
+    }
+
+
+    .promise-layout {
+
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+
+    }
+
+
+    .promise-content {
+
+        max-width: 100%;
+
+    }
+
+
+    .promise-visual img {
+
+        height: 430px;
+
+    }
+
+
+    .promise-visual-badge {
+
+        right: 20px;
+
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 767.98px) {
+
+    .services-hero {
+
+        min-height: 90vh;
+
+        background-position: 60% center;
+
+    }
+
+
+    .services-hero-overlay {
+
+        background:
+            linear-gradient(
+                90deg,
+                rgba(8,11,31,.94) 0%,
+                rgba(8,11,31,.82) 58%,
+                rgba(8,11,31,.52) 100%
+            );
+
+    }
+
+
+    .services-hero-content {
+
+        width: 100%;
+
+        padding: 55px 0;
+
+    }
+
+
+    .services-hero-actions {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 17px;
+
+    }
+
+
+    .service-feature {
+
+        padding: 55px 0;
+
+    }
+
+
+    .service-feature .row {
+
+        --bs-gutter-y: 2.5rem;
+
+    }
+
+
+    .service-feature-image {
+
+        height: 300px;
+
+    }
+
+
+    .service-image-wrap {
+
+        padding:
+            0
+            8px
+            8px
+            0;
+
+    }
+
+
+    .service-feature-dark .service-image-wrap {
+
+        padding:
+            0
+            0
+            8px
+            8px;
+
+    }
+
+
+    .service-number {
+
+        top: -20px;
+
+        left: 0;
+
+    }
+
+
+    .service-feature-dark .service-number {
+
+        right: 0;
+
+    }
+
+
+    .service-image-caption {
+
+        left: 15px;
+
+        bottom: 20px;
+
+        padding: 9px 12px;
+
+    }
+
+
+    .service-feature-dark .service-image-caption {
+
+        right: 15px;
+
+    }
+
+
+    .service-points {
+
+        gap: 8px;
+
+        margin-top: 20px;
+
+    }
+
+
+    .service-point {
+
+        padding: 10px 0;
+
+    }
+
+
+    .service-point-icon {
+
+        width: 38px;
+
+        height: 38px;
+
+        flex-basis: 38px;
+
+    }
+
+
+    .experience-section {
+
+        padding: 58px 0;
+
+    }
+
+
+    .experience-heading {
+
+        margin-bottom: 32px;
+
+    }
+
+
+    .experience-flow {
+
+        grid-template-columns: 1fr;
+
+        gap: 14px;
+
+    }
+
+
+    .experience-step {
+
+        min-height: auto;
+
+        padding: 26px 22px;
+
+    }
+
+
+    .why-section {
+
+        padding: 62px 0;
+
+    }
+
+
+    .why-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+
+    }
+
+
+    .why-card {
+
+        min-height: auto;
+
+        padding: 25px 21px;
+
+    }
+
+
+    .why-card-top {
+
+        margin-bottom: 28px;
+
+    }
+
+
+    .promise-section {
+
+        padding: 58px 0;
+
+    }
+
+
+    .promise-visual img {
+
+        height: 330px;
+
+    }
+
+
+    .promise-visual-badge {
+
+        right: 12px;
+
+        bottom: 20px;
+
+    }
+
+
+    .newsletter-form {
+
+        flex-direction: column;
+
+    }
+
+
+    .newsletter-form .btn {
+
+        width: 100%;
+
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 575.98px) {
+
+    .services-hero {
+
+        min-height: 88vh;
+
+        background-position: 64% center;
+
+    }
+
+
+    .service-feature {
+
+        padding: 48px 0;
+
+    }
+
+
+    .service-feature-image {
+
+        height: 250px;
+
+    }
+
+
+    .service-image-caption {
+
+        max-width: 75%;
+
+    }
+
+
+    .service-image-wrap::after {
+
+        width: 70%;
+
+        height: 70%;
+
+    }
+
+
+    .experience-section {
+
+        padding: 50px 0;
+
+    }
+
+
+    .why-section {
+
+        padding: 52px 0;
+
+    }
+
+
+    .promise-section {
+
+        padding: 50px 0;
+
+    }
+
+
+    .promise-visual::after {
+
+        display: none;
+
+    }
+
+
+    .promise-visual-badge {
+
+        position: relative;
+
+        right: auto;
+
+        bottom: auto;
+
+        margin-top: -35px;
+
+        margin-left: 15px;
+
+        width: calc(100% - 30px);
+
+        max-width: none;
+
+    }
+
+}
+
+
+/* =========================================================
+   SAMSUNG S8+ / SMALL PORTRAIT
+   ========================================================= */
+
+@media (max-width: 575.98px)
+and (orientation: portrait) {
+
+    .services-hero-content {
+
+        padding:
+            45px
+            0;
+
+    }
+
+
+    .service-feature-image {
+
+        height: 235px;
+
+    }
+
+
+    .service-point {
+
+        gap: 10px;
+
+    }
+
+
+    .service-point-icon {
+
+        width: 36px;
+
+        height: 36px;
+
+        flex-basis: 36px;
+
+    }
+
+
+    .why-card {
+
+        padding: 23px 19px;
+
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE LANDSCAPE
+   ========================================================= */
+
+@media (max-width: 767.98px)
+and (orientation: landscape) {
+
+    .services-hero {
+
+        min-height: 90vh;
+
+        background-position: center;
+
+    }
+
+
+    .services-hero-content {
+
+        width: 72%;
+
+        padding:
+            35px
+            0;
+
+    }
+
+
+    .service-feature {
+
+        padding: 48px 0;
+
+    }
+
+
+    .service-feature-image {
+
+        height: 300px;
+
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .services-hero .section-label,
+    .services-hero h1,
+    .services-hero p,
+    .services-hero-actions,
+    .service-feature-content {
+
+        opacity: 1;
+
+        transform: none;
+
+        animation: none;
+
+    }
+
+
+    .experience-icon::after {
+
+        animation: none;
+
+    }
+
+
+    .service-feature-image,
+    .service-point,
+    .why-card,
+    .experience-step {
+
+        transition: none;
+
+    }
+
 }

@@ -5,39 +5,30 @@
 
     <meta charset="UTF-8">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>
         AstroGuide — Understand Your Path. Embrace Your Future.
     </title>
 
-    <meta
-        name="description"
+    <meta name="description"
         content="Explore your horoscope, decode your birth chart, and find guidance for life's next chapter with AstroGuide.">
+
 
     <!-- =====================================================
          BOOTSTRAP
          ===================================================== -->
 
-    <link
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
 
     <!-- =====================================================
          GOOGLE FONTS
          ===================================================== -->
 
-    <link
-        rel="preconnect"
-        href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 
-    <link
-        rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link
         href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap"
@@ -48,19 +39,18 @@
          GLOBAL CSS
          ===================================================== -->
 
-    <link
-        rel="stylesheet"
-        href="./css/global.css">
+    <link rel="stylesheet" href="./css/global.css">
 
 
     <!-- =====================================================
          HOME 2 CSS
          ===================================================== -->
 
-    <link
-        rel="stylesheet"
-        href="./css/home2.css">
-        <link rel="stylesheet" href="./css/hero2.css">
+    <link rel="stylesheet" href="./css/home2.css">
+        <!-- Favicon -->
+<link rel="icon" type="image/png" href="./images/logo.png" />
+<link rel="shortcut icon" href="./images/logo.png" />
+<link rel="apple-touch-icon" href="./images/logo.png" />
 
 </head>
 
@@ -68,619 +58,1045 @@
 <body>
 
 
-<!-- =========================================================
-     NAVBAR
-     KEEPING THE PREVIOUS ASTROGUIDE NAVBAR
-     ========================================================= -->
+    <!-- =========================================================
+         NAVBAR — UNCHANGED
+         ========================================================= -->
 
-<nav class="navbar navbar-expand-lg navbar-custom sticky-top">
-    <div class="container">
-        <a class="navbar-brand-custom" href="./index.html">
-            <img src="./images/logo.png" alt="">
-            <span class="brand-astro" dir="ltr">
-                <span class="brand-astro">Astro</span><span class="brand-guide">Guide</span>
-            </span>
-        </a>
+    <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
 
-        <button class="navbar-toggler navbar-toggler-custom" type="button"
-                data-bs-toggle="collapse" data-bs-target="#navMain" aria-controls="navMain"
-                aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+        <div class="container">
 
-        <div class="collapse navbar-collapse" id="navMain">
-            <ul class="navbar-nav mx-auto gap-lg-1">
-                <!-- Home Dropdown -->
-            <!-- Home Dropdown -->
-                <li class="nav-item dropdown">
-                    <a
-                        class="nav-link nav-link-custom dropdown-toggle active"
-                        href="./index.html"
-                        role="button"
-                        data-bs-toggle="dropdown"
-                        aria-expanded="false"
-                    >
-                        Home
+
+            <!-- BRAND -->
+
+            <a class="navbar-brand-custom" href="./index.html">
+
+                <img src="./images/logo.png" alt="AstroGuide">
+
+                <span class="brand-astro" dir="ltr">
+
+                    <span class="brand-astro">Astro</span><span class="brand-guide">Guide</span>
+
+                </span>
+
+            </a>
+
+
+            <!-- MOBILE CONTROLS -->
+
+            <div class="mobile-nav-controls">
+
+
+                <button
+                    class="nav-utility-btn theme-toggle"
+                    type="button"
+                    aria-label="Toggle dark mode"
+                >
+
+                    <i
+                        data-lucide="sun"
+                        class="theme-toggle-icon"
+                    ></i>
+
+                </button>
+
+
+                <button
+                    class="nav-utility-btn direction-toggle"
+                    id="directionToggleMobile"
+                    type="button"
+                    aria-label="Toggle text direction"
+                >
+
+                    <span class="direction-toggle-text">LTR</span>
+
+                </button>
+
+
+                <button
+                    class="navbar-toggler navbar-toggler-custom"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navMain"
+                    aria-controls="navMain"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+
+                    <span class="navbar-toggler-icon"></span>
+
+                </button>
+
+            </div>
+
+
+            <!-- NAV COLLAPSE -->
+
+            <div class="collapse navbar-collapse" id="navMain">
+
+
+                <ul class="navbar-nav mx-auto gap-lg-1">
+
+
+                    <li class="nav-item dropdown">
+
+                        <a
+                            class="nav-link nav-link-custom dropdown-toggle active"
+                            href="./index.html"
+                            role="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                        >
+                            Home
+                        </a>
+
+
+                        <ul class="dropdown-menu dropdown-menu-custom">
+
+                            <li>
+
+                                <a
+                                    class="dropdown-item dropdown-item-custom"
+                                    href="./index.html"
+                                >
+                                    Home 1
+                                    <span class="item-sub">Classic</span>
+                                </a>
+
+                            </li>
+
+
+                            <li>
+
+                                <a
+                                    class="dropdown-item dropdown-item-custom"
+                                    href="./home2.html"
+                                >
+                                    Home 2
+                                    <span class="item-sub">Premium</span>
+                                </a>
+
+                            </li>
+
+                        </ul>
+
+                    </li>
+
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link nav-link-custom"
+                            href="./about.html"
+                        >
+                            About
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link nav-link-custom"
+                            href="./services.html"
+                        >
+                            Services
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link nav-link-custom"
+                            href="./horoscope.html"
+                        >
+                            Horoscope
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link nav-link-custom"
+                            href="./astrologers.html"
+                        >
+                            Astrologers
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link nav-link-custom"
+                            href="./pricing.html"
+                        >
+                            Pricing
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link nav-link-custom"
+                            href="./dashboard.html"
+                        >
+                            Dashboard
+                        </a>
+
+                    </li>
+
+                </ul>
+
+
+                <div class="d-flex align-items-center gap-2 flex-wrap">
+
+
+                    <div class="nav-utility-group">
+
+
+                        <button
+                            class="nav-utility-btn theme-toggle btninside"
+                            type="button"
+                            aria-label="Toggle dark mode"
+                        >
+
+                            <i
+                                data-lucide="sun"
+                                class="theme-toggle-icon"
+                            ></i>
+
+                        </button>
+
+
+                        <button
+                            class="nav-utility-btn direction-toggle btninside"
+                            id="directionToggle"
+                            type="button"
+                            aria-label="Toggle text direction"
+                        >
+
+                            <span class="direction-toggle-text">LTR</span>
+
+                        </button>
+
+                    </div>
+
+
+                    <div class="nav-cta-group">
+
+                        <a
+                            href="./login.html"
+                            class="btn btn-secondary"
+                        >
+                            Login
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- =========================================================
+         HERO — UNCHANGED
+         ========================================================= -->
+
+    <section class="home2-hero">
+
+
+        <div class="home2-hero-background"></div>
+
+        <div class="home2-hero-overlay"></div>
+
+
+        <div class="home2-hero-container">
+
+
+            <div class="home2-hero-content">
+
+
+                <div class="home2-eyebrow">
+
+                    <span></span>
+
+                    Your Journey Written in the Stars
+
+                </div>
+
+
+                <h1 class="home2-hero-title">
+
+                    <span class="hero-title-line">
+                        Discover What
+                    </span>
+
+                    <span class="hero-title-line hero-title-gold">
+                        <em>The Stars</em>
+                    </span>
+
+                    <span class="hero-title-line">
+                        Have In Store
+                    </span>
+
+                </h1>
+
+
+                <p class="home2-hero-description">
+
+                    Explore your cosmic blueprint and uncover deeper insights into your
+                    personality, relationships, career, and life's journey through astrology.
+
+                </p>
+
+
+                <div class="home2-hero-actions">
+
+                    <a href="#" class="btn btn-primary">
+
+                        Explore Your Horoscope
+
+                        <span class="home2-arrow">→</span>
+
                     </a>
 
-                    <ul class="dropdown-menu dropdown-menu-custom">
-                        <li>
-                            <a class="dropdown-item dropdown-item-custom" href="./index.html">
-                                Home 1 <span class="item-sub">Classic</span>
-                            </a>
-                        </li>
 
-                        <li>
-                            <a class="dropdown-item dropdown-item-custom" href="./home2.html">
-                                Home 2 <span class="item-sub">Premium</span>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                 <li class="nav-item">
-                    <a class="nav-link nav-link-custom" href="./about.html">About</a>
-                </li>
-                <!-- Services Dropdown -->
-<li class="nav-item">
-    <a
-        class="nav-link nav-link-custom"
-        href="/services.html"
-    >
-        Services
-    </a>
-</li>
+                    <a href="#" class="btn btn-secondary">
 
+                        Discover Your Zodiac
 
-                <li class="nav-item">
-                    <a class="nav-link nav-link-custom" href="./astrologers.html">Astrologers</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link nav-link-custom" href="./pricing.html">Pricing</a>
-                </li>
+                    </a>
 
-                <li class="nav-item">
-                    <a class="nav-link nav-link-custom" href="./dashboard.html">Dashboard</a>
-                </li>
-            </ul>
-
-            <div class="d-flex align-items-center gap-2 flex-wrap">
-                <div class="nav-utility-group">
-                    <button class="nav-utility-btn theme-toggle" aria-label="Toggle dark mode">
-                            <i data-lucide="sun" class="theme-toggle-icon"></i>
-                        </button>
-                    <button class="nav-utility-btn direction-toggle"
-                            id="directionToggle"
-                            aria-label="Toggle text direction">
-                        <span class="direction-toggle-text">LTR</span>
-                    </button>
                 </div>
-                <div class="nav-cta-group">
-                    <a href="./login.html" class="btn btn-secondary">Login</a>
+
+
+                <div class="home2-hero-benefits">
+
+
+                    <div class="home2-benefit">
+
+                        <span class="home2-benefit-icon">
+                            ✦
+                        </span>
+
+                        <span>
+                            Personalized<br>
+                            Insights
+                        </span>
+
+                    </div>
+
+
+                    <div class="home2-benefit">
+
+                        <span class="home2-benefit-icon">
+                            ☾
+                        </span>
+
+                        <span>
+                            Cosmic<br>
+                            Guidance
+                        </span>
+
+                    </div>
+
+
+                    <div class="home2-benefit">
+
+                        <span class="home2-benefit-icon">
+                            ♈
+                        </span>
+
+                        <span>
+                            Complete<br>
+                            Zodiac
+                        </span>
+
+                    </div>
+
+
                 </div>
+
+
             </div>
+
         </div>
-    </div>
-</nav>
-
-
-
-<!-- =========================================================
-     HOME 2 HERO
-     ========================================================= -->
-
-<!-- =========================
-     ASTROGUIDE HERO SECTION
-     ========================= -->
-
-<!-- ================================
-     ASTROGUIDE HERO SECTION
-     ================================ -->
-
-<!-- =========================================================
-     ASTROGUIDE — HERO SECTION ONLY
-     Navbar is NOT included
-     ========================================================= -->
-
-
-<main class="hero" id="top">
-
-    <!-- Background effects -->
-    <div class="stars" aria-hidden="true"></div>
-    <div class="veil-left" aria-hidden="true"></div>
-    <div class="veil-bottom" aria-hidden="true"></div>
-
-    <!-- Moon -->
-    <div class="moon" aria-hidden="true"></div>
-
-    <!-- Shooting star -->
-    <div class="shooting-star" aria-hidden="true"></div>
-
-    <!-- Zodiac ring -->
-    <div class="zodiac" aria-hidden="true">
-        <span>♈</span>
-        <span>♉</span>
-        <span>♊</span>
-        <span>♋</span>
-        <span>♌</span>
-        <span>♍</span>
-        <span>♎</span>
-        <span>♏</span>
-        <span>♐</span>
-        <span>♑</span>
-        <span>♒</span>
-        <span>♓</span>
-    </div>
-
-    <!-- Hero content -->
-    <section class="hero__content">
-
-        <div class="eyebrow">
-            <span>Ancient wisdom for a brighter you</span>
-            <i></i>
-        </div>
-
-        <h1>
-            Your Story<br>
-            Is Written<br>
-            <em>in the Stars</em>
-        </h1>
-
-        <p class="hero__description">
-            Explore your horoscope, decode your birth chart,
-            <br class="desktop-only">
-            and find guidance for life's next chapter — all in one place.
-        </p>
-
-        <a class="primary-button" href="#birth-chart">
-            Explore Your Chart
-            <span aria-hidden="true">→</span>
-        </a>
 
     </section>
 
-    <!-- Right-side message -->
-    <div class="hero__note" aria-label="Daily reminder">
-        <span>Clarity</span>
-        <span>Today</span>
-        <span>A Brighter</span>
-        <span>Tomorrow</span>
-        <i></i>
-    </div>
 
-    <!-- Woman -->
-    <img
-        class="woman"
-        src="./images/women-hero.png"
-        alt="Woman gazing up at the starry night sky"
-    >
 
-    <!-- Mountains -->
-    <img
-        class="mountains"
-        src="./images/hero-mountains.png"
-        alt="Misty mountain range silhouetted against twilight sky"
-    >
+    <!-- =========================================================
+         SECTION 01 — EDITORIAL INTRO
+         ========================================================= -->
 
-    <!-- Bottom benefits -->
-    <div class="hero__bottom">
+    <section class="h2-editorial-section">
 
-        <div class="benefits">
 
-            <div class="benefit">
-                <span class="benefit__icon">✧</span>
-                <span>
-                    Personalized<br>
-                    Insights
-                </span>
-            </div>
+        <div class="container">
 
-            <div class="benefit">
-                <span class="benefit__icon benefit__icon--moon">◔</span>
-                <span>
-                    Trusted<br>
-                    Astrologers
-                </span>
-            </div>
 
-            <div class="benefit">
-                <span class="benefit__icon">♧</span>
-                <span>
-                    A More<br>
-                    Mindful You
-                </span>
+            <div class="h2-editorial-layout">
+
+
+                <div class="h2-editorial-number reveal-item">
+                    <div class="h2-number-line"></div>
+
+                </div>
+
+
+                <div class="h2-editorial-main">
+
+
+                    <span class="section-label h2-reveal-label">
+                        The AstroGuide Philosophy
+                    </span>
+
+
+                    <h2 class="h2-editorial-title">
+
+                        Your chart is not a verdict.
+                        <span>It is a conversation.</span>
+
+                    </h2>
+
+
+                    <div class="h2-editorial-divider"></div>
+
+
+                    <p class="h2-editorial-quote">
+
+                        “The most useful astrology does not tell you who to be.
+                        It helps you notice who you already are.”
+
+                    </p>
+
+
+                    <p class="h2-editorial-description">
+
+                        Your birth chart is a map of patterns, possibilities,
+                        strengths, and recurring themes. Our consultants translate
+                        that symbolic language into clear and compassionate insights
+                        that you can carry into everyday decisions.
+
+                    </p>
+
+
+                    <a
+                        href="./about.html"
+                        class="h2-text-link"
+                    >
+
+                        Discover Our Approach
+
+                        <span>→</span>
+
+                    </a>
+
+
+                </div>
+
+
+                <div class="h2-editorial-mark">
+
+                    <div class="h2-orbit-mark">
+
+                        <span></span>
+                        <span></span>
+                        <span></span>
+
+                    </div>
+
+                    <i data-lucide="sparkles"></i>
+
+                </div>
+
+
             </div>
 
         </div>
 
-        <div class="scroll-cue">
-            <i></i>
-            <span>
-                Scroll<br>
-                to explore
-            </span>
-        </div>
-
-    </div>
-
-</main>
+    </section>
 
 
 
-<!-- =========================================================
-     SECTION 01 — EDITORIAL INTRO
-     ========================================================= -->
+    <!-- =========================================================
+         SECTION 02 — SIGNATURE SERVICES
+         ========================================================= -->
 
-<section>
-
-    <div class="container">
-
-        <div class="row align-items-center g-5">
+    <section class="h2-services-section bg-alt">
 
 
-            <div class="col-lg-4">
+        <div class="container">
 
-                <span class="editorial-number">
-                    01
-                </span>
+
+            <div class="h2-section-heading reveal-section">
+
+
+                <div class="h2-heading-topline">
+
+                    <span></span>
+
+                    <span class="section-label">
+                         Signature Services
+                    </span>
+
+                    <span></span>
+
+                </div>
+
 
                 <h2>
-                    Your chart is a conversation
+                    Insight, Made Personal
                 </h2>
 
-            </div>
 
+                <p>
 
-            <div class="col-lg-8">
-
-                <p class="quote-large">
-
-                    “The most useful astrology does not tell you who to be.
-                    It helps you notice who you already are.”
-
-                </p>
-
-
-                <p class="text-muted">
-
-                    Our consultants translate the language of planets
-                    and houses into clear, compassionate insights you
-                    can carry into everyday decisions.
+                    Thoughtful readings designed to turn cosmic symbolism
+                    into meaningful personal reflection.
 
                 </p>
 
             </div>
 
 
-        </div>
-
-    </div>
-
-</section>
+            <div class="h2-services-grid">
 
 
+                <!-- CARD 01 -->
 
-<!-- =========================================================
-     SECTION 02 — SIGNATURE SERVICES
-     ========================================================= -->
-
-<section class="bg-alt">
-
-    <div class="container">
+                <article class="h2-service-card reveal-card">
 
 
-        <div class="text-center mb-5">
-
-            <span class="section-label">
-                02 · Signature Services
-            </span>
-
-            <h2>
-                Insight, Made Personal
-            </h2>
-
-        </div>
+                    <div class="h2-service-card-top">
 
 
+                        <div class="h2-service-icon">
 
-        <div class="row g-4">
+                            <i data-lucide="network"></i>
 
-
-            <!-- SERVICE 1 -->
-
-            <div class="col-md-4">
-
-                <div class="feature-card">
-
-
-                    <div class="card-icon">
-
-                        <i data-lucide="network"></i>
+                        </div>
 
                     </div>
 
 
-                    <h4>
-                        Cosmic Blueprint
-                    </h4>
+                    <div class="h2-service-card-body">
 
+                        <span class="h2-card-kicker">
+                            Birth Chart
+                        </span>
 
-                    <p>
+                        <h3>
+                            Cosmic Blueprint
+                        </h3>
 
-                        An expansive birth chart reading to understand
-                        your inner architecture and recurring themes.
+                        <p>
 
-                    </p>
+                            An expansive birth chart reading to understand
+                            your inner architecture, natural tendencies,
+                            strengths, and recurring life themes.
 
-
-                </div>
-
-            </div>
-
-
-
-            <!-- SERVICE 2 -->
-
-            <div class="col-md-4">
-
-                <div class="feature-card">
-
-
-                    <div class="card-icon">
-
-                        <i data-lucide="heart"></i>
+                        </p>
 
                     </div>
 
 
-                    <h4>
-                        Relationship Lens
-                    </h4>
+                    <a
+                        href="./services.html#birthchart"
+                        class="h2-service-link"
+                        aria-label="Explore Cosmic Blueprint"
+                    >
+
+                        <span>Explore Service</span>
+
+                        <i data-lucide="arrow-up-right"></i>
+
+                    </a>
 
 
-                    <p>
-
-                        Explore the rhythm between two charts with care,
-                        context, and honest conversation.
-
-                    </p>
-
-
-                </div>
-
-            </div>
+                </article>
 
 
 
-            <!-- SERVICE 3 -->
+                <!-- CARD 02 -->
 
-            <div class="col-md-4">
-
-                <div class="feature-card">
+                <article class="h2-service-card reveal-card">
 
 
-                    <div class="card-icon">
+                    <div class="h2-service-card-top">
 
-                        <i data-lucide="compass"></i>
+
+
+                        <div class="h2-service-icon">
+
+                            <i data-lucide="heart"></i>
+
+                        </div>
 
                     </div>
 
 
-                    <h4>
-                        Life Direction
-                    </h4>
+                    <div class="h2-service-card-body">
+
+                        <span class="h2-card-kicker">
+                            Relationships
+                        </span>
+
+                        <h3>
+                            Relationship Lens
+                        </h3>
+
+                        <p>
+
+                            Explore the rhythm between two charts with
+                            context and care, helping you understand how
+                            two people communicate, connect, and grow.
+
+                        </p>
+
+                    </div>
 
 
-                    <p>
+                    <a
+                        href="./services.html#matchmaker"
+                        class="h2-service-link"
+                        aria-label="Explore Relationship Lens"
+                    >
 
-                        Use astrology as a reflective compass for work,
-                        change, purpose, and important choices.
+                        <span>Explore Service</span>
 
-                    </p>
+                        <i data-lucide="arrow-up-right"></i>
+
+                    </a>
 
 
-                </div>
+                </article>
+
+
+
+                <!-- CARD 03 -->
+
+                <article class="h2-service-card reveal-card">
+
+
+                    <div class="h2-service-card-top">
+
+
+                        <div class="h2-service-icon">
+
+                            <i data-lucide="compass"></i>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="h2-service-card-body">
+
+                        <span class="h2-card-kicker">
+                            Direction
+                        </span>
+
+                        <h3>
+                            Life Direction
+                        </h3>
+
+                        <p>
+
+                            Use astrology as a reflective compass for
+                            work, purpose, change, personal growth,
+                            and important life decisions.
+
+                        </p>
+
+                    </div>
+
+
+                    <a
+                        href="./services.html#careerguide"
+                        class="h2-service-link"
+                        aria-label="Explore Life Direction"
+                    >
+
+                        <span>Explore Service</span>
+
+                        <i data-lucide="arrow-up-right"></i>
+
+                    </a>
+
+
+                </article>
+
 
             </div>
-
 
         </div>
 
-    </div>
-
-</section>
+    </section>
 
 
 
-<!-- =========================================================
-     SECTION 03 — FEATURED CONSULTANT
-     ========================================================= -->
+    <!-- =========================================================
+         SECTION 03 — FEATURED CONSULTANT
+         ========================================================= -->
 
-<section>
-
-    <div class="container">
-
-        <div class="row align-items-center g-5">
+    <section class="h2-consultant-section">
 
 
-            <div class="col-lg-5">
-
-                <img
-                    class="content-image"
-                    src="./images/alpha-astro.png"
-                    alt="Astrology consultant">
-
-            </div>
+        <div class="container">
 
 
-            <div class="col-lg-7">
-
+            <div class="h2-consultant-heading reveal-section">
 
                 <span class="section-label">
-                    03 · Featured Consultant
+                    Featured Consultant
                 </span>
 
-
                 <h2>
-                    Meet Dr. Arjun Mehta
+                    A grounded voice for
+                    <span>the cosmic language.</span>
                 </h2>
-
-
-                <p class="text-muted">
-
-                    With more than 18 years of study and practice,
-                    Arjun helps clients find a grounded relationship
-                    with their charts. His sessions blend Vedic
-                    tradition with a practical, modern vocabulary.
-
-                </p>
-
-
-                <a
-                    class="btn btn-secondary"
-                    href="./astrologers.html">
-
-                    View Consultant Profiles
-
-                </a>
-
 
             </div>
 
 
+            <div class="h2-consultant-layout">
+
+
+                <div class="h2-consultant-image-wrap reveal-image">
+
+
+                    <div class="h2-consultant-image-frame">
+
+                        <img
+                            src="./images/alpha-astro.png"
+                            alt="Astrology consultant"
+                            class="h2-consultant-image"
+                        >
+
+                    </div>
+
+
+                    <div class="h2-consultant-image-label">
+
+                        <span>
+                            18+
+                        </span>
+
+                        <small>
+                            Years of Study
+                            <br>
+                            & Practice
+                        </small>
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="h2-consultant-content reveal-content">
+
+
+                    <span class="h2-consultant-kicker">
+                        Vedic Astrology · Modern Perspective
+                    </span>
+
+
+                    <h3>
+                        Meet Dr. Arjun Mehta
+                    </h3>
+
+
+                    <div class="h2-consultant-rule"></div>
+
+
+                    <p>
+
+                        With more than 18 years of study and practice,
+                        Arjun helps clients develop a grounded relationship
+                        with their charts.
+
+                    </p>
+
+
+                    <p>
+
+                        His sessions blend Vedic tradition with a practical,
+                        modern vocabulary, creating space for reflection,
+                        clarity, and meaningful conversations about the
+                        chapters ahead.
+
+                    </p>
+
+
+                    <div class="h2-consultant-signature">
+
+                        <span>
+                            “
+                        </span>
+
+                        <p>
+                            Astrology becomes useful when it helps us
+                            understand ourselves more honestly.
+                        </p>
+
+                    </div>
+
+
+                    <a
+                        href="./astrologers.html"
+                        class="btn btn-secondary h2-consultant-button"
+                    >
+
+                        View Consultant Profiles
+
+                        <span>→</span>
+
+                    </a>
+
+
+                </div>
+
+
+            </div>
+
         </div>
 
-    </div>
-
-</section>
+    </section>
 
 
 
-<!-- =========================================================
-     SECTION 04 — RELATIONSHIP + LIFE PATH
-     ========================================================= -->
+    <!-- =========================================================
+         SECTION 04 — RELATIONSHIP INSIGHT
+         ========================================================= -->
 
-<section class="bg-alt">
-
-    <div class="container">
-
-        <div class="row g-4">
+    <section class="h2-relationship-section">
 
 
-            <!-- RELATIONSHIP -->
+        <div class="container">
 
-            <div class="col-md-6">
 
-                <div class="dark-panel h-100">
+            <div class="h2-relationship-inner">
+
+
+
+
+                <div class="h2-relationship-content reveal-section">
 
 
                     <span class="section-label">
-                        04 · Relationship Insight
+                        Relationship Insight
                     </span>
 
 
                     <h2>
-                        See what brings you closer to the heart.
+
+                        See what brings
+                        <span>you closer to the heart.</span>
+
                     </h2>
+
+
+                    <p class="h2-large-copy">
+
+                        Compatibility is not a verdict.
+                        It is an invitation to understand how two people
+                        give, receive, communicate, and grow.
+
+                    </p>
 
 
                     <p>
 
-                        Compatibility is not a verdict.
-                        It is an invitation to understand how
-                        two people give, receive, communicate,
-                        and grow.
+                        Explore the dynamics between two birth charts
+                        through a thoughtful reading that focuses on
+                        connection, communication, emotional rhythms,
+                        and shared growth.
 
                     </p>
 
 
                     <a
                         class="btn btn-secondary"
-                        href="./services.html">
+                        href="./services.html#matchmaker"
+                    >
 
                         Explore Matchmaking
+
+                        <span class="h2-button-arrow">→</span>
 
                     </a>
 
 
                 </div>
 
+
+                <div class="h2-relationship-symbol">
+
+
+                    <div class="h2-heart-orbit">
+
+                        <div class="h2-orbit-ring ring-one"></div>
+
+                        <div class="h2-orbit-ring ring-two"></div>
+
+                        <div class="h2-orbit-dot"></div>
+
+                        <i data-lucide="heart"></i>
+
+                    </div>
+
+
+                </div>
+
+
             </div>
 
+        </div>
+
+    </section>
 
 
-            <!-- LIFE PATH -->
 
-            <div class="col-md-6">
+    <!-- =========================================================
+         SECTION 05 — LIFE PATH
+         ========================================================= -->
 
-                <div class="content-panel h-100">
+    <section class="h2-lifepath-section bg-alt">
+
+
+        <div class="container">
+
+
+            <div class="h2-lifepath-inner">
+
+
+                <div class="h2-lifepath-intro reveal-section">
+
+
 
 
                     <span class="section-label">
-                        05 · Life Path Insight
+                        Life Path Insight
                     </span>
 
 
                     <h2>
-                        Make space for the next chapter.
+                        Make space for
+                        <span>the next chapter.</span>
                     </h2>
+
+                </div>
+
+
+                <div class="h2-lifepath-content reveal-content">
+
+
+                    <div class="h2-compass-icon">
+
+                        <i data-lucide="compass"></i>
+
+                    </div>
+
+
+                    <p class="h2-lifepath-lead">
+
+                        Identify the values and strengths that can support
+                        you through change, then choose your next step
+                        with greater self-trust.
+
+                    </p>
 
 
                     <p>
 
-                        Identify the values and strengths that can
-                        support you through change, then choose
-                        the next step with more self-trust.
+                        Whether you are considering a career shift,
+                        navigating uncertainty, or simply searching
+                        for a clearer sense of direction, astrology
+                        can become a reflective tool for understanding
+                        what matters most.
 
                     </p>
 
 
                     <a
                         class="btn btn-primary"
-                        href="./services.html">
+                        href="./services.html#careerguide"
+                    >
 
                         Explore Career Guidance
+
+                        <span class="h2-button-arrow">→</span>
 
                     </a>
 
 
                 </div>
 
-            </div>
 
+                <div class="h2-lifepath-statement reveal-item">
+
+                    <span class="h2-statement-mark">
+                        ✦
+                    </span>
+
+                    <p>
+                        Your next chapter does not need
+                        to be rushed. It needs to be understood.
+                    </p>
+
+                </div>
+
+
+            </div>
 
         </div>
 
-    </div>
-
-</section>
+    </section>
 
 
 
-<!-- =========================================================
-     SECTION 06 — PREMIUM HOROSCOPE
-     ========================================================= -->
+    <!-- =========================================================
+         SECTION 06 — PREMIUM HOROSCOPE
+         ========================================================= -->
 
-<section>
-
-    <div class="container">
-
-        <div class="row align-items-center g-5">
+    <section class="h2-horoscope-section">
 
 
-            <div class="col-lg-7">
+        <div class="container">
+
+
+            <div class="h2-horoscope-heading reveal-section">
 
 
                 <span class="section-label">
-                    06 · The Premium Horoscope
+                    The Premium Horoscope
                 </span>
 
 
                 <h2>
-                    A quieter way to check in with the stars
+                    A quieter way to
+                    <span>check in with the stars.</span>
                 </h2>
 
 
-                <p class="text-muted">
+                <p>
 
                     Go beyond a one-line forecast.
                     Our daily, weekly, and monthly perspectives
@@ -689,826 +1105,746 @@
 
                 </p>
 
-
-                <a
-                    class="btn btn-secondary"
-                    href="./horoscope.html">
-
-                    Read Today's Horoscope
-
-                </a>
-
-
             </div>
 
 
-            <div class="col-lg-5">
-
-                <img
-                    class="content-image"
-                    src="./images/moons.png"
-                    alt="Moon phases">
-
-            </div>
+            <div class="h2-horoscope-layout">
 
 
-        </div>
-
-    </div>
-
-</section>
+                <div class="h2-horoscope-image reveal-image">
 
 
+                    <div class="h2-moon-image-frame">
 
-<!-- =========================================================
-     SECTION 07 — CLIENT STORIES
-     ========================================================= -->
+                        <img
+                            src="./images/moons.png"
+                            alt="Moon phases"
+                        >
 
-<section class="bg-alt">
+                        <div class="h2-moon-overlay">
 
-    <div class="container">
+                            <span>
+                                Daily
+                            </span>
 
+                            <span>
+                                Weekly
+                            </span>
 
-        <div class="text-center mb-5">
+                            <span>
+                                Monthly
+                            </span>
 
-            <span class="section-label">
-                07 · Client Stories
-            </span>
+                        </div>
 
+                    </div>
 
-            <h2>
-                What clarity felt like for them
-            </h2>
-
-        </div>
-
-
-
-        <div class="row g-4">
-
-
-            <!-- TESTIMONIAL 1 -->
-
-            <div class="col-md-4">
-
-                <div class="testimonial-card">
-
-                    <p>
-
-                        “A calm, intelligent reading that gave me
-                        language for what I was already feeling.”
-
-                    </p>
-
-
-                    <strong>
-                        — Mira, London
-                    </strong>
 
                 </div>
 
-            </div>
 
+                <div class="h2-horoscope-content reveal-content">
 
 
-            <!-- TESTIMONIAL 2 -->
+                    <div class="h2-horoscope-icon">
 
-            <div class="col-md-4">
+                        <i data-lucide="moon"></i>
 
-                <div class="testimonial-card">
+                    </div>
 
-                    <p>
 
-                        “The written summary became something I return
-                        to whenever I need perspective.”
-
-                    </p>
-
-
-                    <strong>
-                        — Daniel, Toronto
-                    </strong>
-
-                </div>
-
-            </div>
-
-
-
-            <!-- TESTIMONIAL 3 -->
-
-            <div class="col-md-4">
-
-                <div class="testimonial-card">
-
-                    <p>
-
-                        “It felt less like prediction and more like a
-                        meaningful conversation with myself.”
-
-                    </p>
-
-
-                    <strong>
-                        — Anika, Mumbai
-                    </strong>
-
-                </div>
-
-            </div>
-
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     SECTION 08 — NEWSLETTER
-     ========================================================= -->
-
-<section class="newsletter-section section-sm">
-
-    <div class="container position-relative text-center">
-
-
-        <span class="section-label">
-            08 · Stay Connected
-        </span>
-
-
-        <h2>
-            Stay Connected With the Stars
-        </h2>
-
-
-        <p class="section-description">
-
-            Receive astrology insights, horoscope updates,
-            and helpful guidance delivered to your inbox.
-
-        </p>
-
-
-        <form
-            class="newsletter-form mt-4">
-
-
-            <input
-                type="email"
-                class="form-control"
-                placeholder="Email Address"
-                aria-label="Email Address"
-                required>
-
-
-            <button
-                type="submit"
-                class="btn btn-primary">
-
-                Subscribe
-
-            </button>
-
-
-        </form>
-
-
-        <p class="newsletter-msg mt-2"></p>
-
-
-        <div class="newsletter-final-cta">
-
-            Ready for a personalized reading?
-
-            <a href="./pricing.html">
-                Book your consultation today
-            </a>
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     FOOTER
-     ========================================================= -->
-
-<footer class="footer-custom">
-
-    <div class="container">
-
-
-        <div class="row g-4">
-
-
-            <!-- BRAND -->
-
-            <div class="col-lg-4 col-md-6">
-
-
-                <div class="footer-brand">
-
-
-                    <img
-                        src="./images/logo.png"
-                        alt="AstroGuide Logo">
-
-
-                    <span
-                        class="brand-astro"
-                        dir="ltr">
-
-
-                        <span class="brand-astro">
-                            Astro
-                        </span>
-
-
-                        <span class="brand-guide">
-                            Guide
-                        </span>
-
-
+                    <span class="h2-card-kicker">
+                        A moment to pause
                     </span>
 
 
+                    <h3>
+                        Read the sky
+                        with intention.
+                    </h3>
+
+
+                    <p>
+
+                        Instead of promising certainty,
+                        our horoscope perspectives are designed
+                        to help you pause, reflect, and notice
+                        patterns in the season of life you are in.
+
+                    </p>
+
+
+                    <div class="h2-horoscope-points">
+
+
+                        <div>
+
+                            <i data-lucide="sun"></i>
+
+                            <span>
+                                Daily cosmic perspective
+                            </span>
+
+                        </div>
+
+
+                        <div>
+
+                            <i data-lucide="calendar-days"></i>
+
+                            <span>
+                                Weekly guidance
+                            </span>
+
+                        </div>
+
+
+                        <div>
+
+                            <i data-lucide="sparkles"></i>
+
+                            <span>
+                                Monthly themes
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <a
+                        class="btn btn-secondary"
+                        href="./horoscope.html"
+                    >
+
+                        Read Today's Horoscope
+
+                        <span class="h2-button-arrow">→</span>
+
+                    </a>
+
+
                 </div>
 
 
-                <p class="footer-tagline">
+            </div>
 
-                    Understand Your Path.
-                    Embrace Your Future.
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================================
+         SECTION 07 — CLIENT STORIES
+         ========================================================= -->
+
+    <section class="h2-testimonials-section bg-alt">
+
+
+        <div class="container">
+
+
+            <div class="h2-section-heading reveal-section">
+
+
+                <div class="h2-heading-topline">
+
+                    <span></span>
+
+                    <span class="section-label">
+                        Client Stories
+                    </span>
+
+                    <span></span>
+
+                </div>
+
+
+                <h2>
+                    What clarity felt like for them
+                </h2>
+
+
+                <p>
+
+                    A few reflections from people who made space
+                    for a different kind of conversation.
 
                 </p>
 
+            </div>
 
 
-                <!-- SOCIAL ICONS -->
-
-                <div class="footer-social">
+            <div class="h2-testimonials-grid">
 
 
-                    <a
-                        href="#"
-                        aria-label="Facebook">
-
-                        <i data-lucide="facebook"></i>
-
-                    </a>
+                <article class="h2-testimonial-card reveal-card">
 
 
-                    <a
-                        href="#"
-                        aria-label="Instagram">
-
-                        <i data-lucide="instagram"></i>
-
-                    </a>
+                    <div class="h2-quote-icon">
+                        “
+                    </div>
 
 
-                    <a
-                        href="#"
-                        aria-label="Twitter">
+                    <div class="h2-testimonial-stars">
 
-                        <i data-lucide="twitter"></i>
+                        <span>✦</span>
+                        <span>✦</span>
+                        <span>✦</span>
+                        <span>✦</span>
+                        <span>✦</span>
 
-                    </a>
-
-
-                    <a
-                        href="#"
-                        aria-label="YouTube">
-
-                        <i data-lucide="youtube"></i>
-
-                    </a>
+                    </div>
 
 
-                </div>
+                    <p>
+
+                        A calm, intelligent reading that gave me
+                        language for what I was already feeling.
+
+                    </p>
+
+
+                    <div class="h2-testimonial-author">
+
+                        <span class="h2-author-line"></span>
+
+                        <strong>
+                            Mira
+                        </strong>
+
+                        <span>
+                            London
+                        </span>
+
+                    </div>
+
+
+                </article>
+
+
+
+                <article class="h2-testimonial-card featured reveal-card">
+
+
+                    <div class="h2-quote-icon">
+                        “
+                    </div>
+
+
+                    <div class="h2-testimonial-stars">
+
+                        <span>✦</span>
+                        <span>✦</span>
+                        <span>✦</span>
+                        <span>✦</span>
+                        <span>✦</span>
+
+                    </div>
+
+
+                    <p>
+
+                        The written summary became something I return
+                        to whenever I need perspective.
+
+                    </p>
+
+
+                    <div class="h2-testimonial-author">
+
+                        <span class="h2-author-line"></span>
+
+                        <strong>
+                            Daniel
+                        </strong>
+
+                        <span>
+                            Toronto
+                        </span>
+
+                    </div>
+
+
+                </article>
+
+
+
+                <article class="h2-testimonial-card reveal-card">
+
+
+                    <div class="h2-quote-icon">
+                        “
+                    </div>
+
+
+                    <div class="h2-testimonial-stars">
+
+                        <span>✦</span>
+                        <span>✦</span>
+                        <span>✦</span>
+                        <span>✦</span>
+                        <span>✦</span>
+
+                    </div>
+
+
+                    <p>
+
+                        It felt less like prediction and more like a
+                        meaningful conversation with myself.
+
+                    </p>
+
+
+                    <div class="h2-testimonial-author">
+
+                        <span class="h2-author-line"></span>
+
+                        <strong>
+                            Anika
+                        </strong>
+
+                        <span>
+                            Mumbai
+                        </span>
+
+                    </div>
+
+
+                </article>
 
 
             </div>
 
 
+            <div class="h2-testimonial-bottom reveal-item">
 
-            <!-- QUICK LINKS -->
+                <span></span>
 
-            <div class="col-lg-2 col-md-6 col-6">
+                <p>
+                    Your experience is personal.
+                    Your reading should be too.
+                </p>
 
-
-                <h5 class="footer-heading">
-                    Quick Links
-                </h5>
-
-
-                <a
-                    class="footer-link"
-                    href="./index.html">
-
-                    Home
-
-                </a>
-
-
-                <a
-                    class="footer-link"
-                    href="./services.html">
-
-                    Services
-
-                </a>
-
-
-
-
-
-                <a
-                    class="footer-link"
-                    href="./astrologers.html">
-
-                    Astrologers
-
-                </a>
-
-
-                <a
-                    class="footer-link"
-                    href="./pricing.html">
-
-                    Pricing
-
-                </a>
-
-
-                <a
-                    class="footer-link"
-                    href="./about.html">
-
-                    About
-
-                </a>
-
+                <span></span>
 
             </div>
-
-
-
-            <!-- SERVICES -->
-
-            <div class="col-lg-2 col-md-6 col-6">
-
-
-                <h5 class="footer-heading">
-                    Services
-                </h5>
-
-
-                <a
-                    class="footer-link"
-                    href="./services.html#birthchart">
-
-                    Birth Chart Reading
-
-                </a>
-
-
-                <a
-                    class="footer-link"
-                    href="./services.html#matchmaker">
-
-                    Matchmaking
-
-                </a>
-
-
-                <a
-                    class="footer-link"
-                    href="./services.html#careerguide">
-
-                    Career Guidance
-
-                </a>
-
-
-                <a
-                    class="footer-link"
-                    href="./services.html#personalcons">
-
-                    Personal Consultation
-
-                </a>
-
-
-            </div>
-
-
-
-            <!-- ADDITIONAL -->
-
-            <div class="col-lg-2 col-md-6 col-6">
-
-
-                <h5 class="footer-heading">
-                    Additional Pages
-                </h5>
-
-
-                <a
-                    class="footer-link"
-                    href="./404.html">
-
-                    404 Page
-
-                </a>
-
-
-                <a
-                    class="footer-link"
-                    href="./maintenance.html">
-
-                    Maintenance
-
-                </a>
-
-
-            </div>
-
-
-
-            <!-- CONTACT -->
-
-            <div class="col-lg-2 col-md-6 col-6">
-
-
-                <h5 class="footer-heading">
-                    Contact Us
-                </h5>
-
-
-                <div class="contact-item">
-
-
-                    <i data-lucide="phone"></i>
-
-
-                    <span>
-                        +91 98765 43210
-                    </span>
-
-
-                </div>
-
-
-                <div class="contact-item">
-
-
-                    <i data-lucide="map-pin"></i>
-
-
-                    <span>
-                        Hyderabad, India
-                    </span>
-
-
-                </div>
-
-
-                <div class="contact-item">
-
-
-                    <i data-lucide="mail"></i>
-
-
-                    <span>
-                        contact@astroguide.com
-                    </span>
-
-
-                </div>
-
-
-            </div>
-
 
         </div>
 
+    </section>
 
 
-        <!-- FOOTER BOTTOM -->
 
-        <div
-            class="footer-bottom d-flex flex-wrap justify-content-between align-items-center">
+    <!-- =========================================================
+         NEWSLETTER — UNCHANGED
+         ========================================================= -->
 
+    <section class="newsletter-section section-sm">
 
-            <p
-                class="mb-0 text-muted"
-                style="font-size:0.875rem;">
+        <div class="container position-relative text-center">
 
-                &copy; 2026 AstroGuide.
-                All rights reserved.
+            <span class="section-label">
+                Stay Connected
+            </span>
+
+            <h2>
+                Stay Connected With the Stars
+            </h2>
+
+            <p class="section-description">
+
+                Receive astrology insights, horoscope updates,
+                and helpful guidance delivered to your inbox.
 
             </p>
 
 
-            <div class="footer-bottom-links">
+            <form class="newsletter-form mt-4">
+
+                <input
+                    type="email"
+                    class="form-control"
+                    placeholder="Email Address"
+                    aria-label="Email Address"
+                    required
+                >
 
 
-                <a href="#">
-                    Privacy Policy
+                <button type="submit" class="btn btn-primary">
+
+                    Subscribe
+
+                </button>
+
+            </form>
+
+
+            <p class="newsletter-msg mt-2"></p>
+
+
+            <div class="newsletter-final-cta">
+
+                Ready for a personalized reading?
+
+                <a href="./pricing.html">
+                    Book your consultation today
                 </a>
 
+            </div>
 
-                <a href="#">
-                    Terms &amp; Conditions
-                </a>
+        </div>
 
+    </section>
+
+
+
+    <!-- =========================================================
+         FOOTER — UNCHANGED
+         ========================================================= -->
+
+    <footer class="footer-custom">
+
+        <div class="container">
+
+            <div class="row g-4">
+
+
+                <div class="col-lg-4 col-md-6">
+
+                    <div class="footer-brand">
+
+                        <a class="navbar-brand-custom" href="./index.html">
+
+                            <img src="./images/logo.png" alt="">
+
+                            <span class="brand-astro" dir="ltr">
+
+                                <span class="brand-astro">Astro</span><span class="brand-guide">Guide</span>
+
+                            </span>
+
+                        </a>
+
+                    </div>
+
+
+                    <p class="footer-tagline">
+
+                        Understand Your Path.
+                        Embrace Your Future.
+
+                    </p>
+
+
+                    <div class="footer-social">
+
+                        <a href="#" aria-label="Facebook">
+                            <i data-lucide="facebook"></i>
+                        </a>
+
+                        <a href="#" aria-label="Instagram">
+                            <i data-lucide="instagram"></i>
+                        </a>
+
+                        <a href="#" aria-label="Twitter">
+                            <i data-lucide="twitter"></i>
+                        </a>
+
+                        <a href="#" aria-label="YouTube">
+                            <i data-lucide="youtube"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-lg-2 col-md-6 col-6">
+
+                    <h5 class="footer-heading">
+                        Quick Links
+                    </h5>
+
+                    <a class="footer-link" href="./index.html">
+                        Home
+                    </a>
+
+                    <a class="footer-link" href="./about.html">
+                        About
+                    </a>
+
+                    <a class="footer-link" href="./horoscope.html">
+                        Horoscope
+                    </a>
+
+                    <a class="footer-link" href="./astrologers.html">
+                        Astrologers
+                    </a>
+
+                    <a class="footer-link" href="./pricing.html">
+                        Pricing
+                    </a>
+
+                </div>
+
+
+                <div class="col-lg-2 col-md-6 col-6">
+
+                    <h5 class="footer-heading">
+                        Services
+                    </h5>
+
+                    <a class="footer-link" href="./services.html#birthchart">
+                        Birth Chart Reading
+                    </a>
+
+                    <a class="footer-link" href="./services.html#matchmaker">
+                        Matchmaking
+                    </a>
+
+                    <a class="footer-link" href="./services.html#careerguide">
+                        Career Guidance
+                    </a>
+
+                    <a class="footer-link" href="./services.html#personalcons">
+                        Personal Consultation
+                    </a>
+
+                </div>
+
+
+                <div class="col-lg-2 col-md-6 col-6">
+
+                    <h5 class="footer-heading">
+                        Additional Pages
+                    </h5>
+
+                    <a class="footer-link" href="./404.html">
+                        404 Page
+                    </a>
+
+                    <a class="footer-link" href="./maintenance.html">
+                        Maintenance
+                    </a>
+
+                </div>
+
+
+                <div class="col-lg-2 col-md-6 col-6">
+
+                    <h5 class="footer-heading">
+                        Contact Us
+                    </h5>
+
+
+                    <div class="contact-item">
+
+                        <i data-lucide="phone"></i>
+
+                        <span>
+                            +91 98765 43210
+                        </span>
+
+                    </div>
+
+
+                    <div class="contact-item">
+
+                        <i data-lucide="map-pin"></i>
+
+                        <span>
+                            Hyderabad, India
+                        </span>
+
+                    </div>
+
+
+                    <div class="contact-item">
+
+                        <i data-lucide="mail"></i>
+
+                        <span>
+                            contact@astroguide.com
+                        </span>
+
+                    </div>
+
+                </div>
 
             </div>
 
 
+            <div class="footer-bottom d-flex flex-wrap justify-content-between align-items-center">
+
+                <p class="mb-0 text-muted" style="font-size:0.875rem;">
+
+                    &copy; 2026 AstroGuide.
+                    All rights reserved.
+
+                </p>
+
+
+                <div class="footer-bottom-links">
+
+                    <a href="#">
+                        Privacy Policy
+                    </a>
+
+                    <a href="#">
+                        Terms &amp; Conditions
+                    </a>
+
+                </div>
+
+            </div>
+
         </div>
 
+    </footer>
 
-    </div>
 
-</footer>
 
+    <!-- =========================================================
+         LUCIDE
+         ========================================================= -->
 
+    <script src="https://unpkg.com/lucide@0.542.0/dist/umd/lucide.min.js"></script>
 
-<!-- =========================================================
-     LUCIDE ICONS
-     ========================================================= -->
 
-<script
-    src="https://unpkg.com/lucide@0.542.0/dist/umd/lucide.min.js">
-</script>
+    <!-- =========================================================
+         BOOTSTRAP JS
+         ========================================================= -->
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 
-<!-- =========================================================
-     BOOTSTRAP JS
-     ========================================================= -->
+    <!-- =========================================================
+         LUCIDE INITIALIZATION
+         ========================================================= -->
 
-<script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
-</script>
+    <script>
 
+        document.addEventListener(
+            "DOMContentLoaded",
+            function () {
 
+                if (window.lucide) {
+                    lucide.createIcons();
+                }
 
-<!-- =========================================================
-     LUCIDE INITIALIZATION
-     ========================================================= -->
+            }
+        );
 
-<script>
+    </script>
 
-document.addEventListener(
-    "DOMContentLoaded",
-    function () {
 
-        if (window.lucide) {
+    <!-- =========================================================
+         NEWSLETTER
+         ========================================================= -->
 
-            lucide.createIcons();
+    <script>
 
-        }
+        (function () {
 
-    }
-);
+            const form =
+                document.querySelector(".newsletter-form");
 
-</script>
+            const message =
+                document.querySelector(".newsletter-msg");
 
 
-
-<!-- =========================================================
-     NEWSLETTER
-     ========================================================= -->
-
-<script>
-
-(function () {
-
-    const form =
-        document.querySelector(".newsletter-form");
-
-    const message =
-        document.querySelector(".newsletter-msg");
-
-
-    if (!form || !message) {
-        return;
-    }
-
-
-    form.addEventListener(
-        "submit",
-        function (event) {
-
-            event.preventDefault();
-
-
-            message.textContent =
-                "Thank you. You are now connected with AstroGuide.";
-
-
-            form.reset();
-
-        }
-    );
-
-})();
-
-</script>
-
-
-
-<!-- =========================================================
-     HOME 2 HERO MOUSE MOVEMENT
-     ========================================================= -->
-
-<script>
-
-(function () {
-
-    const hero =
-        document.getElementById("home2Hero");
-
-
-    if (!hero) {
-        return;
-    }
-
-
-    const image =
-        hero.querySelector(".hero-art-image");
-
-
-    const atmosphere =
-        hero.querySelector(".hero-golden-atmosphere");
-
-
-    const moon =
-        hero.querySelector(".hero-moon-glow");
-
-
-    const stars =
-        hero.querySelector(".hero-stars-back");
-
-
-    let targetX = 0;
-
-    let targetY = 0;
-
-    let currentX = 0;
-
-    let currentY = 0;
-
-
-    hero.addEventListener(
-        "mousemove",
-        function (event) {
-
-            const rect =
-                hero.getBoundingClientRect();
-
-
-            const x =
-                (event.clientX - rect.left)
-                / rect.width;
-
-
-            const y =
-                (event.clientY - rect.top)
-                / rect.height;
-
-
-            targetX =
-                (x - 0.5) * 2;
-
-
-            targetY =
-                (y - 0.5) * 2;
-
-        }
-    );
-
-
-    hero.addEventListener(
-        "mouseleave",
-        function () {
-
-            targetX = 0;
-
-            targetY = 0;
-
-        }
-    );
-
-
-    function animate() {
-
-
-        currentX +=
-            (targetX - currentX) * 0.025;
-
-
-        currentY +=
-            (targetY - currentY) * 0.025;
-
-
-        /*
-         * Only add parallax when dark mode
-         * is active.
-         */
-
-        const darkMode =
-            document.documentElement
-                .getAttribute("data-theme") === "dark";
-
-
-        if (darkMode) {
-
-
-            if (image) {
-
-                image.style.transform =
-                    "scale(1.04) " +
-                    "translate3d(" +
-                    (currentX * -8) +
-                    "px," +
-                    (currentY * -5) +
-                    "px,0)";
-
+            if (!form || !message) {
+                return;
             }
 
 
-            if (atmosphere) {
+            form.addEventListener(
+                "submit",
+                function (event) {
 
-                atmosphere.style.transform =
-                    "translate3d(" +
-                    (currentX * 16) +
-                    "px," +
-                    (currentY * 12) +
-                    "px,0)";
+                    event.preventDefault();
 
+                    message.textContent =
+                        "Thank you. You are now connected with AstroGuide.";
+
+                    form.reset();
+
+                }
+            );
+
+        })();
+
+    </script>
+
+
+    <!-- =========================================================
+         THEME
+         ========================================================= -->
+
+    <script src="./js/theme.js"></script>
+
+
+    <!-- =========================================================
+         HOME 2 SECTION ANIMATION
+         ========================================================= -->
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const animatedElements =
+                document.querySelectorAll(
+                    ".reveal-section, .reveal-card, .reveal-image, .reveal-content, .reveal-item"
+                );
+
+
+            if (!("IntersectionObserver" in window)) {
+
+                animatedElements.forEach(function (element) {
+                    element.classList.add("is-visible");
+                });
+
+                return;
             }
 
 
-            if (moon) {
+            const observer =
+                new IntersectionObserver(
+                    function (entries) {
 
-                moon.style.transform =
-                    "translate3d(" +
-                    (currentX * -13) +
-                    "px," +
-                    (currentY * -9) +
-                    "px,0)";
+                        entries.forEach(function (entry) {
 
-            }
+                            if (entry.isIntersecting) {
 
+                                entry.target.classList.add("is-visible");
 
-            if (stars) {
+                                observer.unobserve(entry.target);
 
-                stars.style.transform =
-                    "translate3d(" +
-                    (currentX * 10) +
-                    "px," +
-                    (currentY * 7) +
-                    "px,0)";
+                            }
 
-            }
+                        });
 
-
-        }
+                    },
+                    {
+                        threshold: 0.12,
+                        rootMargin: "0px 0px -50px 0px"
+                    }
+                );
 
 
-        requestAnimationFrame(animate);
+            animatedElements.forEach(function (element) {
 
-    }
+                observer.observe(element);
 
+            });
 
-    animate();
+        });
 
-
-})();
-
-</script>
-
-
-
-<!-- =========================================================
-     OPTIONAL EXISTING GLOBAL THEME SCRIPT
-     ========================================================= -->
-
-<script
-    src="./js/theme.js">
-</script>
+    </script>
 
 
 </body>

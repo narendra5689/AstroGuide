@@ -2914,3 +2914,66 @@
     }
 
 }
+/* =========================================================
+   DAILY RHYTHM — RTL SUPPORT
+   ========================================================= */
+
+/* LTR */
+.rhythm-line {
+    padding-left: 28px;
+    padding-right: 0;
+}
+
+.rhythm-line::before {
+    left: 10px;
+    right: auto;
+}
+
+/* RTL */
+html[dir="rtl"] .rhythm-line {
+    padding-left: 0;
+    padding-right: 28px;
+}
+
+html[dir="rtl"] .rhythm-line::before {
+    left: auto;
+    right: 10px;
+}
+
+html[dir="rtl"] .rhythm-step {
+    grid-template-columns: 48px 1fr;
+}
+
+html[dir="rtl"] .rhythm-content {
+    text-align: right;
+}
+/* =========================================================
+   DAILY RHYTHM — MOBILE RTL
+   ========================================================= */
+
+@media (max-width: 991.98px) {
+
+    html[dir="ltr"] .rhythm-line {
+        padding-left: 22px;
+        padding-right: 0;
+    }
+
+    html[dir="ltr"] .rhythm-line::before {
+        left: 10px;
+        right: auto;
+    }
+
+    html[dir="rtl"] .rhythm-line {
+        padding-left: 0;
+        padding-right: 22px;
+    }
+
+    html[dir="rtl"] .rhythm-line::before {
+        left: auto;
+        right: 10px;
+    }
+
+    html[dir="rtl"] .rhythm-content {
+        text-align: right;
+    }
+}

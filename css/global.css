@@ -1438,6 +1438,7 @@ position: sticky !important;
         width: 16px;
         height: 16px;
     }
+    
 
     .mobile-nav-controls .direction-toggle-text {
         font-size: 9px;
@@ -3957,4 +3958,141 @@ body {
         margin-bottom: 24px !important;
         gap: 10px;
     }
+}
+
+
+
+
+/* =========================================================
+   FINAL NAVBAR + FOOTER RTL SPACING FIX
+   ========================================================= */
+
+/* ---------------------------------------------------------
+   1. NAVBAR — MORE SPACE BETWEEN BRAND AND RIGHT SIDE
+   --------------------------------------------------------- */
+
+@media (min-width: 992px) {
+
+    .navbar-custom > .container {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .navbar-brand-custom {
+        margin-right: 32px !important;
+        flex-shrink: 0 !important;
+    }
+
+    .navbar-collapse {
+        flex: 1 1 auto;
+        min-width: 0;
+    }
+
+    .navbar-collapse > .d-flex {
+        margin-left: 24px;
+        flex-shrink: 0;
+    }
+
+    /* RTL */
+    [dir="rtl"] .navbar-brand-custom {
+        margin-right: 0 !important;
+        margin-left: 32px !important;
+    }
+
+    [dir="rtl"] .navbar-collapse > .d-flex {
+        margin-left: 0;
+        margin-right: 24px;
+    }
+}
+
+
+/* ---------------------------------------------------------
+   2. FOOTER CONTACT — PREVENT EMAIL FROM BREAKING
+   --------------------------------------------------------- */
+
+.contact-item {
+    min-width: 0 !important;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-item svg {
+    flex: 0 0 18px !important;
+}
+
+.contact-item span {
+    min-width: 0;
+    flex: 1 1 auto;
+    white-space: nowrap;
+    overflow: visible;
+}
+
+
+/* ---------------------------------------------------------
+   3. FOOTER CONTACT — RTL ALIGNMENT
+   Icon starts at the same edge as the contact text
+   --------------------------------------------------------- */
+
+[dir="rtl"] .contact-item {
+    flex-direction: row;
+    justify-content: flex-start;
+    text-align: right;
+}
+
+[dir="rtl"] .contact-item svg {
+    order: 0;
+}
+
+[dir="rtl"] .contact-item span {
+    order: 1;
+    text-align: right;
+}
+
+
+/* ---------------------------------------------------------
+   4. FOOTER CONTACT COLUMN — REMOVE EXTRA SIDE SPACE
+   --------------------------------------------------------- */
+
+@media (min-width: 992px) {
+
+    .footer-custom .contact-item {
+        width: calc(100% + 12px);
+    }
+
+    [dir="rtl"] .footer-custom .contact-item {
+        margin-right: -12px;
+        margin-left: 0;
+    }
+}
+
+
+/* ---------------------------------------------------------
+   5. MOBILE — KEEP EMAIL ON ONE LINE WHEN POSSIBLE
+   --------------------------------------------------------- */
+
+@media (max-width: 767.98px) {
+
+    .contact-item {
+        gap: 8px;
+    }
+
+    .contact-item span {
+        white-space: normal;
+        overflow-wrap: break-word;
+        word-break: normal;
+    }
+}
+/* =========================================================
+   FOOTER HEADINGS — RTL FIX FOR IPAD / 768px
+   ========================================================= */
+
+@media (min-width: 700px) and (max-width: 850px)
+       and (orientation: portrait) {
+
+    [dir="rtl"] .footer-heading {
+        text-align: right !important;
+    }
+
 }

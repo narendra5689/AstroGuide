@@ -824,5 +824,138 @@ function initializeZodiacSelector() {
 
         }
     );
+document
+    .querySelectorAll(".direction-toggle")
+    .forEach(function (button) {
 
+        button.addEventListener(
+            "click",
+            toggleDirection
+        );
+
+    });
+
+
+/* =====================================================
+   MOBILE NAVBAR — HOME DROPDOWN
+   ===================================================== */
+
+const homeDropdown =
+    document.querySelector(".navbar-custom .nav-item.dropdown");
+
+if (homeDropdown) {
+
+    const homeToggle =
+        homeDropdown.querySelector(".dropdown-toggle");
+
+    const homeMenu =
+        homeDropdown.querySelector(".dropdown-menu");
+
+    if (homeToggle && homeMenu) {
+
+        homeToggle.addEventListener("click", function (e) {
+
+            if (window.innerWidth > 991.98) return;
+
+            e.preventDefault();
+            e.stopPropagation();
+
+            const isOpen =
+                homeDropdown.classList.contains("show");
+
+            if (isOpen) {
+
+                homeDropdown.classList.remove("show");
+                homeMenu.classList.remove("show");
+
+                homeToggle.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
+
+            } else {
+
+                homeDropdown.classList.add("show");
+                homeMenu.classList.add("show");
+
+                homeToggle.setAttribute(
+                    "aria-expanded",
+                    "true"
+                );
+
+            }
+
+        });
+
+
+        /* Close Home when another navbar link is clicked */
+        homeDropdown
+            .closest(".navbar")
+            ?.querySelectorAll(
+                ".navbar-nav .nav-item:not(.dropdown) .nav-link"
+            )
+            .forEach(function (link) {
+
+                link.addEventListener("click", function () {
+
+                    if (window.innerWidth > 991.98) return;
+
+                    homeDropdown.classList.remove("show");
+                    homeMenu.classList.remove("show");
+
+                    homeToggle.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
+
+                });
+
+            });
+
+    }
+}
+/* =====================================================
+   MOBILE NAVBAR DROPDOWN
+   ===================================================== */
+
+const navbar = document.querySelector(".navbar-custom");
+
+if (navbar) {
+
+    const homeDropdown = navbar.querySelector(
+        ".nav-item.dropdown"
+    );
+
+    if (homeDropdown) {
+
+        const homeToggle = homeDropdown.querySelector(
+            ".dropdown-toggle"
+        );
+
+        /* ---------------------------------------------
+           CLOSE HOME WHEN ANOTHER NAV LINK IS CLICKED
+           --------------------------------------------- */
+
+        navbar
+            .querySelectorAll(
+                ".navbar-nav .nav-item:not(.dropdown) .nav-link"
+            )
+            .forEach(function (link) {
+
+                link.addEventListener("click", function () {
+
+                    if (window.innerWidth > 991.98) return;
+
+                    const dropdown =
+                        bootstrap.Dropdown.getInstance(homeToggle);
+
+                    if (dropdown) {
+                        dropdown.hide();
+                    }
+
+                });
+
+            });
+    }
+}
 })();

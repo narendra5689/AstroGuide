@@ -2977,3 +2977,113 @@ html[dir="rtl"] .rhythm-content {
         text-align: right;
     }
 }
+
+
+.newsletter-section {
+    position: relative;
+    overflow: hidden;
+
+    color: #ffffff;
+    background-color: var(--primary-color);
+
+    width: 100%;
+    max-width: 100%;
+}
+
+[data-theme="dark"] .newsletter-section {
+    color: var(--text-color);
+    background-color: var(--bg-alt);
+}
+
+.newsletter-section::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background-image:
+        radial-gradient(
+            1.5px 1.5px at 15% 25%,
+            rgba(255, 255, 255, 0.15),
+            transparent
+        ),
+        radial-gradient(
+            1px 1px at 55% 65%,
+            rgba(255, 255, 255, 0.1),
+            transparent
+        ),
+        radial-gradient(
+            1.5px 1.5px at 85% 15%,
+            rgba(255, 255, 255, 0.12),
+            transparent
+        );
+
+    pointer-events: none;
+}
+
+[data-theme="dark"] .newsletter-section::before {
+    background-image:
+        radial-gradient(
+            1.5px 1.5px at 15% 25%,
+            rgba(212, 184, 101, 0.15),
+            transparent
+        ),
+        radial-gradient(
+            1px 1px at 55% 65%,
+            rgba(212, 184, 101, 0.1),
+            transparent
+        ),
+        radial-gradient(
+            1.5px 1.5px at 85% 15%,
+            rgba(212, 184, 101, 0.12),
+            transparent
+        );
+}
+
+.newsletter-section .section-label {
+    color: var(--secondary-light);
+}
+
+.newsletter-section h2 {
+    color: #ffffff;
+}
+
+[data-theme="dark"] .newsletter-section h2 {
+    color: var(--text-color);
+}
+
+.newsletter-section .section-description {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+[data-theme="dark"] .newsletter-section .section-description {
+    color: var(--text-muted);
+}
+
+.newsletter-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+
+    width: 100%;
+    max-width: 520px;
+    margin: 0 auto;
+}
+
+.newsletter-form .form-control {
+    flex: 1;
+
+    min-width: 240px;
+    height: 48px;
+    padding: 0 16px;
+
+    font-size: 0.9375rem;
+    color: #ffffff;
+
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: var(--radius-sm);
+
+    min-width: 0;
+}
